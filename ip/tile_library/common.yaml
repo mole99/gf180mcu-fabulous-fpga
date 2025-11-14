@@ -1,0 +1,57 @@
+# PDN
+PDN_MULTILAYER: false
+PDN_CFG: dir::../../pdn_cfg.tcl
+
+GRT_ALLOW_CONGESTION: true
+
+# Diode insertion
+#HEURISTIC_ANTENNA_THRESHOLD: 350
+GRT_ANTENNA_ITERS: 10
+
+# PDK specific
+pdk::sky130A:
+    # Routing
+    RT_MAX_LAYER: met4
+
+    # PDN
+    PDN_VOFFSET: 5
+    PDN_HOFFSET: 5
+
+    PDN_VWIDTH: 1.6
+    PDN_HWIDTH: 1.6
+
+    PDN_VSPACING: 3.7
+    PDN_HSPACING: 3.7
+
+    PDN_VPITCH: 30
+    PDN_HPITCH: 30
+
+    PDN_SKIPTRIM: true
+
+pdk::ihp-sg13g2:
+    # Routing
+    RT_MAX_LAYER: TopMetal1
+
+    # Save space
+    BOTTOM_MARGIN_MULT: 1
+    TOP_MARGIN_MULT: 1
+    LEFT_MARGIN_MULT: 6
+    RIGHT_MARGIN_MULT: 6
+
+    # PDN
+    PDN_VWIDTH: 2.2
+    PDN_VSPACING: 4.0
+    PDN_VPITCH: 75.6
+    PDN_VOFFSET: 13.6
+
+    PDN_HWIDTH: 2.0
+    PDN_HSPACING: 4.0
+    PDN_HPITCH: 75.6
+    PDN_HOFFSET: 13.57
+    
+    #GRT_LAYER_ADJUSTMENTS: [0.00,0.05,0.05,0.05,0.05,0.00,0.00]
+
+# Use the minimum length for pins
+# that satisfies the minimum area constraint
+IO_PIN_H_LENGTH: null
+IO_PIN_V_LENGTH: null

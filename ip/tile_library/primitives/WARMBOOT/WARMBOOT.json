@@ -1,0 +1,155 @@
+{
+  "creator": "Yosys 0.54 (git sha1 db72ec3bde296a9512b2d1e6fabf81cfb07c2c1b, clang++ 19.1.7 -fPIC -O3)",
+  "modules": {
+    "WARMBOOT": {
+      "attributes": {
+        "dynports": 1,
+        "cells_not_processed": 1,
+        "src": "/home/leo/Repositories/greyhound-ihp-librelane/ip/fabric/../tile_library/tiles/S_WARMBOOT/../../primitives/WARMBOOT/WARMBOOT.v:16.1-42.10"
+      },
+      "parameter_default_values": {
+        "NoConfigBits": 0,
+        "SLOT_BITS": 4
+      },
+      "ports": {
+        "SLOT": {
+          "direction": "input",
+          "bits": [ 2, 3, 4, 5 ]
+        },
+        "BOOT": {
+          "direction": "input",
+          "bits": [ 6 ]
+        },
+        "RESET": {
+          "direction": "output",
+          "bits": [ 7 ]
+        },
+        "SLOT_top": {
+          "direction": "output",
+          "bits": [ 2, 3, 4, 5 ]
+        },
+        "BOOT_top": {
+          "direction": "output",
+          "bits": [ 8 ]
+        },
+        "RESET_top": {
+          "direction": "input",
+          "bits": [ 7 ]
+        },
+        "CONFIGURED_top": {
+          "direction": "input",
+          "bits": [ 9 ]
+        },
+        "ConfigBits": {
+          "direction": "input",
+          "offset": -1,
+          "upto": 1,
+          "bits": [ 10, 11 ]
+        }
+      },
+      "cells": {
+        "$logic_and$/home/leo/Repositories/greyhound-ihp-librelane/ip/fabric/../tile_library/tiles/S_WARMBOOT/../../primitives/WARMBOOT/WARMBOOT.v:39$1": {
+          "hide_name": 1,
+          "type": "$logic_and",
+          "parameters": {
+            "A_SIGNED": 0,
+            "A_WIDTH": 1,
+            "B_SIGNED": 0,
+            "B_WIDTH": 1,
+            "Y_WIDTH": 1
+          },
+          "attributes": {
+            "src": "/home/leo/Repositories/greyhound-ihp-librelane/ip/fabric/../tile_library/tiles/S_WARMBOOT/../../primitives/WARMBOOT/WARMBOOT.v:39.20-39.42"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 6 ],
+            "B": [ 9 ],
+            "Y": [ 8 ]
+          }
+        }
+      },
+      "netnames": {
+        "$logic_and$/home/leo/Repositories/greyhound-ihp-librelane/ip/fabric/../tile_library/tiles/S_WARMBOOT/../../primitives/WARMBOOT/WARMBOOT.v:39$1_Y": {
+          "hide_name": 1,
+          "bits": [ 8 ],
+          "attributes": {
+            "src": "/home/leo/Repositories/greyhound-ihp-librelane/ip/fabric/../tile_library/tiles/S_WARMBOOT/../../primitives/WARMBOOT/WARMBOOT.v:39.20-39.42"
+          }
+        },
+        "BOOT": {
+          "hide_name": 0,
+          "bits": [ 6 ],
+          "attributes": {
+            "src": "/home/leo/Repositories/greyhound-ihp-librelane/ip/fabric/../tile_library/tiles/S_WARMBOOT/../../primitives/WARMBOOT/WARMBOOT.v:24.34-24.38"
+          }
+        },
+        "BOOT_top": {
+          "hide_name": 0,
+          "bits": [ 8 ],
+          "attributes": {
+            "EXTERNAL": 1,
+            "FABulous": 1,
+            "src": "/home/leo/Repositories/greyhound-ihp-librelane/ip/fabric/../tile_library/tiles/S_WARMBOOT/../../primitives/WARMBOOT/WARMBOOT.v:29.59-29.67"
+          }
+        },
+        "CONFIGURED_top": {
+          "hide_name": 0,
+          "bits": [ 9 ],
+          "attributes": {
+            "EXTERNAL": 1,
+            "FABulous": 1,
+            "src": "/home/leo/Repositories/greyhound-ihp-librelane/ip/fabric/../tile_library/tiles/S_WARMBOOT/../../primitives/WARMBOOT/WARMBOOT.v:32.59-32.73"
+          }
+        },
+        "ConfigBits": {
+          "hide_name": 0,
+          "bits": [ 10, 11 ],
+          "offset": -1,
+          "upto": 1,
+          "attributes": {
+            "FABulous": 1,
+            "GLOBAL": 1,
+            "src": "/home/leo/Repositories/greyhound-ihp-librelane/ip/fabric/../tile_library/tiles/S_WARMBOOT/../../primitives/WARMBOOT/WARMBOOT.v:34.54-34.64"
+          }
+        },
+        "RESET": {
+          "hide_name": 0,
+          "bits": [ 7 ],
+          "attributes": {
+            "src": "/home/leo/Repositories/greyhound-ihp-librelane/ip/fabric/../tile_library/tiles/S_WARMBOOT/../../primitives/WARMBOOT/WARMBOOT.v:25.34-25.39"
+          }
+        },
+        "RESET_top": {
+          "hide_name": 0,
+          "bits": [ 7 ],
+          "attributes": {
+            "EXTERNAL": 1,
+            "FABulous": 1,
+            "src": "/home/leo/Repositories/greyhound-ihp-librelane/ip/fabric/../tile_library/tiles/S_WARMBOOT/../../primitives/WARMBOOT/WARMBOOT.v:30.59-30.68"
+          }
+        },
+        "SLOT": {
+          "hide_name": 0,
+          "bits": [ 2, 3, 4, 5 ],
+          "attributes": {
+            "src": "/home/leo/Repositories/greyhound-ihp-librelane/ip/fabric/../tile_library/tiles/S_WARMBOOT/../../primitives/WARMBOOT/WARMBOOT.v:23.34-23.38"
+          }
+        },
+        "SLOT_top": {
+          "hide_name": 0,
+          "bits": [ 2, 3, 4, 5 ],
+          "attributes": {
+            "EXTERNAL": 1,
+            "FABulous": 1,
+            "src": "/home/leo/Repositories/greyhound-ihp-librelane/ip/fabric/../tile_library/tiles/S_WARMBOOT/../../primitives/WARMBOOT/WARMBOOT.v:28.59-28.67"
+          }
+        }
+      }
+    }
+  }
+}
