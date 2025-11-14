@@ -1,0 +1,620 @@
+{
+  "creator": "Yosys 0.54 (git sha1 db72ec3bde296a9512b2d1e6fabf81cfb07c2c1b, clang++ 19.1.7 -fPIC -O3)",
+  "modules": {
+    "LUT4c_frame_config_dffesr": {
+      "attributes": {
+        "SET_NORESET": 18,
+        "IOmux": 17,
+        "FF": 16,
+        "INIT_15": 15,
+        "INIT_14": 14,
+        "INIT_13": 13,
+        "INIT_12": 12,
+        "INIT_11": 11,
+        "INIT_10": 10,
+        "INIT_9": 9,
+        "INIT_8": 8,
+        "INIT_7": 7,
+        "INIT_6": 6,
+        "INIT_5": 5,
+        "INIT_4": 4,
+        "INIT_3": 3,
+        "INIT_2": 2,
+        "INIT_1": 1,
+        "BelMap": 1,
+        "FABulous": 1,
+        "INIT": 0,
+        "dynports": 1,
+        "cells_not_processed": 1,
+        "src": "/home/leo/Repositories/greyhound-ihp-librelane/ip/fabric/../tile_library/tiles/LUT4AB/../../primitives/LUT4c_frame_config_dffesr/LUT4c_frame_config_dffesr.v:36.1-147.10"
+      },
+      "parameter_default_values": {
+        "NoConfigBits": 19
+      },
+      "ports": {
+        "I": {
+          "direction": "input",
+          "bits": [ 2, 3, 4, 5 ]
+        },
+        "O": {
+          "direction": "output",
+          "bits": [ 6 ]
+        },
+        "Ci": {
+          "direction": "input",
+          "bits": [ 7 ]
+        },
+        "Co": {
+          "direction": "output",
+          "bits": [ 8 ]
+        },
+        "SR": {
+          "direction": "input",
+          "bits": [ 9 ]
+        },
+        "EN": {
+          "direction": "input",
+          "bits": [ 10 ]
+        },
+        "UserCLK": {
+          "direction": "input",
+          "bits": [ 11 ]
+        },
+        "ConfigBits": {
+          "direction": "input",
+          "bits": [ 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30 ]
+        }
+      },
+      "cells": {
+        "$and$/home/leo/Repositories/greyhound-ihp-librelane/ip/fabric/../tile_library/tiles/LUT4AB/../../primitives/LUT4c_frame_config_dffesr/LUT4c_frame_config_dffesr.v:136$5": {
+          "hide_name": 1,
+          "type": "$and",
+          "parameters": {
+            "A_SIGNED": 0,
+            "A_WIDTH": 1,
+            "B_SIGNED": 0,
+            "B_WIDTH": 1,
+            "Y_WIDTH": 1
+          },
+          "attributes": {
+            "src": "/home/leo/Repositories/greyhound-ihp-librelane/ip/fabric/../tile_library/tiles/LUT4AB/../../primitives/LUT4c_frame_config_dffesr/LUT4c_frame_config_dffesr.v:136.15-136.24"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 7 ],
+            "B": [ 3 ],
+            "Y": [ 31 ]
+          }
+        },
+        "$and$/home/leo/Repositories/greyhound-ihp-librelane/ip/fabric/../tile_library/tiles/LUT4AB/../../primitives/LUT4c_frame_config_dffesr/LUT4c_frame_config_dffesr.v:136$6": {
+          "hide_name": 1,
+          "type": "$and",
+          "parameters": {
+            "A_SIGNED": 0,
+            "A_WIDTH": 1,
+            "B_SIGNED": 0,
+            "B_WIDTH": 1,
+            "Y_WIDTH": 1
+          },
+          "attributes": {
+            "src": "/home/leo/Repositories/greyhound-ihp-librelane/ip/fabric/../tile_library/tiles/LUT4AB/../../primitives/LUT4c_frame_config_dffesr/LUT4c_frame_config_dffesr.v:136.29-136.38"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 7 ],
+            "B": [ 4 ],
+            "Y": [ 32 ]
+          }
+        },
+        "$and$/home/leo/Repositories/greyhound-ihp-librelane/ip/fabric/../tile_library/tiles/LUT4AB/../../primitives/LUT4c_frame_config_dffesr/LUT4c_frame_config_dffesr.v:136$8": {
+          "hide_name": 1,
+          "type": "$and",
+          "parameters": {
+            "A_SIGNED": 0,
+            "A_WIDTH": 1,
+            "B_SIGNED": 0,
+            "B_WIDTH": 1,
+            "Y_WIDTH": 1
+          },
+          "attributes": {
+            "src": "/home/leo/Repositories/greyhound-ihp-librelane/ip/fabric/../tile_library/tiles/LUT4AB/../../primitives/LUT4c_frame_config_dffesr/LUT4c_frame_config_dffesr.v:136.43-136.54"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 3 ],
+            "B": [ 4 ],
+            "Y": [ 33 ]
+          }
+        },
+        "$not$/home/leo/Repositories/greyhound-ihp-librelane/ip/fabric/../tile_library/tiles/LUT4AB/../../primitives/LUT4c_frame_config_dffesr/LUT4c_frame_config_dffesr.v:118$1": {
+          "hide_name": 1,
+          "type": "$not",
+          "parameters": {
+            "A_SIGNED": 0,
+            "A_WIDTH": 1,
+            "Y_WIDTH": 1
+          },
+          "attributes": {
+            "src": "/home/leo/Repositories/greyhound-ihp-librelane/ip/fabric/../tile_library/tiles/LUT4AB/../../primitives/LUT4c_frame_config_dffesr/LUT4c_frame_config_dffesr.v:118.7-118.20"
+          },
+          "port_directions": {
+            "A": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 34 ],
+            "Y": [ 35 ]
+          }
+        },
+        "$not$/home/leo/Repositories/greyhound-ihp-librelane/ip/fabric/../tile_library/tiles/LUT4AB/../../primitives/LUT4c_frame_config_dffesr/LUT4c_frame_config_dffesr.v:120$2": {
+          "hide_name": 1,
+          "type": "$not",
+          "parameters": {
+            "A_SIGNED": 0,
+            "A_WIDTH": 1,
+            "Y_WIDTH": 1
+          },
+          "attributes": {
+            "src": "/home/leo/Repositories/greyhound-ihp-librelane/ip/fabric/../tile_library/tiles/LUT4AB/../../primitives/LUT4c_frame_config_dffesr/LUT4c_frame_config_dffesr.v:120.7-120.20"
+          },
+          "port_directions": {
+            "A": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 3 ],
+            "Y": [ 36 ]
+          }
+        },
+        "$not$/home/leo/Repositories/greyhound-ihp-librelane/ip/fabric/../tile_library/tiles/LUT4AB/../../primitives/LUT4c_frame_config_dffesr/LUT4c_frame_config_dffesr.v:122$3": {
+          "hide_name": 1,
+          "type": "$not",
+          "parameters": {
+            "A_SIGNED": 0,
+            "A_WIDTH": 1,
+            "Y_WIDTH": 1
+          },
+          "attributes": {
+            "src": "/home/leo/Repositories/greyhound-ihp-librelane/ip/fabric/../tile_library/tiles/LUT4AB/../../primitives/LUT4c_frame_config_dffesr/LUT4c_frame_config_dffesr.v:122.7-122.20"
+          },
+          "port_directions": {
+            "A": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 4 ],
+            "Y": [ 37 ]
+          }
+        },
+        "$not$/home/leo/Repositories/greyhound-ihp-librelane/ip/fabric/../tile_library/tiles/LUT4AB/../../primitives/LUT4c_frame_config_dffesr/LUT4c_frame_config_dffesr.v:124$4": {
+          "hide_name": 1,
+          "type": "$not",
+          "parameters": {
+            "A_SIGNED": 0,
+            "A_WIDTH": 1,
+            "Y_WIDTH": 1
+          },
+          "attributes": {
+            "src": "/home/leo/Repositories/greyhound-ihp-librelane/ip/fabric/../tile_library/tiles/LUT4AB/../../primitives/LUT4c_frame_config_dffesr/LUT4c_frame_config_dffesr.v:124.7-124.20"
+          },
+          "port_directions": {
+            "A": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 5 ],
+            "Y": [ 38 ]
+          }
+        },
+        "$or$/home/leo/Repositories/greyhound-ihp-librelane/ip/fabric/../tile_library/tiles/LUT4AB/../../primitives/LUT4c_frame_config_dffesr/LUT4c_frame_config_dffesr.v:136$7": {
+          "hide_name": 1,
+          "type": "$or",
+          "parameters": {
+            "A_SIGNED": 0,
+            "A_WIDTH": 1,
+            "B_SIGNED": 0,
+            "B_WIDTH": 1,
+            "Y_WIDTH": 1
+          },
+          "attributes": {
+            "src": "/home/leo/Repositories/greyhound-ihp-librelane/ip/fabric/../tile_library/tiles/LUT4AB/../../primitives/LUT4c_frame_config_dffesr/LUT4c_frame_config_dffesr.v:136.14-136.39"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 31 ],
+            "B": [ 32 ],
+            "Y": [ 39 ]
+          }
+        },
+        "$or$/home/leo/Repositories/greyhound-ihp-librelane/ip/fabric/../tile_library/tiles/LUT4AB/../../primitives/LUT4c_frame_config_dffesr/LUT4c_frame_config_dffesr.v:136$9": {
+          "hide_name": 1,
+          "type": "$or",
+          "parameters": {
+            "A_SIGNED": 0,
+            "A_WIDTH": 1,
+            "B_SIGNED": 0,
+            "B_WIDTH": 1,
+            "Y_WIDTH": 1
+          },
+          "attributes": {
+            "src": "/home/leo/Repositories/greyhound-ihp-librelane/ip/fabric/../tile_library/tiles/LUT4AB/../../primitives/LUT4c_frame_config_dffesr/LUT4c_frame_config_dffesr.v:136.14-136.55"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 39 ],
+            "B": [ 33 ],
+            "Y": [ 8 ]
+          }
+        },
+        "$procdff$16": {
+          "hide_name": 1,
+          "type": "$dff",
+          "parameters": {
+            "CLK_POLARITY": 1,
+            "WIDTH": 1
+          },
+          "attributes": {
+            "src": "/home/leo/Repositories/greyhound-ihp-librelane/ip/fabric/../tile_library/tiles/LUT4AB/../../primitives/LUT4c_frame_config_dffesr/LUT4c_frame_config_dffesr.v:138.2-145.5"
+          },
+          "port_directions": {
+            "CLK": "input",
+            "D": "input",
+            "Q": "output"
+          },
+          "connections": {
+            "CLK": [ 11 ],
+            "D": [ 40 ],
+            "Q": [ 41 ]
+          }
+        },
+        "$procmux$12": {
+          "hide_name": 1,
+          "type": "$mux",
+          "parameters": {
+            "WIDTH": 1
+          },
+          "attributes": {
+            "full_case": 1,
+            "src": "/home/leo/Repositories/greyhound-ihp-librelane/ip/fabric/../tile_library/tiles/LUT4AB/../../primitives/LUT4c_frame_config_dffesr/LUT4c_frame_config_dffesr.v:140.8-140.10|/home/leo/Repositories/greyhound-ihp-librelane/ip/fabric/../tile_library/tiles/LUT4AB/../../primitives/LUT4c_frame_config_dffesr/LUT4c_frame_config_dffesr.v:140.4-143.25"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "S": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 42 ],
+            "B": [ 30 ],
+            "S": [ 9 ],
+            "Y": [ 43 ]
+          }
+        },
+        "$procmux$14": {
+          "hide_name": 1,
+          "type": "$mux",
+          "parameters": {
+            "WIDTH": 1
+          },
+          "attributes": {
+            "src": "/home/leo/Repositories/greyhound-ihp-librelane/ip/fabric/../tile_library/tiles/LUT4AB/../../primitives/LUT4c_frame_config_dffesr/LUT4c_frame_config_dffesr.v:139.7-139.9|/home/leo/Repositories/greyhound-ihp-librelane/ip/fabric/../tile_library/tiles/LUT4AB/../../primitives/LUT4c_frame_config_dffesr/LUT4c_frame_config_dffesr.v:139.3-144.6"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "S": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 41 ],
+            "B": [ 43 ],
+            "S": [ 10 ],
+            "Y": [ 40 ]
+          }
+        },
+        "cus_mux21_I0mux": {
+          "hide_name": 0,
+          "type": "cus_mux21",
+          "parameters": {
+          },
+          "attributes": {
+            "module_not_derived": 1,
+            "src": "/home/leo/Repositories/greyhound-ihp-librelane/ip/fabric/../tile_library/tiles/LUT4AB/../../primitives/LUT4c_frame_config_dffesr/LUT4c_frame_config_dffesr.v:65.12-70.3"
+          },
+          "connections": {
+            "A0": [ 2 ],
+            "A1": [ 7 ],
+            "S": [ 29 ],
+            "X": [ 34 ]
+          }
+        },
+        "cus_mux21_O": {
+          "hide_name": 0,
+          "type": "cus_mux21",
+          "parameters": {
+          },
+          "attributes": {
+            "module_not_derived": 1,
+            "src": "/home/leo/Repositories/greyhound-ihp-librelane/ip/fabric/../tile_library/tiles/LUT4AB/../../primitives/LUT4c_frame_config_dffesr/LUT4c_frame_config_dffesr.v:129.12-134.3"
+          },
+          "connections": {
+            "A0": [ 42 ],
+            "A1": [ 41 ],
+            "S": [ 28 ],
+            "X": [ 6 ]
+          }
+        },
+        "inst_cus_mux161_buf": {
+          "hide_name": 0,
+          "type": "cus_mux161_buf",
+          "parameters": {
+          },
+          "attributes": {
+            "module_not_derived": 1,
+            "src": "/home/leo/Repositories/greyhound-ihp-librelane/ip/fabric/../tile_library/tiles/LUT4AB/../../primitives/LUT4c_frame_config_dffesr/LUT4c_frame_config_dffesr.v:100.17-126.3"
+          },
+          "connections": {
+            "A0": [ 12 ],
+            "A1": [ 13 ],
+            "A10": [ 22 ],
+            "A11": [ 23 ],
+            "A12": [ 24 ],
+            "A13": [ 25 ],
+            "A14": [ 26 ],
+            "A15": [ 27 ],
+            "A2": [ 14 ],
+            "A3": [ 15 ],
+            "A4": [ 16 ],
+            "A5": [ 17 ],
+            "A6": [ 18 ],
+            "A7": [ 19 ],
+            "A8": [ 20 ],
+            "A9": [ 21 ],
+            "S0": [ 34 ],
+            "S0N": [ 35 ],
+            "S1": [ 3 ],
+            "S1N": [ 36 ],
+            "S2": [ 4 ],
+            "S2N": [ 37 ],
+            "S3": [ 5 ],
+            "S3N": [ 38 ],
+            "X": [ 42 ]
+          }
+        }
+      },
+      "netnames": {
+        "$0\\LUT_flop[0:0]": {
+          "hide_name": 1,
+          "bits": [ 40 ],
+          "attributes": {
+            "src": "/home/leo/Repositories/greyhound-ihp-librelane/ip/fabric/../tile_library/tiles/LUT4AB/../../primitives/LUT4c_frame_config_dffesr/LUT4c_frame_config_dffesr.v:138.2-145.5"
+          }
+        },
+        "$and$/home/leo/Repositories/greyhound-ihp-librelane/ip/fabric/../tile_library/tiles/LUT4AB/../../primitives/LUT4c_frame_config_dffesr/LUT4c_frame_config_dffesr.v:136$5_Y": {
+          "hide_name": 1,
+          "bits": [ 31 ],
+          "attributes": {
+            "src": "/home/leo/Repositories/greyhound-ihp-librelane/ip/fabric/../tile_library/tiles/LUT4AB/../../primitives/LUT4c_frame_config_dffesr/LUT4c_frame_config_dffesr.v:136.15-136.24"
+          }
+        },
+        "$and$/home/leo/Repositories/greyhound-ihp-librelane/ip/fabric/../tile_library/tiles/LUT4AB/../../primitives/LUT4c_frame_config_dffesr/LUT4c_frame_config_dffesr.v:136$6_Y": {
+          "hide_name": 1,
+          "bits": [ 32 ],
+          "attributes": {
+            "src": "/home/leo/Repositories/greyhound-ihp-librelane/ip/fabric/../tile_library/tiles/LUT4AB/../../primitives/LUT4c_frame_config_dffesr/LUT4c_frame_config_dffesr.v:136.29-136.38"
+          }
+        },
+        "$and$/home/leo/Repositories/greyhound-ihp-librelane/ip/fabric/../tile_library/tiles/LUT4AB/../../primitives/LUT4c_frame_config_dffesr/LUT4c_frame_config_dffesr.v:136$8_Y": {
+          "hide_name": 1,
+          "bits": [ 33 ],
+          "attributes": {
+            "src": "/home/leo/Repositories/greyhound-ihp-librelane/ip/fabric/../tile_library/tiles/LUT4AB/../../primitives/LUT4c_frame_config_dffesr/LUT4c_frame_config_dffesr.v:136.43-136.54"
+          }
+        },
+        "$not$/home/leo/Repositories/greyhound-ihp-librelane/ip/fabric/../tile_library/tiles/LUT4AB/../../primitives/LUT4c_frame_config_dffesr/LUT4c_frame_config_dffesr.v:118$1_Y": {
+          "hide_name": 1,
+          "bits": [ 35 ],
+          "attributes": {
+            "src": "/home/leo/Repositories/greyhound-ihp-librelane/ip/fabric/../tile_library/tiles/LUT4AB/../../primitives/LUT4c_frame_config_dffesr/LUT4c_frame_config_dffesr.v:118.7-118.20"
+          }
+        },
+        "$not$/home/leo/Repositories/greyhound-ihp-librelane/ip/fabric/../tile_library/tiles/LUT4AB/../../primitives/LUT4c_frame_config_dffesr/LUT4c_frame_config_dffesr.v:120$2_Y": {
+          "hide_name": 1,
+          "bits": [ 36 ],
+          "attributes": {
+            "src": "/home/leo/Repositories/greyhound-ihp-librelane/ip/fabric/../tile_library/tiles/LUT4AB/../../primitives/LUT4c_frame_config_dffesr/LUT4c_frame_config_dffesr.v:120.7-120.20"
+          }
+        },
+        "$not$/home/leo/Repositories/greyhound-ihp-librelane/ip/fabric/../tile_library/tiles/LUT4AB/../../primitives/LUT4c_frame_config_dffesr/LUT4c_frame_config_dffesr.v:122$3_Y": {
+          "hide_name": 1,
+          "bits": [ 37 ],
+          "attributes": {
+            "src": "/home/leo/Repositories/greyhound-ihp-librelane/ip/fabric/../tile_library/tiles/LUT4AB/../../primitives/LUT4c_frame_config_dffesr/LUT4c_frame_config_dffesr.v:122.7-122.20"
+          }
+        },
+        "$not$/home/leo/Repositories/greyhound-ihp-librelane/ip/fabric/../tile_library/tiles/LUT4AB/../../primitives/LUT4c_frame_config_dffesr/LUT4c_frame_config_dffesr.v:124$4_Y": {
+          "hide_name": 1,
+          "bits": [ 38 ],
+          "attributes": {
+            "src": "/home/leo/Repositories/greyhound-ihp-librelane/ip/fabric/../tile_library/tiles/LUT4AB/../../primitives/LUT4c_frame_config_dffesr/LUT4c_frame_config_dffesr.v:124.7-124.20"
+          }
+        },
+        "$or$/home/leo/Repositories/greyhound-ihp-librelane/ip/fabric/../tile_library/tiles/LUT4AB/../../primitives/LUT4c_frame_config_dffesr/LUT4c_frame_config_dffesr.v:136$7_Y": {
+          "hide_name": 1,
+          "bits": [ 39 ],
+          "attributes": {
+            "src": "/home/leo/Repositories/greyhound-ihp-librelane/ip/fabric/../tile_library/tiles/LUT4AB/../../primitives/LUT4c_frame_config_dffesr/LUT4c_frame_config_dffesr.v:136.14-136.39"
+          }
+        },
+        "$or$/home/leo/Repositories/greyhound-ihp-librelane/ip/fabric/../tile_library/tiles/LUT4AB/../../primitives/LUT4c_frame_config_dffesr/LUT4c_frame_config_dffesr.v:136$9_Y": {
+          "hide_name": 1,
+          "bits": [ 8 ],
+          "attributes": {
+            "src": "/home/leo/Repositories/greyhound-ihp-librelane/ip/fabric/../tile_library/tiles/LUT4AB/../../primitives/LUT4c_frame_config_dffesr/LUT4c_frame_config_dffesr.v:136.14-136.55"
+          }
+        },
+        "$procmux$12_Y": {
+          "hide_name": 1,
+          "bits": [ 43 ],
+          "attributes": {
+          }
+        },
+        "$procmux$13_CMP": {
+          "hide_name": 1,
+          "bits": [ 9 ],
+          "attributes": {
+          }
+        },
+        "$procmux$14_Y": {
+          "hide_name": 1,
+          "bits": [ 40 ],
+          "attributes": {
+          }
+        },
+        "$procmux$15_CMP": {
+          "hide_name": 1,
+          "bits": [ 10 ],
+          "attributes": {
+          }
+        },
+        "Ci": {
+          "hide_name": 0,
+          "bits": [ 7 ],
+          "attributes": {
+            "src": "/home/leo/Repositories/greyhound-ihp-librelane/ip/fabric/../tile_library/tiles/LUT4AB/../../primitives/LUT4c_frame_config_dffesr/LUT4c_frame_config_dffesr.v:40.18-40.20"
+          }
+        },
+        "Co": {
+          "hide_name": 0,
+          "bits": [ 8 ],
+          "attributes": {
+            "src": "/home/leo/Repositories/greyhound-ihp-librelane/ip/fabric/../tile_library/tiles/LUT4AB/../../primitives/LUT4c_frame_config_dffesr/LUT4c_frame_config_dffesr.v:41.18-41.20"
+          }
+        },
+        "ConfigBits": {
+          "hide_name": 0,
+          "bits": [ 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30 ],
+          "attributes": {
+            "FABulous": 1,
+            "GLOBAL": 1,
+            "src": "/home/leo/Repositories/greyhound-ihp-librelane/ip/fabric/../tile_library/tiles/LUT4AB/../../primitives/LUT4c_frame_config_dffesr/LUT4c_frame_config_dffesr.v:45.53-45.63"
+          }
+        },
+        "EN": {
+          "hide_name": 0,
+          "bits": [ 10 ],
+          "attributes": {
+            "src": "/home/leo/Repositories/greyhound-ihp-librelane/ip/fabric/../tile_library/tiles/LUT4AB/../../primitives/LUT4c_frame_config_dffesr/LUT4c_frame_config_dffesr.v:43.18-43.20"
+          }
+        },
+        "I": {
+          "hide_name": 0,
+          "bits": [ 2, 3, 4, 5 ],
+          "attributes": {
+            "src": "/home/leo/Repositories/greyhound-ihp-librelane/ip/fabric/../tile_library/tiles/LUT4AB/../../primitives/LUT4c_frame_config_dffesr/LUT4c_frame_config_dffesr.v:38.18-38.19"
+          }
+        },
+        "I0mux": {
+          "hide_name": 0,
+          "bits": [ 34 ],
+          "attributes": {
+            "src": "/home/leo/Repositories/greyhound-ihp-librelane/ip/fabric/../tile_library/tiles/LUT4AB/../../primitives/LUT4c_frame_config_dffesr/LUT4c_frame_config_dffesr.v:54.7-54.12"
+          }
+        },
+        "LUT_flop": {
+          "hide_name": 0,
+          "bits": [ 41 ],
+          "attributes": {
+            "src": "/home/leo/Repositories/greyhound-ihp-librelane/ip/fabric/../tile_library/tiles/LUT4AB/../../primitives/LUT4c_frame_config_dffesr/LUT4c_frame_config_dffesr.v:53.6-53.14"
+          }
+        },
+        "LUT_index": {
+          "hide_name": 0,
+          "bits": [ 34, 3, 4, 5 ],
+          "attributes": {
+            "src": "/home/leo/Repositories/greyhound-ihp-librelane/ip/fabric/../tile_library/tiles/LUT4AB/../../primitives/LUT4c_frame_config_dffesr/LUT4c_frame_config_dffesr.v:51.24-51.33"
+          }
+        },
+        "LUT_out": {
+          "hide_name": 0,
+          "bits": [ 42 ],
+          "attributes": {
+            "src": "/home/leo/Repositories/greyhound-ihp-librelane/ip/fabric/../tile_library/tiles/LUT4AB/../../primitives/LUT4c_frame_config_dffesr/LUT4c_frame_config_dffesr.v:52.7-52.14"
+          }
+        },
+        "LUT_values": {
+          "hide_name": 0,
+          "bits": [ 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27 ],
+          "attributes": {
+            "src": "/home/leo/Repositories/greyhound-ihp-librelane/ip/fabric/../tile_library/tiles/LUT4AB/../../primitives/LUT4c_frame_config_dffesr/LUT4c_frame_config_dffesr.v:50.27-50.37"
+          }
+        },
+        "O": {
+          "hide_name": 0,
+          "bits": [ 6 ],
+          "attributes": {
+            "src": "/home/leo/Repositories/greyhound-ihp-librelane/ip/fabric/../tile_library/tiles/LUT4AB/../../primitives/LUT4c_frame_config_dffesr/LUT4c_frame_config_dffesr.v:39.18-39.19"
+          }
+        },
+        "SR": {
+          "hide_name": 0,
+          "bits": [ 9 ],
+          "attributes": {
+            "src": "/home/leo/Repositories/greyhound-ihp-librelane/ip/fabric/../tile_library/tiles/LUT4AB/../../primitives/LUT4c_frame_config_dffesr/LUT4c_frame_config_dffesr.v:42.18-42.20"
+          }
+        },
+        "UserCLK": {
+          "hide_name": 0,
+          "bits": [ 11 ],
+          "attributes": {
+            "EXTERNAL": 1,
+            "FABulous": 1,
+            "SHARED_PORT": 1,
+            "src": "/home/leo/Repositories/greyhound-ihp-librelane/ip/fabric/../tile_library/tiles/LUT4AB/../../primitives/LUT4c_frame_config_dffesr/LUT4c_frame_config_dffesr.v:44.49-44.56"
+          }
+        },
+        "c_I0mux": {
+          "hide_name": 0,
+          "bits": [ 29 ],
+          "attributes": {
+            "src": "/home/leo/Repositories/greyhound-ihp-librelane/ip/fabric/../tile_library/tiles/LUT4AB/../../primitives/LUT4c_frame_config_dffesr/LUT4c_frame_config_dffesr.v:55.18-55.25"
+          }
+        },
+        "c_out_mux": {
+          "hide_name": 0,
+          "bits": [ 28 ],
+          "attributes": {
+            "src": "/home/leo/Repositories/greyhound-ihp-librelane/ip/fabric/../tile_library/tiles/LUT4AB/../../primitives/LUT4c_frame_config_dffesr/LUT4c_frame_config_dffesr.v:55.7-55.16"
+          }
+        },
+        "c_reset_value": {
+          "hide_name": 0,
+          "bits": [ 30 ],
+          "attributes": {
+            "src": "/home/leo/Repositories/greyhound-ihp-librelane/ip/fabric/../tile_library/tiles/LUT4AB/../../primitives/LUT4c_frame_config_dffesr/LUT4c_frame_config_dffesr.v:55.27-55.40"
+          }
+        }
+      }
+    }
+  }
+}

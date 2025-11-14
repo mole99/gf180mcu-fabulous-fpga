@@ -1,0 +1,302 @@
+{
+  "creator": "Yosys 0.54 (git sha1 db72ec3bde296a9512b2d1e6fabf81cfb07c2c1b, clang++ 19.1.7 -fPIC -O3)",
+  "modules": {
+    "CUSTOM_INSTRUCTION": {
+      "attributes": {
+        "dynports": 1,
+        "cells_not_processed": 1,
+        "src": "/home/leo/Repositories/greyhound-ihp-librelane/ip/fabric/../tile_library/tiles/S_XIF/S_XIF_middle/../../../primitives/CUSTOM_INSTRUCTION/CUSTOM_INSTRUCTION.v:16.1-64.10"
+      },
+      "parameter_default_values": {
+        "NoConfigBits": 0
+      },
+      "ports": {
+        "ISSUE_READY": {
+          "direction": "input",
+          "bits": [ 2 ]
+        },
+        "ISSUE_ACCEPT": {
+          "direction": "input",
+          "bits": [ 3 ]
+        },
+        "ISSUE_VALID": {
+          "direction": "output",
+          "bits": [ 4 ]
+        },
+        "ISSUE_INSTR": {
+          "direction": "output",
+          "bits": [ 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36 ]
+        },
+        "ISSUE_OPA": {
+          "direction": "output",
+          "bits": [ 37, 38, 39, 40, 41, 42, 43, 44, 45, 46, 47, 48, 49, 50, 51, 52, 53, 54, 55, 56, 57, 58, 59, 60, 61, 62, 63, 64, 65, 66, 67, 68 ]
+        },
+        "ISSUE_OPB": {
+          "direction": "output",
+          "bits": [ 69, 70, 71, 72, 73, 74, 75, 76, 77, 78, 79, 80, 81, 82, 83, 84, 85, 86, 87, 88, 89, 90, 91, 92, 93, 94, 95, 96, 97, 98, 99, 100 ]
+        },
+        "ISSUE_ID": {
+          "direction": "output",
+          "bits": [ 101, 102, 103, 104 ]
+        },
+        "RESULT_VALID": {
+          "direction": "input",
+          "bits": [ 105 ]
+        },
+        "RESULT_ID": {
+          "direction": "input",
+          "bits": [ 106, 107, 108, 109 ]
+        },
+        "RESULT_RD": {
+          "direction": "input",
+          "bits": [ 110, 111, 112, 113, 114 ]
+        },
+        "RESULT": {
+          "direction": "input",
+          "bits": [ 115, 116, 117, 118, 119, 120, 121, 122, 123, 124, 125, 126, 127, 128, 129, 130, 131, 132, 133, 134, 135, 136, 137, 138, 139, 140, 141, 142, 143, 144, 145, 146 ]
+        },
+        "ISSUE_READY_top": {
+          "direction": "output",
+          "bits": [ 2 ]
+        },
+        "ISSUE_ACCEPT_top": {
+          "direction": "output",
+          "bits": [ 3 ]
+        },
+        "ISSUE_VALID_top": {
+          "direction": "input",
+          "bits": [ 4 ]
+        },
+        "ISSUE_INSTR_top": {
+          "direction": "input",
+          "bits": [ 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36 ]
+        },
+        "ISSUE_OPA_top": {
+          "direction": "input",
+          "bits": [ 37, 38, 39, 40, 41, 42, 43, 44, 45, 46, 47, 48, 49, 50, 51, 52, 53, 54, 55, 56, 57, 58, 59, 60, 61, 62, 63, 64, 65, 66, 67, 68 ]
+        },
+        "ISSUE_OPB_top": {
+          "direction": "input",
+          "bits": [ 69, 70, 71, 72, 73, 74, 75, 76, 77, 78, 79, 80, 81, 82, 83, 84, 85, 86, 87, 88, 89, 90, 91, 92, 93, 94, 95, 96, 97, 98, 99, 100 ]
+        },
+        "ISSUE_ID_top": {
+          "direction": "input",
+          "bits": [ 101, 102, 103, 104 ]
+        },
+        "RESULT_VALID_top": {
+          "direction": "output",
+          "bits": [ 105 ]
+        },
+        "RESULT_ID_top": {
+          "direction": "output",
+          "bits": [ 106, 107, 108, 109 ]
+        },
+        "RESULT_RD_top": {
+          "direction": "output",
+          "bits": [ 110, 111, 112, 113, 114 ]
+        },
+        "RESULT_top": {
+          "direction": "output",
+          "bits": [ 115, 116, 117, 118, 119, 120, 121, 122, 123, 124, 125, 126, 127, 128, 129, 130, 131, 132, 133, 134, 135, 136, 137, 138, 139, 140, 141, 142, 143, 144, 145, 146 ]
+        },
+        "ConfigBits": {
+          "direction": "input",
+          "offset": -1,
+          "upto": 1,
+          "bits": [ 147, 148 ]
+        }
+      },
+      "cells": {
+      },
+      "netnames": {
+        "ConfigBits": {
+          "hide_name": 0,
+          "bits": [ 147, 148 ],
+          "offset": -1,
+          "upto": 1,
+          "attributes": {
+            "FABulous": 1,
+            "GLOBAL": 1,
+            "src": "/home/leo/Repositories/greyhound-ihp-librelane/ip/fabric/../tile_library/tiles/S_XIF/S_XIF_middle/../../../primitives/CUSTOM_INSTRUCTION/CUSTOM_INSTRUCTION.v:47.54-47.64"
+          }
+        },
+        "ISSUE_ACCEPT": {
+          "hide_name": 0,
+          "bits": [ 3 ],
+          "attributes": {
+            "src": "/home/leo/Repositories/greyhound-ihp-librelane/ip/fabric/../tile_library/tiles/S_XIF/S_XIF_middle/../../../primitives/CUSTOM_INSTRUCTION/CUSTOM_INSTRUCTION.v:21.19-21.31"
+          }
+        },
+        "ISSUE_ACCEPT_top": {
+          "hide_name": 0,
+          "bits": [ 3 ],
+          "attributes": {
+            "EXTERNAL": 1,
+            "FABulous": 1,
+            "src": "/home/leo/Repositories/greyhound-ihp-librelane/ip/fabric/../tile_library/tiles/S_XIF/S_XIF_middle/../../../primitives/CUSTOM_INSTRUCTION/CUSTOM_INSTRUCTION.v:35.44-35.60"
+          }
+        },
+        "ISSUE_ID": {
+          "hide_name": 0,
+          "bits": [ 101, 102, 103, 104 ],
+          "attributes": {
+            "src": "/home/leo/Repositories/greyhound-ihp-librelane/ip/fabric/../tile_library/tiles/S_XIF/S_XIF_middle/../../../primitives/CUSTOM_INSTRUCTION/CUSTOM_INSTRUCTION.v:26.19-26.27"
+          }
+        },
+        "ISSUE_ID_top": {
+          "hide_name": 0,
+          "bits": [ 101, 102, 103, 104 ],
+          "attributes": {
+            "EXTERNAL": 1,
+            "FABulous": 1,
+            "src": "/home/leo/Repositories/greyhound-ihp-librelane/ip/fabric/../tile_library/tiles/S_XIF/S_XIF_middle/../../../primitives/CUSTOM_INSTRUCTION/CUSTOM_INSTRUCTION.v:40.44-40.56"
+          }
+        },
+        "ISSUE_INSTR": {
+          "hide_name": 0,
+          "bits": [ 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36 ],
+          "attributes": {
+            "src": "/home/leo/Repositories/greyhound-ihp-librelane/ip/fabric/../tile_library/tiles/S_XIF/S_XIF_middle/../../../primitives/CUSTOM_INSTRUCTION/CUSTOM_INSTRUCTION.v:23.19-23.30"
+          }
+        },
+        "ISSUE_INSTR_top": {
+          "hide_name": 0,
+          "bits": [ 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36 ],
+          "attributes": {
+            "EXTERNAL": 1,
+            "FABulous": 1,
+            "src": "/home/leo/Repositories/greyhound-ihp-librelane/ip/fabric/../tile_library/tiles/S_XIF/S_XIF_middle/../../../primitives/CUSTOM_INSTRUCTION/CUSTOM_INSTRUCTION.v:37.44-37.59"
+          }
+        },
+        "ISSUE_OPA": {
+          "hide_name": 0,
+          "bits": [ 37, 38, 39, 40, 41, 42, 43, 44, 45, 46, 47, 48, 49, 50, 51, 52, 53, 54, 55, 56, 57, 58, 59, 60, 61, 62, 63, 64, 65, 66, 67, 68 ],
+          "attributes": {
+            "src": "/home/leo/Repositories/greyhound-ihp-librelane/ip/fabric/../tile_library/tiles/S_XIF/S_XIF_middle/../../../primitives/CUSTOM_INSTRUCTION/CUSTOM_INSTRUCTION.v:24.19-24.28"
+          }
+        },
+        "ISSUE_OPA_top": {
+          "hide_name": 0,
+          "bits": [ 37, 38, 39, 40, 41, 42, 43, 44, 45, 46, 47, 48, 49, 50, 51, 52, 53, 54, 55, 56, 57, 58, 59, 60, 61, 62, 63, 64, 65, 66, 67, 68 ],
+          "attributes": {
+            "EXTERNAL": 1,
+            "FABulous": 1,
+            "src": "/home/leo/Repositories/greyhound-ihp-librelane/ip/fabric/../tile_library/tiles/S_XIF/S_XIF_middle/../../../primitives/CUSTOM_INSTRUCTION/CUSTOM_INSTRUCTION.v:38.44-38.57"
+          }
+        },
+        "ISSUE_OPB": {
+          "hide_name": 0,
+          "bits": [ 69, 70, 71, 72, 73, 74, 75, 76, 77, 78, 79, 80, 81, 82, 83, 84, 85, 86, 87, 88, 89, 90, 91, 92, 93, 94, 95, 96, 97, 98, 99, 100 ],
+          "attributes": {
+            "src": "/home/leo/Repositories/greyhound-ihp-librelane/ip/fabric/../tile_library/tiles/S_XIF/S_XIF_middle/../../../primitives/CUSTOM_INSTRUCTION/CUSTOM_INSTRUCTION.v:25.19-25.28"
+          }
+        },
+        "ISSUE_OPB_top": {
+          "hide_name": 0,
+          "bits": [ 69, 70, 71, 72, 73, 74, 75, 76, 77, 78, 79, 80, 81, 82, 83, 84, 85, 86, 87, 88, 89, 90, 91, 92, 93, 94, 95, 96, 97, 98, 99, 100 ],
+          "attributes": {
+            "EXTERNAL": 1,
+            "FABulous": 1,
+            "src": "/home/leo/Repositories/greyhound-ihp-librelane/ip/fabric/../tile_library/tiles/S_XIF/S_XIF_middle/../../../primitives/CUSTOM_INSTRUCTION/CUSTOM_INSTRUCTION.v:39.44-39.57"
+          }
+        },
+        "ISSUE_READY": {
+          "hide_name": 0,
+          "bits": [ 2 ],
+          "attributes": {
+            "src": "/home/leo/Repositories/greyhound-ihp-librelane/ip/fabric/../tile_library/tiles/S_XIF/S_XIF_middle/../../../primitives/CUSTOM_INSTRUCTION/CUSTOM_INSTRUCTION.v:20.19-20.30"
+          }
+        },
+        "ISSUE_READY_top": {
+          "hide_name": 0,
+          "bits": [ 2 ],
+          "attributes": {
+            "EXTERNAL": 1,
+            "FABulous": 1,
+            "src": "/home/leo/Repositories/greyhound-ihp-librelane/ip/fabric/../tile_library/tiles/S_XIF/S_XIF_middle/../../../primitives/CUSTOM_INSTRUCTION/CUSTOM_INSTRUCTION.v:34.44-34.59"
+          }
+        },
+        "ISSUE_VALID": {
+          "hide_name": 0,
+          "bits": [ 4 ],
+          "attributes": {
+            "src": "/home/leo/Repositories/greyhound-ihp-librelane/ip/fabric/../tile_library/tiles/S_XIF/S_XIF_middle/../../../primitives/CUSTOM_INSTRUCTION/CUSTOM_INSTRUCTION.v:22.19-22.30"
+          }
+        },
+        "ISSUE_VALID_top": {
+          "hide_name": 0,
+          "bits": [ 4 ],
+          "attributes": {
+            "EXTERNAL": 1,
+            "FABulous": 1,
+            "src": "/home/leo/Repositories/greyhound-ihp-librelane/ip/fabric/../tile_library/tiles/S_XIF/S_XIF_middle/../../../primitives/CUSTOM_INSTRUCTION/CUSTOM_INSTRUCTION.v:36.44-36.59"
+          }
+        },
+        "RESULT": {
+          "hide_name": 0,
+          "bits": [ 115, 116, 117, 118, 119, 120, 121, 122, 123, 124, 125, 126, 127, 128, 129, 130, 131, 132, 133, 134, 135, 136, 137, 138, 139, 140, 141, 142, 143, 144, 145, 146 ],
+          "attributes": {
+            "src": "/home/leo/Repositories/greyhound-ihp-librelane/ip/fabric/../tile_library/tiles/S_XIF/S_XIF_middle/../../../primitives/CUSTOM_INSTRUCTION/CUSTOM_INSTRUCTION.v:31.19-31.25"
+          }
+        },
+        "RESULT_ID": {
+          "hide_name": 0,
+          "bits": [ 106, 107, 108, 109 ],
+          "attributes": {
+            "src": "/home/leo/Repositories/greyhound-ihp-librelane/ip/fabric/../tile_library/tiles/S_XIF/S_XIF_middle/../../../primitives/CUSTOM_INSTRUCTION/CUSTOM_INSTRUCTION.v:29.19-29.28"
+          }
+        },
+        "RESULT_ID_top": {
+          "hide_name": 0,
+          "bits": [ 106, 107, 108, 109 ],
+          "attributes": {
+            "EXTERNAL": 1,
+            "FABulous": 1,
+            "src": "/home/leo/Repositories/greyhound-ihp-librelane/ip/fabric/../tile_library/tiles/S_XIF/S_XIF_middle/../../../primitives/CUSTOM_INSTRUCTION/CUSTOM_INSTRUCTION.v:43.44-43.57"
+          }
+        },
+        "RESULT_RD": {
+          "hide_name": 0,
+          "bits": [ 110, 111, 112, 113, 114 ],
+          "attributes": {
+            "src": "/home/leo/Repositories/greyhound-ihp-librelane/ip/fabric/../tile_library/tiles/S_XIF/S_XIF_middle/../../../primitives/CUSTOM_INSTRUCTION/CUSTOM_INSTRUCTION.v:30.19-30.28"
+          }
+        },
+        "RESULT_RD_top": {
+          "hide_name": 0,
+          "bits": [ 110, 111, 112, 113, 114 ],
+          "attributes": {
+            "EXTERNAL": 1,
+            "FABulous": 1,
+            "src": "/home/leo/Repositories/greyhound-ihp-librelane/ip/fabric/../tile_library/tiles/S_XIF/S_XIF_middle/../../../primitives/CUSTOM_INSTRUCTION/CUSTOM_INSTRUCTION.v:44.44-44.57"
+          }
+        },
+        "RESULT_VALID": {
+          "hide_name": 0,
+          "bits": [ 105 ],
+          "attributes": {
+            "src": "/home/leo/Repositories/greyhound-ihp-librelane/ip/fabric/../tile_library/tiles/S_XIF/S_XIF_middle/../../../primitives/CUSTOM_INSTRUCTION/CUSTOM_INSTRUCTION.v:28.19-28.31"
+          }
+        },
+        "RESULT_VALID_top": {
+          "hide_name": 0,
+          "bits": [ 105 ],
+          "attributes": {
+            "EXTERNAL": 1,
+            "FABulous": 1,
+            "src": "/home/leo/Repositories/greyhound-ihp-librelane/ip/fabric/../tile_library/tiles/S_XIF/S_XIF_middle/../../../primitives/CUSTOM_INSTRUCTION/CUSTOM_INSTRUCTION.v:42.44-42.60"
+          }
+        },
+        "RESULT_top": {
+          "hide_name": 0,
+          "bits": [ 115, 116, 117, 118, 119, 120, 121, 122, 123, 124, 125, 126, 127, 128, 129, 130, 131, 132, 133, 134, 135, 136, 137, 138, 139, 140, 141, 142, 143, 144, 145, 146 ],
+          "attributes": {
+            "EXTERNAL": 1,
+            "FABulous": 1,
+            "src": "/home/leo/Repositories/greyhound-ihp-librelane/ip/fabric/../tile_library/tiles/S_XIF/S_XIF_middle/../../../primitives/CUSTOM_INSTRUCTION/CUSTOM_INSTRUCTION.v:45.44-45.54"
+          }
+        }
+      }
+    }
+  }
+}
