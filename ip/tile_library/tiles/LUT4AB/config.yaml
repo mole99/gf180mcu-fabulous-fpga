@@ -1,0 +1,76 @@
+meta:
+  version: 2
+  flow: FABulousTile
+  substituting_steps:
+    # Don't resize the buffers
+    OpenROAD.Resizer*: null
+    OpenROAD.RepairDesign*: null
+    
+    #+OpenROAD.GlobalRouting: Odb.InsertECOBuffers
+    #+OpenROAD.GlobalRouting: Odb.InsertECODiodes
+    +OpenROAD.GlobalPlacement: OpenROAD.AddBuffers
+
+FABULOUS_TILE_DIR: dir::. #tiles/LUT4AB
+
+# Basics
+DESIGN_NAME: LUT4AB
+VERILOG_FILES:
+  - dir::../../models_pack.v
+  - dir::../../custom.v
+
+# Disable timing driven placement
+# as it would resize the buffers
+PL_TIME_DRIVEN: false
+
+# Add buffers
+DESIGN_REPAIR_BUFFER_INPUT_PORTS: False
+DESIGN_REPAIR_BUFFER_OUTPUT_PORTS: True
+
+# "AREA 0" "AREA 1" "AREA 2" "AREA 3"
+SYNTH_STRATEGY: "AREA 2"
+
+# Clock
+CLOCK_PERIOD: 20
+CLOCK_PORT: UserCLK
+
+# Area
+FP_SIZING: absolute
+pdk::sky130A:
+    DIE_AREA: [0, 0, 205, 225]
+    PL_TARGET_DENSITY_PCT: 58
+pdk::ihp-sg13g2:
+    # Width should be multiple of 0.48 (Metal2 pitch)
+    # Height should be multiple of 0.42 (Metal3 pitch)
+    # Standard cell row height: 3.78 (9 Metal3 tracks)
+    DIE_AREA: [0, 0, 215.04, 215.46]
+    #DIE_AREA: [0, 0, 215.04, 224.7]
+    
+    PL_TARGET_DENSITY_PCT: 96
+    
+    ROUTING_OBSTRUCTIONS:
+    - [Metal2, 0, -1, 215.04, 0]
+
+pdk::gf180mcuD:
+    # Width should be multiple of
+    # Height should be multiple of
+    # Standard cell row height:
+    DIE_AREA: [0, 0, 400, 400]
+    PL_TARGET_DENSITY_PCT: 60
+
+
+
+#INSERT_ECO_BUFFERS:
+#- target: /UserCLK
+#  buffer: sg13g2_buf_4
+
+#DIODE_CELL: sg13g2_antennanp/A
+
+#INSERT_ECO_DIODES:
+#- target: /N4BEG.*
+#- target: /NN4BEG.*
+#- target: /S4BEG.*
+#- target: /SS4BEG.*
+#- target: /EE4BEG.*
+#- target: /E6BEG.*
+#- target: /WW4BEG.*
+#- target: /W6BEG.*

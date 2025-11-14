@@ -1,0 +1,25 @@
+meta:
+  version: 2
+  flow: FABulousTile
+
+FABULOUS_TILE_DIR: dir::. #tiles/S_term_DSP
+
+# Basics
+DESIGN_NAME: S_term_DSP
+VERILOG_FILES:
+  - dir::../../models_pack.v
+  - dir::../../custom.v
+
+# Clock
+CLOCK_PERIOD: 20
+CLOCK_PORT: UserCLK
+
+# Area
+FP_SIZING: absolute
+pdk::sky130A:
+    DIE_AREA: [0, 0, 205, 56.25]
+pdk::ihp-sg13g2:
+    # Width should be multiple of 0.48 (Metal2 pitch)
+    # Height should be multiple of 0.42 (Metal3 pitch)
+    DIE_AREA: [0, 0, 184.8, 53.76]
+    PL_TARGET_DENSITY_PCT: 96

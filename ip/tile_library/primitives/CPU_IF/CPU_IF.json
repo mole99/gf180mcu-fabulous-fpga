@@ -1,0 +1,86 @@
+{
+  "creator": "Yosys 0.54 (git sha1 db72ec3bde296a9512b2d1e6fabf81cfb07c2c1b, clang++ 19.1.7 -fPIC -O3)",
+  "modules": {
+    "CPU_IF": {
+      "attributes": {
+        "dynports": 1,
+        "cells_not_processed": 1,
+        "src": "/home/leo/Repositories/greyhound-ihp-librelane/ip/fabric/../tile_library/tiles/S_CPU_IF/../../primitives/CPU_IF/CPU_IF.v:16.1-33.10"
+      },
+      "parameter_default_values": {
+        "NoConfigBits": 0
+      },
+      "ports": {
+        "I": {
+          "direction": "input",
+          "bits": [ 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17 ]
+        },
+        "O": {
+          "direction": "output",
+          "bits": [ 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33 ]
+        },
+        "I_top": {
+          "direction": "output",
+          "bits": [ 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17 ]
+        },
+        "O_top": {
+          "direction": "input",
+          "bits": [ 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33 ]
+        },
+        "ConfigBits": {
+          "direction": "input",
+          "offset": -1,
+          "upto": 1,
+          "bits": [ 34, 35 ]
+        }
+      },
+      "cells": {
+      },
+      "netnames": {
+        "ConfigBits": {
+          "hide_name": 0,
+          "bits": [ 34, 35 ],
+          "offset": -1,
+          "upto": 1,
+          "attributes": {
+            "FABulous": 1,
+            "GLOBAL": 1,
+            "src": "/home/leo/Repositories/greyhound-ihp-librelane/ip/fabric/../tile_library/tiles/S_CPU_IF/../../primitives/CPU_IF/CPU_IF.v:27.54-27.64"
+          }
+        },
+        "I": {
+          "hide_name": 0,
+          "bits": [ 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17 ],
+          "attributes": {
+            "src": "/home/leo/Repositories/greyhound-ihp-librelane/ip/fabric/../tile_library/tiles/S_CPU_IF/../../primitives/CPU_IF/CPU_IF.v:20.27-20.28"
+          }
+        },
+        "I_top": {
+          "hide_name": 0,
+          "bits": [ 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17 ],
+          "attributes": {
+            "EXTERNAL": 1,
+            "FABulous": 1,
+            "src": "/home/leo/Repositories/greyhound-ihp-librelane/ip/fabric/../tile_library/tiles/S_CPU_IF/../../primitives/CPU_IF/CPU_IF.v:24.52-24.57"
+          }
+        },
+        "O": {
+          "hide_name": 0,
+          "bits": [ 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33 ],
+          "attributes": {
+            "src": "/home/leo/Repositories/greyhound-ihp-librelane/ip/fabric/../tile_library/tiles/S_CPU_IF/../../primitives/CPU_IF/CPU_IF.v:21.27-21.28"
+          }
+        },
+        "O_top": {
+          "hide_name": 0,
+          "bits": [ 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33 ],
+          "attributes": {
+            "EXTERNAL": 1,
+            "FABulous": 1,
+            "src": "/home/leo/Repositories/greyhound-ihp-librelane/ip/fabric/../tile_library/tiles/S_CPU_IF/../../primitives/CPU_IF/CPU_IF.v:25.52-25.57"
+          }
+        }
+      }
+    }
+  }
+}
