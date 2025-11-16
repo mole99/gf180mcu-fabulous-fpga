@@ -29,9 +29,9 @@ module WARMBOOT #(
     (* FABulous, EXTERNAL *) output                       BOOT_top,
     (* FABulous, EXTERNAL *) input                        RESET_top,
     
-    (* FABulous, EXTERNAL *) input                        CONFIGURED_top,
+    (* FABulous, EXTERNAL *) input                        CONFIGURED_top
 
-    	(* FABulous, GLOBAL *) input [NoConfigBits-1:0] ConfigBits
+    //	(* FABulous, GLOBAL *) input [NoConfigBits-1:0] ConfigBits
 );
 
 	assign SLOT_top = SLOT;

@@ -8,8 +8,8 @@
         "BelMap": 1,
         "FABulous": 1,
         "dynports": 1,
-        "cells_not_processed": 1,
-        "src": "/home/leo/Repositories/greyhound-ihp-librelane/ip/fabric/../tile_library/tiles/LUT4AB/../../primitives/MUX8LUT_frame_config_mux/MUX8LUT_frame_config_mux.v:20.1-156.10"
+        "top": 1,
+        "src": "/home/leo/Repositories/gf180mcu-fabulous-fpga/ip/fabric/../tile_library/tiles/LUT4AB/../../primitives/MUX8LUT_frame_config_mux/MUX8LUT_frame_config_mux.v:20.1-156.10"
       },
       "parameter_default_values": {
         "NoConfigBits": 2
@@ -80,7 +80,7 @@
           },
           "attributes": {
             "module_not_derived": 1,
-            "src": "/home/leo/Repositories/greyhound-ihp-librelane/ip/fabric/../tile_library/tiles/LUT4AB/../../primitives/MUX8LUT_frame_config_mux/MUX8LUT_frame_config_mux.v:51.15-56.6"
+            "src": "/home/leo/Repositories/gf180mcu-fabulous-fpga/ip/fabric/../tile_library/tiles/LUT4AB/../../primitives/MUX8LUT_frame_config_mux/MUX8LUT_frame_config_mux.v:51.15-56.6"
           },
           "connections": {
             "A0": [ 2 ],
@@ -96,7 +96,7 @@
           },
           "attributes": {
             "module_not_derived": 1,
-            "src": "/home/leo/Repositories/greyhound-ihp-librelane/ip/fabric/../tile_library/tiles/LUT4AB/../../primitives/MUX8LUT_frame_config_mux/MUX8LUT_frame_config_mux.v:109.15-114.6"
+            "src": "/home/leo/Repositories/gf180mcu-fabulous-fpga/ip/fabric/../tile_library/tiles/LUT4AB/../../primitives/MUX8LUT_frame_config_mux/MUX8LUT_frame_config_mux.v:109.15-114.6"
           },
           "connections": {
             "A0": [ 14 ],
@@ -112,7 +112,7 @@
           },
           "attributes": {
             "module_not_derived": 1,
-            "src": "/home/leo/Repositories/greyhound-ihp-librelane/ip/fabric/../tile_library/tiles/LUT4AB/../../primitives/MUX8LUT_frame_config_mux/MUX8LUT_frame_config_mux.v:124.15-129.6"
+            "src": "/home/leo/Repositories/gf180mcu-fabulous-fpga/ip/fabric/../tile_library/tiles/LUT4AB/../../primitives/MUX8LUT_frame_config_mux/MUX8LUT_frame_config_mux.v:124.15-129.6"
           },
           "connections": {
             "A0": [ 21 ],
@@ -128,7 +128,7 @@
           },
           "attributes": {
             "module_not_derived": 1,
-            "src": "/home/leo/Repositories/greyhound-ihp-librelane/ip/fabric/../tile_library/tiles/LUT4AB/../../primitives/MUX8LUT_frame_config_mux/MUX8LUT_frame_config_mux.v:58.15-63.6"
+            "src": "/home/leo/Repositories/gf180mcu-fabulous-fpga/ip/fabric/../tile_library/tiles/LUT4AB/../../primitives/MUX8LUT_frame_config_mux/MUX8LUT_frame_config_mux.v:58.15-63.6"
           },
           "connections": {
             "A0": [ 4 ],
@@ -144,7 +144,7 @@
           },
           "attributes": {
             "module_not_derived": 1,
-            "src": "/home/leo/Repositories/greyhound-ihp-librelane/ip/fabric/../tile_library/tiles/LUT4AB/../../primitives/MUX8LUT_frame_config_mux/MUX8LUT_frame_config_mux.v:65.15-70.6"
+            "src": "/home/leo/Repositories/gf180mcu-fabulous-fpga/ip/fabric/../tile_library/tiles/LUT4AB/../../primitives/MUX8LUT_frame_config_mux/MUX8LUT_frame_config_mux.v:65.15-70.6"
           },
           "connections": {
             "A0": [ 6 ],
@@ -160,7 +160,7 @@
           },
           "attributes": {
             "module_not_derived": 1,
-            "src": "/home/leo/Repositories/greyhound-ihp-librelane/ip/fabric/../tile_library/tiles/LUT4AB/../../primitives/MUX8LUT_frame_config_mux/MUX8LUT_frame_config_mux.v:116.15-121.6"
+            "src": "/home/leo/Repositories/gf180mcu-fabulous-fpga/ip/fabric/../tile_library/tiles/LUT4AB/../../primitives/MUX8LUT_frame_config_mux/MUX8LUT_frame_config_mux.v:116.15-121.6"
           },
           "connections": {
             "A0": [ 17 ],
@@ -176,7 +176,7 @@
           },
           "attributes": {
             "module_not_derived": 1,
-            "src": "/home/leo/Repositories/greyhound-ihp-librelane/ip/fabric/../tile_library/tiles/LUT4AB/../../primitives/MUX8LUT_frame_config_mux/MUX8LUT_frame_config_mux.v:132.15-137.6"
+            "src": "/home/leo/Repositories/gf180mcu-fabulous-fpga/ip/fabric/../tile_library/tiles/LUT4AB/../../primitives/MUX8LUT_frame_config_mux/MUX8LUT_frame_config_mux.v:132.15-137.6"
           },
           "connections": {
             "A0": [ 26 ],
@@ -192,7 +192,7 @@
           },
           "attributes": {
             "module_not_derived": 1,
-            "src": "/home/leo/Repositories/greyhound-ihp-librelane/ip/fabric/../tile_library/tiles/LUT4AB/../../primitives/MUX8LUT_frame_config_mux/MUX8LUT_frame_config_mux.v:72.15-77.6"
+            "src": "/home/leo/Repositories/gf180mcu-fabulous-fpga/ip/fabric/../tile_library/tiles/LUT4AB/../../primitives/MUX8LUT_frame_config_mux/MUX8LUT_frame_config_mux.v:72.15-77.6"
           },
           "connections": {
             "A0": [ 8 ],
@@ -208,7 +208,7 @@
           },
           "attributes": {
             "module_not_derived": 1,
-            "src": "/home/leo/Repositories/greyhound-ihp-librelane/ip/fabric/../tile_library/tiles/LUT4AB/../../primitives/MUX8LUT_frame_config_mux/MUX8LUT_frame_config_mux.v:141.15-146.6"
+            "src": "/home/leo/Repositories/gf180mcu-fabulous-fpga/ip/fabric/../tile_library/tiles/LUT4AB/../../primitives/MUX8LUT_frame_config_mux/MUX8LUT_frame_config_mux.v:141.15-146.6"
           },
           "connections": {
             "A0": [ 20 ],
@@ -224,7 +224,7 @@
           },
           "attributes": {
             "module_not_derived": 1,
-            "src": "/home/leo/Repositories/greyhound-ihp-librelane/ip/fabric/../tile_library/tiles/LUT4AB/../../primitives/MUX8LUT_frame_config_mux/MUX8LUT_frame_config_mux.v:148.15-153.6"
+            "src": "/home/leo/Repositories/gf180mcu-fabulous-fpga/ip/fabric/../tile_library/tiles/LUT4AB/../../primitives/MUX8LUT_frame_config_mux/MUX8LUT_frame_config_mux.v:148.15-153.6"
           },
           "connections": {
             "A0": [ 28 ],
@@ -240,7 +240,7 @@
           },
           "attributes": {
             "module_not_derived": 1,
-            "src": "/home/leo/Repositories/greyhound-ihp-librelane/ip/fabric/../tile_library/tiles/LUT4AB/../../primitives/MUX8LUT_frame_config_mux/MUX8LUT_frame_config_mux.v:80.15-85.6"
+            "src": "/home/leo/Repositories/gf180mcu-fabulous-fpga/ip/fabric/../tile_library/tiles/LUT4AB/../../primitives/MUX8LUT_frame_config_mux/MUX8LUT_frame_config_mux.v:80.15-85.6"
           },
           "connections": {
             "A0": [ 11 ],
@@ -256,7 +256,7 @@
           },
           "attributes": {
             "module_not_derived": 1,
-            "src": "/home/leo/Repositories/greyhound-ihp-librelane/ip/fabric/../tile_library/tiles/LUT4AB/../../primitives/MUX8LUT_frame_config_mux/MUX8LUT_frame_config_mux.v:87.15-92.6"
+            "src": "/home/leo/Repositories/gf180mcu-fabulous-fpga/ip/fabric/../tile_library/tiles/LUT4AB/../../primitives/MUX8LUT_frame_config_mux/MUX8LUT_frame_config_mux.v:87.15-92.6"
           },
           "connections": {
             "A0": [ 12 ],
@@ -272,7 +272,7 @@
           },
           "attributes": {
             "module_not_derived": 1,
-            "src": "/home/leo/Repositories/greyhound-ihp-librelane/ip/fabric/../tile_library/tiles/LUT4AB/../../primitives/MUX8LUT_frame_config_mux/MUX8LUT_frame_config_mux.v:101.15-106.6"
+            "src": "/home/leo/Repositories/gf180mcu-fabulous-fpga/ip/fabric/../tile_library/tiles/LUT4AB/../../primitives/MUX8LUT_frame_config_mux/MUX8LUT_frame_config_mux.v:101.15-106.6"
           },
           "connections": {
             "A0": [ 13 ],
@@ -288,7 +288,7 @@
           },
           "attributes": {
             "module_not_derived": 1,
-            "src": "/home/leo/Repositories/greyhound-ihp-librelane/ip/fabric/../tile_library/tiles/LUT4AB/../../primitives/MUX8LUT_frame_config_mux/MUX8LUT_frame_config_mux.v:94.15-99.6"
+            "src": "/home/leo/Repositories/gf180mcu-fabulous-fpga/ip/fabric/../tile_library/tiles/LUT4AB/../../primitives/MUX8LUT_frame_config_mux/MUX8LUT_frame_config_mux.v:94.15-99.6"
           },
           "connections": {
             "A0": [ 27 ],
@@ -303,49 +303,49 @@
           "hide_name": 0,
           "bits": [ 2 ],
           "attributes": {
-            "src": "/home/leo/Repositories/greyhound-ihp-librelane/ip/fabric/../tile_library/tiles/LUT4AB/../../primitives/MUX8LUT_frame_config_mux/MUX8LUT_frame_config_mux.v:22.8-22.9"
+            "src": "/home/leo/Repositories/gf180mcu-fabulous-fpga/ip/fabric/../tile_library/tiles/LUT4AB/../../primitives/MUX8LUT_frame_config_mux/MUX8LUT_frame_config_mux.v:22.8-22.9"
           }
         },
         "AB": {
           "hide_name": 0,
           "bits": [ 14 ],
           "attributes": {
-            "src": "/home/leo/Repositories/greyhound-ihp-librelane/ip/fabric/../tile_library/tiles/LUT4AB/../../primitives/MUX8LUT_frame_config_mux/MUX8LUT_frame_config_mux.v:39.7-39.9"
+            "src": "/home/leo/Repositories/gf180mcu-fabulous-fpga/ip/fabric/../tile_library/tiles/LUT4AB/../../primitives/MUX8LUT_frame_config_mux/MUX8LUT_frame_config_mux.v:39.7-39.9"
           }
         },
         "AD": {
           "hide_name": 0,
           "bits": [ 21 ],
           "attributes": {
-            "src": "/home/leo/Repositories/greyhound-ihp-librelane/ip/fabric/../tile_library/tiles/LUT4AB/../../primitives/MUX8LUT_frame_config_mux/MUX8LUT_frame_config_mux.v:41.7-41.9"
+            "src": "/home/leo/Repositories/gf180mcu-fabulous-fpga/ip/fabric/../tile_library/tiles/LUT4AB/../../primitives/MUX8LUT_frame_config_mux/MUX8LUT_frame_config_mux.v:41.7-41.9"
           }
         },
         "AH": {
           "hide_name": 0,
           "bits": [ 23 ],
           "attributes": {
-            "src": "/home/leo/Repositories/greyhound-ihp-librelane/ip/fabric/../tile_library/tiles/LUT4AB/../../primitives/MUX8LUT_frame_config_mux/MUX8LUT_frame_config_mux.v:41.15-41.17"
+            "src": "/home/leo/Repositories/gf180mcu-fabulous-fpga/ip/fabric/../tile_library/tiles/LUT4AB/../../primitives/MUX8LUT_frame_config_mux/MUX8LUT_frame_config_mux.v:41.15-41.17"
           }
         },
         "B": {
           "hide_name": 0,
           "bits": [ 3 ],
           "attributes": {
-            "src": "/home/leo/Repositories/greyhound-ihp-librelane/ip/fabric/../tile_library/tiles/LUT4AB/../../primitives/MUX8LUT_frame_config_mux/MUX8LUT_frame_config_mux.v:23.8-23.9"
+            "src": "/home/leo/Repositories/gf180mcu-fabulous-fpga/ip/fabric/../tile_library/tiles/LUT4AB/../../primitives/MUX8LUT_frame_config_mux/MUX8LUT_frame_config_mux.v:23.8-23.9"
           }
         },
         "C": {
           "hide_name": 0,
           "bits": [ 4 ],
           "attributes": {
-            "src": "/home/leo/Repositories/greyhound-ihp-librelane/ip/fabric/../tile_library/tiles/LUT4AB/../../primitives/MUX8LUT_frame_config_mux/MUX8LUT_frame_config_mux.v:24.8-24.9"
+            "src": "/home/leo/Repositories/gf180mcu-fabulous-fpga/ip/fabric/../tile_library/tiles/LUT4AB/../../primitives/MUX8LUT_frame_config_mux/MUX8LUT_frame_config_mux.v:24.8-24.9"
           }
         },
         "CD": {
           "hide_name": 0,
           "bits": [ 20 ],
           "attributes": {
-            "src": "/home/leo/Repositories/greyhound-ihp-librelane/ip/fabric/../tile_library/tiles/LUT4AB/../../primitives/MUX8LUT_frame_config_mux/MUX8LUT_frame_config_mux.v:39.11-39.13"
+            "src": "/home/leo/Repositories/gf180mcu-fabulous-fpga/ip/fabric/../tile_library/tiles/LUT4AB/../../primitives/MUX8LUT_frame_config_mux/MUX8LUT_frame_config_mux.v:39.11-39.13"
           }
         },
         "ConfigBits": {
@@ -354,147 +354,147 @@
           "attributes": {
             "FABulous": 1,
             "GLOBAL": 1,
-            "src": "/home/leo/Repositories/greyhound-ihp-librelane/ip/fabric/../tile_library/tiles/LUT4AB/../../primitives/MUX8LUT_frame_config_mux/MUX8LUT_frame_config_mux.v:36.50-36.60"
+            "src": "/home/leo/Repositories/gf180mcu-fabulous-fpga/ip/fabric/../tile_library/tiles/LUT4AB/../../primitives/MUX8LUT_frame_config_mux/MUX8LUT_frame_config_mux.v:36.50-36.60"
           }
         },
         "D": {
           "hide_name": 0,
           "bits": [ 5 ],
           "attributes": {
-            "src": "/home/leo/Repositories/greyhound-ihp-librelane/ip/fabric/../tile_library/tiles/LUT4AB/../../primitives/MUX8LUT_frame_config_mux/MUX8LUT_frame_config_mux.v:25.8-25.9"
+            "src": "/home/leo/Repositories/gf180mcu-fabulous-fpga/ip/fabric/../tile_library/tiles/LUT4AB/../../primitives/MUX8LUT_frame_config_mux/MUX8LUT_frame_config_mux.v:25.8-25.9"
           }
         },
         "E": {
           "hide_name": 0,
           "bits": [ 6 ],
           "attributes": {
-            "src": "/home/leo/Repositories/greyhound-ihp-librelane/ip/fabric/../tile_library/tiles/LUT4AB/../../primitives/MUX8LUT_frame_config_mux/MUX8LUT_frame_config_mux.v:26.8-26.9"
+            "src": "/home/leo/Repositories/gf180mcu-fabulous-fpga/ip/fabric/../tile_library/tiles/LUT4AB/../../primitives/MUX8LUT_frame_config_mux/MUX8LUT_frame_config_mux.v:26.8-26.9"
           }
         },
         "EF": {
           "hide_name": 0,
           "bits": [ 17 ],
           "attributes": {
-            "src": "/home/leo/Repositories/greyhound-ihp-librelane/ip/fabric/../tile_library/tiles/LUT4AB/../../primitives/MUX8LUT_frame_config_mux/MUX8LUT_frame_config_mux.v:39.15-39.17"
+            "src": "/home/leo/Repositories/gf180mcu-fabulous-fpga/ip/fabric/../tile_library/tiles/LUT4AB/../../primitives/MUX8LUT_frame_config_mux/MUX8LUT_frame_config_mux.v:39.15-39.17"
           }
         },
         "EH": {
           "hide_name": 0,
           "bits": [ 22 ],
           "attributes": {
-            "src": "/home/leo/Repositories/greyhound-ihp-librelane/ip/fabric/../tile_library/tiles/LUT4AB/../../primitives/MUX8LUT_frame_config_mux/MUX8LUT_frame_config_mux.v:41.11-41.13"
+            "src": "/home/leo/Repositories/gf180mcu-fabulous-fpga/ip/fabric/../tile_library/tiles/LUT4AB/../../primitives/MUX8LUT_frame_config_mux/MUX8LUT_frame_config_mux.v:41.11-41.13"
           }
         },
         "EH_GH": {
           "hide_name": 0,
           "bits": [ 28 ],
           "attributes": {
-            "src": "/home/leo/Repositories/greyhound-ihp-librelane/ip/fabric/../tile_library/tiles/LUT4AB/../../primitives/MUX8LUT_frame_config_mux/MUX8LUT_frame_config_mux.v:42.7-42.12"
+            "src": "/home/leo/Repositories/gf180mcu-fabulous-fpga/ip/fabric/../tile_library/tiles/LUT4AB/../../primitives/MUX8LUT_frame_config_mux/MUX8LUT_frame_config_mux.v:42.7-42.12"
           }
         },
         "F": {
           "hide_name": 0,
           "bits": [ 7 ],
           "attributes": {
-            "src": "/home/leo/Repositories/greyhound-ihp-librelane/ip/fabric/../tile_library/tiles/LUT4AB/../../primitives/MUX8LUT_frame_config_mux/MUX8LUT_frame_config_mux.v:27.8-27.9"
+            "src": "/home/leo/Repositories/gf180mcu-fabulous-fpga/ip/fabric/../tile_library/tiles/LUT4AB/../../primitives/MUX8LUT_frame_config_mux/MUX8LUT_frame_config_mux.v:27.8-27.9"
           }
         },
         "G": {
           "hide_name": 0,
           "bits": [ 8 ],
           "attributes": {
-            "src": "/home/leo/Repositories/greyhound-ihp-librelane/ip/fabric/../tile_library/tiles/LUT4AB/../../primitives/MUX8LUT_frame_config_mux/MUX8LUT_frame_config_mux.v:28.8-28.9"
+            "src": "/home/leo/Repositories/gf180mcu-fabulous-fpga/ip/fabric/../tile_library/tiles/LUT4AB/../../primitives/MUX8LUT_frame_config_mux/MUX8LUT_frame_config_mux.v:28.8-28.9"
           }
         },
         "GH": {
           "hide_name": 0,
           "bits": [ 26 ],
           "attributes": {
-            "src": "/home/leo/Repositories/greyhound-ihp-librelane/ip/fabric/../tile_library/tiles/LUT4AB/../../primitives/MUX8LUT_frame_config_mux/MUX8LUT_frame_config_mux.v:39.19-39.21"
+            "src": "/home/leo/Repositories/gf180mcu-fabulous-fpga/ip/fabric/../tile_library/tiles/LUT4AB/../../primitives/MUX8LUT_frame_config_mux/MUX8LUT_frame_config_mux.v:39.19-39.21"
           }
         },
         "H": {
           "hide_name": 0,
           "bits": [ 9 ],
           "attributes": {
-            "src": "/home/leo/Repositories/greyhound-ihp-librelane/ip/fabric/../tile_library/tiles/LUT4AB/../../primitives/MUX8LUT_frame_config_mux/MUX8LUT_frame_config_mux.v:29.8-29.9"
+            "src": "/home/leo/Repositories/gf180mcu-fabulous-fpga/ip/fabric/../tile_library/tiles/LUT4AB/../../primitives/MUX8LUT_frame_config_mux/MUX8LUT_frame_config_mux.v:29.8-29.9"
           }
         },
         "M_AB": {
           "hide_name": 0,
           "bits": [ 14 ],
           "attributes": {
-            "src": "/home/leo/Repositories/greyhound-ihp-librelane/ip/fabric/../tile_library/tiles/LUT4AB/../../primitives/MUX8LUT_frame_config_mux/MUX8LUT_frame_config_mux.v:31.9-31.13"
+            "src": "/home/leo/Repositories/gf180mcu-fabulous-fpga/ip/fabric/../tile_library/tiles/LUT4AB/../../primitives/MUX8LUT_frame_config_mux/MUX8LUT_frame_config_mux.v:31.9-31.13"
           }
         },
         "M_AD": {
           "hide_name": 0,
           "bits": [ 15 ],
           "attributes": {
-            "src": "/home/leo/Repositories/greyhound-ihp-librelane/ip/fabric/../tile_library/tiles/LUT4AB/../../primitives/MUX8LUT_frame_config_mux/MUX8LUT_frame_config_mux.v:32.9-32.13"
+            "src": "/home/leo/Repositories/gf180mcu-fabulous-fpga/ip/fabric/../tile_library/tiles/LUT4AB/../../primitives/MUX8LUT_frame_config_mux/MUX8LUT_frame_config_mux.v:32.9-32.13"
           }
         },
         "M_AH": {
           "hide_name": 0,
           "bits": [ 16 ],
           "attributes": {
-            "src": "/home/leo/Repositories/greyhound-ihp-librelane/ip/fabric/../tile_library/tiles/LUT4AB/../../primitives/MUX8LUT_frame_config_mux/MUX8LUT_frame_config_mux.v:33.9-33.13"
+            "src": "/home/leo/Repositories/gf180mcu-fabulous-fpga/ip/fabric/../tile_library/tiles/LUT4AB/../../primitives/MUX8LUT_frame_config_mux/MUX8LUT_frame_config_mux.v:33.9-33.13"
           }
         },
         "M_EF": {
           "hide_name": 0,
           "bits": [ 17 ],
           "attributes": {
-            "src": "/home/leo/Repositories/greyhound-ihp-librelane/ip/fabric/../tile_library/tiles/LUT4AB/../../primitives/MUX8LUT_frame_config_mux/MUX8LUT_frame_config_mux.v:34.9-34.13"
+            "src": "/home/leo/Repositories/gf180mcu-fabulous-fpga/ip/fabric/../tile_library/tiles/LUT4AB/../../primitives/MUX8LUT_frame_config_mux/MUX8LUT_frame_config_mux.v:34.9-34.13"
           }
         },
         "S": {
           "hide_name": 0,
           "bits": [ 10, 11, 12, 13 ],
           "attributes": {
-            "src": "/home/leo/Repositories/greyhound-ihp-librelane/ip/fabric/../tile_library/tiles/LUT4AB/../../primitives/MUX8LUT_frame_config_mux/MUX8LUT_frame_config_mux.v:30.14-30.15"
+            "src": "/home/leo/Repositories/gf180mcu-fabulous-fpga/ip/fabric/../tile_library/tiles/LUT4AB/../../primitives/MUX8LUT_frame_config_mux/MUX8LUT_frame_config_mux.v:30.14-30.15"
           }
         },
         "c0": {
           "hide_name": 0,
           "bits": [ 18 ],
           "attributes": {
-            "src": "/home/leo/Repositories/greyhound-ihp-librelane/ip/fabric/../tile_library/tiles/LUT4AB/../../primitives/MUX8LUT_frame_config_mux/MUX8LUT_frame_config_mux.v:44.7-44.9"
+            "src": "/home/leo/Repositories/gf180mcu-fabulous-fpga/ip/fabric/../tile_library/tiles/LUT4AB/../../primitives/MUX8LUT_frame_config_mux/MUX8LUT_frame_config_mux.v:44.7-44.9"
           }
         },
         "c1": {
           "hide_name": 0,
           "bits": [ 19 ],
           "attributes": {
-            "src": "/home/leo/Repositories/greyhound-ihp-librelane/ip/fabric/../tile_library/tiles/LUT4AB/../../primitives/MUX8LUT_frame_config_mux/MUX8LUT_frame_config_mux.v:44.11-44.13"
+            "src": "/home/leo/Repositories/gf180mcu-fabulous-fpga/ip/fabric/../tile_library/tiles/LUT4AB/../../primitives/MUX8LUT_frame_config_mux/MUX8LUT_frame_config_mux.v:44.11-44.13"
           }
         },
         "sCD": {
           "hide_name": 0,
           "bits": [ 24 ],
           "attributes": {
-            "src": "/home/leo/Repositories/greyhound-ihp-librelane/ip/fabric/../tile_library/tiles/LUT4AB/../../primitives/MUX8LUT_frame_config_mux/MUX8LUT_frame_config_mux.v:40.7-40.10"
+            "src": "/home/leo/Repositories/gf180mcu-fabulous-fpga/ip/fabric/../tile_library/tiles/LUT4AB/../../primitives/MUX8LUT_frame_config_mux/MUX8LUT_frame_config_mux.v:40.7-40.10"
           }
         },
         "sEF": {
           "hide_name": 0,
           "bits": [ 25 ],
           "attributes": {
-            "src": "/home/leo/Repositories/greyhound-ihp-librelane/ip/fabric/../tile_library/tiles/LUT4AB/../../primitives/MUX8LUT_frame_config_mux/MUX8LUT_frame_config_mux.v:40.12-40.15"
+            "src": "/home/leo/Repositories/gf180mcu-fabulous-fpga/ip/fabric/../tile_library/tiles/LUT4AB/../../primitives/MUX8LUT_frame_config_mux/MUX8LUT_frame_config_mux.v:40.12-40.15"
           }
         },
         "sEH": {
           "hide_name": 0,
           "bits": [ 27 ],
           "attributes": {
-            "src": "/home/leo/Repositories/greyhound-ihp-librelane/ip/fabric/../tile_library/tiles/LUT4AB/../../primitives/MUX8LUT_frame_config_mux/MUX8LUT_frame_config_mux.v:40.22-40.25"
+            "src": "/home/leo/Repositories/gf180mcu-fabulous-fpga/ip/fabric/../tile_library/tiles/LUT4AB/../../primitives/MUX8LUT_frame_config_mux/MUX8LUT_frame_config_mux.v:40.22-40.25"
           }
         },
         "sGH": {
           "hide_name": 0,
           "bits": [ 29 ],
           "attributes": {
-            "src": "/home/leo/Repositories/greyhound-ihp-librelane/ip/fabric/../tile_library/tiles/LUT4AB/../../primitives/MUX8LUT_frame_config_mux/MUX8LUT_frame_config_mux.v:40.17-40.20"
+            "src": "/home/leo/Repositories/gf180mcu-fabulous-fpga/ip/fabric/../tile_library/tiles/LUT4AB/../../primitives/MUX8LUT_frame_config_mux/MUX8LUT_frame_config_mux.v:40.17-40.20"
           }
         }
       }

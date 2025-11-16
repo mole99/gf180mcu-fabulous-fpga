@@ -51,6 +51,27 @@ pdk::ihp-sg13g2:
     
     #GRT_LAYER_ADJUSTMENTS: [0.00,0.05,0.05,0.05,0.05,0.00,0.00]
 
+pdk::gf180mcuD:
+    # Routing
+    RT_MAX_LAYER: Metal4
+
+    # Save space
+    BOTTOM_MARGIN_MULT: 1
+    TOP_MARGIN_MULT: 1
+    LEFT_MARGIN_MULT: 6
+    RIGHT_MARGIN_MULT: 6
+
+    # PDN - default
+    #PDN_VWIDTH: 2.2
+    #PDN_VSPACING: 4.0
+    #PDN_VPITCH: 75.6
+    #PDN_VOFFSET: 13.6
+
+    #PDN_HWIDTH: 2.0
+    #PDN_HSPACING: 4.0
+    #PDN_HPITCH: 75.6
+    #PDN_HOFFSET: 13.57
+
 # Use the minimum length for pins
 # that satisfies the minimum area constraint
 IO_PIN_H_LENGTH: null

@@ -3,9 +3,8 @@
   "modules": {
     "IHP_SRAM_1024x32": {
       "attributes": {
-        "dynports": 1,
-        "cells_not_processed": 1,
-        "src": "/home/leo/Repositories/greyhound-ihp-librelane/ip/fabric/../tile_library/tiles/IHP_SRAM/IHP_SRAM_bot/../../../primitives/IHP_SRAM_1024x32/IHP_SRAM_1024x32.v:15.1-63.10"
+        "top": 1,
+        "src": "/home/leo/Repositories/gf180mcu-fabulous-fpga/ip/fabric/../tile_library/tiles/IHP_SRAM/IHP_SRAM_bot/../../../primitives/IHP_SRAM_1024x32/IHP_SRAM_1024x32.v:15.1-63.10"
       },
       "parameter_default_values": {
         "NoConfigBits": 0
@@ -86,16 +85,10 @@
         "UserCLK": {
           "direction": "input",
           "bits": [ 112 ]
-        },
-        "ConfigBits": {
-          "direction": "input",
-          "offset": -1,
-          "upto": 1,
-          "bits": [ 114, 115 ]
         }
       },
       "cells": {
-        "$logic_and$/home/leo/Repositories/greyhound-ihp-librelane/ip/fabric/../tile_library/tiles/IHP_SRAM/IHP_SRAM_bot/../../../primitives/IHP_SRAM_1024x32/IHP_SRAM_1024x32.v:54$1": {
+        "$logic_and$/home/leo/Repositories/gf180mcu-fabulous-fpga/ip/fabric/../tile_library/tiles/IHP_SRAM/IHP_SRAM_bot/../../../primitives/IHP_SRAM_1024x32/IHP_SRAM_1024x32.v:54$1": {
           "hide_name": 1,
           "type": "$logic_and",
           "parameters": {
@@ -106,7 +99,7 @@
             "Y_WIDTH": 1
           },
           "attributes": {
-            "src": "/home/leo/Repositories/greyhound-ihp-librelane/ip/fabric/../tile_library/tiles/IHP_SRAM/IHP_SRAM_bot/../../../primitives/IHP_SRAM_1024x32/IHP_SRAM_1024x32.v:54.26-54.49"
+            "src": "/home/leo/Repositories/gf180mcu-fabulous-fpga/ip/fabric/../tile_library/tiles/IHP_SRAM/IHP_SRAM_bot/../../../primitives/IHP_SRAM_1024x32/IHP_SRAM_1024x32.v:54.26-54.49"
           },
           "port_directions": {
             "A": "input",
@@ -121,18 +114,18 @@
         }
       },
       "netnames": {
-        "$logic_and$/home/leo/Repositories/greyhound-ihp-librelane/ip/fabric/../tile_library/tiles/IHP_SRAM/IHP_SRAM_bot/../../../primitives/IHP_SRAM_1024x32/IHP_SRAM_1024x32.v:54$1_Y": {
+        "$logic_and$/home/leo/Repositories/gf180mcu-fabulous-fpga/ip/fabric/../tile_library/tiles/IHP_SRAM/IHP_SRAM_bot/../../../primitives/IHP_SRAM_1024x32/IHP_SRAM_1024x32.v:54$1_Y": {
           "hide_name": 1,
           "bits": [ 111 ],
           "attributes": {
-            "src": "/home/leo/Repositories/greyhound-ihp-librelane/ip/fabric/../tile_library/tiles/IHP_SRAM/IHP_SRAM_bot/../../../primitives/IHP_SRAM_1024x32/IHP_SRAM_1024x32.v:54.26-54.49"
+            "src": "/home/leo/Repositories/gf180mcu-fabulous-fpga/ip/fabric/../tile_library/tiles/IHP_SRAM/IHP_SRAM_bot/../../../primitives/IHP_SRAM_1024x32/IHP_SRAM_1024x32.v:54.26-54.49"
           }
         },
         "A_ADDR": {
           "hide_name": 0,
           "bits": [ 2, 3, 4, 5, 6, 7, 8, 9, 10, 11 ],
           "attributes": {
-            "src": "/home/leo/Repositories/greyhound-ihp-librelane/ip/fabric/../tile_library/tiles/IHP_SRAM/IHP_SRAM_bot/../../../primitives/IHP_SRAM_1024x32/IHP_SRAM_1024x32.v:19.27-19.33"
+            "src": "/home/leo/Repositories/gf180mcu-fabulous-fpga/ip/fabric/../tile_library/tiles/IHP_SRAM/IHP_SRAM_bot/../../../primitives/IHP_SRAM_1024x32/IHP_SRAM_1024x32.v:19.27-19.33"
           }
         },
         "A_ADDR_SRAM": {
@@ -141,14 +134,14 @@
           "attributes": {
             "EXTERNAL": 1,
             "FABulous": 1,
-            "src": "/home/leo/Repositories/greyhound-ihp-librelane/ip/fabric/../tile_library/tiles/IHP_SRAM/IHP_SRAM_bot/../../../primitives/IHP_SRAM_1024x32/IHP_SRAM_1024x32.v:28.52-28.63"
+            "src": "/home/leo/Repositories/gf180mcu-fabulous-fpga/ip/fabric/../tile_library/tiles/IHP_SRAM/IHP_SRAM_bot/../../../primitives/IHP_SRAM_1024x32/IHP_SRAM_1024x32.v:28.52-28.63"
           }
         },
         "A_BM": {
           "hide_name": 0,
           "bits": [ 44, 45, 46, 47, 48, 49, 50, 51, 52, 53, 54, 55, 56, 57, 58, 59, 60, 61, 62, 63, 64, 65, 66, 67, 68, 69, 70, 71, 72, 73, 74, 75 ],
           "attributes": {
-            "src": "/home/leo/Repositories/greyhound-ihp-librelane/ip/fabric/../tile_library/tiles/IHP_SRAM/IHP_SRAM_bot/../../../primitives/IHP_SRAM_1024x32/IHP_SRAM_1024x32.v:21.27-21.31"
+            "src": "/home/leo/Repositories/gf180mcu-fabulous-fpga/ip/fabric/../tile_library/tiles/IHP_SRAM/IHP_SRAM_bot/../../../primitives/IHP_SRAM_1024x32/IHP_SRAM_1024x32.v:21.27-21.31"
           }
         },
         "A_BM_SRAM": {
@@ -157,7 +150,7 @@
           "attributes": {
             "EXTERNAL": 1,
             "FABulous": 1,
-            "src": "/home/leo/Repositories/greyhound-ihp-librelane/ip/fabric/../tile_library/tiles/IHP_SRAM/IHP_SRAM_bot/../../../primitives/IHP_SRAM_1024x32/IHP_SRAM_1024x32.v:30.52-30.61"
+            "src": "/home/leo/Repositories/gf180mcu-fabulous-fpga/ip/fabric/../tile_library/tiles/IHP_SRAM/IHP_SRAM_bot/../../../primitives/IHP_SRAM_1024x32/IHP_SRAM_1024x32.v:30.52-30.61"
           }
         },
         "A_CLK_SRAM": {
@@ -166,14 +159,14 @@
           "attributes": {
             "EXTERNAL": 1,
             "FABulous": 1,
-            "src": "/home/leo/Repositories/greyhound-ihp-librelane/ip/fabric/../tile_library/tiles/IHP_SRAM/IHP_SRAM_bot/../../../primitives/IHP_SRAM_1024x32/IHP_SRAM_1024x32.v:36.52-36.62"
+            "src": "/home/leo/Repositories/gf180mcu-fabulous-fpga/ip/fabric/../tile_library/tiles/IHP_SRAM/IHP_SRAM_bot/../../../primitives/IHP_SRAM_1024x32/IHP_SRAM_1024x32.v:36.52-36.62"
           }
         },
         "A_DIN": {
           "hide_name": 0,
           "bits": [ 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40, 41, 42, 43 ],
           "attributes": {
-            "src": "/home/leo/Repositories/greyhound-ihp-librelane/ip/fabric/../tile_library/tiles/IHP_SRAM/IHP_SRAM_bot/../../../primitives/IHP_SRAM_1024x32/IHP_SRAM_1024x32.v:20.27-20.32"
+            "src": "/home/leo/Repositories/gf180mcu-fabulous-fpga/ip/fabric/../tile_library/tiles/IHP_SRAM/IHP_SRAM_bot/../../../primitives/IHP_SRAM_1024x32/IHP_SRAM_1024x32.v:20.27-20.32"
           }
         },
         "A_DIN_SRAM": {
@@ -182,14 +175,14 @@
           "attributes": {
             "EXTERNAL": 1,
             "FABulous": 1,
-            "src": "/home/leo/Repositories/greyhound-ihp-librelane/ip/fabric/../tile_library/tiles/IHP_SRAM/IHP_SRAM_bot/../../../primitives/IHP_SRAM_1024x32/IHP_SRAM_1024x32.v:29.52-29.62"
+            "src": "/home/leo/Repositories/gf180mcu-fabulous-fpga/ip/fabric/../tile_library/tiles/IHP_SRAM/IHP_SRAM_bot/../../../primitives/IHP_SRAM_1024x32/IHP_SRAM_1024x32.v:29.52-29.62"
           }
         },
         "A_DOUT": {
           "hide_name": 0,
           "bits": [ 79, 80, 81, 82, 83, 84, 85, 86, 87, 88, 89, 90, 91, 92, 93, 94, 95, 96, 97, 98, 99, 100, 101, 102, 103, 104, 105, 106, 107, 108, 109, 110 ],
           "attributes": {
-            "src": "/home/leo/Repositories/greyhound-ihp-librelane/ip/fabric/../tile_library/tiles/IHP_SRAM/IHP_SRAM_bot/../../../primitives/IHP_SRAM_1024x32/IHP_SRAM_1024x32.v:25.28-25.34"
+            "src": "/home/leo/Repositories/gf180mcu-fabulous-fpga/ip/fabric/../tile_library/tiles/IHP_SRAM/IHP_SRAM_bot/../../../primitives/IHP_SRAM_1024x32/IHP_SRAM_1024x32.v:25.28-25.34"
           }
         },
         "A_DOUT_SRAM": {
@@ -198,14 +191,14 @@
           "attributes": {
             "EXTERNAL": 1,
             "FABulous": 1,
-            "src": "/home/leo/Repositories/greyhound-ihp-librelane/ip/fabric/../tile_library/tiles/IHP_SRAM/IHP_SRAM_bot/../../../primitives/IHP_SRAM_1024x32/IHP_SRAM_1024x32.v:34.52-34.63"
+            "src": "/home/leo/Repositories/gf180mcu-fabulous-fpga/ip/fabric/../tile_library/tiles/IHP_SRAM/IHP_SRAM_bot/../../../primitives/IHP_SRAM_1024x32/IHP_SRAM_1024x32.v:34.52-34.63"
           }
         },
         "A_MEN": {
           "hide_name": 0,
           "bits": [ 77 ],
           "attributes": {
-            "src": "/home/leo/Repositories/greyhound-ihp-librelane/ip/fabric/../tile_library/tiles/IHP_SRAM/IHP_SRAM_bot/../../../primitives/IHP_SRAM_1024x32/IHP_SRAM_1024x32.v:23.27-23.32"
+            "src": "/home/leo/Repositories/gf180mcu-fabulous-fpga/ip/fabric/../tile_library/tiles/IHP_SRAM/IHP_SRAM_bot/../../../primitives/IHP_SRAM_1024x32/IHP_SRAM_1024x32.v:23.27-23.32"
           }
         },
         "A_MEN_SRAM": {
@@ -214,14 +207,14 @@
           "attributes": {
             "EXTERNAL": 1,
             "FABulous": 1,
-            "src": "/home/leo/Repositories/greyhound-ihp-librelane/ip/fabric/../tile_library/tiles/IHP_SRAM/IHP_SRAM_bot/../../../primitives/IHP_SRAM_1024x32/IHP_SRAM_1024x32.v:32.52-32.62"
+            "src": "/home/leo/Repositories/gf180mcu-fabulous-fpga/ip/fabric/../tile_library/tiles/IHP_SRAM/IHP_SRAM_bot/../../../primitives/IHP_SRAM_1024x32/IHP_SRAM_1024x32.v:32.52-32.62"
           }
         },
         "A_REN": {
           "hide_name": 0,
           "bits": [ 78 ],
           "attributes": {
-            "src": "/home/leo/Repositories/greyhound-ihp-librelane/ip/fabric/../tile_library/tiles/IHP_SRAM/IHP_SRAM_bot/../../../primitives/IHP_SRAM_1024x32/IHP_SRAM_1024x32.v:24.27-24.32"
+            "src": "/home/leo/Repositories/gf180mcu-fabulous-fpga/ip/fabric/../tile_library/tiles/IHP_SRAM/IHP_SRAM_bot/../../../primitives/IHP_SRAM_1024x32/IHP_SRAM_1024x32.v:24.27-24.32"
           }
         },
         "A_REN_SRAM": {
@@ -230,7 +223,7 @@
           "attributes": {
             "EXTERNAL": 1,
             "FABulous": 1,
-            "src": "/home/leo/Repositories/greyhound-ihp-librelane/ip/fabric/../tile_library/tiles/IHP_SRAM/IHP_SRAM_bot/../../../primitives/IHP_SRAM_1024x32/IHP_SRAM_1024x32.v:33.52-33.62"
+            "src": "/home/leo/Repositories/gf180mcu-fabulous-fpga/ip/fabric/../tile_library/tiles/IHP_SRAM/IHP_SRAM_bot/../../../primitives/IHP_SRAM_1024x32/IHP_SRAM_1024x32.v:33.52-33.62"
           }
         },
         "A_TIE_HIGH_SRAM": {
@@ -239,7 +232,7 @@
           "attributes": {
             "EXTERNAL": 1,
             "FABulous": 1,
-            "src": "/home/leo/Repositories/greyhound-ihp-librelane/ip/fabric/../tile_library/tiles/IHP_SRAM/IHP_SRAM_bot/../../../primitives/IHP_SRAM_1024x32/IHP_SRAM_1024x32.v:38.52-38.67"
+            "src": "/home/leo/Repositories/gf180mcu-fabulous-fpga/ip/fabric/../tile_library/tiles/IHP_SRAM/IHP_SRAM_bot/../../../primitives/IHP_SRAM_1024x32/IHP_SRAM_1024x32.v:38.52-38.67"
           }
         },
         "A_TIE_LOW_SRAM": {
@@ -248,14 +241,14 @@
           "attributes": {
             "EXTERNAL": 1,
             "FABulous": 1,
-            "src": "/home/leo/Repositories/greyhound-ihp-librelane/ip/fabric/../tile_library/tiles/IHP_SRAM/IHP_SRAM_bot/../../../primitives/IHP_SRAM_1024x32/IHP_SRAM_1024x32.v:39.52-39.66"
+            "src": "/home/leo/Repositories/gf180mcu-fabulous-fpga/ip/fabric/../tile_library/tiles/IHP_SRAM/IHP_SRAM_bot/../../../primitives/IHP_SRAM_1024x32/IHP_SRAM_1024x32.v:39.52-39.66"
           }
         },
         "A_WEN": {
           "hide_name": 0,
           "bits": [ 76 ],
           "attributes": {
-            "src": "/home/leo/Repositories/greyhound-ihp-librelane/ip/fabric/../tile_library/tiles/IHP_SRAM/IHP_SRAM_bot/../../../primitives/IHP_SRAM_1024x32/IHP_SRAM_1024x32.v:22.27-22.32"
+            "src": "/home/leo/Repositories/gf180mcu-fabulous-fpga/ip/fabric/../tile_library/tiles/IHP_SRAM/IHP_SRAM_bot/../../../primitives/IHP_SRAM_1024x32/IHP_SRAM_1024x32.v:22.27-22.32"
           }
         },
         "A_WEN_SRAM": {
@@ -264,7 +257,7 @@
           "attributes": {
             "EXTERNAL": 1,
             "FABulous": 1,
-            "src": "/home/leo/Repositories/greyhound-ihp-librelane/ip/fabric/../tile_library/tiles/IHP_SRAM/IHP_SRAM_bot/../../../primitives/IHP_SRAM_1024x32/IHP_SRAM_1024x32.v:31.52-31.62"
+            "src": "/home/leo/Repositories/gf180mcu-fabulous-fpga/ip/fabric/../tile_library/tiles/IHP_SRAM/IHP_SRAM_bot/../../../primitives/IHP_SRAM_1024x32/IHP_SRAM_1024x32.v:31.52-31.62"
           }
         },
         "CONFIGURED_top": {
@@ -273,18 +266,7 @@
           "attributes": {
             "EXTERNAL": 1,
             "FABulous": 1,
-            "src": "/home/leo/Repositories/greyhound-ihp-librelane/ip/fabric/../tile_library/tiles/IHP_SRAM/IHP_SRAM_bot/../../../primitives/IHP_SRAM_1024x32/IHP_SRAM_1024x32.v:41.52-41.66"
-          }
-        },
-        "ConfigBits": {
-          "hide_name": 0,
-          "bits": [ 114, 115 ],
-          "offset": -1,
-          "upto": 1,
-          "attributes": {
-            "FABulous": 1,
-            "GLOBAL": 1,
-            "src": "/home/leo/Repositories/greyhound-ihp-librelane/ip/fabric/../tile_library/tiles/IHP_SRAM/IHP_SRAM_bot/../../../primitives/IHP_SRAM_1024x32/IHP_SRAM_1024x32.v:46.54-46.64"
+            "src": "/home/leo/Repositories/gf180mcu-fabulous-fpga/ip/fabric/../tile_library/tiles/IHP_SRAM/IHP_SRAM_bot/../../../primitives/IHP_SRAM_1024x32/IHP_SRAM_1024x32.v:41.52-41.66"
           }
         },
         "UserCLK": {
@@ -294,7 +276,7 @@
             "EXTERNAL": 1,
             "FABulous": 1,
             "SHARED_PORT": 1,
-            "src": "/home/leo/Repositories/greyhound-ihp-librelane/ip/fabric/../tile_library/tiles/IHP_SRAM/IHP_SRAM_bot/../../../primitives/IHP_SRAM_1024x32/IHP_SRAM_1024x32.v:44.49-44.56"
+            "src": "/home/leo/Repositories/gf180mcu-fabulous-fpga/ip/fabric/../tile_library/tiles/IHP_SRAM/IHP_SRAM_bot/../../../primitives/IHP_SRAM_1024x32/IHP_SRAM_1024x32.v:44.49-44.56"
           }
         }
       }
