@@ -1,0 +1,54 @@
+all: synth pnr bitstream hex
+
+synth:
+	yosys \
+	-p \
+	"synth_fabulous \
+	-top $(TOP) \
+	-json $(DESIGN_NAME).json \
+	-lut 4 \
+	-extra-plib $(EXTRA_PRIMITIVES_PATH)" \
+	$(RTL)
+.PHONY: synth
+
+pnr:
+	FAB_ROOT=$(FABULOUS_ROOT) \
+	nextpnr-generic \
+	--uarch fabulous \
+	--json $(DESIGN_NAME).json \
+	-o fasm=$(DESIGN_NAME).fasm \
+	--verbose \
+	--log $(DESIGN_NAME)_log.txt \
+	--timing-allow-fail
+.PHONY: pnr
+
+bitstream:
+	python3 $(BIT_GEN) \
+	-genBitstream \
+	$(DESIGN_NAME).fasm \
+	$(FABULOUS_ROOT)/bitStreamSpec.bin \
+	$(DESIGN_NAME).bit
+.PHONY: bitstream
+
+hex:
+	python3 $(BIT_TO_HEX) \
+	$(DESIGN_NAME).bit \
+	$(DESIGN_NAME).hex
+
+clean:
+	rm -rf $(DESIGN_NAME).json
+	rm -rf $(DESIGN_NAME).fasm
+	rm -rf $(DESIGN_NAME)_log.txt
+	rm -rf $(DESIGN_NAME).bit
+	rm -rf $(DESIGN_NAME).hex
+.PHONY: clean
+
+help:
+	@echo "Commands:"
+	@echo " synth           ... Synthesize the user design"
+	@echo " pnr             ... Run Place and Route"
+	@echo " bitstream       ... Generate the bitstream"
+	@echo " hex             ... Convert bitstream to hex"
+	@echo " clean           ... Delete all generated files"
+	@echo " help            ... Show this help message"
+.phony: help

@@ -1,0 +1,118 @@
+meta:
+  version: 2
+  flow: FABulousFabric
+  substituting_steps:
+    # Save some time
+    Magic.DRC: null
+    #KLayout.DRC: null
+
+    # Add steps for LVS with KLayout
+    #+Checker.LVS: OpenROAD.WriteCDL
+    #+OpenROAD.WriteCDL: KLayout.LVS
+    
+    # The new version of OpenROAD says
+    # during DPL it needs stdcell rows
+    # (although we don't use stdcells)
+    #OpenROAD.DetailedPlacement: null
+
+# Basics
+DESIGN_NAME: eFPGA
+VERILOG_FILES: []
+
+# No extract-unique, because the power straps
+# are connected in the top-level integration
+MAGIC_NO_EXT_UNIQUE: true
+
+# Unfortunately needed
+GRT_ALLOW_CONGESTION: true
+
+# FABulous config
+FABULOUS_FABRIC_CONFIG: dir::fabric.csv
+FABULOUS_TILE_LIBRARY: dir::../tile_library/tiles/
+
+FABULOUS_TILE_SPACING: 0
+# Vertical spacing should be multiple of 0.42 (Metal2 pitch)
+# Horizontal spacing should be multiple of 0.48 (Metal3 pitch)
+# The halo was chosen so that there's just enough space for the pins
+# except for the bottom: here the clock net needs to be routed
+FABULOUS_HALO_SPACING: [ 0.48, 4.2, 0.48, 0.48 ]
+
+# Match spacing if possible
+IO_PIN_H_LENGTH: 0.48
+IO_PIN_V_LENGTH: 0.48
+
+FABULOUS_TILE_SIZES:
+  LUT4AB:           [ 287.28, 287.28 ]
+  
+  "IHP_SRAM_*":     [ 214.48, 287.28 ]
+  "*term_IHP_SRAM": [ 214.48, 71.12 ]
+
+  #RegFile:          [ 239.04, 215.46 ]
+  #"*_term_single2": [ 239.04, 53.76 ]
+ 
+  #"DSP*":           [ 184.8, 215.46 ]
+  #"*term_DSP*":     [ 184.8, 53.76 ]
+
+  "W_IO":           [ 142.80, 287.28 ]
+  "N*":             [ 287.28, 71.12 ]
+  "S*":             [ 287.28, 71.12 ]
+
+# Save on file space by sharing same cells
+PRIMARY_GDSII_STREAMOUT_TOOL: klayout
+#KLAYOUT_CONFLICT_RESOLUTION: SkipNewCell
+
+# The pin placer tool has a default min distance between pins of 2 routing tracks.
+# Allow to place pins everywhere on the routing grid.
+IO_PIN_MIN_DISTANCE: 0.42 # horizontal grid distance
+
+# Manual pin placement to prevent congestion
+#FABULOUS_MANUAL_PINS:
+    #"UserCLK": [Metal2, 5.76, 0.24, 0.4, 0.48]
+
+    #"FrameStrobe[0]": [Metal2, 10.56, 0.24, 0.4, 0.48]
+
+    #"FrameData[0]": [Metal3, 0.24, 3505.74, 0.48, 0.4]
+
+    
+# Clock
+CLOCK_PERIOD: 20
+CLOCK_PORT: UserCLK
+
+# Routing
+RT_CLOCK_MAX_LAYER: Metal4
+RT_MAX_LAYER: Metal4
+DRT_MAX_LAYER: Metal4
+
+# Disable stdcells
+#SYNTH_ELABORATE_ONLY: true
+RUN_POST_GPL_DESIGN_REPAIR: false
+RUN_POST_CTS_RESIZER_TIMING: false
+DESIGN_REPAIR_BUFFER_INPUT_PORTS: false
+PDN_ENABLE_RAILS: false
+RUN_ANTENNA_REPAIR: false
+RUN_FILL_INSERTION: false
+RUN_TAP_ENDCAP_INSERTION: false
+RUN_CTS: false
+RUN_IRDROP_REPORT: false
+ERROR_ON_SYNTH_CHECKS: false
+
+# PDN (of the tiles) TODO
+# Needs to be the same PDN setting as for the tiles
+# as it is used to overly vertical power straps
+# at the same position as at the tiles
+PDN_VERTICAL_LAYER: Metal4
+PDN_HORIZONTAL_LAYER: Metal5
+
+# default
+#PDN_VWIDTH: 2.2
+#PDN_VSPACING: 4.0
+#PDN_VPITCH: 75.6
+#PDN_VOFFSET: 13.6
+
+#PDN_HWIDTH: 2.0
+#PDN_HSPACING: 4.0
+#PDN_HPITCH: 75.6
+#PDN_HOFFSET: 13.57
+
+VDD_PIN: VDD
+GND_PIN: VSS

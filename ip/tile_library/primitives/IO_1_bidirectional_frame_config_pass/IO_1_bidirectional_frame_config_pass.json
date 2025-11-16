@@ -3,8 +3,8 @@
   "modules": {
     "IO_1_bidirectional_frame_config_pass": {
       "attributes": {
-        "cells_not_processed": 1,
-        "src": "/home/leo/Repositories/greyhound-ihp-librelane/ip/fabric/../tile_library/tiles/W_IO/../../primitives/IO_1_bidirectional_frame_config_pass/IO_1_bidirectional_frame_config_pass.v:19.1-60.10"
+        "top": 1,
+        "src": "/home/leo/Repositories/gf180mcu-fabulous-fpga/ip/fabric/../tile_library/tiles/W_IO/../../primitives/IO_1_bidirectional_frame_config_pass/IO_1_bidirectional_frame_config_pass.v:19.1-60.10"
       },
       "ports": {
         "I": {
@@ -41,7 +41,7 @@
         }
       },
       "cells": {
-        "$not$/home/leo/Repositories/greyhound-ihp-librelane/ip/fabric/../tile_library/tiles/W_IO/../../primitives/IO_1_bidirectional_frame_config_pass/IO_1_bidirectional_frame_config_pass.v:51$2": {
+        "$not$/home/leo/Repositories/gf180mcu-fabulous-fpga/ip/fabric/../tile_library/tiles/W_IO/../../primitives/IO_1_bidirectional_frame_config_pass/IO_1_bidirectional_frame_config_pass.v:51$2": {
           "hide_name": 1,
           "type": "$not",
           "parameters": {
@@ -50,7 +50,7 @@
             "Y_WIDTH": 1
           },
           "attributes": {
-            "src": "/home/leo/Repositories/greyhound-ihp-librelane/ip/fabric/../tile_library/tiles/W_IO/../../primitives/IO_1_bidirectional_frame_config_pass/IO_1_bidirectional_frame_config_pass.v:51.17-51.19"
+            "src": "/home/leo/Repositories/gf180mcu-fabulous-fpga/ip/fabric/../tile_library/tiles/W_IO/../../primitives/IO_1_bidirectional_frame_config_pass/IO_1_bidirectional_frame_config_pass.v:51.17-51.19"
           },
           "port_directions": {
             "A": "input",
@@ -69,7 +69,7 @@
             "WIDTH": 1
           },
           "attributes": {
-            "src": "/home/leo/Repositories/greyhound-ihp-librelane/ip/fabric/../tile_library/tiles/W_IO/../../primitives/IO_1_bidirectional_frame_config_pass/IO_1_bidirectional_frame_config_pass.v:45.2-48.5"
+            "src": "/home/leo/Repositories/gf180mcu-fabulous-fpga/ip/fabric/../tile_library/tiles/W_IO/../../primitives/IO_1_bidirectional_frame_config_pass/IO_1_bidirectional_frame_config_pass.v:45.2-48.5"
           },
           "port_directions": {
             "CLK": "input",
@@ -88,21 +88,21 @@
           "hide_name": 1,
           "bits": [ 4 ],
           "attributes": {
-            "src": "/home/leo/Repositories/greyhound-ihp-librelane/ip/fabric/../tile_library/tiles/W_IO/../../primitives/IO_1_bidirectional_frame_config_pass/IO_1_bidirectional_frame_config_pass.v:45.2-48.5"
+            "src": "/home/leo/Repositories/gf180mcu-fabulous-fpga/ip/fabric/../tile_library/tiles/W_IO/../../primitives/IO_1_bidirectional_frame_config_pass/IO_1_bidirectional_frame_config_pass.v:45.2-48.5"
           }
         },
-        "$not$/home/leo/Repositories/greyhound-ihp-librelane/ip/fabric/../tile_library/tiles/W_IO/../../primitives/IO_1_bidirectional_frame_config_pass/IO_1_bidirectional_frame_config_pass.v:51$2_Y": {
+        "$not$/home/leo/Repositories/gf180mcu-fabulous-fpga/ip/fabric/../tile_library/tiles/W_IO/../../primitives/IO_1_bidirectional_frame_config_pass/IO_1_bidirectional_frame_config_pass.v:51$2_Y": {
           "hide_name": 1,
           "bits": [ 6 ],
           "attributes": {
-            "src": "/home/leo/Repositories/greyhound-ihp-librelane/ip/fabric/../tile_library/tiles/W_IO/../../primitives/IO_1_bidirectional_frame_config_pass/IO_1_bidirectional_frame_config_pass.v:51.17-51.19"
+            "src": "/home/leo/Repositories/gf180mcu-fabulous-fpga/ip/fabric/../tile_library/tiles/W_IO/../../primitives/IO_1_bidirectional_frame_config_pass/IO_1_bidirectional_frame_config_pass.v:51.17-51.19"
           }
         },
         "I": {
           "hide_name": 0,
           "bits": [ 2 ],
           "attributes": {
-            "src": "/home/leo/Repositories/greyhound-ihp-librelane/ip/fabric/../tile_library/tiles/W_IO/../../primitives/IO_1_bidirectional_frame_config_pass/IO_1_bidirectional_frame_config_pass.v:22.8-22.9"
+            "src": "/home/leo/Repositories/gf180mcu-fabulous-fpga/ip/fabric/../tile_library/tiles/W_IO/../../primitives/IO_1_bidirectional_frame_config_pass/IO_1_bidirectional_frame_config_pass.v:22.8-22.9"
           }
         },
         "I_top": {
@@ -111,14 +111,14 @@
           "attributes": {
             "EXTERNAL": 1,
             "FABulous": 1,
-            "src": "/home/leo/Repositories/greyhound-ihp-librelane/ip/fabric/../tile_library/tiles/W_IO/../../primitives/IO_1_bidirectional_frame_config_pass/IO_1_bidirectional_frame_config_pass.v:26.34-26.39"
+            "src": "/home/leo/Repositories/gf180mcu-fabulous-fpga/ip/fabric/../tile_library/tiles/W_IO/../../primitives/IO_1_bidirectional_frame_config_pass/IO_1_bidirectional_frame_config_pass.v:26.34-26.39"
           }
         },
         "O": {
           "hide_name": 0,
           "bits": [ 4 ],
           "attributes": {
-            "src": "/home/leo/Repositories/greyhound-ihp-librelane/ip/fabric/../tile_library/tiles/W_IO/../../primitives/IO_1_bidirectional_frame_config_pass/IO_1_bidirectional_frame_config_pass.v:24.9-24.10"
+            "src": "/home/leo/Repositories/gf180mcu-fabulous-fpga/ip/fabric/../tile_library/tiles/W_IO/../../primitives/IO_1_bidirectional_frame_config_pass/IO_1_bidirectional_frame_config_pass.v:24.9-24.10"
           }
         },
         "O_top": {
@@ -127,7 +127,7 @@
           "attributes": {
             "EXTERNAL": 1,
             "FABulous": 1,
-            "src": "/home/leo/Repositories/greyhound-ihp-librelane/ip/fabric/../tile_library/tiles/W_IO/../../primitives/IO_1_bidirectional_frame_config_pass/IO_1_bidirectional_frame_config_pass.v:28.33-28.38"
+            "src": "/home/leo/Repositories/gf180mcu-fabulous-fpga/ip/fabric/../tile_library/tiles/W_IO/../../primitives/IO_1_bidirectional_frame_config_pass/IO_1_bidirectional_frame_config_pass.v:28.33-28.38"
           }
         },
         "Q": {
@@ -136,14 +136,14 @@
           "attributes": {
             "FABulous": 1,
             "GLOBAL": 1,
-            "src": "/home/leo/Repositories/greyhound-ihp-librelane/ip/fabric/../tile_library/tiles/W_IO/../../primitives/IO_1_bidirectional_frame_config_pass/IO_1_bidirectional_frame_config_pass.v:25.9-25.10"
+            "src": "/home/leo/Repositories/gf180mcu-fabulous-fpga/ip/fabric/../tile_library/tiles/W_IO/../../primitives/IO_1_bidirectional_frame_config_pass/IO_1_bidirectional_frame_config_pass.v:25.9-25.10"
           }
         },
         "T": {
           "hide_name": 0,
           "bits": [ 3 ],
           "attributes": {
-            "src": "/home/leo/Repositories/greyhound-ihp-librelane/ip/fabric/../tile_library/tiles/W_IO/../../primitives/IO_1_bidirectional_frame_config_pass/IO_1_bidirectional_frame_config_pass.v:23.8-23.9"
+            "src": "/home/leo/Repositories/gf180mcu-fabulous-fpga/ip/fabric/../tile_library/tiles/W_IO/../../primitives/IO_1_bidirectional_frame_config_pass/IO_1_bidirectional_frame_config_pass.v:23.8-23.9"
           }
         },
         "T_top": {
@@ -152,7 +152,7 @@
           "attributes": {
             "EXTERNAL": 1,
             "FABulous": 1,
-            "src": "/home/leo/Repositories/greyhound-ihp-librelane/ip/fabric/../tile_library/tiles/W_IO/../../primitives/IO_1_bidirectional_frame_config_pass/IO_1_bidirectional_frame_config_pass.v:27.34-27.39"
+            "src": "/home/leo/Repositories/gf180mcu-fabulous-fpga/ip/fabric/../tile_library/tiles/W_IO/../../primitives/IO_1_bidirectional_frame_config_pass/IO_1_bidirectional_frame_config_pass.v:27.34-27.39"
           }
         },
         "UserCLK": {
@@ -162,7 +162,7 @@
             "EXTERNAL": 1,
             "FABulous": 1,
             "SHARED_PORT": 1,
-            "src": "/home/leo/Repositories/greyhound-ihp-librelane/ip/fabric/../tile_library/tiles/W_IO/../../primitives/IO_1_bidirectional_frame_config_pass/IO_1_bidirectional_frame_config_pass.v:30.46-30.53"
+            "src": "/home/leo/Repositories/gf180mcu-fabulous-fpga/ip/fabric/../tile_library/tiles/W_IO/../../primitives/IO_1_bidirectional_frame_config_pass/IO_1_bidirectional_frame_config_pass.v:30.46-30.53"
           }
         }
       }

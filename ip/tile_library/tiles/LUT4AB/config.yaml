@@ -51,13 +51,15 @@ pdk::ihp-sg13g2:
     - [Metal2, 0, -1, 215.04, 0]
 
 pdk::gf180mcuD:
-    # Width should be multiple of
-    # Height should be multiple of
-    # Standard cell row height:
-    DIE_AREA: [0, 0, 400, 400]
-    PL_TARGET_DENSITY_PCT: 60
+    # Width should be multiple of 0.56 (Metal2 pitch)
+    # Height should be multiple of 0.56 (Metal3 pitch)
+    # Standard cell row height: 3.92 (8 Metal3 track)
+    DIE_AREA: [0, 0, 287.28, 287.28]
+    PL_TARGET_DENSITY_PCT: 90
+    BOTTOM_MARGIN_MULT: 1
+    TOP_MARGIN_MULT: 1
 
-
+SYNTH_LATCH_MAP: dir::../../latch_map.v
 
 #INSERT_ECO_BUFFERS:
 #- target: /UserCLK
