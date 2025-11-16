@@ -41,9 +41,9 @@ module IHP_SRAM_1024x32 #(parameter NoConfigBits = 0)(
     (* FABulous, EXTERNAL *) input                 CONFIGURED_top,
     
     // External and shared clock
-    (* FABulous, EXTERNAL, SHARED_PORT *) input UserCLK,
+    (* FABulous, EXTERNAL, SHARED_PORT *) input UserCLK
     
-    	(* FABulous, GLOBAL *) input [NoConfigBits-1:0] ConfigBits
+    //	(* FABulous, GLOBAL *) input [NoConfigBits-1:0] ConfigBits
 );
     
 	assign A_ADDR_SRAM    = A_ADDR;
