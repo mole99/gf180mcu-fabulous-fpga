@@ -41,3 +41,13 @@ pdk::ihp-sg13g2:
     # Height should be multiple of 0.42 (Metal3 pitch)
     DIE_AREA: [0, 0, 239.04, 215.46]
     PL_TARGET_DENSITY_PCT: 93
+pdk::gf180mcuD:
+    # Width should be multiple of 0.56 (Metal2 pitch)
+    # Height should be multiple of 0.56 (Metal3 pitch)
+    # Standard cell row height: 3.92 (8 Metal3 track)
+    DIE_AREA: [0, 0, 310.80, 287.28]
+    PL_TARGET_DENSITY_PCT: 84
+    BOTTOM_MARGIN_MULT: 1
+    TOP_MARGIN_MULT: 1
+
+SYNTH_LATCH_MAP: dir::../../latch_map.v
