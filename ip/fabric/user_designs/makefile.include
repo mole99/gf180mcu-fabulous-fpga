@@ -1,3 +1,9 @@
+# Paths
+FABULOUS_ROOT 		?= ../../macro/gf180mcuD/fabulous
+EXTRA_PRIMITIVES_PATH 	?= ../extra_primitives.v
+BIT_GEN 			?= ../bit_gen.py
+BIT_TO_HEX 		?= ../bit_to_hex.py
+
 all: synth pnr bitstream hex
 
 synth:
