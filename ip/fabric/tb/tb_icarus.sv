@@ -14,10 +14,10 @@ module tb;
     parameter FrameBitsPerRow = 32;
     parameter MaxFramesPerCol = 20;
 
-    parameter NumColumns = 12;
-    parameter NumRows = 18;
+    parameter NumColumns = 9;
+    parameter NumRows = 14;
 
-    parameter FABRIC_NUM_IO_WEST = 32;
+    parameter FABRIC_NUM_IO_WEST = 24;
 
     wire clk_i;
     wire rst_ni;
@@ -47,40 +47,13 @@ module tb;
     wire        fabric_warmboot_reset_i;
     
     assign fabric_warmboot_reset_i = busy_o;
-
-    // CPU_IRQ
-    wire  [3:0] fabric_irq_o;
-
-    // CUSTOM_INSTRUCTION
-    wire        fabric_issue_ready_o;
-    wire        fabric_issue_accept_o;
-    wire        fabric_issue_valid_i;
-    wire [31:0] fabric_issue_instr_i;
-    wire [31:0] fabric_issue_op0_i;
-    wire [31:0] fabric_issue_op1_i;
-    wire [3 :0] fabric_issue_id_i;
-    
-    wire        fabric_result_valid_o;
-    wire [3 :0] fabric_result_id_o;
-    wire [4 :0] fabric_result_rd_o;
-    wire [31:0] fabric_result_o;
-
-    // OBI_PERIPHERAL
-    wire         fabric_obi_req_i;
-    wire         fabric_obi_we_i;
-    wire  [3 :0] fabric_obi_be_i;
-    wire  [23:0] fabric_obi_addr_i;
-    wire  [31:0] fabric_obi_wdata_i;
-    wire         fabric_obi_gnt_o;
-    wire         fabric_obi_rvalid_o;
-    wire  [31:0] fabric_obi_rdata_o;
     
     fabric_config #(
-        	.FrameBitsPerRow    (FrameBitsPerRow),
-	    .MaxFramesPerCol    (MaxFramesPerCol),
-	    
-	    .NumColumns         (NumColumns),
-	    .NumRows            (NumRows)
+      .FrameBitsPerRow    (FrameBitsPerRow),
+      .MaxFramesPerCol    (MaxFramesPerCol),
+      
+      .NumColumns         (NumColumns),
+      .NumRows            (NumRows)
     ) fabric_config (
         .clk_i,
         .rst_ni,
@@ -116,37 +89,10 @@ module tb;
         .fabric_io_west_out_o,
         .fabric_io_west_oe_o,
         
-	    // WARMBOOT
+        // WARMBOOT
         .fabric_warmboot_boot_o,
         .fabric_warmboot_slot_o,
-        .fabric_warmboot_reset_i,
-
-        // CPU_IRQ
-        .fabric_irq_o,
-
-        // CUSTOM_INSTRUCTION
-        .fabric_issue_ready_o,
-        .fabric_issue_accept_o,
-        .fabric_issue_valid_i,
-        .fabric_issue_instr_i,
-        .fabric_issue_op0_i,
-        .fabric_issue_op1_i,
-        .fabric_issue_id_i,
-
-        .fabric_result_valid_o,
-        .fabric_result_id_o,
-        .fabric_result_rd_o,
-        .fabric_result_o,
-
-        // OBI_PERIPHERAL
-        .fabric_obi_req_i,
-        .fabric_obi_we_i,
-        .fabric_obi_be_i,
-        .fabric_obi_addr_i,
-        .fabric_obi_wdata_i,
-        .fabric_obi_gnt_o,
-        .fabric_obi_rvalid_o,
-        .fabric_obi_rdata_o
+        .fabric_warmboot_reset_i
     );
 
 endmodule
