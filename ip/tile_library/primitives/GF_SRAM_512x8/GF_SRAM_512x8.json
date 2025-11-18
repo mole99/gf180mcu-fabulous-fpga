@@ -1,0 +1,238 @@
+{
+  "creator": "Yosys 0.54 (git sha1 db72ec3bde296a9512b2d1e6fabf81cfb07c2c1b, clang++ 19.1.7 -fPIC -O3)",
+  "modules": {
+    "GF_SRAM_512x8": {
+      "attributes": {
+        "dynports": 1,
+        "top": 1,
+        "src": "/home/leo/Repositories/gf180mcu-fabulous-fpga/ip/fabric/../tile_library/tiles/GF_SRAM/GF_SRAM_bot/../../../primitives/GF_SRAM_512x8/GF_SRAM_512x8.v:15.1-58.10"
+      },
+      "parameter_default_values": {
+        "ADDR_BITS": 9,
+        "NoConfigBits": 0,
+        "WIDTH": 8
+      },
+      "ports": {
+        "CEN": {
+          "direction": "input",
+          "bits": [ 2 ]
+        },
+        "GWEN": {
+          "direction": "input",
+          "bits": [ 3 ]
+        },
+        "WEN": {
+          "direction": "input",
+          "bits": [ 4, 5, 6, 7, 8, 9, 10, 11 ]
+        },
+        "A": {
+          "direction": "input",
+          "bits": [ 12, 13, 14, 15, 16, 17, 18, 19, 20 ]
+        },
+        "D": {
+          "direction": "input",
+          "bits": [ 21, 22, 23, 24, 25, 26, 27, 28 ]
+        },
+        "Q": {
+          "direction": "output",
+          "bits": [ 29, 30, 31, 32, 33, 34, 35, 36 ]
+        },
+        "CEN_SRAM": {
+          "direction": "output",
+          "bits": [ 37 ]
+        },
+        "GWEN_SRAM": {
+          "direction": "output",
+          "bits": [ 3 ]
+        },
+        "WEN_SRAM": {
+          "direction": "output",
+          "bits": [ 4, 5, 6, 7, 8, 9, 10, 11 ]
+        },
+        "A_SRAM": {
+          "direction": "output",
+          "bits": [ 12, 13, 14, 15, 16, 17, 18, 19, 20 ]
+        },
+        "D_SRAM": {
+          "direction": "output",
+          "bits": [ 21, 22, 23, 24, 25, 26, 27, 28 ]
+        },
+        "Q_SRAM": {
+          "direction": "input",
+          "bits": [ 29, 30, 31, 32, 33, 34, 35, 36 ]
+        },
+        "CLK_SRAM": {
+          "direction": "output",
+          "bits": [ 38 ]
+        },
+        "CONFIGURED_top": {
+          "direction": "input",
+          "bits": [ 39 ]
+        },
+        "UserCLK": {
+          "direction": "input",
+          "bits": [ 38 ]
+        }
+      },
+      "cells": {
+        "$logic_and$/home/leo/Repositories/gf180mcu-fabulous-fpga/ip/fabric/../tile_library/tiles/GF_SRAM/GF_SRAM_bot/../../../primitives/GF_SRAM_512x8/GF_SRAM_512x8.v:49$1": {
+          "hide_name": 1,
+          "type": "$logic_and",
+          "parameters": {
+            "A_SIGNED": 0,
+            "A_WIDTH": 1,
+            "B_SIGNED": 0,
+            "B_WIDTH": 1,
+            "Y_WIDTH": 1
+          },
+          "attributes": {
+            "src": "/home/leo/Repositories/gf180mcu-fabulous-fpga/ip/fabric/../tile_library/tiles/GF_SRAM/GF_SRAM_bot/../../../primitives/GF_SRAM_512x8/GF_SRAM_512x8.v:49.22-49.43"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 2 ],
+            "B": [ 39 ],
+            "Y": [ 37 ]
+          }
+        }
+      },
+      "netnames": {
+        "$logic_and$/home/leo/Repositories/gf180mcu-fabulous-fpga/ip/fabric/../tile_library/tiles/GF_SRAM/GF_SRAM_bot/../../../primitives/GF_SRAM_512x8/GF_SRAM_512x8.v:49$1_Y": {
+          "hide_name": 1,
+          "bits": [ 37 ],
+          "attributes": {
+            "src": "/home/leo/Repositories/gf180mcu-fabulous-fpga/ip/fabric/../tile_library/tiles/GF_SRAM/GF_SRAM_bot/../../../primitives/GF_SRAM_512x8/GF_SRAM_512x8.v:49.22-49.43"
+          }
+        },
+        "A": {
+          "hide_name": 0,
+          "bits": [ 12, 13, 14, 15, 16, 17, 18, 19, 20 ],
+          "attributes": {
+            "src": "/home/leo/Repositories/gf180mcu-fabulous-fpga/ip/fabric/../tile_library/tiles/GF_SRAM/GF_SRAM_bot/../../../primitives/GF_SRAM_512x8/GF_SRAM_512x8.v:26.35-26.36"
+          }
+        },
+        "A_SRAM": {
+          "hide_name": 0,
+          "bits": [ 12, 13, 14, 15, 16, 17, 18, 19, 20 ],
+          "attributes": {
+            "EXTERNAL": 1,
+            "FABulous": 1,
+            "src": "/home/leo/Repositories/gf180mcu-fabulous-fpga/ip/fabric/../tile_library/tiles/GF_SRAM/GF_SRAM_bot/../../../primitives/GF_SRAM_512x8/GF_SRAM_512x8.v:34.59-34.65"
+          }
+        },
+        "CEN": {
+          "hide_name": 0,
+          "bits": [ 2 ],
+          "attributes": {
+            "src": "/home/leo/Repositories/gf180mcu-fabulous-fpga/ip/fabric/../tile_library/tiles/GF_SRAM/GF_SRAM_bot/../../../primitives/GF_SRAM_512x8/GF_SRAM_512x8.v:23.35-23.38"
+          }
+        },
+        "CEN_SRAM": {
+          "hide_name": 0,
+          "bits": [ 37 ],
+          "attributes": {
+            "EXTERNAL": 1,
+            "FABulous": 1,
+            "src": "/home/leo/Repositories/gf180mcu-fabulous-fpga/ip/fabric/../tile_library/tiles/GF_SRAM/GF_SRAM_bot/../../../primitives/GF_SRAM_512x8/GF_SRAM_512x8.v:31.59-31.67"
+          }
+        },
+        "CLK_SRAM": {
+          "hide_name": 0,
+          "bits": [ 38 ],
+          "attributes": {
+            "EXTERNAL": 1,
+            "FABulous": 1,
+            "src": "/home/leo/Repositories/gf180mcu-fabulous-fpga/ip/fabric/../tile_library/tiles/GF_SRAM/GF_SRAM_bot/../../../primitives/GF_SRAM_512x8/GF_SRAM_512x8.v:38.59-38.67"
+          }
+        },
+        "CONFIGURED_top": {
+          "hide_name": 0,
+          "bits": [ 39 ],
+          "attributes": {
+            "EXTERNAL": 1,
+            "FABulous": 1,
+            "src": "/home/leo/Repositories/gf180mcu-fabulous-fpga/ip/fabric/../tile_library/tiles/GF_SRAM/GF_SRAM_bot/../../../primitives/GF_SRAM_512x8/GF_SRAM_512x8.v:40.36-40.50"
+          }
+        },
+        "D": {
+          "hide_name": 0,
+          "bits": [ 21, 22, 23, 24, 25, 26, 27, 28 ],
+          "attributes": {
+            "src": "/home/leo/Repositories/gf180mcu-fabulous-fpga/ip/fabric/../tile_library/tiles/GF_SRAM/GF_SRAM_bot/../../../primitives/GF_SRAM_512x8/GF_SRAM_512x8.v:27.35-27.36"
+          }
+        },
+        "D_SRAM": {
+          "hide_name": 0,
+          "bits": [ 21, 22, 23, 24, 25, 26, 27, 28 ],
+          "attributes": {
+            "EXTERNAL": 1,
+            "FABulous": 1,
+            "src": "/home/leo/Repositories/gf180mcu-fabulous-fpga/ip/fabric/../tile_library/tiles/GF_SRAM/GF_SRAM_bot/../../../primitives/GF_SRAM_512x8/GF_SRAM_512x8.v:35.59-35.65"
+          }
+        },
+        "GWEN": {
+          "hide_name": 0,
+          "bits": [ 3 ],
+          "attributes": {
+            "src": "/home/leo/Repositories/gf180mcu-fabulous-fpga/ip/fabric/../tile_library/tiles/GF_SRAM/GF_SRAM_bot/../../../primitives/GF_SRAM_512x8/GF_SRAM_512x8.v:24.35-24.39"
+          }
+        },
+        "GWEN_SRAM": {
+          "hide_name": 0,
+          "bits": [ 3 ],
+          "attributes": {
+            "EXTERNAL": 1,
+            "FABulous": 1,
+            "src": "/home/leo/Repositories/gf180mcu-fabulous-fpga/ip/fabric/../tile_library/tiles/GF_SRAM/GF_SRAM_bot/../../../primitives/GF_SRAM_512x8/GF_SRAM_512x8.v:32.59-32.68"
+          }
+        },
+        "Q": {
+          "hide_name": 0,
+          "bits": [ 29, 30, 31, 32, 33, 34, 35, 36 ],
+          "attributes": {
+            "src": "/home/leo/Repositories/gf180mcu-fabulous-fpga/ip/fabric/../tile_library/tiles/GF_SRAM/GF_SRAM_bot/../../../primitives/GF_SRAM_512x8/GF_SRAM_512x8.v:28.36-28.37"
+          }
+        },
+        "Q_SRAM": {
+          "hide_name": 0,
+          "bits": [ 29, 30, 31, 32, 33, 34, 35, 36 ],
+          "attributes": {
+            "EXTERNAL": 1,
+            "FABulous": 1,
+            "src": "/home/leo/Repositories/gf180mcu-fabulous-fpga/ip/fabric/../tile_library/tiles/GF_SRAM/GF_SRAM_bot/../../../primitives/GF_SRAM_512x8/GF_SRAM_512x8.v:36.59-36.65"
+          }
+        },
+        "UserCLK": {
+          "hide_name": 0,
+          "bits": [ 38 ],
+          "attributes": {
+            "EXTERNAL": 1,
+            "FABulous": 1,
+            "SHARED_PORT": 1,
+            "src": "/home/leo/Repositories/gf180mcu-fabulous-fpga/ip/fabric/../tile_library/tiles/GF_SRAM/GF_SRAM_bot/../../../primitives/GF_SRAM_512x8/GF_SRAM_512x8.v:43.49-43.56"
+          }
+        },
+        "WEN": {
+          "hide_name": 0,
+          "bits": [ 4, 5, 6, 7, 8, 9, 10, 11 ],
+          "attributes": {
+            "src": "/home/leo/Repositories/gf180mcu-fabulous-fpga/ip/fabric/../tile_library/tiles/GF_SRAM/GF_SRAM_bot/../../../primitives/GF_SRAM_512x8/GF_SRAM_512x8.v:25.35-25.38"
+          }
+        },
+        "WEN_SRAM": {
+          "hide_name": 0,
+          "bits": [ 4, 5, 6, 7, 8, 9, 10, 11 ],
+          "attributes": {
+            "EXTERNAL": 1,
+            "FABulous": 1,
+            "src": "/home/leo/Repositories/gf180mcu-fabulous-fpga/ip/fabric/../tile_library/tiles/GF_SRAM/GF_SRAM_bot/../../../primitives/GF_SRAM_512x8/GF_SRAM_512x8.v:33.59-33.67"
+          }
+        }
+      }
+    }
+  }
+}

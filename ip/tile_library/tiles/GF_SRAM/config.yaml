@@ -8,13 +8,15 @@ meta:
 
     +OpenROAD.GlobalPlacement: OpenROAD.AddBuffers
 
-FABULOUS_TILE_DIR: dir::. #tiles/RegFile
+FABULOUS_TILE_DIR: dir::. #tiles/GF_SRAM
 
 # Basics
-DESIGN_NAME: RegFile
+DESIGN_NAME: GF_SRAM
+FABULOUS_SUPERTILE: true
 VERILOG_FILES:
   - dir::../../models_pack.v
   - dir::../../custom.v
+FABULOUS_EXTERNAL_SIDE: E
 
 # Disable timing driven placement
 # as it would resize the buffers
@@ -24,30 +26,33 @@ PL_TIME_DRIVEN: false
 DESIGN_REPAIR_BUFFER_INPUT_PORTS: False
 DESIGN_REPAIR_BUFFER_OUTPUT_PORTS: True
 
-# "AREA 0" "AREA 1" "AREA 2" "AREA 3"
-SYNTH_STRATEGY: "AREA 2"
+# Seems to add a few buffers too
+PL_ROUTABILITY_DRIVEN: false
 
 # Clock
 CLOCK_PERIOD: 20
-CLOCK_PORT: UserCLK
+CLOCK_PORT: Tile_X0Y1_UserCLK
 
 # Area
 FP_SIZING: absolute
-pdk::sky130A:
-    DIE_AREA: [0, 0, 245, 225]
-    PL_TARGET_DENSITY_PCT: 53
 pdk::ihp-sg13g2:
     # Width should be multiple of 0.48 (Metal2 pitch)
     # Height should be multiple of 0.42 (Metal3 pitch)
-    DIE_AREA: [0, 0, 239.04, 215.46]
-    PL_TARGET_DENSITY_PCT: 93
+    DIE_AREA: [0, 0, 109.44, 430.92]
+    
+    PL_TARGET_DENSITY_PCT: 84
+    SYNTH_STRATEGY: "AREA 0" # "AREA 0" "AREA 1" "AREA 2" "AREA 3"
+    
+    ROUTING_OBSTRUCTIONS:
+    - [Metal2, 0, -1, 109.44, 0]
+
 pdk::gf180mcuD:
     # Width should be multiple of 0.56 (Metal2 pitch)
     # Height should be multiple of 0.56 (Metal3 pitch)
     # Standard cell row height: 3.92 (8 Metal3 track)
-    DIE_AREA: [0, 0, 316.40, 287.28]
-    PL_TARGET_DENSITY_PCT: 83
-    BOTTOM_MARGIN_MULT: 1
-    TOP_MARGIN_MULT: 1
+    # Note: the number of pin slots must be divisable
+    # by the number of segments for the side
+    DIE_AREA: [0, 0, 158.48, 574.56]
+    PL_TARGET_DENSITY_PCT: 80
 
 SYNTH_LATCH_MAP: dir::../../latch_map.v
