@@ -28,6 +28,10 @@ DESIGN_NAME: chip_top
 VERILOG_FILES:
 - dir::../src/chip_top.sv
 - dir::../src/chip_core.sv
+- dir::../ip/fabric/rtl/fabric_wrapper.sv
+- dir::../ip/fabric_config/fabric_config.sv
+- dir::../ip/fabric_config/fabric_spi_controller.sv
+- dir::../ip/fabric_config/fabric_spi_receiver.sv
 
 # Enable plugin for better SystemVerilog support
 # USE_SLANG: True
@@ -71,6 +75,9 @@ GRT_ALLOW_CONGESTION: true
 # Fix antenna violations after DRT
 DRT_ANTENNA_REPAIR_ITERS: 10
 DRT_ANTENNA_MARGIN: 10 # %
+
+PL_MAX_DISPLACEMENT_X: 800
+PL_MAX_DISPLACEMENT_Y: 500
 
 # PDN - Straps
 PDN_VWIDTH: 5
@@ -182,18 +189,46 @@ MACROS:
         - pdk_dir::libs.ref/gf180mcu_fd_ip_sram/lib/gf180mcu_fd_ip_sram__sram512x8m8wm1__ss_125C_4v50.lib
     instances:
       # Make sure to specify the SRAMs in pdn_cfg.tcl
-      i_chip_core.sram_0:
-        location: [490, 500]
-        orientation: N
-      i_chip_core.sram_1:
-        location: [970, 500]
+      i_chip_core.fabric_wrapper.sram_0:
+        location: [3005, 530]
         orientation: E
+      i_chip_core.fabric_wrapper.sram_1:
+        location: [3005, 1130]
+        orientation: E
+      i_chip_core.fabric_wrapper.sram_2:
+        location: [3005, 1730]
+        orientation: E
+      i_chip_core.fabric_wrapper.sram_3:
+        location: [3005, 2330]
+        orientation: E
+      i_chip_core.fabric_wrapper.sram_4:
+        location: [3005, 2930]
+        orientation: E
+      i_chip_core.fabric_wrapper.sram_5:
+        location: [3005, 3530]
+        orientation: E
+
+  eFPGA:
+    gds:
+      - dir::../ip/fabric/macro/gf180mcuD/gds/eFPGA.gds
+    lef:
+      - dir::../ip/fabric/macro/gf180mcuD/lef/eFPGA.lef
+    nl:
+      - dir::../ip/fabric/macro/gf180mcuD/nl/eFPGA.nl.v
+    instances:
+      i_chip_core.fabric_wrapper.eFPGA:
+        location: [640, 500]
+        orientation: N
 
 # This is an alternative method compared to
 # specifying the power connections in the RTL
 PDN_MACRO_CONNECTIONS:
-- "i_chip_core.sram_0 VDD VSS VDD VSS"
-- "i_chip_core.sram_1 VDD VSS VDD VSS"
+- "i_chip_core.fabric_wrapper.sram_0 VDD VSS VDD VSS"
+- "i_chip_core.fabric_wrapper.sram_1 VDD VSS VDD VSS"
+- "i_chip_core.fabric_wrapper.sram_2 VDD VSS VDD VSS"
+- "i_chip_core.fabric_wrapper.sram_3 VDD VSS VDD VSS"
+- "i_chip_core.fabric_wrapper.sram_4 VDD VSS VDD VSS"
+- "i_chip_core.fabric_wrapper.sram_5 VDD VSS VDD VSS"
 
 # Halo size around macros while cutting rows.
 # Workaround for: https://github.com/The-OpenROAD-Project/OpenROAD/issues/8868

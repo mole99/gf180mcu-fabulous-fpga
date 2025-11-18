@@ -47,17 +47,6 @@ module fabric_config #(
     
     state_t curr_state;
     state_t next_state;
-    
-    logic clk_gated;
-    
-    (* keep, dont_touch *)
-    sg13g2_lgcp_1 clk_gate (
-      .CLK      (clk_i),
-      .GATE     (1'b1),
-      .GCLK     (clk_gated)
-    );
-    
-    //assign clk_gated = clk_i;
 
     // Configuration signals
     logic  [$clog2(NumColumns)-1:0] column_select;
@@ -86,7 +75,7 @@ module fabric_config #(
     assign busy_o = curr_state != S_IDLE;
 
     // State transition
-    always_ff @(posedge clk_gated, negedge rst_ni) begin
+    always_ff @(posedge clk_i, negedge rst_ni) begin
         if (!rst_ni) begin
             curr_state <= S_IDLE;
         end else begin
@@ -94,7 +83,7 @@ module fabric_config #(
         end
     end
     
-    always_ff @(posedge clk_gated, negedge rst_ni) begin
+    always_ff @(posedge clk_i, negedge rst_ni) begin
         if (!rst_ni) begin
             configured_o <= '0;
         end else begin
@@ -106,7 +95,7 @@ module fabric_config #(
     end
     
     
-    always_ff @(posedge clk_gated, negedge rst_ni) begin
+    always_ff @(posedge clk_i, negedge rst_ni) begin
         if (!rst_ni) begin
             column_select <= '0;
             frame_select  <= '0;
@@ -167,7 +156,7 @@ module fabric_config #(
     // Strobe registers via row select
     generate
     for (genvar i=0; i<NumRows; i++) begin : gen_framedata
-        always_ff @(posedge clk_gated) begin
+        always_ff @(posedge clk_i) begin
             if (row_strobe && row_select == i) begin
                 FrameDataRegister[FrameBitsPerRow*i +: FrameBitsPerRow] <= row_data;
             end
