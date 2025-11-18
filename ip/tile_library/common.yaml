@@ -61,16 +61,8 @@ pdk::gf180mcuD:
     LEFT_MARGIN_MULT: 6
     RIGHT_MARGIN_MULT: 6
 
-    # PDN - default
-    #PDN_VWIDTH: 2.2
-    #PDN_VSPACING: 4.0
-    #PDN_VPITCH: 75.6
-    #PDN_VOFFSET: 13.6
-
-    #PDN_HWIDTH: 2.0
-    #PDN_HSPACING: 4.0
-    #PDN_HPITCH: 75.6
-    #PDN_HOFFSET: 13.57
+    # PDN
+    PDN_VPITCH: 100
 
 # Use the minimum length for pins
 # that satisfies the minimum area constraint
