@@ -3,7 +3,7 @@ meta:
   flow: FABulousFabric
   substituting_steps:
     # Save some time
-    Magic.DRC: null
+    #Magic.DRC: null
     #KLayout.DRC: null
 
     # Add steps for LVS with KLayout
@@ -21,7 +21,7 @@ VERILOG_FILES: []
 
 # No extract-unique, because the power straps
 # are connected in the top-level integration
-MAGIC_NO_EXT_UNIQUE: true
+MAGIC_EXT_UNIQUE: notopports
 
 # Unfortunately needed
 GRT_ALLOW_CONGESTION: true
@@ -44,11 +44,11 @@ IO_PIN_V_LENGTH: 0.56
 FABULOUS_TILE_SIZES:
   LUT4AB:           [ 287.28, 287.28 ]
   
-  "IHP_SRAM_*":     [ 214.48, 287.28 ]
-  "*term_IHP_SRAM": [ 214.48, 71.12 ]
+  "GF_SRAM_*":     [ 158.48, 287.28 ]
+  "*term_SRAM": [ 158.48, 71.12 ]
 
-  RegFile:          [ 310.80, 287.28 ]
-  "*_term_single2": [ 310.80, 71.12 ]
+  RegFile:          [ 316.40, 287.28 ]
+  "*_term_single2": [ 316.40, 71.12 ]
  
   "DSP*":           [ 263.76, 287.28 ]
   "*term_DSP*":     [ 263.76, 71.12 ]
@@ -66,13 +66,95 @@ PRIMARY_GDSII_STREAMOUT_TOOL: klayout
 IO_PIN_MIN_DISTANCE: 0.42 # horizontal grid distance
 
 # Manual pin placement to prevent congestion
-#FABULOUS_MANUAL_PINS:
-    #"UserCLK": [Metal2, 5.76, 0.24, 0.4, 0.48]
+FABULOUS_MANUAL_PINS:
+    "UserCLK": [Metal2, 4.2, 0.28, 0.56, 0.56]
 
-    #"FrameStrobe[0]": [Metal2, 10.56, 0.24, 0.4, 0.48]
+    "FrameStrobe[0]": [Metal2, 10.92, 0.28, 0.56, 0.56]
+    "FrameStrobe[1]": [Metal2, 17.64, 0.28, 0.56, 0.56]
+    "FrameStrobe[2]": [Metal2, 24.36, 0.28, 0.56, 0.56]
+    "FrameStrobe[3]": [Metal2, 31.08, 0.28, 0.56, 0.56]
+    "FrameStrobe[4]": [Metal2, 37.80, 0.28, 0.56, 0.56]
+    "FrameStrobe[5]": [Metal2, 44.52, 0.28, 0.56, 0.56]
+    "FrameStrobe[6]": [Metal2, 51.24, 0.28, 0.56, 0.56]
+    "FrameStrobe[7]": [Metal2, 57.96, 0.28, 0.56, 0.56]
+    "FrameStrobe[8]": [Metal2, 64.68, 0.28, 0.56, 0.56]
+    "FrameStrobe[9]": [Metal2, 71.40, 0.28, 0.56, 0.56]
+    "FrameStrobe[10]": [Metal2, 78.12, 0.28, 0.56, 0.56]
+    "FrameStrobe[11]": [Metal2, 84.84, 0.28, 0.56, 0.56]
+    "FrameStrobe[12]": [Metal2, 91.56, 0.28, 0.56, 0.56]
+    "FrameStrobe[13]": [Metal2, 98.28, 0.28, 0.56, 0.56]
+    "FrameStrobe[14]": [Metal2, 105.00, 0.28, 0.56, 0.56]
+    "FrameStrobe[15]": [Metal2, 111.72, 0.28, 0.56, 0.56]
+    "FrameStrobe[16]": [Metal2, 118.44, 0.28, 0.56, 0.56]
+    "FrameStrobe[17]": [Metal2, 125.16, 0.28, 0.56, 0.56]
+    "FrameStrobe[18]": [Metal2, 131.88, 0.28, 0.56, 0.56]
+    "FrameStrobe[19]": [Metal2, 138.60, 0.28, 0.56, 0.56]
 
-    #"FrameData[0]": [Metal3, 0.24, 3505.74, 0.48, 0.4]
+    "FrameData[416]": [Metal3, 0.28, 5.88, 0.56, 0.56]
+    "FrameData[417]": [Metal3, 0.28, 8.12, 0.56, 0.56]
+    "FrameData[418]": [Metal3, 0.28, 10.36, 0.56, 0.56]
+    "FrameData[419]": [Metal3, 0.28, 12.60, 0.56, 0.56]
+    "FrameData[420]": [Metal3, 0.28, 14.84, 0.56, 0.56]
+    "FrameData[421]": [Metal3, 0.28, 17.08, 0.56, 0.56]
+    "FrameData[422]": [Metal3, 0.28, 19.32, 0.56, 0.56]
+    "FrameData[423]": [Metal3, 0.28, 21.56, 0.56, 0.56]
+    "FrameData[424]": [Metal3, 0.28, 23.80, 0.56, 0.56]
+    "FrameData[425]": [Metal3, 0.28, 26.04, 0.56, 0.56]
+    "FrameData[426]": [Metal3, 0.28, 28.28, 0.56, 0.56]
+    "FrameData[427]": [Metal3, 0.28, 30.52, 0.56, 0.56]
+    "FrameData[428]": [Metal3, 0.28, 32.76, 0.56, 0.56]
+    "FrameData[429]": [Metal3, 0.28, 35.00, 0.56, 0.56]
+    "FrameData[430]": [Metal3, 0.28, 37.24, 0.56, 0.56]
+    "FrameData[431]": [Metal3, 0.28, 39.48, 0.56, 0.56]
+    "FrameData[432]": [Metal3, 0.28, 41.72, 0.56, 0.56]
+    "FrameData[433]": [Metal3, 0.28, 43.96, 0.56, 0.56]
+    "FrameData[434]": [Metal3, 0.28, 46.20, 0.56, 0.56]
+    "FrameData[435]": [Metal3, 0.28, 48.44, 0.56, 0.56]
+    "FrameData[436]": [Metal3, 0.28, 50.68, 0.56, 0.56]
+    "FrameData[437]": [Metal3, 0.28, 52.92, 0.56, 0.56]
+    "FrameData[438]": [Metal3, 0.28, 55.16, 0.56, 0.56]
+    "FrameData[439]": [Metal3, 0.28, 57.40, 0.56, 0.56]
+    "FrameData[440]": [Metal3, 0.28, 59.64, 0.56, 0.56]
+    "FrameData[441]": [Metal3, 0.28, 61.88, 0.56, 0.56]
+    "FrameData[442]": [Metal3, 0.28, 64.12, 0.56, 0.56]
+    "FrameData[443]": [Metal3, 0.28, 66.36, 0.56, 0.56]
+    "FrameData[444]": [Metal3, 0.28, 68.60, 0.56, 0.56]
+    "FrameData[445]": [Metal3, 0.28, 70.84, 0.56, 0.56]
+    "FrameData[446]": [Metal3, 0.28, 73.08, 0.56, 0.56]
+    "FrameData[447]": [Metal3, 0.28, 75.32, 0.56, 0.56]
 
+    "FrameData[0]": [Metal3, 0.28, 3524.36, 0.56, 0.56]
+    "FrameData[1]": [Metal3, 0.28, 3526.60, 0.56, 0.56]
+    "FrameData[2]": [Metal3, 0.28, 3528.84, 0.56, 0.56]
+    "FrameData[3]": [Metal3, 0.28, 3531.08, 0.56, 0.56]
+    "FrameData[4]": [Metal3, 0.28, 3533.32, 0.56, 0.56]
+    "FrameData[5]": [Metal3, 0.28, 3535.56, 0.56, 0.56]
+    "FrameData[6]": [Metal3, 0.28, 3537.80, 0.56, 0.56]
+    "FrameData[7]": [Metal3, 0.28, 3540.04, 0.56, 0.56]
+    "FrameData[8]": [Metal3, 0.28, 3542.28, 0.56, 0.56]
+    "FrameData[9]": [Metal3, 0.28, 3544.52, 0.56, 0.56]
+    "FrameData[10]": [Metal3, 0.28, 3546.76, 0.56, 0.56]
+    "FrameData[11]": [Metal3, 0.28, 3549.00, 0.56, 0.56]
+    "FrameData[12]": [Metal3, 0.28, 3551.24, 0.56, 0.56]
+    "FrameData[13]": [Metal3, 0.28, 3553.48, 0.56, 0.56]
+    "FrameData[14]": [Metal3, 0.28, 3555.72, 0.56, 0.56]
+    "FrameData[15]": [Metal3, 0.28, 3557.96, 0.56, 0.56]
+    "FrameData[16]": [Metal3, 0.28, 3560.20, 0.56, 0.56]
+    "FrameData[17]": [Metal3, 0.28, 3562.44, 0.56, 0.56]
+    "FrameData[18]": [Metal3, 0.28, 3564.68, 0.56, 0.56]
+    "FrameData[19]": [Metal3, 0.28, 3566.92, 0.56, 0.56]
+    "FrameData[20]": [Metal3, 0.28, 3569.16, 0.56, 0.56]
+    "FrameData[21]": [Metal3, 0.28, 3571.40, 0.56, 0.56]
+    "FrameData[22]": [Metal3, 0.28, 3573.64, 0.56, 0.56]
+    "FrameData[23]": [Metal3, 0.28, 3575.88, 0.56, 0.56]
+    "FrameData[24]": [Metal3, 0.28, 3578.12, 0.56, 0.56]
+    "FrameData[25]": [Metal3, 0.28, 3580.36, 0.56, 0.56]
+    "FrameData[26]": [Metal3, 0.28, 3582.60, 0.56, 0.56]
+    "FrameData[27]": [Metal3, 0.28, 3584.84, 0.56, 0.56]
+    "FrameData[28]": [Metal3, 0.28, 3587.08, 0.56, 0.56]
+    "FrameData[29]": [Metal3, 0.28, 3589.32, 0.56, 0.56]
+    "FrameData[30]": [Metal3, 0.28, 3591.56, 0.56, 0.56]
+    "FrameData[31]": [Metal3, 0.28, 3593.80, 0.56, 0.56]
     
 # Clock
 CLOCK_PERIOD: 20
