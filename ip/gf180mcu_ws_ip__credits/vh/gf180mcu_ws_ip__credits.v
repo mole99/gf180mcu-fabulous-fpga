@@ -1,0 +1,2 @@
+module gf180mcu_ws_ip__credits;
+endmodule
