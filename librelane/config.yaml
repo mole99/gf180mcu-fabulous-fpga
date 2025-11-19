@@ -176,6 +176,36 @@ MACROS:
         location: ["expr::$DIE_AREA[2] + -169.25", "expr::$DIE_AREA[3] + -169.25"]
         orientation: N
 
+  gf180mcu_ws_ip__logo_fabulous:
+    gds:
+      - dir::../ip/gf180mcu_ws_ip__logo_fabulous/gds/gf180mcu_ws_ip__logo_fabulous.gds
+    lef:
+      - dir::../ip/gf180mcu_ws_ip__logo_fabulous/lef/gf180mcu_ws_ip__logo_fabulous.lef
+    vh:
+      - dir::../ip/gf180mcu_ws_ip__logo_fabulous/vh/gf180mcu_ws_ip__logo_fabulous.v
+    lib:
+      "*":
+        - dir::../ip/gf180mcu_ws_ip__logo_fabulous/lib/gf180mcu_ws_ip__logo_fabulous.lib
+    instances:
+      fabulous_logo:
+        location: [3762.75, 26]
+        orientation: N
+
+  gf180mcu_ws_ip__credits:
+    gds:
+      - dir::../ip/gf180mcu_ws_ip__credits/gds/gf180mcu_ws_ip__credits.gds
+    lef:
+      - dir::../ip/gf180mcu_ws_ip__credits/lef/gf180mcu_ws_ip__credits.lef
+    vh:
+      - dir::../ip/gf180mcu_ws_ip__credits/vh/gf180mcu_ws_ip__credits.v
+    lib:
+      "*":
+        - dir::../ip/gf180mcu_ws_ip__credits/lib/gf180mcu_ws_ip__credits.lib
+    instances:
+      credits:
+        location: [26, 4952.75]
+        orientation: N
+
   gf180mcu_fd_ip_sram__sram512x8m8wm1:
     gds:
       - pdk_dir::libs.ref/gf180mcu_fd_ip_sram/gds/gf180mcu_fd_ip_sram__sram512x8m8wm1.gds
@@ -193,22 +223,22 @@ MACROS:
     instances:
       # Make sure to specify the SRAMs in pdn_cfg.tcl
       i_chip_core.fabric_wrapper.sram_0:
-        location: [3005, 530]
+        location: [3005, 790]
         orientation: E
       i_chip_core.fabric_wrapper.sram_1:
-        location: [3005, 1130]
+        location: [3005, 1390]
         orientation: E
       i_chip_core.fabric_wrapper.sram_2:
-        location: [3005, 1730]
+        location: [3005, 1990]
         orientation: E
       i_chip_core.fabric_wrapper.sram_3:
-        location: [3005, 2330]
+        location: [3005, 2590]
         orientation: E
       i_chip_core.fabric_wrapper.sram_4:
-        location: [3005, 2930]
+        location: [3005, 3190]
         orientation: E
       i_chip_core.fabric_wrapper.sram_5:
-        location: [3005, 3530]
+        location: [3005, 3790]
         orientation: E
 
   eFPGA:
@@ -220,7 +250,7 @@ MACROS:
       - dir::../ip/fabric/macro/gf180mcuD/nl/eFPGA.nl.v
     instances:
       i_chip_core.fabric_wrapper.eFPGA:
-        location: [640, 500]
+        location: [640, 750]
         orientation: N
 
 # This is an alternative method compared to

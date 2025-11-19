@@ -1,0 +1,1590 @@
+<?xml version="1.0" encoding="utf-8"?>
+<report-database>
+ <description>DRC Run Report at</description>
+ <original-file/>
+ <generator>drc: script='/home/leo/Repositories/gf180mcu-fabulous-fpga/ip/gf180mcu_ws_ip__logo_fabulous/../../gf180mcu/gf180mcuD/libs.tech/klayout/tech/drc/gf180mcu.drc'</generator>
+ <top-cell>gf180mcu_ws_ip__logo_fabulous</top-cell>
+ <tags>
+ </tags>
+ <categories>
+  <category>
+   <name>comp_OFFGRID</name>
+   <description>OFFGRID : OFFGRID vertex on comp</description>
+   <categories>
+   </categories>
+  </category>
+  <category>
+   <name>comp_angle</name>
+   <description>ACUTE :  non 45 degree angle comp</description>
+   <categories>
+   </categories>
+  </category>
+  <category>
+   <name>dnwell_OFFGRID</name>
+   <description>OFFGRID : OFFGRID vertex on dnwell</description>
+   <categories>
+   </categories>
+  </category>
+  <category>
+   <name>dnwell_angle</name>
+   <description>ACUTE :  non 45 degree angle dnwell</description>
+   <categories>
+   </categories>
+  </category>
+  <category>
+   <name>nwell_OFFGRID</name>
+   <description>OFFGRID : OFFGRID vertex on nwell</description>
+   <categories>
+   </categories>
+  </category>
+  <category>
+   <name>nwell_angle</name>
+   <description>ACUTE :  non 45 degree angle nwell</description>
+   <categories>
+   </categories>
+  </category>
+  <category>
+   <name>lvpwell_OFFGRID</name>
+   <description>OFFGRID : OFFGRID vertex on lvpwell</description>
+   <categories>
+   </categories>
+  </category>
+  <category>
+   <name>lvpwell_angle</name>
+   <description>ACUTE :  non 45 degree angle lvpwell</description>
+   <categories>
+   </categories>
+  </category>
+  <category>
+   <name>dualgate_OFFGRID</name>
+   <description>OFFGRID : OFFGRID vertex on dualgate</description>
+   <categories>
+   </categories>
+  </category>
+  <category>
+   <name>dualgate_angle</name>
+   <description>ACUTE :  non 45 degree angle dualgate</description>
+   <categories>
+   </categories>
+  </category>
+  <category>
+   <name>poly2_OFFGRID</name>
+   <description>OFFGRID : OFFGRID vertex on poly2</description>
+   <categories>
+   </categories>
+  </category>
+  <category>
+   <name>poly2_angle</name>
+   <description>ACUTE :  non 45 degree angle poly2</description>
+   <categories>
+   </categories>
+  </category>
+  <category>
+   <name>nplus_OFFGRID</name>
+   <description>OFFGRID : OFFGRID vertex on nplus</description>
+   <categories>
+   </categories>
+  </category>
+  <category>
+   <name>nplus_angle</name>
+   <description>ACUTE :  non 45 degree angle nplus</description>
+   <categories>
+   </categories>
+  </category>
+  <category>
+   <name>pplus_OFFGRID</name>
+   <description>OFFGRID : OFFGRID vertex on pplus</description>
+   <categories>
+   </categories>
+  </category>
+  <category>
+   <name>pplus_angle</name>
+   <description>ACUTE :  non 45 degree angle pplus</description>
+   <categories>
+   </categories>
+  </category>
+  <category>
+   <name>sab_OFFGRID</name>
+   <description>OFFGRID : OFFGRID vertex on sab</description>
+   <categories>
+   </categories>
+  </category>
+  <category>
+   <name>sab_angle</name>
+   <description>ACUTE : non 45 degree angle sab</description>
+   <categories>
+   </categories>
+  </category>
+  <category>
+   <name>esd_OFFGRID</name>
+   <description>OFFGRID : OFFGRID vertex on esd</description>
+   <categories>
+   </categories>
+  </category>
+  <category>
+   <name>esd_angle</name>
+   <description>ACUTE : non 45 degree angle esd</description>
+   <categories>
+   </categories>
+  </category>
+  <category>
+   <name>resistor_OFFGRID</name>
+   <description>OFFGRID : OFFGRID vertex on resistor</description>
+   <categories>
+   </categories>
+  </category>
+  <category>
+   <name>resistor_angle</name>
+   <description>ACUTE :  non 45 degree angle resistor</description>
+   <categories>
+   </categories>
+  </category>
+  <category>
+   <name>fhres_OFFGRID</name>
+   <description>OFFGRID : OFFGRID vertex on fhres</description>
+   <categories>
+   </categories>
+  </category>
+  <category>
+   <name>fhres_angle</name>
+   <description>ACUTE :  non 45 degree angle fhres</description>
+   <categories>
+   </categories>
+  </category>
+  <category>
+   <name>fusetop_OFFGRID</name>
+   <description>OFFGRID : OFFGRID vertex on fusetop</description>
+   <categories>
+   </categories>
+  </category>
+  <category>
+   <name>fusetop_angle</name>
+   <description>ACUTE :  non 45 degree angle fusetop</description>
+   <categories>
+   </categories>
+  </category>
+  <category>
+   <name>fusewindow_d_OFFGRID</name>
+   <description>OFFGRID : OFFGRID vertex on fusewindow_d</description>
+   <categories>
+   </categories>
+  </category>
+  <category>
+   <name>fusewindow_d_angle</name>
+   <description>ACUTE : non 45 degree angle fusewindow_d</description>
+   <categories>
+   </categories>
+  </category>
+  <category>
+   <name>polyfuse_OFFGRID</name>
+   <description>OFFGRID : OFFGRID vertex on polyfuse</description>
+   <categories>
+   </categories>
+  </category>
+  <category>
+   <name>polyfuse_angle</name>
+   <description>ACUTE :  non 45 degree angle polyfuse</description>
+   <categories>
+   </categories>
+  </category>
+  <category>
+   <name>mvsd_OFFGRID</name>
+   <description>OFFGRID : OFFGRID vertex on mvsd</description>
+   <categories>
+   </categories>
+  </category>
+  <category>
+   <name>mvsd_angle</name>
+   <description>ACUTE :  non 45 degree angle mvsd</description>
+   <categories>
+   </categories>
+  </category>
+  <category>
+   <name>mvpsd_OFFGRID</name>
+   <description>OFFGRID : OFFGRID vertex on mvpsd</description>
+   <categories>
+   </categories>
+  </category>
+  <category>
+   <name>mvpsd_angle</name>
+   <description>ACUTE :  non 45 degree angle mvpsd</description>
+   <categories>
+   </categories>
+  </category>
+  <category>
+   <name>nat_OFFGRID</name>
+   <description>OFFGRID : OFFGRID vertex on nat</description>
+   <categories>
+   </categories>
+  </category>
+  <category>
+   <name>nat_angle</name>
+   <description>ACUTE : non 45 degree angle nat</description>
+   <categories>
+   </categories>
+  </category>
+  <category>
+   <name>comp_dummy_OFFGRID</name>
+   <description>OFFGRID : OFFGRID vertex on comp_dummy</description>
+   <categories>
+   </categories>
+  </category>
+  <category>
+   <name>comp_dummy_angle</name>
+   <description>ACUTE : non 45 degree angle comp_dummy</description>
+   <categories>
+   </categories>
+  </category>
+  <category>
+   <name>poly2_dummy_OFFGRID</name>
+   <description>OFFGRID : OFFGRID vertex on poly2_dummy</description>
+   <categories>
+   </categories>
+  </category>
+  <category>
+   <name>poly2_dummy_angle</name>
+   <description>ACUTE : non 45 degree angle poly2_dummy</description>
+   <categories>
+   </categories>
+  </category>
+  <category>
+   <name>schottky_diode_OFFGRID</name>
+   <description>OFFGRID : OFFGRID vertex on schottky_diode</description>
+   <categories>
+   </categories>
+  </category>
+  <category>
+   <name>schottky_diode_angle</name>
+   <description>ACUTE : non 45 degree angle schottky_diode</description>
+   <categories>
+   </categories>
+  </category>
+  <category>
+   <name>zener_OFFGRID</name>
+   <description>OFFGRID : OFFGRID vertex on zener</description>
+   <categories>
+   </categories>
+  </category>
+  <category>
+   <name>zener_angle</name>
+   <description>ACUTE :  non 45 degree angle zener</description>
+   <categories>
+   </categories>
+  </category>
+  <category>
+   <name>res_mk_OFFGRID</name>
+   <description>OFFGRID : OFFGRID vertex on res_mk</description>
+   <categories>
+   </categories>
+  </category>
+  <category>
+   <name>res_mk_angle</name>
+   <description>ACUTE :  non 45 degree angle res_mk</description>
+   <categories>
+   </categories>
+  </category>
+  <category>
+   <name>opc_drc_OFFGRID</name>
+   <description>OFFGRID : OFFGRID vertex on opc_drc</description>
+   <categories>
+   </categories>
+  </category>
+  <category>
+   <name>opc_drc_angle</name>
+   <description>ACUTE :  non 45 degree angle opc_drc</description>
+   <categories>
+   </categories>
+  </category>
+  <category>
+   <name>ndmy_OFFGRID</name>
+   <description>OFFGRID : OFFGRID vertex on ndmy</description>
+   <categories>
+   </categories>
+  </category>
+  <category>
+   <name>ndmy_angle</name>
+   <description>ACUTE :  non 45 degree angle ndmy</description>
+   <categories>
+   </categories>
+  </category>
+  <category>
+   <name>pmndmy_OFFGRID</name>
+   <description>OFFGRID : OFFGRID vertex on pmndmy</description>
+   <categories>
+   </categories>
+  </category>
+  <category>
+   <name>pmndmy_angle</name>
+   <description>ACUTE :  non 45 degree angle pmndmy</description>
+   <categories>
+   </categories>
+  </category>
+  <category>
+   <name>v5_xtor_OFFGRID</name>
+   <description>OFFGRID : OFFGRID vertex on v5_xtor</description>
+   <categories>
+   </categories>
+  </category>
+  <category>
+   <name>v5_xtor_angle</name>
+   <description>ACUTE :  non 45 degree angle v5_xtor</description>
+   <categories>
+   </categories>
+  </category>
+  <category>
+   <name>cap_mk_OFFGRID</name>
+   <description>OFFGRID : OFFGRID vertex on cap_mk</description>
+   <categories>
+   </categories>
+  </category>
+  <category>
+   <name>cap_mk_angle</name>
+   <description>ACUTE :  non 45 degree angle cap_mk</description>
+   <categories>
+   </categories>
+  </category>
+  <category>
+   <name>mos_cap_mk_OFFGRID</name>
+   <description>OFFGRID : OFFGRID vertex on mos_cap_mk</description>
+   <categories>
+   </categories>
+  </category>
+  <category>
+   <name>mos_cap_mk_angle</name>
+   <description>ACUTE : non 45 degree angle mos_cap_mk</description>
+   <categories>
+   </categories>
+  </category>
+  <category>
+   <name>ind_mk_OFFGRID</name>
+   <description>OFFGRID : OFFGRID vertex on ind_mk</description>
+   <categories>
+   </categories>
+  </category>
+  <category>
+   <name>ind_mk_angle</name>
+   <description>ACUTE :  non 45 degree angle ind_mk</description>
+   <categories>
+   </categories>
+  </category>
+  <category>
+   <name>diode_mk_OFFGRID</name>
+   <description>OFFGRID : OFFGRID vertex on diode_mk</description>
+   <categories>
+   </categories>
+  </category>
+  <category>
+   <name>diode_mk_angle</name>
+   <description>ACUTE :  non 45 degree angle diode_mk</description>
+   <categories>
+   </categories>
+  </category>
+  <category>
+   <name>drc_bjt_OFFGRID</name>
+   <description>OFFGRID : OFFGRID vertex on drc_bjt</description>
+   <categories>
+   </categories>
+  </category>
+  <category>
+   <name>drc_bjt_angle</name>
+   <description>ACUTE :  non 45 degree angle drc_bjt</description>
+   <categories>
+   </categories>
+  </category>
+  <category>
+   <name>lvs_bjt_OFFGRID</name>
+   <description>OFFGRID : OFFGRID vertex on lvs_bjt</description>
+   <categories>
+   </categories>
+  </category>
+  <category>
+   <name>lvs_bjt_angle</name>
+   <description>ACUTE :  non 45 degree angle lvs_bjt</description>
+   <categories>
+   </categories>
+  </category>
+  <category>
+   <name>mim_l_mk_OFFGRID</name>
+   <description>OFFGRID : OFFGRID vertex on mim_l_mk</description>
+   <categories>
+   </categories>
+  </category>
+  <category>
+   <name>mim_l_mk_angle</name>
+   <description>ACUTE :  non 45 degree angle mim_l_mk</description>
+   <categories>
+   </categories>
+  </category>
+  <category>
+   <name>latchup_mk_OFFGRID</name>
+   <description>OFFGRID : OFFGRID vertex on latchup_mk</description>
+   <categories>
+   </categories>
+  </category>
+  <category>
+   <name>latchup_mk_angle</name>
+   <description>ACUTE : non 45 degree angle latchup_mk</description>
+   <categories>
+   </categories>
+  </category>
+  <category>
+   <name>guard_ring_mk_OFFGRID</name>
+   <description>OFFGRID : OFFGRID vertex on guard_ring_mk</description>
+   <categories>
+   </categories>
+  </category>
+  <category>
+   <name>guard_ring_mk_angle</name>
+   <description>ACUTE : non 45 degree angle guard_ring_mk</description>
+   <categories>
+   </categories>
+  </category>
+  <category>
+   <name>otp_mk_OFFGRID</name>
+   <description>OFFGRID : OFFGRID vertex on otp_mk</description>
+   <categories>
+   </categories>
+  </category>
+  <category>
+   <name>otp_mk_angle</name>
+   <description>ACUTE :  non 45 degree angle otp_mk</description>
+   <categories>
+   </categories>
+  </category>
+  <category>
+   <name>mtpmark_OFFGRID</name>
+   <description>OFFGRID : OFFGRID vertex on mtpmark</description>
+   <categories>
+   </categories>
+  </category>
+  <category>
+   <name>mtpmark_angle</name>
+   <description>ACUTE :  non 45 degree angle mtpmark</description>
+   <categories>
+   </categories>
+  </category>
+  <category>
+   <name>neo_ee_mk_OFFGRID</name>
+   <description>OFFGRID : OFFGRID vertex on neo_ee_mk</description>
+   <categories>
+   </categories>
+  </category>
+  <category>
+   <name>neo_ee_mk_angle</name>
+   <description>ACUTE :  non 45 degree angle neo_ee_mk</description>
+   <categories>
+   </categories>
+  </category>
+  <category>
+   <name>sramcore_OFFGRID</name>
+   <description>OFFGRID : OFFGRID vertex on sramcore</description>
+   <categories>
+   </categories>
+  </category>
+  <category>
+   <name>sramcore_angle</name>
+   <description>ACUTE :  non 45 degree angle sramcore</description>
+   <categories>
+   </categories>
+  </category>
+  <category>
+   <name>lvs_rf_OFFGRID</name>
+   <description>OFFGRID : OFFGRID vertex on lvs_rf</description>
+   <categories>
+   </categories>
+  </category>
+  <category>
+   <name>lvs_rf_angle</name>
+   <description>ACUTE :  non 45 degree angle lvs_rf</description>
+   <categories>
+   </categories>
+  </category>
+  <category>
+   <name>lvs_drain_OFFGRID</name>
+   <description>OFFGRID : OFFGRID vertex on lvs_drain</description>
+   <categories>
+   </categories>
+  </category>
+  <category>
+   <name>lvs_drain_angle</name>
+   <description>ACUTE :  non 45 degree angle lvs_drain</description>
+   <categories>
+   </categories>
+  </category>
+  <category>
+   <name>hvpolyrs_OFFGRID</name>
+   <description>OFFGRID : OFFGRID vertex on hvpolyrs</description>
+   <categories>
+   </categories>
+  </category>
+  <category>
+   <name>hvpolyrs_angle</name>
+   <description>ACUTE :  non 45 degree angle hvpolyrs</description>
+   <categories>
+   </categories>
+  </category>
+  <category>
+   <name>lvs_io_OFFGRID</name>
+   <description>OFFGRID : OFFGRID vertex on lvs_io</description>
+   <categories>
+   </categories>
+  </category>
+  <category>
+   <name>lvs_io_angle</name>
+   <description>ACUTE :  non 45 degree angle lvs_io</description>
+   <categories>
+   </categories>
+  </category>
+  <category>
+   <name>probe_mk_OFFGRID</name>
+   <description>OFFGRID : OFFGRID vertex on probe_mk</description>
+   <categories>
+   </categories>
+  </category>
+  <category>
+   <name>probe_mk_angle</name>
+   <description>ACUTE :  non 45 degree angle probe_mk</description>
+   <categories>
+   </categories>
+  </category>
+  <category>
+   <name>esd_mk_OFFGRID</name>
+   <description>OFFGRID : OFFGRID vertex on esd_mk</description>
+   <categories>
+   </categories>
+  </category>
+  <category>
+   <name>esd_mk_angle</name>
+   <description>ACUTE :  non 45 degree angle esd_mk</description>
+   <categories>
+   </categories>
+  </category>
+  <category>
+   <name>lvs_source_OFFGRID</name>
+   <description>OFFGRID : OFFGRID vertex on lvs_source</description>
+   <categories>
+   </categories>
+  </category>
+  <category>
+   <name>lvs_source_angle</name>
+   <description>ACUTE : non 45 degree angle lvs_source</description>
+   <categories>
+   </categories>
+  </category>
+  <category>
+   <name>well_diode_mk_OFFGRID</name>
+   <description>OFFGRID : OFFGRID vertex on well_diode_mk</description>
+   <categories>
+   </categories>
+  </category>
+  <category>
+   <name>well_diode_mk_angle</name>
+   <description>ACUTE : non 45 degree angle well_diode_mk</description>
+   <categories>
+   </categories>
+  </category>
+  <category>
+   <name>ldmos_xtor_OFFGRID</name>
+   <description>OFFGRID : OFFGRID vertex on ldmos_xtor</description>
+   <categories>
+   </categories>
+  </category>
+  <category>
+   <name>ldmos_xtor_angle</name>
+   <description>ACUTE : non 45 degree angle ldmos_xtor</description>
+   <categories>
+   </categories>
+  </category>
+  <category>
+   <name>plfuse_OFFGRID</name>
+   <description>OFFGRID : OFFGRID vertex on plfuse</description>
+   <categories>
+   </categories>
+  </category>
+  <category>
+   <name>plfuse_angle</name>
+   <description>ACUTE :  non 45 degree angle plfuse</description>
+   <categories>
+   </categories>
+  </category>
+  <category>
+   <name>efuse_mk_OFFGRID</name>
+   <description>OFFGRID : OFFGRID vertex on efuse_mk</description>
+   <categories>
+   </categories>
+  </category>
+  <category>
+   <name>efuse_mk_angle</name>
+   <description>ACUTE :  non 45 degree angle efuse_mk</description>
+   <categories>
+   </categories>
+  </category>
+  <category>
+   <name>mcell_feol_mk_OFFGRID</name>
+   <description>OFFGRID : OFFGRID vertex on mcell_feol_mk</description>
+   <categories>
+   </categories>
+  </category>
+  <category>
+   <name>mcell_feol_mk_angle</name>
+   <description>ACUTE : non 45 degree angle mcell_feol_mk</description>
+   <categories>
+   </categories>
+  </category>
+  <category>
+   <name>ymtp_mk_OFFGRID</name>
+   <description>OFFGRID : OFFGRID vertex on ymtp_mk</description>
+   <categories>
+   </categories>
+  </category>
+  <category>
+   <name>ymtp_mk_angle</name>
+   <description>ACUTE :  non 45 degree angle ymtp_mk</description>
+   <categories>
+   </categories>
+  </category>
+  <category>
+   <name>dev_wf_mk_OFFGRID</name>
+   <description>OFFGRID : OFFGRID vertex on dev_wf_mk</description>
+   <categories>
+   </categories>
+  </category>
+  <category>
+   <name>dev_wf_mk_angle</name>
+   <description>ACUTE :  non 45 degree angle dev_wf_mk</description>
+   <categories>
+   </categories>
+  </category>
+  <category>
+   <name>comp_label_OFFGRID</name>
+   <description>OFFGRID : OFFGRID vertex on comp_label</description>
+   <categories>
+   </categories>
+  </category>
+  <category>
+   <name>comp_label_angle</name>
+   <description>ACUTE : non 45 degree angle comp_label</description>
+   <categories>
+   </categories>
+  </category>
+  <category>
+   <name>poly2_label_OFFGRID</name>
+   <description>OFFGRID : OFFGRID vertex on poly2_label</description>
+   <categories>
+   </categories>
+  </category>
+  <category>
+   <name>poly2_label_angle</name>
+   <description>ACUTE : non 45 degree angle poly2_label</description>
+   <categories>
+   </categories>
+  </category>
+  <category>
+   <name>mdiode_OFFGRID</name>
+   <description>OFFGRID : OFFGRID vertex on mdiode</description>
+   <categories>
+   </categories>
+  </category>
+  <category>
+   <name>mdiode_angle</name>
+   <description>ACUTE :  non 45 degree angle mdiode</description>
+   <categories>
+   </categories>
+  </category>
+  <category>
+   <name>contact_OFFGRID</name>
+   <description>OFFGRID : OFFGRID vertex on contact</description>
+   <categories>
+   </categories>
+  </category>
+  <category>
+   <name>contact_angle</name>
+   <description>ACUTE :  non 45 degree angle contact</description>
+   <categories>
+   </categories>
+  </category>
+  <category>
+   <name>metal1_OFFGRID</name>
+   <description>OFFGRID : OFFGRID vertex on metal1</description>
+   <categories>
+   </categories>
+  </category>
+  <category>
+   <name>metal1_angle</name>
+   <description>ACUTE :  non 45 degree angle metal1</description>
+   <categories>
+   </categories>
+  </category>
+  <category>
+   <name>metal1_slot_OFFGRID</name>
+   <description>OFFGRID : OFFGRID vertex on metal1_slot</description>
+   <categories>
+   </categories>
+  </category>
+  <category>
+   <name>metal1_slot_angle</name>
+   <description>ACUTE : non 45 degree angle metal1_slot</description>
+   <categories>
+   </categories>
+  </category>
+  <category>
+   <name>metal1_blk_OFFGRID</name>
+   <description>OFFGRID : OFFGRID vertex on metal1_blk</description>
+   <categories>
+   </categories>
+  </category>
+  <category>
+   <name>metal1_blk_angle</name>
+   <description>ACUTE : non 45 degree angle metal1_blk</description>
+   <categories>
+   </categories>
+  </category>
+  <category>
+   <name>metal1_label_OFFGRID</name>
+   <description>OFFGRID : OFFGRID vertex on metal1_label</description>
+   <categories>
+   </categories>
+  </category>
+  <category>
+   <name>metal1_label_angle</name>
+   <description>ACUTE : non 45 degree angle metal1_label</description>
+   <categories>
+   </categories>
+  </category>
+  <category>
+   <name>via1_OFFGRID</name>
+   <description>OFFGRID : OFFGRID vertex on via1</description>
+   <categories>
+   </categories>
+  </category>
+  <category>
+   <name>via1_angle</name>
+   <description>ACUTE :  non 45 degree angle via1</description>
+   <categories>
+   </categories>
+  </category>
+  <category>
+   <name>metal2_OFFGRID</name>
+   <description>OFFGRID : OFFGRID vertex on metal2</description>
+   <categories>
+   </categories>
+  </category>
+  <category>
+   <name>metal2_angle</name>
+   <description>ACUTE :  non 45 degree angle metal2</description>
+   <categories>
+   </categories>
+  </category>
+  <category>
+   <name>metal2_label_OFFGRID</name>
+   <description>OFFGRID : OFFGRID vertex on metal2_label</description>
+   <categories>
+   </categories>
+  </category>
+  <category>
+   <name>metal2_label_angle</name>
+   <description>ACUTE : non 45 degree angle metal2_label</description>
+   <categories>
+   </categories>
+  </category>
+  <category>
+   <name>metal2_slot_OFFGRID</name>
+   <description>OFFGRID : OFFGRID vertex on metal2_slot</description>
+   <categories>
+   </categories>
+  </category>
+  <category>
+   <name>metal2_slot_angle</name>
+   <description>ACUTE : non 45 degree angle metal2_slot</description>
+   <categories>
+   </categories>
+  </category>
+  <category>
+   <name>metal2_blk_OFFGRID</name>
+   <description>OFFGRID : OFFGRID vertex on metal2_blk</description>
+   <categories>
+   </categories>
+  </category>
+  <category>
+   <name>metal2_blk_angle</name>
+   <description>ACUTE : non 45 degree angle metal2_blk</description>
+   <categories>
+   </categories>
+  </category>
+  <category>
+   <name>via2_OFFGRID</name>
+   <description>OFFGRID : OFFGRID vertex on via2</description>
+   <categories>
+   </categories>
+  </category>
+  <category>
+   <name>via2_angle</name>
+   <description>ACUTE :  non 45 degree angle via2</description>
+   <categories>
+   </categories>
+  </category>
+  <category>
+   <name>metal3_OFFGRID</name>
+   <description>OFFGRID : OFFGRID vertex on metal3</description>
+   <categories>
+   </categories>
+  </category>
+  <category>
+   <name>metal3_angle</name>
+   <description>ACUTE :  non 45 degree angle metal3</description>
+   <categories>
+   </categories>
+  </category>
+  <category>
+   <name>metal3_dummy_OFFGRID</name>
+   <description>OFFGRID : OFFGRID vertex on metal3_dummy</description>
+   <categories>
+   </categories>
+  </category>
+  <category>
+   <name>metal3_dummy_angle</name>
+   <description>ACUTE : non 45 degree angle metal3_dummy</description>
+   <categories>
+   </categories>
+  </category>
+  <category>
+   <name>metal3_label_OFFGRID</name>
+   <description>OFFGRID : OFFGRID vertex on metal3_label</description>
+   <categories>
+   </categories>
+  </category>
+  <category>
+   <name>metal3_label_angle</name>
+   <description>ACUTE : non 45 degree angle metal3_label</description>
+   <categories>
+   </categories>
+  </category>
+  <category>
+   <name>metal3_blk_OFFGRID</name>
+   <description>OFFGRID : OFFGRID vertex on metal3_blk</description>
+   <categories>
+   </categories>
+  </category>
+  <category>
+   <name>metal3_blk_angle</name>
+   <description>ACUTE : non 45 degree angle metal3_blk</description>
+   <categories>
+   </categories>
+  </category>
+  <category>
+   <name>via3_OFFGRID</name>
+   <description>OFFGRID : OFFGRID vertex on via3</description>
+   <categories>
+   </categories>
+  </category>
+  <category>
+   <name>via3_angle</name>
+   <description>ACUTE :  non 45 degree angle via3</description>
+   <categories>
+   </categories>
+  </category>
+  <category>
+   <name>metal4_OFFGRID</name>
+   <description>OFFGRID : OFFGRID vertex on metal4</description>
+   <categories>
+   </categories>
+  </category>
+  <category>
+   <name>metal4_angle</name>
+   <description>ACUTE : non 45 degree angle metal4</description>
+   <categories>
+   </categories>
+  </category>
+  <category>
+   <name>metal4_dummy_OFFGRID</name>
+   <description>OFFGRID : OFFGRID vertex on metal4_dummy</description>
+   <categories>
+   </categories>
+  </category>
+  <category>
+   <name>metal4_dummy_angle</name>
+   <description>ACUTE : non 45 degree angle metal4_dummy</description>
+   <categories>
+   </categories>
+  </category>
+  <category>
+   <name>metal4_label_OFFGRID</name>
+   <description>OFFGRID : OFFGRID vertex on metal4_label</description>
+   <categories>
+   </categories>
+  </category>
+  <category>
+   <name>metal4_label_angle</name>
+   <description>ACUTE : non 45 degree angle metal4_label</description>
+   <categories>
+   </categories>
+  </category>
+  <category>
+   <name>metal4_blk_OFFGRID</name>
+   <description>OFFGRID : OFFGRID vertex on metal4_blk</description>
+   <categories>
+   </categories>
+  </category>
+  <category>
+   <name>metal4_blk_angle</name>
+   <description>ACUTE : non 45 degree angle metal4_blk</description>
+   <categories>
+   </categories>
+  </category>
+  <category>
+   <name>via4_OFFGRID</name>
+   <description>OFFGRID : OFFGRID vertex on via4</description>
+   <categories>
+   </categories>
+  </category>
+  <category>
+   <name>via4_angle</name>
+   <description>ACUTE : non 45 degree angle via4</description>
+   <categories>
+   </categories>
+  </category>
+  <category>
+   <name>metal5_OFFGRID</name>
+   <description>OFFGRID : OFFGRID vertex on metal5</description>
+   <categories>
+   </categories>
+  </category>
+  <category>
+   <name>metal5_angle</name>
+   <description>ACUTE : non 45 degree angle metal5</description>
+   <categories>
+   </categories>
+  </category>
+  <category>
+   <name>metal5_dummy_OFFGRID</name>
+   <description>OFFGRID : OFFGRID vertex on metal5_dummy</description>
+   <categories>
+   </categories>
+  </category>
+  <category>
+   <name>metal5_dummy_angle</name>
+   <description>ACUTE : non 45 degree angle metal5_dummy</description>
+   <categories>
+   </categories>
+  </category>
+  <category>
+   <name>metal5_label_OFFGRID</name>
+   <description>OFFGRID : OFFGRID vertex on metal5_label</description>
+   <categories>
+   </categories>
+  </category>
+  <category>
+   <name>metal5_label_angle</name>
+   <description>ACUTE : non 45 degree angle metal5_label</description>
+   <categories>
+   </categories>
+  </category>
+  <category>
+   <name>metal5_blk_OFFGRID</name>
+   <description>OFFGRID : OFFGRID vertex on metal5_blk</description>
+   <categories>
+   </categories>
+  </category>
+  <category>
+   <name>metal5_blk_angle</name>
+   <description>ACUTE : non 45 degree angle metal5_blk</description>
+   <categories>
+   </categories>
+  </category>
+  <category>
+   <name>pad_OFFGRID</name>
+   <description>OFFGRID : OFFGRID vertex on pad</description>
+   <categories>
+   </categories>
+  </category>
+  <category>
+   <name>pad_angle</name>
+   <description>ACUTE : non 45 degree angle pad</description>
+   <categories>
+   </categories>
+  </category>
+  <category>
+   <name>ubmpperi_OFFGRID</name>
+   <description>OFFGRID : OFFGRID vertex on ubmpperi</description>
+   <categories>
+   </categories>
+  </category>
+  <category>
+   <name>ubmpperi_angle</name>
+   <description>ACUTE :  non 45 degree angle ubmpperi</description>
+   <categories>
+   </categories>
+  </category>
+  <category>
+   <name>ubmparray_OFFGRID</name>
+   <description>OFFGRID : OFFGRID vertex on ubmparray</description>
+   <categories>
+   </categories>
+  </category>
+  <category>
+   <name>ubmparray_angle</name>
+   <description>ACUTE :  non 45 degree angle ubmparray</description>
+   <categories>
+   </categories>
+  </category>
+  <category>
+   <name>ubmeplate_OFFGRID</name>
+   <description>OFFGRID : OFFGRID vertex on ubmeplate</description>
+   <categories>
+   </categories>
+  </category>
+  <category>
+   <name>ubmeplate_angle</name>
+   <description>ACUTE :  non 45 degree angle ubmeplate</description>
+   <categories>
+   </categories>
+  </category>
+  <category>
+   <name>metal1_res_OFFGRID</name>
+   <description>OFFGRID : OFFGRID vertex on metal1_res</description>
+   <categories>
+   </categories>
+  </category>
+  <category>
+   <name>metal1_res_angle</name>
+   <description>ACUTE : non 45 degree angle metal1_res</description>
+   <categories>
+   </categories>
+  </category>
+  <category>
+   <name>metal2_res_OFFGRID</name>
+   <description>OFFGRID : OFFGRID vertex on metal2_res</description>
+   <categories>
+   </categories>
+  </category>
+  <category>
+   <name>metal2_res_angle</name>
+   <description>ACUTE : non 45 degree angle metal2_res</description>
+   <categories>
+   </categories>
+  </category>
+  <category>
+   <name>metal3_res_OFFGRID</name>
+   <description>OFFGRID : OFFGRID vertex on metal3_res</description>
+   <categories>
+   </categories>
+  </category>
+  <category>
+   <name>metal3_res_angle</name>
+   <description>ACUTE : non 45 degree angle metal3_res</description>
+   <categories>
+   </categories>
+  </category>
+  <category>
+   <name>metal4_res_OFFGRID</name>
+   <description>OFFGRID : OFFGRID vertex on metal4_res</description>
+   <categories>
+   </categories>
+  </category>
+  <category>
+   <name>metal4_res_angle</name>
+   <description>ACUTE : non 45 degree angle metal4_res</description>
+   <categories>
+   </categories>
+  </category>
+  <category>
+   <name>metal5_res_OFFGRID</name>
+   <description>OFFGRID : OFFGRID vertex on metal5_res</description>
+   <categories>
+   </categories>
+  </category>
+  <category>
+   <name>metal5_res_angle</name>
+   <description>ACUTE : non 45 degree angle metal5_res</description>
+   <categories>
+   </categories>
+  </category>
+  <category>
+   <name>metal6_res_OFFGRID</name>
+   <description>OFFGRID : OFFGRID vertex on metal6_res</description>
+   <categories>
+   </categories>
+  </category>
+  <category>
+   <name>metal6_res_angle</name>
+   <description>ACUTE : non 45 degree angle metal6_res</description>
+   <categories>
+   </categories>
+  </category>
+  <category>
+   <name>pr_bndry_OFFGRID</name>
+   <description>OFFGRID : OFFGRID vertex on pr_bndry</description>
+   <categories>
+   </categories>
+  </category>
+  <category>
+   <name>pr_bndry_angle</name>
+   <description>ACUTE : non 45 degree angle pr_bndry</description>
+   <categories>
+   </categories>
+  </category>
+  <category>
+   <name>border_OFFGRID</name>
+   <description>OFFGRID : OFFGRID vertex on border</description>
+   <categories>
+   </categories>
+  </category>
+  <category>
+   <name>border_angle</name>
+   <description>ACUTE : non 45 degree angle border</description>
+   <categories>
+   </categories>
+  </category>
+  <category>
+   <name>M1.1</name>
+   <description>M1.1 : min. metal1 width : 0.23µm</description>
+   <categories>
+   </categories>
+  </category>
+  <category>
+   <name>M1.2a</name>
+   <description>M1.2a : min. metal1 spacing : 0.23µm</description>
+   <categories>
+   </categories>
+  </category>
+  <category>
+   <name>M1.2b</name>
+   <description>M1.2b : Space to wide Metal1 (length &amp; width &gt; 10um) : 0.3µm</description>
+   <categories>
+   </categories>
+  </category>
+  <category>
+   <name>M1.3</name>
+   <description>M1.3 : Minimum Metal1 area : 0.1444µm²</description>
+   <categories>
+   </categories>
+  </category>
+  <category>
+   <name>M2.1</name>
+   <description>M2.1 : min. metal2 width : 0.28µm</description>
+   <categories>
+   </categories>
+  </category>
+  <category>
+   <name>M2.2a</name>
+   <description>M2.2a : min. metal2 spacing : 0.28µm</description>
+   <categories>
+   </categories>
+  </category>
+  <category>
+   <name>M2.2b</name>
+   <description>M2.2b : Space to wide Metal2 (length &amp; width &gt; 10um) : 0.3µm</description>
+   <categories>
+   </categories>
+  </category>
+  <category>
+   <name>M2.3</name>
+   <description>M2.3 : Minimum metal2 area : 0.1444µm²</description>
+   <categories>
+   </categories>
+  </category>
+  <category>
+   <name>M3.1</name>
+   <description>M3.1 : min. metal3 width : 0.28µm</description>
+   <categories>
+   </categories>
+  </category>
+  <category>
+   <name>M3.2a</name>
+   <description>M3.2a : min. metal3 spacing : 0.28µm</description>
+   <categories>
+   </categories>
+  </category>
+  <category>
+   <name>M3.2b</name>
+   <description>M3.2b : Space to wide Metal3 (length &amp; width &gt; 10um) : 0.3µm</description>
+   <categories>
+   </categories>
+  </category>
+  <category>
+   <name>M3.3</name>
+   <description>M3.3 : Minimum metal3 area : 0.1444µm²</description>
+   <categories>
+   </categories>
+  </category>
+  <category>
+   <name>M4.1</name>
+   <description>M4.1 : min. metal4 width : 0.28µm</description>
+   <categories>
+   </categories>
+  </category>
+  <category>
+   <name>M4.2a</name>
+   <description>M4.2a : min. metal4 spacing : 0.28µm</description>
+   <categories>
+   </categories>
+  </category>
+  <category>
+   <name>M4.2b</name>
+   <description>M4.2b : Space to wide Metal4 (length &amp; width &gt; 10um) : 0.3µm</description>
+   <categories>
+   </categories>
+  </category>
+  <category>
+   <name>M4.3</name>
+   <description>M4.3 : Minimum metal4 area : 0.1444µm²</description>
+   <categories>
+   </categories>
+  </category>
+  <category>
+   <name>MT.1</name>
+   <description>MT.1 : min. metaltop width : 0.44µm</description>
+   <categories>
+   </categories>
+  </category>
+  <category>
+   <name>MT.2a</name>
+   <description>MT.2a : min. metaltop spacing : 0.46µm</description>
+   <categories>
+   </categories>
+  </category>
+  <category>
+   <name>MT.2b</name>
+   <description>MT.2b : Space to wide Metal2 (length &amp; width &gt; 10um) : 0.6µm</description>
+   <categories>
+   </categories>
+  </category>
+  <category>
+   <name>MT.4</name>
+   <description>MT.4 : Minimum MetalTop area : 0.5625µm²</description>
+   <categories>
+   </categories>
+  </category>
+  <category>
+   <name>MIMTM.1</name>
+   <description>MIMTM.1 : Minimum MiM bottom plate spacing to the bottom plate metal
+                      (whether adjacent MiM or routing metal). : 1.2µm</description>
+   <categories>
+   </categories>
+  </category>
+  <category>
+   <name>MIMTM.2</name>
+   <description>MIMTM.2 : Minimum MiM bottom plate overlap of Vian-1 layer.
+                    [This is applicable for Vian-1 within 1.06um oversize of FuseTop layer
+                    (referenced to virtual bottom plate)]. : 0.4µm</description>
+   <categories>
+   </categories>
+  </category>
+  <category>
+   <name>MIMTM.3</name>
+   <description>MIMTM.3 : Minimum MiM bottom plate overlap of Top plate.</description>
+   <categories>
+   </categories>
+  </category>
+  <category>
+   <name>MIMTM.4</name>
+   <description>MIMTM.4 : Minimum MiM top plate (FuseTop) overlap of Vian-1: 0.4µm</description>
+   <categories>
+   </categories>
+  </category>
+  <category>
+   <name>MIMTM.5</name>
+   <description>MIMTM.5 : Minimum spacing between top plate and the Vian-1 connecting to the bottom plate. : 0.4µm</description>
+   <categories>
+   </categories>
+  </category>
+  <category>
+   <name>MIMTM.6</name>
+   <description>MIMTM.6 : Minimum spacing between unrelated top plates: 0.6µm</description>
+   <categories>
+   </categories>
+  </category>
+  <category>
+   <name>MIMTM.7</name>
+   <description>MIMTM.7 : Min FuseTop enclosure by CAP_MK: 0um.</description>
+   <categories>
+   </categories>
+  </category>
+  <category>
+   <name>MIMTM.8a</name>
+   <description>MIMTM.8a : Minimum MIM cap area (defined by FuseTop area): 25µm²</description>
+   <categories>
+   </categories>
+  </category>
+  <category>
+   <name>MIMTM.8b</name>
+   <description>MIMTM.8b : Maximum single MIM Cap area (Use multiple MIM caps in
+                       parallel connection if bigger capacitors are required) (um2). : 10000µm</description>
+   <categories>
+   </categories>
+  </category>
+  <category>
+   <name>MIMTM.9</name>
+   <description>MIMTM.9 : Min. Via (Vian-1) spacing for sea of Via on MIM top plate. : 0.5µm</description>
+   <categories>
+   </categories>
+  </category>
+  <category>
+   <name>MIMTM.10</name>
+   <description>MIMTM.10 : (a) There cannot be any Vian-2 touching MIM bottom plate Metaln-1.
+                      (b) MIM bottom plate Metaln-1 can only be connected through the higher Via (Vian-1).</description>
+   <categories>
+   </categories>
+  </category>
+  <category>
+   <name>MIMTM.11</name>
+   <description>MIMTM.11 : Bottom plate of multiple MIM caps can be shared (for common nodes)
+                     as long as total MIM area with that single common plate does not exceed MIMTM.8b rule. : -µm</description>
+   <categories>
+   </categories>
+  </category>
+  <category>
+   <name>V1.1</name>
+   <description>V1.1 : Min/max Via1 size . : 0.26µm</description>
+   <categories>
+   </categories>
+  </category>
+  <category>
+   <name>V1.2a</name>
+   <description>V1.2a : min. via1 spacing : 0.26µm</description>
+   <categories>
+   </categories>
+  </category>
+  <category>
+   <name>V1.2b</name>
+   <description>V1.2b : Via1 Space in 4x4 or larger via1 array : 0.36µm</description>
+   <categories>
+   </categories>
+  </category>
+  <category>
+   <name>V1.3a</name>
+   <description>V1.3a : metal1 overlap of via1 &gt;= 0.0</description>
+   <categories>
+   </categories>
+  </category>
+  <category>
+   <name>V1.3c</name>
+   <description>V1.3c : metal1 (&lt; 0.34um) end-of-line overlap. (Applies to all &lt; 0.34µm wide Metal lines,
+                    excluding Metal branches shorter than 0.28µm.) : 0.06µm</description>
+   <categories>
+   </categories>
+  </category>
+  <category>
+   <name>V1.3d</name>
+   <description>V1.3d : If metal1 overlap via1 by &lt; 0.04um on one side, adjacent metal1 edges overlap. : 0.06µm</description>
+   <categories>
+   </categories>
+  </category>
+  <category>
+   <name>V1.4a</name>
+   <description>V1.4a : metal2 overlap of via1 &gt;= 0.01 um</description>
+   <categories>
+   </categories>
+  </category>
+  <category>
+   <name>V1.4b</name>
+   <description>V1.4p : metal2 (&lt; 0.34um) end-of-line overlap. (Applies to all &lt; 0.34µm wide Metal lines,
+                    excluding Metal branches shorter than 0.28µm.) : 0.06µm</description>
+   <categories>
+   </categories>
+  </category>
+  <category>
+   <name>V1.4c</name>
+   <description>V1.4c : If metal2 overlap via1 by &lt; 0.04um on one side, adjacent metal2 edges overlap. : 0.06µm</description>
+   <categories>
+   </categories>
+  </category>
+  <category>
+   <name>V2.1</name>
+   <description>V2.1 : Min/max Via2 size . : 0.26µm</description>
+   <categories>
+   </categories>
+  </category>
+  <category>
+   <name>V2.2a</name>
+   <description>V2.2a : min. via2 spacing : 0.26µm</description>
+   <categories>
+   </categories>
+  </category>
+  <category>
+   <name>V2.2b</name>
+   <description>V2.2b : via2 Space in 4x4 or larger via2 array : 0.36µm</description>
+   <categories>
+   </categories>
+  </category>
+  <category>
+   <name>V2.3b</name>
+   <description>V2.3b : metal2 overlap of via2 &gt;= 0.01</description>
+   <categories>
+   </categories>
+  </category>
+  <category>
+   <name>V2.3c</name>
+   <description>V2.3c : metal2 (&lt; 0.34um) end-of-line overlap.(Applies to all &lt; 0.34µm wide Metal lines,
+                    excluding Metal branches shorter than 0.28µm.) : 0.06µm</description>
+   <categories>
+   </categories>
+  </category>
+  <category>
+   <name>V2.3d</name>
+   <description>V2.3d : If metal2 overlap via2 by &lt; 0.04um on one side, adjacent metal2 edges overlap. : 0.06µm</description>
+   <categories>
+   </categories>
+  </category>
+  <category>
+   <name>V2.4a</name>
+   <description>V2.4a : metal3 overlap of via2 &gt;= 0.01 um</description>
+   <categories>
+   </categories>
+  </category>
+  <category>
+   <name>V2.4b</name>
+   <description>V2.4p : metal3 (&lt; 0.34um) end-of-line overlap. : 0.06µm</description>
+   <categories>
+   </categories>
+  </category>
+  <category>
+   <name>V2.4c</name>
+   <description>V2.4c : If metal3 overlap via2 by &lt; 0.04um on one side, adjacent metal3 edges overlap. : 0.06µm</description>
+   <categories>
+   </categories>
+  </category>
+  <category>
+   <name>V3.1</name>
+   <description>V3.1 : Min/max Via3 size . : 0.26µm</description>
+   <categories>
+   </categories>
+  </category>
+  <category>
+   <name>V3.2a</name>
+   <description>V3.2a : min. via3 spacing : 0.26µm</description>
+   <categories>
+   </categories>
+  </category>
+  <category>
+   <name>V3.2b</name>
+   <description>V3.2b : via3 Space in 4x4 or larger via3 array : 0.36µm</description>
+   <categories>
+   </categories>
+  </category>
+  <category>
+   <name>V3.3b</name>
+   <description>V3.3b : metal3 overlap of via3 &gt;= 0.01</description>
+   <categories>
+   </categories>
+  </category>
+  <category>
+   <name>V3.3c</name>
+   <description>V3.3c : metal3 (&lt; 0.34um) end-of-line overlap. (Applies to all &lt; 0.34µm wide Metal lines,
+                    excluding Metal branches shorter than 0.28µm.) : 0.06µm</description>
+   <categories>
+   </categories>
+  </category>
+  <category>
+   <name>V3.3d</name>
+   <description>V3.3d : If metal3 overlap via3 by &lt; 0.04um on one side, adjacent metal3 edges overlap. : 0.06µm</description>
+   <categories>
+   </categories>
+  </category>
+  <category>
+   <name>V3.4a</name>
+   <description>V3.4a : metal4 overlap of via3 &gt;= 0.01 um</description>
+   <categories>
+   </categories>
+  </category>
+  <category>
+   <name>V3.4b</name>
+   <description>V3.4p : metal4 (&lt; 0.34um) end-of-line overlap. (Applies to all &lt; 0.34µm wide Metal lines,
+                    excluding Metal branches shorter than 0.28µm.) : 0.06µm</description>
+   <categories>
+   </categories>
+  </category>
+  <category>
+   <name>V3.4c</name>
+   <description>V3.4c : If metal4 overlap via3 by &lt; 0.04um on one side, adjacent metal4 edges overlap. : 0.06µm</description>
+   <categories>
+   </categories>
+  </category>
+  <category>
+   <name>V4.1</name>
+   <description>V4.1 : Min/max Via4 size . : 0.26µm</description>
+   <categories>
+   </categories>
+  </category>
+  <category>
+   <name>V4.2a</name>
+   <description>V4.2a : min. via4 spacing : 0.26µm</description>
+   <categories>
+   </categories>
+  </category>
+  <category>
+   <name>V4.2b</name>
+   <description>V4.2b : via4 Space in 4x4 or larger via4 array : 0.36µm</description>
+   <categories>
+   </categories>
+  </category>
+  <category>
+   <name>V4.3b</name>
+   <description>V4.3b : metal4 overlap of via4 &gt;= 0.01</description>
+   <categories>
+   </categories>
+  </category>
+  <category>
+   <name>V4.3c</name>
+   <description>V4.3c : metal4 (&lt; 0.34um) end-of-line overlap. (Applies to all &lt; 0.34µm wide Metal lines,
+                    excluding Metal branches shorter than 0.28µm.) : 0.06µm</description>
+   <categories>
+   </categories>
+  </category>
+  <category>
+   <name>V4.3d</name>
+   <description>V4.3d : If metal4 overlap via4 by &lt; 0.04um on one side, adjacent metal4 edges overlap. : 0.06µm</description>
+   <categories>
+   </categories>
+  </category>
+  <category>
+   <name>V4.4a</name>
+   <description>V4.4a : metal5 overlap of via4 &gt;= 0.01 um</description>
+   <categories>
+   </categories>
+  </category>
+  <category>
+   <name>V4.4b</name>
+   <description>V4.4p : metal5 (&lt; 0.34um) end-of-line overlap. (Applies to all &lt; 0.34µm wide Metal lines,
+                    excluding Metal branches shorter than 0.28µm.) : 0.06µm</description>
+   <categories>
+   </categories>
+  </category>
+  <category>
+   <name>V4.4c</name>
+   <description>V4.4c : If metal5 overlap via4 by &lt; 0.04um on one side, adjacent metal5 edges overlap. : 0.06µm</description>
+   <categories>
+   </categories>
+  </category>
+  <category>
+   <name>DE.2</name>
+   <description>DE.2 : Minimum NDMY or PMNDMY size (x or y dimension in um) : 0.8µm</description>
+   <categories>
+   </categories>
+  </category>
+  <category>
+   <name>DE.3</name>
+   <description>DE.3 : Maximum NDMY size (um2): 15000 um2.
+              If size greater than 15000 um2 then two sides should not be greater than (80 um).</description>
+   <categories>
+   </categories>
+  </category>
+  <category>
+   <name>DE.4</name>
+   <description>DE.4 : Minimum NDMY to NDMY space (Merge if space is less) : 20µm</description>
+   <categories>
+   </categories>
+  </category>
+ </categories>
+ <cells>
+  <cell>
+   <name>gf180mcu_ws_ip__logo_fabulous</name>
+   <variant/>
+   <layout-name/>
+   <references>
+   </references>
+  </cell>
+ </cells>
+ <items>
+ </items>
+</report-database>
