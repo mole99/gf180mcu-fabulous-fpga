@@ -1,0 +1,2 @@
+module gf180mcu_ws_ip__logo_fabulous;
+endmodule
