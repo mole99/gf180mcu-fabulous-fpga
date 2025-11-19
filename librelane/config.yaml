@@ -37,6 +37,8 @@ VERILOG_FILES:
 # USE_SLANG: True
 # SLANG_ARGUMENTS: ['--keep-hierarchy']
 
+SYNTH_STRATEGY: "DELAY 4"
+
 # Slightly smaller file sizes
 PRIMARY_GDSII_STREAMOUT_TOOL: klayout
 
@@ -57,6 +59,8 @@ IGNORE_DISCONNECTED_MODULES:
 - gf180mcu_fd_io__bi_24t
 - gf180mcu_ws_ip__id
 - gf180mcu_ws_ip__logo
+- gf180mcu_ws_ip__logo_fabulous
+- gf180mcu_ws_ip__credits
 
 # Clock
 CLOCK_PORT: clk_PAD
@@ -64,8 +68,8 @@ CLOCK_NET: clk_pad/Y
 CLOCK_PERIOD: 40 # 25 MHz
 
 # Fix hold violations
-PL_RESIZER_HOLD_SLACK_MARGIN: 0.35
-GRT_RESIZER_HOLD_SLACK_MARGIN: 0.3
+PL_RESIZER_HOLD_SLACK_MARGIN: 0.5 # ns
+GRT_RESIZER_HOLD_SLACK_MARGIN: 0.25 # ns
 
 # Increase for more logic
 # on your die
@@ -226,19 +230,19 @@ MACROS:
         location: [3005, 790]
         orientation: E
       i_chip_core.fabric_wrapper.sram_1:
-        location: [3005, 1390]
+        location: [3005, 1389.76]
         orientation: E
       i_chip_core.fabric_wrapper.sram_2:
-        location: [3005, 1990]
+        location: [3005, 1989.52]
         orientation: E
       i_chip_core.fabric_wrapper.sram_3:
-        location: [3005, 2590]
+        location: [3005, 2589.28]
         orientation: E
       i_chip_core.fabric_wrapper.sram_4:
-        location: [3005, 3190]
+        location: [3005, 3189.04]
         orientation: E
       i_chip_core.fabric_wrapper.sram_5:
-        location: [3005, 3790]
+        location: [3005, 3788.8]
         orientation: E
 
   eFPGA:
@@ -256,6 +260,7 @@ MACROS:
 # This is an alternative method compared to
 # specifying the power connections in the RTL
 PDN_MACRO_CONNECTIONS:
+- "i_chip_core.fabric_wrapper.eFPGA VDD VSS VDD VSS"
 - "i_chip_core.fabric_wrapper.sram_0 VDD VSS VDD VSS"
 - "i_chip_core.fabric_wrapper.sram_1 VDD VSS VDD VSS"
 - "i_chip_core.fabric_wrapper.sram_2 VDD VSS VDD VSS"
@@ -277,9 +282,13 @@ PDN_CFG: dir::pdn_cfg.tcl
 LVS_FLATTEN_CELLS:
 - gf180mcu_ws_ip__id
 - gf180mcu_ws_ip__logo
+- gf180mcu_ws_ip__logo_fabulous
+- gf180mcu_ws_ip__credits
 
 # gf180mcu_ws_ip__id/logo has no ports and components
 # therefore make it an abstract cell in the layout
 MAGIC_EXT_ABSTRACT_CELLS:
 - gf180mcu_ws_ip__id
 - gf180mcu_ws_ip__logo
+- gf180mcu_ws_ip__logo_fabulous
+- gf180mcu_ws_ip__credits
