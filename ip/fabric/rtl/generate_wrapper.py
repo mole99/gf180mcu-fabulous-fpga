@@ -3,8 +3,8 @@ from contextlib import redirect_stdout
 COLUMNS = 9
 ROWS = 14
 
-FABRIC_NUM_IO_WEST = 24
-BELS_PER_IO_TILE = ['A', 'B']
+FABRIC_NUM_IO_WEST = 48
+BELS_PER_IO_TILE = ['A', 'B', 'C', 'D']
 NUM_SRAM = 6
 SRAM_WIDTH = 8
 SRAM_ADDR_BITS = 9

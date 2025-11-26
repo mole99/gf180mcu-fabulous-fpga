@@ -8,6 +8,10 @@ GRT_ALLOW_CONGESTION: true
 #HEURISTIC_ANTENNA_THRESHOLD: 350
 GRT_ANTENNA_ITERS: 10
 
+# Fix antenna violations after DRT
+DRT_ANTENNA_REPAIR_ITERS: 10
+DRT_ANTENNA_MARGIN: 10 # %
+
 # PDK specific
 pdk::sky130A:
     # Routing

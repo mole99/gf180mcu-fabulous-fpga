@@ -44,18 +44,19 @@ IO_PIN_V_LENGTH: 0.56
 FABULOUS_TILE_SIZES:
   LUT4AB:           [ 287.28, 287.28 ]
   
-  "GF_SRAM_*":     [ 158.48, 287.28 ]
-  "*term_SRAM": [ 158.48, 71.12 ]
+  "GF_SRAM_*":      [ 158.48, 287.28 ]
+  "*term_SRAM":     [ 158.48,  71.12 ]
 
-  RegFile:          [ 316.40, 287.28 ]
-  "*_term_single2": [ 316.40, 71.12 ]
+  RegFile:          [ 322.00, 287.28 ]
+  "*_term_single2": [ 322.00,  71.12 ]
  
   "DSP*":           [ 263.76, 287.28 ]
-  "*term_DSP*":     [ 263.76, 71.12 ]
+  "*term_DSP*":     [ 263.76,  71.12 ]
 
   "W_IO":           [ 142.80, 287.28 ]
-  "N*":             [ 287.28, 71.12 ]
-  "S*":             [ 287.28, 71.12 ]
+  "W_IO4":          [ 142.80, 287.28 ]
+  "N*":             [ 287.28,  71.12 ]
+  "S*":             [ 287.28,  71.12 ]
 
 # Save on file space by sharing same cells
 PRIMARY_GDSII_STREAMOUT_TOOL: klayout

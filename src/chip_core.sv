@@ -27,9 +27,9 @@ module chip_core #(
     output wire [NUM_BIDIR_PADS-1:0] bidir_sl,   // Slew rate (0=fast, 1=slow)
     output wire [NUM_BIDIR_PADS-1:0] bidir_ie,   // Input enable
     output wire [NUM_BIDIR_PADS-1:0] bidir_pu,   // Pull-up
-    output wire [NUM_BIDIR_PADS-1:0] bidir_pd,   // Pull-down
+    output wire [NUM_BIDIR_PADS-1:0] bidir_pd    // Pull-down
 
-    inout  wire [NUM_ANALOG_PADS-1:0] analog  // Analog
+    //inout  wire [NUM_ANALOG_PADS-1:0] analog  // Analog
 );
 
     // -------------------
@@ -41,7 +41,7 @@ module chip_core #(
     parameter NumColumns = 9;
     parameter NumRows = 14;
 
-    parameter FABRIC_NUM_IO_WEST = 24;
+    parameter FABRIC_NUM_IO_WEST = 48;
 
     // -------------------
 
@@ -51,8 +51,8 @@ module chip_core #(
     assign input_pd = '0;
 
     // Set the bidir as output
-    assign bidir_oe[NUM_BIDIR_PADS-1:FABRIC_NUM_IO_WEST-1+6] = '1;
-    assign bidir_out[NUM_BIDIR_PADS-1:FABRIC_NUM_IO_WEST-1+6] = '1;
+    //assign bidir_oe[NUM_BIDIR_PADS-1:FABRIC_NUM_IO_WEST-1+6] = '1;
+    //assign bidir_out[NUM_BIDIR_PADS-1:FABRIC_NUM_IO_WEST-1+6] = '1;
     assign bidir_cs = '0;
     assign bidir_sl = '0;
     assign bidir_ie = ~bidir_oe;

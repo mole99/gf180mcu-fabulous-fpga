@@ -4,7 +4,7 @@ PDK ?= gf180mcuD
 PDK_ROOT ?= ~/.ciel
 #$(MAKEFILE_DIR)/../../gf180mcu
 
-TILES = LUT4AB S_term_single N_term_single RegFile S_term_single2 N_term_single2 DSP S_term_DSP N_term_DSP W_IO S_WARMBOOT GF_SRAM N_term_SRAM S_term_SRAM
+TILES = LUT4AB S_term_single N_term_single RegFile S_term_single2 N_term_single2 DSP S_term_DSP N_term_DSP W_IO W_IO4 S_WARMBOOT GF_SRAM N_term_SRAM S_term_SRAM
 TILE_DIR = tiles
 
 TILE_PATHS := $(addprefix $(TILE_DIR)/,$(TILES))
