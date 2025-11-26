@@ -2,13 +2,14 @@ meta:
   version: 2
   flow: FABulousTile
 
-FABULOUS_TILE_DIR: dir::. #tiles/N_term_single2
+FABULOUS_TILE_DIR: dir::. #tiles/W_IO4
 
 # Basics
-DESIGN_NAME: N_term_single2
+DESIGN_NAME: W_IO4
 VERILOG_FILES:
   - dir::../../models_pack.v
   - dir::../../custom.v
+FABULOUS_EXTERNAL_SIDE: W
 
 # Clock
 CLOCK_PERIOD: 20
@@ -17,13 +18,19 @@ CLOCK_PORT: UserCLK
 # Area
 FP_SIZING: absolute
 pdk::sky130A:
-    DIE_AREA: [0, 0, 205, 56.25]
+    DIE_AREA: [0, 0, 49.68, 259.76]
+    PL_TARGET_DENSITY_PCT: 54
+    BOTTOM_MARGIN_MULT: 3
+    TOP_MARGIN_MULT: 3
+pdk::ihp-sg13g2:
+    DIE_AREA: [0, 0, 68.64, 241.92]
+    PL_TARGET_DENSITY_PCT: 79
+    SYNTH_STRATEGY: "AREA 2" # "AREA 0" "AREA 1" "AREA 2" "AREA 3"
 pdk::gf180mcuD:
     # Width should be multiple of 0.56 (Metal2 pitch)
     # Height should be multiple of 0.56 (Metal3 pitch)
     # Standard cell row height: 3.92 (8 Metal3 track)
-    DIE_AREA: [0, 0, 322.00, 71.12]
-    BOTTOM_MARGIN_MULT: 1
-    TOP_MARGIN_MULT: 1
+    DIE_AREA: [0, 0, 142.8, 287.28]
+    PL_TARGET_DENSITY_PCT: 90
 
 SYNTH_LATCH_MAP: dir::../../latch_map.v
