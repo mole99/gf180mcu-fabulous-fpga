@@ -1,0 +1,53 @@
+{
+  "creator": "Yosys 0.54 (git sha1 db72ec3bde296a9512b2d1e6fabf81cfb07c2c1b, clang++ 19.1.7 -fPIC -O3)",
+  "modules": {
+    "Config_access": {
+      "attributes": {
+        "C_bit3": 3,
+        "C_bit2": 2,
+        "C_bit1": 1,
+        "C_bit0": 0,
+        "BelMap": 1,
+        "FABulous": 1,
+        "dynports": 1,
+        "top": 1,
+        "src": "/home/leo/Repositories/gf180mcu-fabulous-fpga/ip/fabric/../tile_library/tiles/W_IO4/../../primitives/Config_access/Config_access.v:7.1-17.10"
+      },
+      "parameter_default_values": {
+        "NoConfigBits": 4
+      },
+      "ports": {
+        "C_bit": {
+          "direction": "output",
+          "bits": [ 2, 3, 4, 5 ]
+        },
+        "ConfigBits": {
+          "direction": "input",
+          "bits": [ 2, 3, 4, 5 ]
+        }
+      },
+      "cells": {
+      },
+      "netnames": {
+        "C_bit": {
+          "hide_name": 0,
+          "bits": [ 2, 3, 4, 5 ],
+          "attributes": {
+            "EXTERNAL": 1,
+            "FABulous": 1,
+            "src": "/home/leo/Repositories/gf180mcu-fabulous-fpga/ip/fabric/../tile_library/tiles/W_IO4/../../primitives/Config_access/Config_access.v:10.39-10.44"
+          }
+        },
+        "ConfigBits": {
+          "hide_name": 0,
+          "bits": [ 2, 3, 4, 5 ],
+          "attributes": {
+            "FABulous": 1,
+            "GLOBAL": 1,
+            "src": "/home/leo/Repositories/gf180mcu-fabulous-fpga/ip/fabric/../tile_library/tiles/W_IO4/../../primitives/Config_access/Config_access.v:12.49-12.59"
+          }
+        }
+      }
+    }
+  }
+}
