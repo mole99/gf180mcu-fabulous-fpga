@@ -223,22 +223,22 @@ MACROS:
         - pdk_dir::libs.ref/gf180mcu_fd_ip_sram/lib/gf180mcu_fd_ip_sram__sram512x8m8wm1__ss_125C_4v50.lib
     instances:
       # Make sure to specify the SRAMs in pdn_cfg.tcl
-      i_chip_core.fabric_wrapper.sram_0:
+      i_chip_core.fabric_wrapper.sram_5:
         location: [3005, 790]
         orientation: E
-      i_chip_core.fabric_wrapper.sram_1:
+      i_chip_core.fabric_wrapper.sram_4:
         location: [3005, 1389.76]
         orientation: E
-      i_chip_core.fabric_wrapper.sram_2:
+      i_chip_core.fabric_wrapper.sram_3:
         location: [3005, 1989.52]
         orientation: E
-      i_chip_core.fabric_wrapper.sram_3:
+      i_chip_core.fabric_wrapper.sram_2:
         location: [3005, 2589.28]
         orientation: E
-      i_chip_core.fabric_wrapper.sram_4:
+      i_chip_core.fabric_wrapper.sram_1:
         location: [3005, 3189.04]
         orientation: E
-      i_chip_core.fabric_wrapper.sram_5:
+      i_chip_core.fabric_wrapper.sram_0:
         location: [3005, 3788.8]
         orientation: E
 
