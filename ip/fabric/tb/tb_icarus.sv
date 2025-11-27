@@ -17,7 +17,7 @@ module tb;
     parameter NumColumns = 9;
     parameter NumRows = 14;
 
-    parameter FABRIC_NUM_IO_WEST = 24;
+    parameter FABRIC_NUM_IO_WEST = 48;
 
     wire clk_i;
     wire rst_ni;
