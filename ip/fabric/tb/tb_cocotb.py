@@ -27,15 +27,15 @@ NumRows = 14
 BITSTREAM_START = 0xFAB0FAB1
 DESYNC_FLAG = 20
 
-FABRIC_NUM_IO_WEST = 24
+FABRIC_NUM_IO_WEST = 48
 NUM_SRAM = 6
 SRAM_WIDTH = 8
 SRAM_ADDR_BITS = 9
 
-run_all_zeros   = False
-run_all_ones    = False
-run_counter     = False
-run_passthrough = False
+run_all_zeros   = True
+run_all_ones    = True
+run_counter     = True
+run_passthrough = True
 run_sram        = True
 
 def set_fabric_io(dut, value):
@@ -388,6 +388,7 @@ if __name__ == "__main__":
         sources.append(f'{PRIMITIVES_ROOT}/MUX8LUT_frame_config_mux/MUX8LUT_frame_config_mux.v')
         sources.append(f'{PRIMITIVES_ROOT}/RegFile_32x4/RegFile_32x4.v')
         sources.append(f'{PRIMITIVES_ROOT}/WARMBOOT/WARMBOOT.v')
+        sources.append(f'{PRIMITIVES_ROOT}/Config_access/Config_access.v')
 
         # Add tiles
         
@@ -434,10 +435,10 @@ if __name__ == "__main__":
         sources.append(f'{TILES_ROOT}/S_term_single2/S_term_single2.v')
         sources.append(f'{TILES_ROOT}/S_term_single2/S_term_single2_switch_matrix.v')
 
-        # W_IO
-        sources.append(f'{TILES_ROOT}/W_IO/W_IO.v')
-        sources.append(f'{TILES_ROOT}/W_IO/W_IO_ConfigMem.v')
-        sources.append(f'{TILES_ROOT}/W_IO/W_IO_switch_matrix.v')
+        # W_IO4
+        sources.append(f'{TILES_ROOT}/W_IO4/W_IO4.v')
+        sources.append(f'{TILES_ROOT}/W_IO4/W_IO4_ConfigMem.v')
+        sources.append(f'{TILES_ROOT}/W_IO4/W_IO4_switch_matrix.v')
 
         # S_WARMBOOT
         sources.append(f'{TILES_ROOT}/S_WARMBOOT/S_WARMBOOT.v')
