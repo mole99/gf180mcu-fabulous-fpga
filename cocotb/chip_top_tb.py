@@ -11,14 +11,21 @@ from cocotb.clock import Clock
 from cocotb.triggers import Timer, Edge, RisingEdge, FallingEdge, ClockCycles
 from cocotb_tools.runner import get_runner
 
+proj_path = Path(__file__).resolve().parent
 sim = os.getenv("SIM", "icarus")
 pdk_root = os.getenv("PDK_ROOT", Path("~/.ciel").expanduser())
 pdk = os.getenv("PDK", "gf180mcuD")
 scl = os.getenv("SCL", "gf180mcu_fd_sc_mcu7t5v0")
 gl = os.getenv("GL", False)
 slot = os.getenv("SLOT", "1x1")
+hdl_toplevel = "chip_top_tb"
 
-hdl_toplevel = "chip_top"
+hello_world = {
+    'flash1_slot0': proj_path / "../ip/fabric/user_designs/all_ones/all_ones.hex",
+    'flash1_slot1': proj_path / "../ip/fabric/user_designs/all_zeros/all_zeros.hex",
+}
+
+enabled = hello_world
 
 async def set_defaults(dut):
     dut.input_PAD.value = 0
@@ -60,6 +67,13 @@ async def test_counter(dut):
     # Create a logger for this testbench
     logger = logging.getLogger("my_testbench")
 
+    logger.info("Setting defaults...")
+
+    # FPGA config mode
+    # if mode == 0: SPI controller
+    # if mode == 1: SPI receiver
+    dut.fpga_mode_i.value = 0
+
     logger.info("Startup sequence...")
 
     # Start up
@@ -67,28 +81,25 @@ async def test_counter(dut):
 
     logger.info("Running the test...")
 
-    # Wait for some time...
-    await ClockCycles(dut.clk_PAD, 10)
-
-    # Start the counter by setting all inputs to 1
-    dut.input_PAD.value = -1
-
     # Wait for a number of clock cycles
-    await ClockCycles(dut.clk_PAD, 100)
+    await ClockCycles(dut.clk_PAD, 10000)
+    
+    # Wait for done
+    await FallingEdge(dut.config_busy_o)
 
-    # Check the end result of the counter
-    assert dut.bidir_PAD.value == 100 - 1
+    assert (dut.fpga_io.value == (1<<48)-1)
 
     logger.info("Done!")
 
 
 def chip_top_runner():
 
-    proj_path = Path(__file__).resolve().parent
-
     sources = []
-    defines = {f"SLOT_{slot.upper()}": True}
+    defines = {f"SLOT_{slot.upper()}": True, "BITSTREAM_FLASH": True}
     includes = [proj_path / "../src/"]
+
+    sources.append(proj_path / "chip_top_tb.v")
+    sources.append(proj_path / "spiflash_powered.v")
 
     if gl:
         # SCL models
@@ -102,6 +113,12 @@ def chip_top_runner():
     else:
         sources.append(proj_path / "../src/chip_top.sv")
         sources.append(proj_path / "../src/chip_core.sv")
+        
+        sources.append(proj_path / "../ip/fabric/rtl/fabric_wrapper.sv")
+        
+        sources.append(proj_path / "../ip/fabric_config/fabric_config.sv")
+        sources.append(proj_path / "../ip/fabric_config/fabric_spi_controller.sv")
+        sources.append(proj_path / "../ip/fabric_config/fabric_spi_receiver.sv")
 
     sources += [
         # IO pad models
@@ -114,7 +131,99 @@ def chip_top_runner():
         # Custom IP
         proj_path / "../ip/gf180mcu_ws_ip__id/vh/gf180mcu_ws_ip__id.v",
         proj_path / "../ip/gf180mcu_ws_ip__logo/vh/gf180mcu_ws_ip__logo.v",
+        proj_path / "../ip/gf180mcu_ws_ip__credits/vh/gf180mcu_ws_ip__credits.v",
+        proj_path / "../ip/gf180mcu_ws_ip__logo_fabulous/vh/gf180mcu_ws_ip__logo_fabulous.v",
     ]
+
+    # Add FPGA fabric
+    sources.append(proj_path / f'../ip/fabric/macro/{pdk}/fabulous/eFPGA.v')
+
+    # Paths
+    TILES_ROOT = proj_path / '../ip/tile_library/tiles'
+    PRIMITIVES_ROOT = proj_path / '../ip/tile_library/primitives/'
+    
+    # Primitives
+    sources.append(f'{PRIMITIVES_ROOT}/GF_SRAM_512x8/GF_SRAM_512x8.v')
+    sources.append(f'{PRIMITIVES_ROOT}/IO_1_bidirectional_frame_config_pass/IO_1_bidirectional_frame_config_pass.v')
+    sources.append(f'{PRIMITIVES_ROOT}/LUT4c_frame_config_dffesr/LUT4c_frame_config_dffesr.v')
+    sources.append(f'{PRIMITIVES_ROOT}/MULADD/MULADD.v')
+    sources.append(f'{PRIMITIVES_ROOT}/MUX8LUT_frame_config_mux/MUX8LUT_frame_config_mux.v')
+    sources.append(f'{PRIMITIVES_ROOT}/RegFile_32x4/RegFile_32x4.v')
+    sources.append(f'{PRIMITIVES_ROOT}/WARMBOOT/WARMBOOT.v')
+    sources.append(f'{PRIMITIVES_ROOT}/Config_access/Config_access.v')
+    
+    # DSP
+    sources.append(f'{TILES_ROOT}/DSP/DSP.v')
+    sources.append(f'{TILES_ROOT}/DSP/DSP_bot/DSP_bot.v')
+    sources.append(f'{TILES_ROOT}/DSP/DSP_bot/DSP_bot_ConfigMem.v')
+    sources.append(f'{TILES_ROOT}/DSP/DSP_bot/DSP_bot_switch_matrix.v')
+    sources.append(f'{TILES_ROOT}/DSP/DSP_top/DSP_top.v')
+    sources.append(f'{TILES_ROOT}/DSP/DSP_top/DSP_top_ConfigMem.v')
+    sources.append(f'{TILES_ROOT}/DSP/DSP_top/DSP_top_switch_matrix.v')
+    
+    # LUT4AB
+    sources.append(f'{TILES_ROOT}/LUT4AB/LUT4AB.v')
+    sources.append(f'{TILES_ROOT}/LUT4AB/LUT4AB_ConfigMem.v')
+    sources.append(f'{TILES_ROOT}/LUT4AB/LUT4AB_switch_matrix.v')
+    
+    # N_term_DSP
+    sources.append(f'{TILES_ROOT}/N_term_DSP/N_term_DSP.v')
+    sources.append(f'{TILES_ROOT}/N_term_DSP/N_term_DSP_switch_matrix.v')
+    
+    # N_term_single
+    sources.append(f'{TILES_ROOT}/N_term_single/N_term_single.v')
+    sources.append(f'{TILES_ROOT}/N_term_single/N_term_single_switch_matrix.v')
+    
+    # N_term_single2
+    sources.append(f'{TILES_ROOT}/N_term_single2/N_term_single2.v')
+    sources.append(f'{TILES_ROOT}/N_term_single2/N_term_single2_switch_matrix.v')
+
+    # RegFile
+    sources.append(f'{TILES_ROOT}/RegFile/RegFile.v')
+    sources.append(f'{TILES_ROOT}/RegFile/RegFile_ConfigMem.v')
+    sources.append(f'{TILES_ROOT}/RegFile/RegFile_switch_matrix.v')
+    
+    # S_term_DSP
+    sources.append(f'{TILES_ROOT}/S_term_DSP/S_term_DSP.v')
+    sources.append(f'{TILES_ROOT}/S_term_DSP/S_term_DSP_switch_matrix.v')
+    
+    # S_term_single
+    sources.append(f'{TILES_ROOT}/S_term_single/S_term_single.v')
+    sources.append(f'{TILES_ROOT}/S_term_single/S_term_single_switch_matrix.v')
+
+    # S_term_single2
+    sources.append(f'{TILES_ROOT}/S_term_single2/S_term_single2.v')
+    sources.append(f'{TILES_ROOT}/S_term_single2/S_term_single2_switch_matrix.v')
+
+    # W_IO4
+    sources.append(f'{TILES_ROOT}/W_IO4/W_IO4.v')
+    sources.append(f'{TILES_ROOT}/W_IO4/W_IO4_ConfigMem.v')
+    sources.append(f'{TILES_ROOT}/W_IO4/W_IO4_switch_matrix.v')
+
+    # S_WARMBOOT
+    sources.append(f'{TILES_ROOT}/S_WARMBOOT/S_WARMBOOT.v')
+    sources.append(f'{TILES_ROOT}/S_WARMBOOT/S_WARMBOOT_ConfigMem.v')
+    sources.append(f'{TILES_ROOT}/S_WARMBOOT/S_WARMBOOT_switch_matrix.v')
+
+    # GF_SRAM
+    sources.append(f'{TILES_ROOT}/GF_SRAM/GF_SRAM.v')
+    sources.append(f'{TILES_ROOT}/GF_SRAM/GF_SRAM_bot/GF_SRAM_bot.v')
+    sources.append(f'{TILES_ROOT}/GF_SRAM/GF_SRAM_bot/GF_SRAM_bot_ConfigMem.v')
+    sources.append(f'{TILES_ROOT}/GF_SRAM/GF_SRAM_bot/GF_SRAM_bot_switch_matrix.v')
+    sources.append(f'{TILES_ROOT}/GF_SRAM/GF_SRAM_top/GF_SRAM_top.v')
+    sources.append(f'{TILES_ROOT}/GF_SRAM/GF_SRAM_top/GF_SRAM_top_ConfigMem.v')
+    sources.append(f'{TILES_ROOT}/GF_SRAM/GF_SRAM_top/GF_SRAM_top_switch_matrix.v')
+
+    # N_term_SRAM
+    sources.append(f'{TILES_ROOT}/N_term_SRAM/N_term_SRAM.v')
+    sources.append(f'{TILES_ROOT}/N_term_SRAM/N_term_SRAM_switch_matrix.v')
+
+    # S_term_SRAM
+    sources.append(f'{TILES_ROOT}/S_term_SRAM/S_term_SRAM.v')
+    sources.append(f'{TILES_ROOT}/S_term_SRAM/S_term_SRAM_switch_matrix.v')
+
+    sources.append(proj_path / '../ip/tile_library/models_pack.v')
+
 
     build_args = []
 
@@ -138,6 +247,11 @@ def chip_top_runner():
     )
 
     plusargs = []
+
+    if enabled["flash1_slot0"]:
+        plusargs += [f'+flash1_slot0={enabled["flash1_slot0"]}']
+    if enabled["flash1_slot1"]:
+        plusargs += [f'+flash1_slot1={enabled["flash1_slot1"]}']
 
     runner.test(
         hdl_toplevel=hdl_toplevel,
