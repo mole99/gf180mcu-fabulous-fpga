@@ -18,7 +18,8 @@ pdk = os.getenv("PDK", "gf180mcuD")
 scl = os.getenv("SCL", "gf180mcu_fd_sc_mcu7t5v0")
 gl = os.getenv("GL", False)
 slot = os.getenv("SLOT", "1x1")
-hdl_toplevel = "chip_top_tb"
+hdl_toplevel = "chip_top"
+tb_toplevel = "chip_top_tb"
 
 hello_world = {
     'flash1_slot0': proj_path / "../ip/fabric/user_designs/all_ones/all_ones.hex",
@@ -109,7 +110,7 @@ def chip_top_runner():
         # We use the powered netlist
         sources.append(proj_path / f"../final/pnl/{hdl_toplevel}.pnl.v")
 
-        defines = {"FUNCTIONAL": True, "USE_POWER_PINS": True}
+        defines.update({"FUNCTIONAL": True, "USE_POWER_PINS": True})
     else:
         sources.append(proj_path / "../src/chip_top.sv")
         sources.append(proj_path / "../src/chip_core.sv")
@@ -238,7 +239,7 @@ def chip_top_runner():
     runner = get_runner(sim)
     runner.build(
         sources=sources,
-        hdl_toplevel=hdl_toplevel,
+        hdl_toplevel=tb_toplevel,
         defines=defines,
         always=True,
         includes=includes,
@@ -254,7 +255,7 @@ def chip_top_runner():
         plusargs += [f'+flash1_slot1={enabled["flash1_slot1"]}']
 
     runner.test(
-        hdl_toplevel=hdl_toplevel,
+        hdl_toplevel=tb_toplevel,
         test_module="chip_top_tb,",
         plusargs=plusargs,
         waves=True,
