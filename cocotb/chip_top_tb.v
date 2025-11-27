@@ -92,3 +92,5 @@ endmodule
 module break_comb_loop(input A, output X);
 assign #0.1 X = A;
 endmodule
+
+`default_nettype wire
