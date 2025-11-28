@@ -1,6 +1,35 @@
-# gf180mcu Project Template
+# gf180mcu FABulous FPGA
 
-Project template for wafer.space MPW runs using the gf180mcu PDK.
+Based on the [project template](https://github.com/wafer-space/gf180mcu-project-template) for wafer.space MPW runs using the gf180mcu PDK.
+
+<p align="center">
+  <a href="img/chip_top_white.png">
+    <img src="img/chip_top_white.png" alt="chip layout" width=35%>
+  </a>
+</p>
+
+- [FABulous](https://github.com/FPGA-Research/FABulous) eFPGA
+- 48x I/Os
+  - 480x LUT4 + FF
+    - w. carry chain
+  - 60x MUX
+    - Either 1xMUX8, 2xMUX4 or 4xMUX2
+  - 6x SRAM 512x8
+    - individual bit-enable
+  - 6x MAC
+    - 8bit*8bit + 20bit
+    - sign-extend
+    - sync/async operands and/or ACC
+  - 12x Register file
+    - 32x4bit each
+    - 1w1r1r
+    - sync/async output
+  - 1x Global clock network
+  - 1x WARMBOOT
+    - Trigger a reconfiguration from one of 16 slots
+    - Provides a reset signal which is asserted during reconfiguration
+
+
 
 ## Prerequisites
 
@@ -75,39 +104,6 @@ You can view it using a waveform viewer, for example, [GTKWave](https://gtkwave.
 ```
 make sim-view
 ```
-
-You can now update the testbench according to your design.
-
-## Implementing Your Own Design
-
-The source files for this template can be found in the `src/` directory. `chip_top.sv` defines the top-level ports and instantiates `chip_core`, chip ID (QR code) and the wafer.space logo. To allow for the default bonding setup, do not change the number of pads in order to keep the original bondpad positions. To be compatible with the default breakout PCB, do not change any of the power or ground pads. However, you can change the type of the signal pads, e.g. to bidirectional, input-only or e.g. analog pads. The template provides the `NUM_INPUT` and `NUM_BIDIR` parameters for this purpose.
-
-The actual pad positions are defined in the LibreLane configuration file under `librelane/config.yaml`. The variables `PAD_SOUTH`/`PAD_EAST`/`PAD_NORTH`/`PAD_WEST` determine the respective pad placement. The LibreLane configuration also allows you to customize the flow (enable or disable steps), specify the source files, set various variables for the steps, and instantiate macros. For more information about the configuration, please refer to the LibreLane documentation: https://librelane.readthedocs.io/en/latest/
-
-To implement your own design, simply edit `chip_core.sv`. The `chip_core` module receives the clock and reset, as well as the signals from the pads defined in `chip_top`. As an example, a 42-bit wide counter is implemented.
-
-> [!NOTE]
-> For more comprehensive SystemVerilog support, enable the `USE_SLANG` variable in the LibreLane configuration.
-
-## Choosing a Different Slot Size
-
-The template supports the following slot sizes: `1x1`, `0p5x1`, `1x0p5`, `0p5x0p5`.
-By default, the design is implemented using the `1x1` slot definition.
-
-To select a different slot size, simply set the `SLOT` environment variable.
-This can be done when invoking a make target:
-
-```
-SLOT=0p5x0p5 make librelane
-```
-
-Alternatively, you can export the slot size:
-
-```
-export SLOT=0p5x0p5
-```
-
-You can change the slot that is selected by default in the Makefile by editing the value of `DEFAULT_SLOT`.
 
 ## Precheck
 

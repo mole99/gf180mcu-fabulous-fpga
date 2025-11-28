@@ -3,3 +3,4 @@ __pycache__/
 gf180mcu/
 gf180_drc.lyrdb
 sim_build/
+final/
