@@ -1,0 +1,177 @@
+{
+  "creator": "Yosys 0.54 (git sha1 db72ec3bde296a9512b2d1e6fabf81cfb07c2c1b, clang++ 19.1.7 -fPIC -O3)",
+  "modules": {
+    "S_term_SRAM": {
+      "attributes": {
+        "hdlname": "S_term_SRAM",
+        "dynports": "00000000000000000000000000000001",
+        "top": "00000000000000000000000000000001",
+        "src": "/home/leo/Repositories/gf180mcu-fabulous-fpga/ip/tile_library/tiles/S_term_SRAM/S_term_SRAM.v:1.1-644.10"
+      },
+      "parameter_default_values": {
+        "FrameBitsPerRow": "00000000000000000000000000100000",
+        "MaxFramesPerCol": "00000000000000000000000000010100"
+      },
+      "ports": {
+        "N1BEG": {
+          "direction": "output",
+          "bits": [ 2, 3, 4, 5 ]
+        },
+        "N2BEG": {
+          "direction": "output",
+          "bits": [ 6, 7, 8, 9, 10, 11, 12, 13 ]
+        },
+        "N2BEGb": {
+          "direction": "output",
+          "bits": [ 14, 15, 16, 17, 18, 19, 20, 21 ]
+        },
+        "N4BEG": {
+          "direction": "output",
+          "bits": [ 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37 ]
+        },
+        "S1END": {
+          "direction": "input",
+          "bits": [ 5, 4, 3, 2 ]
+        },
+        "S2MID": {
+          "direction": "input",
+          "bits": [ 13, 12, 11, 10, 9, 8, 7, 6 ]
+        },
+        "S2END": {
+          "direction": "input",
+          "bits": [ 21, 20, 19, 18, 17, 16, 15, 14 ]
+        },
+        "S4END": {
+          "direction": "input",
+          "bits": [ 37, 36, 35, 34, 33, 32, 31, 30, 29, 28, 27, 26, 25, 24, 23, 22 ]
+        },
+        "UserCLK": {
+          "direction": "input",
+          "bits": [ 38 ]
+        },
+        "UserCLKo": {
+          "direction": "output",
+          "bits": [ 38 ]
+        },
+        "FrameData": {
+          "direction": "input",
+          "bits": [ 39, 40, 41, 42, 43, 44, 45, 46, 47, 48, 49, 50, 51, 52, 53, 54, 55, 56, 57, 58, 59, 60, 61, 62, 63, 64, 65, 66, 67, 68, 69, 70 ]
+        },
+        "FrameData_O": {
+          "direction": "output",
+          "bits": [ 39, 40, 41, 42, 43, 44, 45, 46, 47, 48, 49, 50, 51, 52, 53, 54, 55, 56, 57, 58, 59, 60, 61, 62, 63, 64, 65, 66, 67, 68, 69, 70 ]
+        },
+        "FrameStrobe": {
+          "direction": "input",
+          "bits": [ 71, 72, 73, 74, 75, 76, 77, 78, 79, 80, 81, 82, 83, 84, 85, 86, 87, 88, 89, 90 ]
+        },
+        "FrameStrobe_O": {
+          "direction": "output",
+          "bits": [ 71, 72, 73, 74, 75, 76, 77, 78, 79, 80, 81, 82, 83, 84, 85, 86, 87, 88, 89, 90 ]
+        }
+      },
+      "cells": {
+      },
+      "netnames": {
+        "FrameData": {
+          "hide_name": 0,
+          "bits": [ 39, 40, 41, 42, 43, 44, 45, 46, 47, 48, 49, 50, 51, 52, 53, 54, 55, 56, 57, 58, 59, 60, 61, 62, 63, 64, 65, 66, 67, 68, 69, 70 ],
+          "attributes": {
+            "src": "/home/leo/Repositories/gf180mcu-fabulous-fpga/ip/tile_library/tiles/S_term_SRAM/S_term_SRAM.v:22.38-22.47"
+          }
+        },
+        "FrameData_O": {
+          "hide_name": 0,
+          "bits": [ 39, 40, 41, 42, 43, 44, 45, 46, 47, 48, 49, 50, 51, 52, 53, 54, 55, 56, 57, 58, 59, 60, 61, 62, 63, 64, 65, 66, 67, 68, 69, 70 ],
+          "attributes": {
+            "src": "/home/leo/Repositories/gf180mcu-fabulous-fpga/ip/tile_library/tiles/S_term_SRAM/S_term_SRAM.v:23.39-23.50"
+          }
+        },
+        "FrameStrobe": {
+          "hide_name": 0,
+          "bits": [ 71, 72, 73, 74, 75, 76, 77, 78, 79, 80, 81, 82, 83, 84, 85, 86, 87, 88, 89, 90 ],
+          "attributes": {
+            "src": "/home/leo/Repositories/gf180mcu-fabulous-fpga/ip/tile_library/tiles/S_term_SRAM/S_term_SRAM.v:24.38-24.49"
+          }
+        },
+        "FrameStrobe_O": {
+          "hide_name": 0,
+          "bits": [ 71, 72, 73, 74, 75, 76, 77, 78, 79, 80, 81, 82, 83, 84, 85, 86, 87, 88, 89, 90 ],
+          "attributes": {
+            "src": "/home/leo/Repositories/gf180mcu-fabulous-fpga/ip/tile_library/tiles/S_term_SRAM/S_term_SRAM.v:25.39-25.52"
+          }
+        },
+        "N1BEG": {
+          "hide_name": 0,
+          "bits": [ 2, 3, 4, 5 ],
+          "attributes": {
+            "src": "/home/leo/Repositories/gf180mcu-fabulous-fpga/ip/tile_library/tiles/S_term_SRAM/S_term_SRAM.v:11.23-11.28"
+          }
+        },
+        "N2BEG": {
+          "hide_name": 0,
+          "bits": [ 6, 7, 8, 9, 10, 11, 12, 13 ],
+          "attributes": {
+            "src": "/home/leo/Repositories/gf180mcu-fabulous-fpga/ip/tile_library/tiles/S_term_SRAM/S_term_SRAM.v:12.23-12.28"
+          }
+        },
+        "N2BEGb": {
+          "hide_name": 0,
+          "bits": [ 14, 15, 16, 17, 18, 19, 20, 21 ],
+          "attributes": {
+            "src": "/home/leo/Repositories/gf180mcu-fabulous-fpga/ip/tile_library/tiles/S_term_SRAM/S_term_SRAM.v:13.23-13.29"
+          }
+        },
+        "N4BEG": {
+          "hide_name": 0,
+          "bits": [ 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37 ],
+          "attributes": {
+            "src": "/home/leo/Repositories/gf180mcu-fabulous-fpga/ip/tile_library/tiles/S_term_SRAM/S_term_SRAM.v:14.24-14.29"
+          }
+        },
+        "S1END": {
+          "hide_name": 0,
+          "bits": [ 5, 4, 3, 2 ],
+          "attributes": {
+            "src": "/home/leo/Repositories/gf180mcu-fabulous-fpga/ip/tile_library/tiles/S_term_SRAM/S_term_SRAM.v:15.22-15.27"
+          }
+        },
+        "S2END": {
+          "hide_name": 0,
+          "bits": [ 21, 20, 19, 18, 17, 16, 15, 14 ],
+          "attributes": {
+            "src": "/home/leo/Repositories/gf180mcu-fabulous-fpga/ip/tile_library/tiles/S_term_SRAM/S_term_SRAM.v:17.22-17.27"
+          }
+        },
+        "S2MID": {
+          "hide_name": 0,
+          "bits": [ 13, 12, 11, 10, 9, 8, 7, 6 ],
+          "attributes": {
+            "src": "/home/leo/Repositories/gf180mcu-fabulous-fpga/ip/tile_library/tiles/S_term_SRAM/S_term_SRAM.v:16.22-16.27"
+          }
+        },
+        "S4END": {
+          "hide_name": 0,
+          "bits": [ 37, 36, 35, 34, 33, 32, 31, 30, 29, 28, 27, 26, 25, 24, 23, 22 ],
+          "attributes": {
+            "src": "/home/leo/Repositories/gf180mcu-fabulous-fpga/ip/tile_library/tiles/S_term_SRAM/S_term_SRAM.v:18.23-18.28"
+          }
+        },
+        "UserCLK": {
+          "hide_name": 0,
+          "bits": [ 38 ],
+          "attributes": {
+            "src": "/home/leo/Repositories/gf180mcu-fabulous-fpga/ip/tile_library/tiles/S_term_SRAM/S_term_SRAM.v:20.16-20.23"
+          }
+        },
+        "UserCLKo": {
+          "hide_name": 0,
+          "bits": [ 38 ],
+          "attributes": {
+            "src": "/home/leo/Repositories/gf180mcu-fabulous-fpga/ip/tile_library/tiles/S_term_SRAM/S_term_SRAM.v:21.17-21.25"
+          }
+        }
+      }
+    }
+  }
+}

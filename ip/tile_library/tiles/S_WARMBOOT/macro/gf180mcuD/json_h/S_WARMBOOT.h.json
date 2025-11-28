@@ -1,0 +1,2001 @@
+{
+  "creator": "Yosys 0.54 (git sha1 db72ec3bde296a9512b2d1e6fabf81cfb07c2c1b, clang++ 19.1.7 -fPIC -O3)",
+  "modules": {
+    "S_WARMBOOT": {
+      "attributes": {
+        "hdlname": "S_WARMBOOT",
+        "dynports": "00000000000000000000000000000001",
+        "top": "00000000000000000000000000000001",
+        "src": "/home/leo/Repositories/gf180mcu-fabulous-fpga/ip/tile_library/tiles/S_WARMBOOT/S_WARMBOOT.v:1.1-731.10"
+      },
+      "parameter_default_values": {
+        "FrameBitsPerRow": "00000000000000000000000000100000",
+        "MaxFramesPerCol": "00000000000000000000000000010100",
+        "NoConfigBits": "00000000000000000000000000010011"
+      },
+      "ports": {
+        "N1BEG": {
+          "direction": "output",
+          "bits": [ 2, 3, 4, 5 ]
+        },
+        "N2BEG": {
+          "direction": "output",
+          "bits": [ 6, 7, 8, 9, 10, 11, 12, 13 ]
+        },
+        "N2BEGb": {
+          "direction": "output",
+          "bits": [ 14, 15, 16, 17, 18, 19, 20, 21 ]
+        },
+        "N4BEG": {
+          "direction": "output",
+          "bits": [ 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37 ]
+        },
+        "NN4BEG": {
+          "direction": "output",
+          "bits": [ 38, 39, 40, 41, 42, 43, 44, 45, 46, 47, 48, 49, 50, 51, 52, 53 ]
+        },
+        "Co": {
+          "direction": "output",
+          "bits": [ "0" ]
+        },
+        "S1END": {
+          "direction": "input",
+          "bits": [ 54, 55, 56, 57 ]
+        },
+        "S2MID": {
+          "direction": "input",
+          "bits": [ 13, 12, 11, 10, 9, 8, 7, 6 ]
+        },
+        "S2END": {
+          "direction": "input",
+          "bits": [ 21, 20, 19, 18, 17, 16, 15, 14 ]
+        },
+        "S4END": {
+          "direction": "input",
+          "bits": [ 37, 36, 35, 34, 33, 32, 31, 30, 29, 28, 27, 26, 25, 24, 23, 22 ]
+        },
+        "SS4END": {
+          "direction": "input",
+          "bits": [ 53, 52, 51, 50, 49, 48, 47, 46, 45, 44, 43, 42, 41, 40, 39, 38 ]
+        },
+        "RESET_top": {
+          "direction": "input",
+          "bits": [ 58 ]
+        },
+        "CONFIGURED_top": {
+          "direction": "input",
+          "bits": [ 59 ]
+        },
+        "SLOT_top0": {
+          "direction": "output",
+          "bits": [ 60 ]
+        },
+        "SLOT_top1": {
+          "direction": "output",
+          "bits": [ 61 ]
+        },
+        "SLOT_top2": {
+          "direction": "output",
+          "bits": [ 62 ]
+        },
+        "SLOT_top3": {
+          "direction": "output",
+          "bits": [ 63 ]
+        },
+        "BOOT_top": {
+          "direction": "output",
+          "bits": [ 64 ]
+        },
+        "UserCLK": {
+          "direction": "input",
+          "bits": [ 65 ]
+        },
+        "UserCLKo": {
+          "direction": "output",
+          "bits": [ 65 ]
+        },
+        "FrameData": {
+          "direction": "input",
+          "bits": [ 66, 67, 68, 69, 70, 71, 72, 73, 74, 75, 76, 77, 78, 79, 80, 81, 82, 83, 84, 85, 86, 87, 88, 89, 90, 91, 92, 93, 94, 95, 96, 97 ]
+        },
+        "FrameData_O": {
+          "direction": "output",
+          "bits": [ 66, 67, 68, 69, 70, 71, 72, 73, 74, 75, 76, 77, 78, 79, 80, 81, 82, 83, 84, 85, 86, 87, 88, 89, 90, 91, 92, 93, 94, 95, 96, 97 ]
+        },
+        "FrameStrobe": {
+          "direction": "input",
+          "bits": [ 98, 99, 100, 101, 102, 103, 104, 105, 106, 107, 108, 109, 110, 111, 112, 113, 114, 115, 116, 117 ]
+        },
+        "FrameStrobe_O": {
+          "direction": "output",
+          "bits": [ 98, 99, 100, 101, 102, 103, 104, 105, 106, 107, 108, 109, 110, 111, 112, 113, 114, 115, 116, 117 ]
+        }
+      },
+      "cells": {
+        "$flatten\\Inst_S_WARMBOOT_ConfigMem.\\Inst_frame0_bit13.$auto$proc_dlatch.cc:432:proc_dlatch$15": {
+          "hide_name": 1,
+          "type": "$dlatch",
+          "parameters": {
+            "EN_POLARITY": "00000000000000000000000000000001",
+            "WIDTH": "00000000000000000000000000000001"
+          },
+          "attributes": {
+            "src": "/home/leo/Repositories/gf180mcu-fabulous-fpga/ip/tile_library/models_pack.v:55.5-61.8"
+          },
+          "port_directions": {
+            "D": "input",
+            "EN": "input",
+            "Q": "output"
+          },
+          "connections": {
+            "D": [ 79 ],
+            "EN": [ 98 ],
+            "Q": [ 118 ]
+          }
+        },
+        "$flatten\\Inst_S_WARMBOOT_ConfigMem.\\Inst_frame0_bit14.$auto$proc_dlatch.cc:432:proc_dlatch$15": {
+          "hide_name": 1,
+          "type": "$dlatch",
+          "parameters": {
+            "EN_POLARITY": "00000000000000000000000000000001",
+            "WIDTH": "00000000000000000000000000000001"
+          },
+          "attributes": {
+            "src": "/home/leo/Repositories/gf180mcu-fabulous-fpga/ip/tile_library/models_pack.v:55.5-61.8"
+          },
+          "port_directions": {
+            "D": "input",
+            "EN": "input",
+            "Q": "output"
+          },
+          "connections": {
+            "D": [ 80 ],
+            "EN": [ 98 ],
+            "Q": [ 119 ]
+          }
+        },
+        "$flatten\\Inst_S_WARMBOOT_ConfigMem.\\Inst_frame0_bit15.$auto$proc_dlatch.cc:432:proc_dlatch$15": {
+          "hide_name": 1,
+          "type": "$dlatch",
+          "parameters": {
+            "EN_POLARITY": "00000000000000000000000000000001",
+            "WIDTH": "00000000000000000000000000000001"
+          },
+          "attributes": {
+            "src": "/home/leo/Repositories/gf180mcu-fabulous-fpga/ip/tile_library/models_pack.v:55.5-61.8"
+          },
+          "port_directions": {
+            "D": "input",
+            "EN": "input",
+            "Q": "output"
+          },
+          "connections": {
+            "D": [ 81 ],
+            "EN": [ 98 ],
+            "Q": [ 120 ]
+          }
+        },
+        "$flatten\\Inst_S_WARMBOOT_ConfigMem.\\Inst_frame0_bit16.$auto$proc_dlatch.cc:432:proc_dlatch$15": {
+          "hide_name": 1,
+          "type": "$dlatch",
+          "parameters": {
+            "EN_POLARITY": "00000000000000000000000000000001",
+            "WIDTH": "00000000000000000000000000000001"
+          },
+          "attributes": {
+            "src": "/home/leo/Repositories/gf180mcu-fabulous-fpga/ip/tile_library/models_pack.v:55.5-61.8"
+          },
+          "port_directions": {
+            "D": "input",
+            "EN": "input",
+            "Q": "output"
+          },
+          "connections": {
+            "D": [ 82 ],
+            "EN": [ 98 ],
+            "Q": [ 121 ]
+          }
+        },
+        "$flatten\\Inst_S_WARMBOOT_ConfigMem.\\Inst_frame0_bit17.$auto$proc_dlatch.cc:432:proc_dlatch$15": {
+          "hide_name": 1,
+          "type": "$dlatch",
+          "parameters": {
+            "EN_POLARITY": "00000000000000000000000000000001",
+            "WIDTH": "00000000000000000000000000000001"
+          },
+          "attributes": {
+            "src": "/home/leo/Repositories/gf180mcu-fabulous-fpga/ip/tile_library/models_pack.v:55.5-61.8"
+          },
+          "port_directions": {
+            "D": "input",
+            "EN": "input",
+            "Q": "output"
+          },
+          "connections": {
+            "D": [ 83 ],
+            "EN": [ 98 ],
+            "Q": [ 122 ]
+          }
+        },
+        "$flatten\\Inst_S_WARMBOOT_ConfigMem.\\Inst_frame0_bit18.$auto$proc_dlatch.cc:432:proc_dlatch$15": {
+          "hide_name": 1,
+          "type": "$dlatch",
+          "parameters": {
+            "EN_POLARITY": "00000000000000000000000000000001",
+            "WIDTH": "00000000000000000000000000000001"
+          },
+          "attributes": {
+            "src": "/home/leo/Repositories/gf180mcu-fabulous-fpga/ip/tile_library/models_pack.v:55.5-61.8"
+          },
+          "port_directions": {
+            "D": "input",
+            "EN": "input",
+            "Q": "output"
+          },
+          "connections": {
+            "D": [ 84 ],
+            "EN": [ 98 ],
+            "Q": [ 123 ]
+          }
+        },
+        "$flatten\\Inst_S_WARMBOOT_ConfigMem.\\Inst_frame0_bit19.$auto$proc_dlatch.cc:432:proc_dlatch$15": {
+          "hide_name": 1,
+          "type": "$dlatch",
+          "parameters": {
+            "EN_POLARITY": "00000000000000000000000000000001",
+            "WIDTH": "00000000000000000000000000000001"
+          },
+          "attributes": {
+            "src": "/home/leo/Repositories/gf180mcu-fabulous-fpga/ip/tile_library/models_pack.v:55.5-61.8"
+          },
+          "port_directions": {
+            "D": "input",
+            "EN": "input",
+            "Q": "output"
+          },
+          "connections": {
+            "D": [ 85 ],
+            "EN": [ 98 ],
+            "Q": [ 124 ]
+          }
+        },
+        "$flatten\\Inst_S_WARMBOOT_ConfigMem.\\Inst_frame0_bit20.$auto$proc_dlatch.cc:432:proc_dlatch$15": {
+          "hide_name": 1,
+          "type": "$dlatch",
+          "parameters": {
+            "EN_POLARITY": "00000000000000000000000000000001",
+            "WIDTH": "00000000000000000000000000000001"
+          },
+          "attributes": {
+            "src": "/home/leo/Repositories/gf180mcu-fabulous-fpga/ip/tile_library/models_pack.v:55.5-61.8"
+          },
+          "port_directions": {
+            "D": "input",
+            "EN": "input",
+            "Q": "output"
+          },
+          "connections": {
+            "D": [ 86 ],
+            "EN": [ 98 ],
+            "Q": [ 125 ]
+          }
+        },
+        "$flatten\\Inst_S_WARMBOOT_ConfigMem.\\Inst_frame0_bit21.$auto$proc_dlatch.cc:432:proc_dlatch$15": {
+          "hide_name": 1,
+          "type": "$dlatch",
+          "parameters": {
+            "EN_POLARITY": "00000000000000000000000000000001",
+            "WIDTH": "00000000000000000000000000000001"
+          },
+          "attributes": {
+            "src": "/home/leo/Repositories/gf180mcu-fabulous-fpga/ip/tile_library/models_pack.v:55.5-61.8"
+          },
+          "port_directions": {
+            "D": "input",
+            "EN": "input",
+            "Q": "output"
+          },
+          "connections": {
+            "D": [ 87 ],
+            "EN": [ 98 ],
+            "Q": [ 126 ]
+          }
+        },
+        "$flatten\\Inst_S_WARMBOOT_ConfigMem.\\Inst_frame0_bit22.$auto$proc_dlatch.cc:432:proc_dlatch$15": {
+          "hide_name": 1,
+          "type": "$dlatch",
+          "parameters": {
+            "EN_POLARITY": "00000000000000000000000000000001",
+            "WIDTH": "00000000000000000000000000000001"
+          },
+          "attributes": {
+            "src": "/home/leo/Repositories/gf180mcu-fabulous-fpga/ip/tile_library/models_pack.v:55.5-61.8"
+          },
+          "port_directions": {
+            "D": "input",
+            "EN": "input",
+            "Q": "output"
+          },
+          "connections": {
+            "D": [ 88 ],
+            "EN": [ 98 ],
+            "Q": [ 127 ]
+          }
+        },
+        "$flatten\\Inst_S_WARMBOOT_ConfigMem.\\Inst_frame0_bit23.$auto$proc_dlatch.cc:432:proc_dlatch$15": {
+          "hide_name": 1,
+          "type": "$dlatch",
+          "parameters": {
+            "EN_POLARITY": "00000000000000000000000000000001",
+            "WIDTH": "00000000000000000000000000000001"
+          },
+          "attributes": {
+            "src": "/home/leo/Repositories/gf180mcu-fabulous-fpga/ip/tile_library/models_pack.v:55.5-61.8"
+          },
+          "port_directions": {
+            "D": "input",
+            "EN": "input",
+            "Q": "output"
+          },
+          "connections": {
+            "D": [ 89 ],
+            "EN": [ 98 ],
+            "Q": [ 128 ]
+          }
+        },
+        "$flatten\\Inst_S_WARMBOOT_ConfigMem.\\Inst_frame0_bit24.$auto$proc_dlatch.cc:432:proc_dlatch$15": {
+          "hide_name": 1,
+          "type": "$dlatch",
+          "parameters": {
+            "EN_POLARITY": "00000000000000000000000000000001",
+            "WIDTH": "00000000000000000000000000000001"
+          },
+          "attributes": {
+            "src": "/home/leo/Repositories/gf180mcu-fabulous-fpga/ip/tile_library/models_pack.v:55.5-61.8"
+          },
+          "port_directions": {
+            "D": "input",
+            "EN": "input",
+            "Q": "output"
+          },
+          "connections": {
+            "D": [ 90 ],
+            "EN": [ 98 ],
+            "Q": [ 129 ]
+          }
+        },
+        "$flatten\\Inst_S_WARMBOOT_ConfigMem.\\Inst_frame0_bit25.$auto$proc_dlatch.cc:432:proc_dlatch$15": {
+          "hide_name": 1,
+          "type": "$dlatch",
+          "parameters": {
+            "EN_POLARITY": "00000000000000000000000000000001",
+            "WIDTH": "00000000000000000000000000000001"
+          },
+          "attributes": {
+            "src": "/home/leo/Repositories/gf180mcu-fabulous-fpga/ip/tile_library/models_pack.v:55.5-61.8"
+          },
+          "port_directions": {
+            "D": "input",
+            "EN": "input",
+            "Q": "output"
+          },
+          "connections": {
+            "D": [ 91 ],
+            "EN": [ 98 ],
+            "Q": [ 130 ]
+          }
+        },
+        "$flatten\\Inst_S_WARMBOOT_ConfigMem.\\Inst_frame0_bit26.$auto$proc_dlatch.cc:432:proc_dlatch$15": {
+          "hide_name": 1,
+          "type": "$dlatch",
+          "parameters": {
+            "EN_POLARITY": "00000000000000000000000000000001",
+            "WIDTH": "00000000000000000000000000000001"
+          },
+          "attributes": {
+            "src": "/home/leo/Repositories/gf180mcu-fabulous-fpga/ip/tile_library/models_pack.v:55.5-61.8"
+          },
+          "port_directions": {
+            "D": "input",
+            "EN": "input",
+            "Q": "output"
+          },
+          "connections": {
+            "D": [ 92 ],
+            "EN": [ 98 ],
+            "Q": [ 131 ]
+          }
+        },
+        "$flatten\\Inst_S_WARMBOOT_ConfigMem.\\Inst_frame0_bit27.$auto$proc_dlatch.cc:432:proc_dlatch$15": {
+          "hide_name": 1,
+          "type": "$dlatch",
+          "parameters": {
+            "EN_POLARITY": "00000000000000000000000000000001",
+            "WIDTH": "00000000000000000000000000000001"
+          },
+          "attributes": {
+            "src": "/home/leo/Repositories/gf180mcu-fabulous-fpga/ip/tile_library/models_pack.v:55.5-61.8"
+          },
+          "port_directions": {
+            "D": "input",
+            "EN": "input",
+            "Q": "output"
+          },
+          "connections": {
+            "D": [ 93 ],
+            "EN": [ 98 ],
+            "Q": [ 132 ]
+          }
+        },
+        "$flatten\\Inst_S_WARMBOOT_ConfigMem.\\Inst_frame0_bit28.$auto$proc_dlatch.cc:432:proc_dlatch$15": {
+          "hide_name": 1,
+          "type": "$dlatch",
+          "parameters": {
+            "EN_POLARITY": "00000000000000000000000000000001",
+            "WIDTH": "00000000000000000000000000000001"
+          },
+          "attributes": {
+            "src": "/home/leo/Repositories/gf180mcu-fabulous-fpga/ip/tile_library/models_pack.v:55.5-61.8"
+          },
+          "port_directions": {
+            "D": "input",
+            "EN": "input",
+            "Q": "output"
+          },
+          "connections": {
+            "D": [ 94 ],
+            "EN": [ 98 ],
+            "Q": [ 133 ]
+          }
+        },
+        "$flatten\\Inst_S_WARMBOOT_ConfigMem.\\Inst_frame0_bit29.$auto$proc_dlatch.cc:432:proc_dlatch$15": {
+          "hide_name": 1,
+          "type": "$dlatch",
+          "parameters": {
+            "EN_POLARITY": "00000000000000000000000000000001",
+            "WIDTH": "00000000000000000000000000000001"
+          },
+          "attributes": {
+            "src": "/home/leo/Repositories/gf180mcu-fabulous-fpga/ip/tile_library/models_pack.v:55.5-61.8"
+          },
+          "port_directions": {
+            "D": "input",
+            "EN": "input",
+            "Q": "output"
+          },
+          "connections": {
+            "D": [ 95 ],
+            "EN": [ 98 ],
+            "Q": [ 134 ]
+          }
+        },
+        "$flatten\\Inst_S_WARMBOOT_ConfigMem.\\Inst_frame0_bit30.$auto$proc_dlatch.cc:432:proc_dlatch$15": {
+          "hide_name": 1,
+          "type": "$dlatch",
+          "parameters": {
+            "EN_POLARITY": "00000000000000000000000000000001",
+            "WIDTH": "00000000000000000000000000000001"
+          },
+          "attributes": {
+            "src": "/home/leo/Repositories/gf180mcu-fabulous-fpga/ip/tile_library/models_pack.v:55.5-61.8"
+          },
+          "port_directions": {
+            "D": "input",
+            "EN": "input",
+            "Q": "output"
+          },
+          "connections": {
+            "D": [ 96 ],
+            "EN": [ 98 ],
+            "Q": [ 135 ]
+          }
+        },
+        "$flatten\\Inst_S_WARMBOOT_ConfigMem.\\Inst_frame0_bit31.$auto$proc_dlatch.cc:432:proc_dlatch$15": {
+          "hide_name": 1,
+          "type": "$dlatch",
+          "parameters": {
+            "EN_POLARITY": "00000000000000000000000000000001",
+            "WIDTH": "00000000000000000000000000000001"
+          },
+          "attributes": {
+            "src": "/home/leo/Repositories/gf180mcu-fabulous-fpga/ip/tile_library/models_pack.v:55.5-61.8"
+          },
+          "port_directions": {
+            "D": "input",
+            "EN": "input",
+            "Q": "output"
+          },
+          "connections": {
+            "D": [ 97 ],
+            "EN": [ 98 ],
+            "Q": [ 136 ]
+          }
+        },
+        "$flatten\\Inst_S_WARMBOOT_switch_matrix.\\inst_cus_mux21_N1BEG0.$ternary$/home/leo/Repositories/gf180mcu-fabulous-fpga/ip/tile_library/models_pack.v:205$5": {
+          "hide_name": 1,
+          "type": "$mux",
+          "parameters": {
+            "WIDTH": "00000000000000000000000000000001"
+          },
+          "attributes": {
+            "src": "/home/leo/Repositories/gf180mcu-fabulous-fpga/ip/tile_library/models_pack.v:205.13-205.32"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "S": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 57 ],
+            "B": [ 58 ],
+            "S": [ 118 ],
+            "Y": [ 2 ]
+          }
+        },
+        "$flatten\\Inst_S_WARMBOOT_switch_matrix.\\inst_cus_mux21_N1BEG1.$ternary$/home/leo/Repositories/gf180mcu-fabulous-fpga/ip/tile_library/models_pack.v:205$5": {
+          "hide_name": 1,
+          "type": "$mux",
+          "parameters": {
+            "WIDTH": "00000000000000000000000000000001"
+          },
+          "attributes": {
+            "src": "/home/leo/Repositories/gf180mcu-fabulous-fpga/ip/tile_library/models_pack.v:205.13-205.32"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "S": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 56 ],
+            "B": [ 58 ],
+            "S": [ 119 ],
+            "Y": [ 3 ]
+          }
+        },
+        "$flatten\\Inst_S_WARMBOOT_switch_matrix.\\inst_cus_mux21_N1BEG2.$ternary$/home/leo/Repositories/gf180mcu-fabulous-fpga/ip/tile_library/models_pack.v:205$5": {
+          "hide_name": 1,
+          "type": "$mux",
+          "parameters": {
+            "WIDTH": "00000000000000000000000000000001"
+          },
+          "attributes": {
+            "src": "/home/leo/Repositories/gf180mcu-fabulous-fpga/ip/tile_library/models_pack.v:205.13-205.32"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "S": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 55 ],
+            "B": [ 58 ],
+            "S": [ 120 ],
+            "Y": [ 4 ]
+          }
+        },
+        "$flatten\\Inst_S_WARMBOOT_switch_matrix.\\inst_cus_mux21_N1BEG3.$ternary$/home/leo/Repositories/gf180mcu-fabulous-fpga/ip/tile_library/models_pack.v:205$5": {
+          "hide_name": 1,
+          "type": "$mux",
+          "parameters": {
+            "WIDTH": "00000000000000000000000000000001"
+          },
+          "attributes": {
+            "src": "/home/leo/Repositories/gf180mcu-fabulous-fpga/ip/tile_library/models_pack.v:205.13-205.32"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "S": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 54 ],
+            "B": [ 58 ],
+            "S": [ 121 ],
+            "Y": [ 5 ]
+          }
+        },
+        "$flatten\\Inst_S_WARMBOOT_switch_matrix.\\inst_cus_mux81_buf_BOOT.\\cus_mux21_inst.$ternary$/home/leo/Repositories/gf180mcu-fabulous-fpga/ip/tile_library/models_pack.v:205$5": {
+          "hide_name": 1,
+          "type": "$mux",
+          "parameters": {
+            "WIDTH": "00000000000000000000000000000001"
+          },
+          "attributes": {
+            "src": "/home/leo/Repositories/gf180mcu-fabulous-fpga/ip/tile_library/models_pack.v:205.13-205.32"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "S": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 137 ],
+            "B": [ 138 ],
+            "S": [ 136 ],
+            "Y": [ 139 ]
+          }
+        },
+        "$flatten\\Inst_S_WARMBOOT_switch_matrix.\\inst_cus_mux81_buf_BOOT.\\cus_mux41_buf_inst0.$ternary$/home/leo/Repositories/gf180mcu-fabulous-fpga/ip/tile_library/models_pack.v:190$6": {
+          "hide_name": 1,
+          "type": "$mux",
+          "parameters": {
+            "WIDTH": "00000000000000000000000000000001"
+          },
+          "attributes": {
+            "src": "/home/leo/Repositories/gf180mcu-fabulous-fpga/ip/tile_library/models_pack.v:190.12-190.32"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "S": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 57 ],
+            "B": [ 10 ],
+            "S": [ 134 ],
+            "Y": [ 140 ]
+          }
+        },
+        "$flatten\\Inst_S_WARMBOOT_switch_matrix.\\inst_cus_mux81_buf_BOOT.\\cus_mux41_buf_inst0.$ternary$/home/leo/Repositories/gf180mcu-fabulous-fpga/ip/tile_library/models_pack.v:191$7": {
+          "hide_name": 1,
+          "type": "$mux",
+          "parameters": {
+            "WIDTH": "00000000000000000000000000000001"
+          },
+          "attributes": {
+            "src": "/home/leo/Repositories/gf180mcu-fabulous-fpga/ip/tile_library/models_pack.v:191.12-191.32"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "S": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 18 ],
+            "B": [ 14 ],
+            "S": [ 134 ],
+            "Y": [ 141 ]
+          }
+        },
+        "$flatten\\Inst_S_WARMBOOT_switch_matrix.\\inst_cus_mux81_buf_BOOT.\\cus_mux41_buf_inst0.$ternary$/home/leo/Repositories/gf180mcu-fabulous-fpga/ip/tile_library/models_pack.v:192$8": {
+          "hide_name": 1,
+          "type": "$mux",
+          "parameters": {
+            "WIDTH": "00000000000000000000000000000001"
+          },
+          "attributes": {
+            "src": "/home/leo/Repositories/gf180mcu-fabulous-fpga/ip/tile_library/models_pack.v:192.14-192.26"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "S": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 140 ],
+            "B": [ 141 ],
+            "S": [ 135 ],
+            "Y": [ 137 ]
+          }
+        },
+        "$flatten\\Inst_S_WARMBOOT_switch_matrix.\\inst_cus_mux81_buf_BOOT.\\cus_mux41_buf_inst1.$ternary$/home/leo/Repositories/gf180mcu-fabulous-fpga/ip/tile_library/models_pack.v:190$6": {
+          "hide_name": 1,
+          "type": "$mux",
+          "parameters": {
+            "WIDTH": "00000000000000000000000000000001"
+          },
+          "attributes": {
+            "src": "/home/leo/Repositories/gf180mcu-fabulous-fpga/ip/tile_library/models_pack.v:190.12-190.32"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "S": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 34 ],
+            "B": [ 30 ],
+            "S": [ 134 ],
+            "Y": [ 142 ]
+          }
+        },
+        "$flatten\\Inst_S_WARMBOOT_switch_matrix.\\inst_cus_mux81_buf_BOOT.\\cus_mux41_buf_inst1.$ternary$/home/leo/Repositories/gf180mcu-fabulous-fpga/ip/tile_library/models_pack.v:191$7": {
+          "hide_name": 1,
+          "type": "$mux",
+          "parameters": {
+            "WIDTH": "00000000000000000000000000000001"
+          },
+          "attributes": {
+            "src": "/home/leo/Repositories/gf180mcu-fabulous-fpga/ip/tile_library/models_pack.v:191.12-191.32"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "S": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 50 ],
+            "B": [ 46 ],
+            "S": [ 134 ],
+            "Y": [ 143 ]
+          }
+        },
+        "$flatten\\Inst_S_WARMBOOT_switch_matrix.\\inst_cus_mux81_buf_BOOT.\\cus_mux41_buf_inst1.$ternary$/home/leo/Repositories/gf180mcu-fabulous-fpga/ip/tile_library/models_pack.v:192$8": {
+          "hide_name": 1,
+          "type": "$mux",
+          "parameters": {
+            "WIDTH": "00000000000000000000000000000001"
+          },
+          "attributes": {
+            "src": "/home/leo/Repositories/gf180mcu-fabulous-fpga/ip/tile_library/models_pack.v:192.14-192.26"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "S": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 142 ],
+            "B": [ 143 ],
+            "S": [ 135 ],
+            "Y": [ 138 ]
+          }
+        },
+        "$flatten\\Inst_S_WARMBOOT_switch_matrix.\\inst_cus_mux81_buf_SLOT0.\\cus_mux21_inst.$ternary$/home/leo/Repositories/gf180mcu-fabulous-fpga/ip/tile_library/models_pack.v:205$5": {
+          "hide_name": 1,
+          "type": "$mux",
+          "parameters": {
+            "WIDTH": "00000000000000000000000000000001"
+          },
+          "attributes": {
+            "src": "/home/leo/Repositories/gf180mcu-fabulous-fpga/ip/tile_library/models_pack.v:205.13-205.32"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "S": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 144 ],
+            "B": [ 145 ],
+            "S": [ 124 ],
+            "Y": [ 60 ]
+          }
+        },
+        "$flatten\\Inst_S_WARMBOOT_switch_matrix.\\inst_cus_mux81_buf_SLOT0.\\cus_mux41_buf_inst0.$ternary$/home/leo/Repositories/gf180mcu-fabulous-fpga/ip/tile_library/models_pack.v:190$6": {
+          "hide_name": 1,
+          "type": "$mux",
+          "parameters": {
+            "WIDTH": "00000000000000000000000000000001"
+          },
+          "attributes": {
+            "src": "/home/leo/Repositories/gf180mcu-fabulous-fpga/ip/tile_library/models_pack.v:190.12-190.32"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "S": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 54 ],
+            "B": [ 13 ],
+            "S": [ 122 ],
+            "Y": [ 146 ]
+          }
+        },
+        "$flatten\\Inst_S_WARMBOOT_switch_matrix.\\inst_cus_mux81_buf_SLOT0.\\cus_mux41_buf_inst0.$ternary$/home/leo/Repositories/gf180mcu-fabulous-fpga/ip/tile_library/models_pack.v:191$7": {
+          "hide_name": 1,
+          "type": "$mux",
+          "parameters": {
+            "WIDTH": "00000000000000000000000000000001"
+          },
+          "attributes": {
+            "src": "/home/leo/Repositories/gf180mcu-fabulous-fpga/ip/tile_library/models_pack.v:191.12-191.32"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "S": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 21 ],
+            "B": [ 17 ],
+            "S": [ 122 ],
+            "Y": [ 147 ]
+          }
+        },
+        "$flatten\\Inst_S_WARMBOOT_switch_matrix.\\inst_cus_mux81_buf_SLOT0.\\cus_mux41_buf_inst0.$ternary$/home/leo/Repositories/gf180mcu-fabulous-fpga/ip/tile_library/models_pack.v:192$8": {
+          "hide_name": 1,
+          "type": "$mux",
+          "parameters": {
+            "WIDTH": "00000000000000000000000000000001"
+          },
+          "attributes": {
+            "src": "/home/leo/Repositories/gf180mcu-fabulous-fpga/ip/tile_library/models_pack.v:192.14-192.26"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "S": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 146 ],
+            "B": [ 147 ],
+            "S": [ 123 ],
+            "Y": [ 144 ]
+          }
+        },
+        "$flatten\\Inst_S_WARMBOOT_switch_matrix.\\inst_cus_mux81_buf_SLOT0.\\cus_mux41_buf_inst1.$ternary$/home/leo/Repositories/gf180mcu-fabulous-fpga/ip/tile_library/models_pack.v:190$6": {
+          "hide_name": 1,
+          "type": "$mux",
+          "parameters": {
+            "WIDTH": "00000000000000000000000000000001"
+          },
+          "attributes": {
+            "src": "/home/leo/Repositories/gf180mcu-fabulous-fpga/ip/tile_library/models_pack.v:190.12-190.32"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "S": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 37 ],
+            "B": [ 33 ],
+            "S": [ 122 ],
+            "Y": [ 148 ]
+          }
+        },
+        "$flatten\\Inst_S_WARMBOOT_switch_matrix.\\inst_cus_mux81_buf_SLOT0.\\cus_mux41_buf_inst1.$ternary$/home/leo/Repositories/gf180mcu-fabulous-fpga/ip/tile_library/models_pack.v:191$7": {
+          "hide_name": 1,
+          "type": "$mux",
+          "parameters": {
+            "WIDTH": "00000000000000000000000000000001"
+          },
+          "attributes": {
+            "src": "/home/leo/Repositories/gf180mcu-fabulous-fpga/ip/tile_library/models_pack.v:191.12-191.32"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "S": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 53 ],
+            "B": [ 49 ],
+            "S": [ 122 ],
+            "Y": [ 149 ]
+          }
+        },
+        "$flatten\\Inst_S_WARMBOOT_switch_matrix.\\inst_cus_mux81_buf_SLOT0.\\cus_mux41_buf_inst1.$ternary$/home/leo/Repositories/gf180mcu-fabulous-fpga/ip/tile_library/models_pack.v:192$8": {
+          "hide_name": 1,
+          "type": "$mux",
+          "parameters": {
+            "WIDTH": "00000000000000000000000000000001"
+          },
+          "attributes": {
+            "src": "/home/leo/Repositories/gf180mcu-fabulous-fpga/ip/tile_library/models_pack.v:192.14-192.26"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "S": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 148 ],
+            "B": [ 149 ],
+            "S": [ 123 ],
+            "Y": [ 145 ]
+          }
+        },
+        "$flatten\\Inst_S_WARMBOOT_switch_matrix.\\inst_cus_mux81_buf_SLOT1.\\cus_mux21_inst.$ternary$/home/leo/Repositories/gf180mcu-fabulous-fpga/ip/tile_library/models_pack.v:205$5": {
+          "hide_name": 1,
+          "type": "$mux",
+          "parameters": {
+            "WIDTH": "00000000000000000000000000000001"
+          },
+          "attributes": {
+            "src": "/home/leo/Repositories/gf180mcu-fabulous-fpga/ip/tile_library/models_pack.v:205.13-205.32"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "S": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 150 ],
+            "B": [ 151 ],
+            "S": [ 127 ],
+            "Y": [ 61 ]
+          }
+        },
+        "$flatten\\Inst_S_WARMBOOT_switch_matrix.\\inst_cus_mux81_buf_SLOT1.\\cus_mux41_buf_inst0.$ternary$/home/leo/Repositories/gf180mcu-fabulous-fpga/ip/tile_library/models_pack.v:190$6": {
+          "hide_name": 1,
+          "type": "$mux",
+          "parameters": {
+            "WIDTH": "00000000000000000000000000000001"
+          },
+          "attributes": {
+            "src": "/home/leo/Repositories/gf180mcu-fabulous-fpga/ip/tile_library/models_pack.v:190.12-190.32"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "S": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 55 ],
+            "B": [ 12 ],
+            "S": [ 125 ],
+            "Y": [ 152 ]
+          }
+        },
+        "$flatten\\Inst_S_WARMBOOT_switch_matrix.\\inst_cus_mux81_buf_SLOT1.\\cus_mux41_buf_inst0.$ternary$/home/leo/Repositories/gf180mcu-fabulous-fpga/ip/tile_library/models_pack.v:191$7": {
+          "hide_name": 1,
+          "type": "$mux",
+          "parameters": {
+            "WIDTH": "00000000000000000000000000000001"
+          },
+          "attributes": {
+            "src": "/home/leo/Repositories/gf180mcu-fabulous-fpga/ip/tile_library/models_pack.v:191.12-191.32"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "S": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 20 ],
+            "B": [ 16 ],
+            "S": [ 125 ],
+            "Y": [ 153 ]
+          }
+        },
+        "$flatten\\Inst_S_WARMBOOT_switch_matrix.\\inst_cus_mux81_buf_SLOT1.\\cus_mux41_buf_inst0.$ternary$/home/leo/Repositories/gf180mcu-fabulous-fpga/ip/tile_library/models_pack.v:192$8": {
+          "hide_name": 1,
+          "type": "$mux",
+          "parameters": {
+            "WIDTH": "00000000000000000000000000000001"
+          },
+          "attributes": {
+            "src": "/home/leo/Repositories/gf180mcu-fabulous-fpga/ip/tile_library/models_pack.v:192.14-192.26"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "S": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 152 ],
+            "B": [ 153 ],
+            "S": [ 126 ],
+            "Y": [ 150 ]
+          }
+        },
+        "$flatten\\Inst_S_WARMBOOT_switch_matrix.\\inst_cus_mux81_buf_SLOT1.\\cus_mux41_buf_inst1.$ternary$/home/leo/Repositories/gf180mcu-fabulous-fpga/ip/tile_library/models_pack.v:190$6": {
+          "hide_name": 1,
+          "type": "$mux",
+          "parameters": {
+            "WIDTH": "00000000000000000000000000000001"
+          },
+          "attributes": {
+            "src": "/home/leo/Repositories/gf180mcu-fabulous-fpga/ip/tile_library/models_pack.v:190.12-190.32"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "S": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 36 ],
+            "B": [ 32 ],
+            "S": [ 125 ],
+            "Y": [ 154 ]
+          }
+        },
+        "$flatten\\Inst_S_WARMBOOT_switch_matrix.\\inst_cus_mux81_buf_SLOT1.\\cus_mux41_buf_inst1.$ternary$/home/leo/Repositories/gf180mcu-fabulous-fpga/ip/tile_library/models_pack.v:191$7": {
+          "hide_name": 1,
+          "type": "$mux",
+          "parameters": {
+            "WIDTH": "00000000000000000000000000000001"
+          },
+          "attributes": {
+            "src": "/home/leo/Repositories/gf180mcu-fabulous-fpga/ip/tile_library/models_pack.v:191.12-191.32"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "S": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 52 ],
+            "B": [ 48 ],
+            "S": [ 125 ],
+            "Y": [ 155 ]
+          }
+        },
+        "$flatten\\Inst_S_WARMBOOT_switch_matrix.\\inst_cus_mux81_buf_SLOT1.\\cus_mux41_buf_inst1.$ternary$/home/leo/Repositories/gf180mcu-fabulous-fpga/ip/tile_library/models_pack.v:192$8": {
+          "hide_name": 1,
+          "type": "$mux",
+          "parameters": {
+            "WIDTH": "00000000000000000000000000000001"
+          },
+          "attributes": {
+            "src": "/home/leo/Repositories/gf180mcu-fabulous-fpga/ip/tile_library/models_pack.v:192.14-192.26"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "S": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 154 ],
+            "B": [ 155 ],
+            "S": [ 126 ],
+            "Y": [ 151 ]
+          }
+        },
+        "$flatten\\Inst_S_WARMBOOT_switch_matrix.\\inst_cus_mux81_buf_SLOT2.\\cus_mux21_inst.$ternary$/home/leo/Repositories/gf180mcu-fabulous-fpga/ip/tile_library/models_pack.v:205$5": {
+          "hide_name": 1,
+          "type": "$mux",
+          "parameters": {
+            "WIDTH": "00000000000000000000000000000001"
+          },
+          "attributes": {
+            "src": "/home/leo/Repositories/gf180mcu-fabulous-fpga/ip/tile_library/models_pack.v:205.13-205.32"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "S": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 156 ],
+            "B": [ 157 ],
+            "S": [ 130 ],
+            "Y": [ 62 ]
+          }
+        },
+        "$flatten\\Inst_S_WARMBOOT_switch_matrix.\\inst_cus_mux81_buf_SLOT2.\\cus_mux41_buf_inst0.$ternary$/home/leo/Repositories/gf180mcu-fabulous-fpga/ip/tile_library/models_pack.v:190$6": {
+          "hide_name": 1,
+          "type": "$mux",
+          "parameters": {
+            "WIDTH": "00000000000000000000000000000001"
+          },
+          "attributes": {
+            "src": "/home/leo/Repositories/gf180mcu-fabulous-fpga/ip/tile_library/models_pack.v:190.12-190.32"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "S": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 56 ],
+            "B": [ 11 ],
+            "S": [ 128 ],
+            "Y": [ 158 ]
+          }
+        },
+        "$flatten\\Inst_S_WARMBOOT_switch_matrix.\\inst_cus_mux81_buf_SLOT2.\\cus_mux41_buf_inst0.$ternary$/home/leo/Repositories/gf180mcu-fabulous-fpga/ip/tile_library/models_pack.v:191$7": {
+          "hide_name": 1,
+          "type": "$mux",
+          "parameters": {
+            "WIDTH": "00000000000000000000000000000001"
+          },
+          "attributes": {
+            "src": "/home/leo/Repositories/gf180mcu-fabulous-fpga/ip/tile_library/models_pack.v:191.12-191.32"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "S": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 19 ],
+            "B": [ 15 ],
+            "S": [ 128 ],
+            "Y": [ 159 ]
+          }
+        },
+        "$flatten\\Inst_S_WARMBOOT_switch_matrix.\\inst_cus_mux81_buf_SLOT2.\\cus_mux41_buf_inst0.$ternary$/home/leo/Repositories/gf180mcu-fabulous-fpga/ip/tile_library/models_pack.v:192$8": {
+          "hide_name": 1,
+          "type": "$mux",
+          "parameters": {
+            "WIDTH": "00000000000000000000000000000001"
+          },
+          "attributes": {
+            "src": "/home/leo/Repositories/gf180mcu-fabulous-fpga/ip/tile_library/models_pack.v:192.14-192.26"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "S": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 158 ],
+            "B": [ 159 ],
+            "S": [ 129 ],
+            "Y": [ 156 ]
+          }
+        },
+        "$flatten\\Inst_S_WARMBOOT_switch_matrix.\\inst_cus_mux81_buf_SLOT2.\\cus_mux41_buf_inst1.$ternary$/home/leo/Repositories/gf180mcu-fabulous-fpga/ip/tile_library/models_pack.v:190$6": {
+          "hide_name": 1,
+          "type": "$mux",
+          "parameters": {
+            "WIDTH": "00000000000000000000000000000001"
+          },
+          "attributes": {
+            "src": "/home/leo/Repositories/gf180mcu-fabulous-fpga/ip/tile_library/models_pack.v:190.12-190.32"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "S": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 35 ],
+            "B": [ 31 ],
+            "S": [ 128 ],
+            "Y": [ 160 ]
+          }
+        },
+        "$flatten\\Inst_S_WARMBOOT_switch_matrix.\\inst_cus_mux81_buf_SLOT2.\\cus_mux41_buf_inst1.$ternary$/home/leo/Repositories/gf180mcu-fabulous-fpga/ip/tile_library/models_pack.v:191$7": {
+          "hide_name": 1,
+          "type": "$mux",
+          "parameters": {
+            "WIDTH": "00000000000000000000000000000001"
+          },
+          "attributes": {
+            "src": "/home/leo/Repositories/gf180mcu-fabulous-fpga/ip/tile_library/models_pack.v:191.12-191.32"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "S": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 51 ],
+            "B": [ 47 ],
+            "S": [ 128 ],
+            "Y": [ 161 ]
+          }
+        },
+        "$flatten\\Inst_S_WARMBOOT_switch_matrix.\\inst_cus_mux81_buf_SLOT2.\\cus_mux41_buf_inst1.$ternary$/home/leo/Repositories/gf180mcu-fabulous-fpga/ip/tile_library/models_pack.v:192$8": {
+          "hide_name": 1,
+          "type": "$mux",
+          "parameters": {
+            "WIDTH": "00000000000000000000000000000001"
+          },
+          "attributes": {
+            "src": "/home/leo/Repositories/gf180mcu-fabulous-fpga/ip/tile_library/models_pack.v:192.14-192.26"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "S": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 160 ],
+            "B": [ 161 ],
+            "S": [ 129 ],
+            "Y": [ 157 ]
+          }
+        },
+        "$flatten\\Inst_S_WARMBOOT_switch_matrix.\\inst_cus_mux81_buf_SLOT3.\\cus_mux21_inst.$ternary$/home/leo/Repositories/gf180mcu-fabulous-fpga/ip/tile_library/models_pack.v:205$5": {
+          "hide_name": 1,
+          "type": "$mux",
+          "parameters": {
+            "WIDTH": "00000000000000000000000000000001"
+          },
+          "attributes": {
+            "src": "/home/leo/Repositories/gf180mcu-fabulous-fpga/ip/tile_library/models_pack.v:205.13-205.32"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "S": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 162 ],
+            "B": [ 163 ],
+            "S": [ 133 ],
+            "Y": [ 63 ]
+          }
+        },
+        "$flatten\\Inst_S_WARMBOOT_switch_matrix.\\inst_cus_mux81_buf_SLOT3.\\cus_mux41_buf_inst0.$ternary$/home/leo/Repositories/gf180mcu-fabulous-fpga/ip/tile_library/models_pack.v:190$6": {
+          "hide_name": 1,
+          "type": "$mux",
+          "parameters": {
+            "WIDTH": "00000000000000000000000000000001"
+          },
+          "attributes": {
+            "src": "/home/leo/Repositories/gf180mcu-fabulous-fpga/ip/tile_library/models_pack.v:190.12-190.32"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "S": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 57 ],
+            "B": [ 10 ],
+            "S": [ 131 ],
+            "Y": [ 164 ]
+          }
+        },
+        "$flatten\\Inst_S_WARMBOOT_switch_matrix.\\inst_cus_mux81_buf_SLOT3.\\cus_mux41_buf_inst0.$ternary$/home/leo/Repositories/gf180mcu-fabulous-fpga/ip/tile_library/models_pack.v:191$7": {
+          "hide_name": 1,
+          "type": "$mux",
+          "parameters": {
+            "WIDTH": "00000000000000000000000000000001"
+          },
+          "attributes": {
+            "src": "/home/leo/Repositories/gf180mcu-fabulous-fpga/ip/tile_library/models_pack.v:191.12-191.32"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "S": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 18 ],
+            "B": [ 14 ],
+            "S": [ 131 ],
+            "Y": [ 165 ]
+          }
+        },
+        "$flatten\\Inst_S_WARMBOOT_switch_matrix.\\inst_cus_mux81_buf_SLOT3.\\cus_mux41_buf_inst0.$ternary$/home/leo/Repositories/gf180mcu-fabulous-fpga/ip/tile_library/models_pack.v:192$8": {
+          "hide_name": 1,
+          "type": "$mux",
+          "parameters": {
+            "WIDTH": "00000000000000000000000000000001"
+          },
+          "attributes": {
+            "src": "/home/leo/Repositories/gf180mcu-fabulous-fpga/ip/tile_library/models_pack.v:192.14-192.26"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "S": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 164 ],
+            "B": [ 165 ],
+            "S": [ 132 ],
+            "Y": [ 162 ]
+          }
+        },
+        "$flatten\\Inst_S_WARMBOOT_switch_matrix.\\inst_cus_mux81_buf_SLOT3.\\cus_mux41_buf_inst1.$ternary$/home/leo/Repositories/gf180mcu-fabulous-fpga/ip/tile_library/models_pack.v:190$6": {
+          "hide_name": 1,
+          "type": "$mux",
+          "parameters": {
+            "WIDTH": "00000000000000000000000000000001"
+          },
+          "attributes": {
+            "src": "/home/leo/Repositories/gf180mcu-fabulous-fpga/ip/tile_library/models_pack.v:190.12-190.32"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "S": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 34 ],
+            "B": [ 30 ],
+            "S": [ 131 ],
+            "Y": [ 166 ]
+          }
+        },
+        "$flatten\\Inst_S_WARMBOOT_switch_matrix.\\inst_cus_mux81_buf_SLOT3.\\cus_mux41_buf_inst1.$ternary$/home/leo/Repositories/gf180mcu-fabulous-fpga/ip/tile_library/models_pack.v:191$7": {
+          "hide_name": 1,
+          "type": "$mux",
+          "parameters": {
+            "WIDTH": "00000000000000000000000000000001"
+          },
+          "attributes": {
+            "src": "/home/leo/Repositories/gf180mcu-fabulous-fpga/ip/tile_library/models_pack.v:191.12-191.32"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "S": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 50 ],
+            "B": [ 46 ],
+            "S": [ 131 ],
+            "Y": [ 167 ]
+          }
+        },
+        "$flatten\\Inst_S_WARMBOOT_switch_matrix.\\inst_cus_mux81_buf_SLOT3.\\cus_mux41_buf_inst1.$ternary$/home/leo/Repositories/gf180mcu-fabulous-fpga/ip/tile_library/models_pack.v:192$8": {
+          "hide_name": 1,
+          "type": "$mux",
+          "parameters": {
+            "WIDTH": "00000000000000000000000000000001"
+          },
+          "attributes": {
+            "src": "/home/leo/Repositories/gf180mcu-fabulous-fpga/ip/tile_library/models_pack.v:192.14-192.26"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "S": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 166 ],
+            "B": [ 167 ],
+            "S": [ 132 ],
+            "Y": [ 163 ]
+          }
+        },
+        "$flatten\\Inst_WARMBOOT.$logic_and$primitives/WARMBOOT/WARMBOOT.v:39$1": {
+          "hide_name": 1,
+          "type": "$logic_and",
+          "parameters": {
+            "A_SIGNED": "00000000000000000000000000000000",
+            "A_WIDTH": "00000000000000000000000000000001",
+            "B_SIGNED": "00000000000000000000000000000000",
+            "B_WIDTH": "00000000000000000000000000000001",
+            "Y_WIDTH": "00000000000000000000000000000001"
+          },
+          "attributes": {
+            "src": "primitives/WARMBOOT/WARMBOOT.v:39.20-39.42"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 139 ],
+            "B": [ 59 ],
+            "Y": [ 64 ]
+          }
+        }
+      },
+      "netnames": {
+        "BOOT": {
+          "hide_name": 0,
+          "bits": [ 139 ],
+          "attributes": {
+            "src": "/home/leo/Repositories/gf180mcu-fabulous-fpga/ip/tile_library/tiles/S_WARMBOOT/S_WARMBOOT.v:45.6-45.10"
+          }
+        },
+        "BOOT_top": {
+          "hide_name": 0,
+          "bits": [ 64 ],
+          "attributes": {
+            "src": "/home/leo/Repositories/gf180mcu-fabulous-fpga/ip/tile_library/tiles/S_WARMBOOT/S_WARMBOOT.v:29.17-29.25"
+          }
+        },
+        "CONFIGURED_top": {
+          "hide_name": 0,
+          "bits": [ 59 ],
+          "attributes": {
+            "src": "/home/leo/Repositories/gf180mcu-fabulous-fpga/ip/tile_library/tiles/S_WARMBOOT/S_WARMBOOT.v:24.16-24.30"
+          }
+        },
+        "Co": {
+          "hide_name": 0,
+          "bits": [ "0" ],
+          "attributes": {
+            "single_bit_vector": "00000000000000000000000000000001",
+            "src": "/home/leo/Repositories/gf180mcu-fabulous-fpga/ip/tile_library/tiles/S_WARMBOOT/S_WARMBOOT.v:17.23-17.25"
+          }
+        },
+        "FrameData": {
+          "hide_name": 0,
+          "bits": [ 66, 67, 68, 69, 70, 71, 72, 73, 74, 75, 76, 77, 78, 79, 80, 81, 82, 83, 84, 85, 86, 87, 88, 89, 90, 91, 92, 93, 94, 95, 96, 97 ],
+          "attributes": {
+            "src": "/home/leo/Repositories/gf180mcu-fabulous-fpga/ip/tile_library/tiles/S_WARMBOOT/S_WARMBOOT.v:33.38-33.47"
+          }
+        },
+        "FrameData_O": {
+          "hide_name": 0,
+          "bits": [ 66, 67, 68, 69, 70, 71, 72, 73, 74, 75, 76, 77, 78, 79, 80, 81, 82, 83, 84, 85, 86, 87, 88, 89, 90, 91, 92, 93, 94, 95, 96, 97 ],
+          "attributes": {
+            "src": "/home/leo/Repositories/gf180mcu-fabulous-fpga/ip/tile_library/tiles/S_WARMBOOT/S_WARMBOOT.v:34.39-34.50"
+          }
+        },
+        "FrameStrobe": {
+          "hide_name": 0,
+          "bits": [ 98, 99, 100, 101, 102, 103, 104, 105, 106, 107, 108, 109, 110, 111, 112, 113, 114, 115, 116, 117 ],
+          "attributes": {
+            "src": "/home/leo/Repositories/gf180mcu-fabulous-fpga/ip/tile_library/tiles/S_WARMBOOT/S_WARMBOOT.v:35.38-35.49"
+          }
+        },
+        "FrameStrobe_O": {
+          "hide_name": 0,
+          "bits": [ 98, 99, 100, 101, 102, 103, 104, 105, 106, 107, 108, 109, 110, 111, 112, 113, 114, 115, 116, 117 ],
+          "attributes": {
+            "src": "/home/leo/Repositories/gf180mcu-fabulous-fpga/ip/tile_library/tiles/S_WARMBOOT/S_WARMBOOT.v:36.39-36.52"
+          }
+        },
+        "Inst_S_WARMBOOT_ConfigMem.Inst_frame0_bit13.Q": {
+          "hide_name": 0,
+          "bits": [ 118 ],
+          "attributes": {
+            "hdlname": "Inst_S_WARMBOOT_ConfigMem Inst_frame0_bit13 Q",
+            "src": "/home/leo/Repositories/gf180mcu-fabulous-fpga/ip/tile_library/models_pack.v:54.38-54.39"
+          }
+        },
+        "Inst_S_WARMBOOT_ConfigMem.Inst_frame0_bit14.Q": {
+          "hide_name": 0,
+          "bits": [ 119 ],
+          "attributes": {
+            "hdlname": "Inst_S_WARMBOOT_ConfigMem Inst_frame0_bit14 Q",
+            "src": "/home/leo/Repositories/gf180mcu-fabulous-fpga/ip/tile_library/models_pack.v:54.38-54.39"
+          }
+        },
+        "Inst_S_WARMBOOT_ConfigMem.Inst_frame0_bit15.Q": {
+          "hide_name": 0,
+          "bits": [ 120 ],
+          "attributes": {
+            "hdlname": "Inst_S_WARMBOOT_ConfigMem Inst_frame0_bit15 Q",
+            "src": "/home/leo/Repositories/gf180mcu-fabulous-fpga/ip/tile_library/models_pack.v:54.38-54.39"
+          }
+        },
+        "Inst_S_WARMBOOT_ConfigMem.Inst_frame0_bit16.Q": {
+          "hide_name": 0,
+          "bits": [ 121 ],
+          "attributes": {
+            "hdlname": "Inst_S_WARMBOOT_ConfigMem Inst_frame0_bit16 Q",
+            "src": "/home/leo/Repositories/gf180mcu-fabulous-fpga/ip/tile_library/models_pack.v:54.38-54.39"
+          }
+        },
+        "Inst_S_WARMBOOT_ConfigMem.Inst_frame0_bit17.Q": {
+          "hide_name": 0,
+          "bits": [ 122 ],
+          "attributes": {
+            "hdlname": "Inst_S_WARMBOOT_ConfigMem Inst_frame0_bit17 Q",
+            "src": "/home/leo/Repositories/gf180mcu-fabulous-fpga/ip/tile_library/models_pack.v:54.38-54.39"
+          }
+        },
+        "Inst_S_WARMBOOT_ConfigMem.Inst_frame0_bit18.Q": {
+          "hide_name": 0,
+          "bits": [ 123 ],
+          "attributes": {
+            "hdlname": "Inst_S_WARMBOOT_ConfigMem Inst_frame0_bit18 Q",
+            "src": "/home/leo/Repositories/gf180mcu-fabulous-fpga/ip/tile_library/models_pack.v:54.38-54.39"
+          }
+        },
+        "Inst_S_WARMBOOT_ConfigMem.Inst_frame0_bit19.Q": {
+          "hide_name": 0,
+          "bits": [ 124 ],
+          "attributes": {
+            "hdlname": "Inst_S_WARMBOOT_ConfigMem Inst_frame0_bit19 Q",
+            "src": "/home/leo/Repositories/gf180mcu-fabulous-fpga/ip/tile_library/models_pack.v:54.38-54.39"
+          }
+        },
+        "Inst_S_WARMBOOT_ConfigMem.Inst_frame0_bit20.Q": {
+          "hide_name": 0,
+          "bits": [ 125 ],
+          "attributes": {
+            "hdlname": "Inst_S_WARMBOOT_ConfigMem Inst_frame0_bit20 Q",
+            "src": "/home/leo/Repositories/gf180mcu-fabulous-fpga/ip/tile_library/models_pack.v:54.38-54.39"
+          }
+        },
+        "Inst_S_WARMBOOT_ConfigMem.Inst_frame0_bit21.Q": {
+          "hide_name": 0,
+          "bits": [ 126 ],
+          "attributes": {
+            "hdlname": "Inst_S_WARMBOOT_ConfigMem Inst_frame0_bit21 Q",
+            "src": "/home/leo/Repositories/gf180mcu-fabulous-fpga/ip/tile_library/models_pack.v:54.38-54.39"
+          }
+        },
+        "Inst_S_WARMBOOT_ConfigMem.Inst_frame0_bit22.Q": {
+          "hide_name": 0,
+          "bits": [ 127 ],
+          "attributes": {
+            "hdlname": "Inst_S_WARMBOOT_ConfigMem Inst_frame0_bit22 Q",
+            "src": "/home/leo/Repositories/gf180mcu-fabulous-fpga/ip/tile_library/models_pack.v:54.38-54.39"
+          }
+        },
+        "Inst_S_WARMBOOT_ConfigMem.Inst_frame0_bit23.Q": {
+          "hide_name": 0,
+          "bits": [ 128 ],
+          "attributes": {
+            "hdlname": "Inst_S_WARMBOOT_ConfigMem Inst_frame0_bit23 Q",
+            "src": "/home/leo/Repositories/gf180mcu-fabulous-fpga/ip/tile_library/models_pack.v:54.38-54.39"
+          }
+        },
+        "Inst_S_WARMBOOT_ConfigMem.Inst_frame0_bit24.Q": {
+          "hide_name": 0,
+          "bits": [ 129 ],
+          "attributes": {
+            "hdlname": "Inst_S_WARMBOOT_ConfigMem Inst_frame0_bit24 Q",
+            "src": "/home/leo/Repositories/gf180mcu-fabulous-fpga/ip/tile_library/models_pack.v:54.38-54.39"
+          }
+        },
+        "Inst_S_WARMBOOT_ConfigMem.Inst_frame0_bit25.Q": {
+          "hide_name": 0,
+          "bits": [ 130 ],
+          "attributes": {
+            "hdlname": "Inst_S_WARMBOOT_ConfigMem Inst_frame0_bit25 Q",
+            "src": "/home/leo/Repositories/gf180mcu-fabulous-fpga/ip/tile_library/models_pack.v:54.38-54.39"
+          }
+        },
+        "Inst_S_WARMBOOT_ConfigMem.Inst_frame0_bit26.Q": {
+          "hide_name": 0,
+          "bits": [ 131 ],
+          "attributes": {
+            "hdlname": "Inst_S_WARMBOOT_ConfigMem Inst_frame0_bit26 Q",
+            "src": "/home/leo/Repositories/gf180mcu-fabulous-fpga/ip/tile_library/models_pack.v:54.38-54.39"
+          }
+        },
+        "Inst_S_WARMBOOT_ConfigMem.Inst_frame0_bit27.Q": {
+          "hide_name": 0,
+          "bits": [ 132 ],
+          "attributes": {
+            "hdlname": "Inst_S_WARMBOOT_ConfigMem Inst_frame0_bit27 Q",
+            "src": "/home/leo/Repositories/gf180mcu-fabulous-fpga/ip/tile_library/models_pack.v:54.38-54.39"
+          }
+        },
+        "Inst_S_WARMBOOT_ConfigMem.Inst_frame0_bit28.Q": {
+          "hide_name": 0,
+          "bits": [ 133 ],
+          "attributes": {
+            "hdlname": "Inst_S_WARMBOOT_ConfigMem Inst_frame0_bit28 Q",
+            "src": "/home/leo/Repositories/gf180mcu-fabulous-fpga/ip/tile_library/models_pack.v:54.38-54.39"
+          }
+        },
+        "Inst_S_WARMBOOT_ConfigMem.Inst_frame0_bit29.Q": {
+          "hide_name": 0,
+          "bits": [ 134 ],
+          "attributes": {
+            "hdlname": "Inst_S_WARMBOOT_ConfigMem Inst_frame0_bit29 Q",
+            "src": "/home/leo/Repositories/gf180mcu-fabulous-fpga/ip/tile_library/models_pack.v:54.38-54.39"
+          }
+        },
+        "Inst_S_WARMBOOT_ConfigMem.Inst_frame0_bit30.Q": {
+          "hide_name": 0,
+          "bits": [ 135 ],
+          "attributes": {
+            "hdlname": "Inst_S_WARMBOOT_ConfigMem Inst_frame0_bit30 Q",
+            "src": "/home/leo/Repositories/gf180mcu-fabulous-fpga/ip/tile_library/models_pack.v:54.38-54.39"
+          }
+        },
+        "Inst_S_WARMBOOT_ConfigMem.Inst_frame0_bit31.Q": {
+          "hide_name": 0,
+          "bits": [ 136 ],
+          "attributes": {
+            "hdlname": "Inst_S_WARMBOOT_ConfigMem Inst_frame0_bit31 Q",
+            "src": "/home/leo/Repositories/gf180mcu-fabulous-fpga/ip/tile_library/models_pack.v:54.38-54.39"
+          }
+        },
+        "Inst_S_WARMBOOT_switch_matrix.N1BEG0": {
+          "hide_name": 0,
+          "bits": [ 2 ],
+          "attributes": {
+            "hdlname": "Inst_S_WARMBOOT_switch_matrix N1BEG0",
+            "src": "/home/leo/Repositories/gf180mcu-fabulous-fpga/ip/tile_library/tiles/S_WARMBOOT/S_WARMBOOT_switch_matrix.v:60.17-60.23"
+          }
+        },
+        "Inst_S_WARMBOOT_switch_matrix.N1BEG1": {
+          "hide_name": 0,
+          "bits": [ 3 ],
+          "attributes": {
+            "hdlname": "Inst_S_WARMBOOT_switch_matrix N1BEG1",
+            "src": "/home/leo/Repositories/gf180mcu-fabulous-fpga/ip/tile_library/tiles/S_WARMBOOT/S_WARMBOOT_switch_matrix.v:61.17-61.23"
+          }
+        },
+        "Inst_S_WARMBOOT_switch_matrix.N1BEG2": {
+          "hide_name": 0,
+          "bits": [ 4 ],
+          "attributes": {
+            "hdlname": "Inst_S_WARMBOOT_switch_matrix N1BEG2",
+            "src": "/home/leo/Repositories/gf180mcu-fabulous-fpga/ip/tile_library/tiles/S_WARMBOOT/S_WARMBOOT_switch_matrix.v:62.17-62.23"
+          }
+        },
+        "Inst_S_WARMBOOT_switch_matrix.N1BEG3": {
+          "hide_name": 0,
+          "bits": [ 5 ],
+          "attributes": {
+            "hdlname": "Inst_S_WARMBOOT_switch_matrix N1BEG3",
+            "src": "/home/leo/Repositories/gf180mcu-fabulous-fpga/ip/tile_library/tiles/S_WARMBOOT/S_WARMBOOT_switch_matrix.v:63.17-63.23"
+          }
+        },
+        "Inst_S_WARMBOOT_switch_matrix.inst_cus_mux81_buf_BOOT.cus_mux21_inst.A0": {
+          "hide_name": 0,
+          "bits": [ 137 ],
+          "attributes": {
+            "hdlname": "Inst_S_WARMBOOT_switch_matrix inst_cus_mux81_buf_BOOT cus_mux21_inst A0",
+            "src": "/home/leo/Repositories/gf180mcu-fabulous-fpga/ip/tile_library/models_pack.v:196.8-196.10"
+          }
+        },
+        "Inst_S_WARMBOOT_switch_matrix.inst_cus_mux81_buf_BOOT.cus_mux21_inst.A1": {
+          "hide_name": 0,
+          "bits": [ 138 ],
+          "attributes": {
+            "hdlname": "Inst_S_WARMBOOT_switch_matrix inst_cus_mux81_buf_BOOT cus_mux21_inst A1",
+            "src": "/home/leo/Repositories/gf180mcu-fabulous-fpga/ip/tile_library/models_pack.v:197.8-197.10"
+          }
+        },
+        "Inst_S_WARMBOOT_switch_matrix.inst_cus_mux81_buf_BOOT.cus_mux41_buf_inst0.B0": {
+          "hide_name": 0,
+          "bits": [ 140 ],
+          "attributes": {
+            "hdlname": "Inst_S_WARMBOOT_switch_matrix inst_cus_mux81_buf_BOOT cus_mux41_buf_inst0 B0",
+            "src": "/home/leo/Repositories/gf180mcu-fabulous-fpga/ip/tile_library/models_pack.v:190.7-190.9"
+          }
+        },
+        "Inst_S_WARMBOOT_switch_matrix.inst_cus_mux81_buf_BOOT.cus_mux41_buf_inst0.B1": {
+          "hide_name": 0,
+          "bits": [ 141 ],
+          "attributes": {
+            "hdlname": "Inst_S_WARMBOOT_switch_matrix inst_cus_mux81_buf_BOOT cus_mux41_buf_inst0 B1",
+            "src": "/home/leo/Repositories/gf180mcu-fabulous-fpga/ip/tile_library/models_pack.v:191.7-191.9"
+          }
+        },
+        "Inst_S_WARMBOOT_switch_matrix.inst_cus_mux81_buf_BOOT.cus_mux41_buf_inst1.B0": {
+          "hide_name": 0,
+          "bits": [ 142 ],
+          "attributes": {
+            "hdlname": "Inst_S_WARMBOOT_switch_matrix inst_cus_mux81_buf_BOOT cus_mux41_buf_inst1 B0",
+            "src": "/home/leo/Repositories/gf180mcu-fabulous-fpga/ip/tile_library/models_pack.v:190.7-190.9"
+          }
+        },
+        "Inst_S_WARMBOOT_switch_matrix.inst_cus_mux81_buf_BOOT.cus_mux41_buf_inst1.B1": {
+          "hide_name": 0,
+          "bits": [ 143 ],
+          "attributes": {
+            "hdlname": "Inst_S_WARMBOOT_switch_matrix inst_cus_mux81_buf_BOOT cus_mux41_buf_inst1 B1",
+            "src": "/home/leo/Repositories/gf180mcu-fabulous-fpga/ip/tile_library/models_pack.v:191.7-191.9"
+          }
+        },
+        "Inst_S_WARMBOOT_switch_matrix.inst_cus_mux81_buf_SLOT0.cus_mux21_inst.A0": {
+          "hide_name": 0,
+          "bits": [ 144 ],
+          "attributes": {
+            "hdlname": "Inst_S_WARMBOOT_switch_matrix inst_cus_mux81_buf_SLOT0 cus_mux21_inst A0",
+            "src": "/home/leo/Repositories/gf180mcu-fabulous-fpga/ip/tile_library/models_pack.v:196.8-196.10"
+          }
+        },
+        "Inst_S_WARMBOOT_switch_matrix.inst_cus_mux81_buf_SLOT0.cus_mux21_inst.A1": {
+          "hide_name": 0,
+          "bits": [ 145 ],
+          "attributes": {
+            "hdlname": "Inst_S_WARMBOOT_switch_matrix inst_cus_mux81_buf_SLOT0 cus_mux21_inst A1",
+            "src": "/home/leo/Repositories/gf180mcu-fabulous-fpga/ip/tile_library/models_pack.v:197.8-197.10"
+          }
+        },
+        "Inst_S_WARMBOOT_switch_matrix.inst_cus_mux81_buf_SLOT0.cus_mux41_buf_inst0.B0": {
+          "hide_name": 0,
+          "bits": [ 146 ],
+          "attributes": {
+            "hdlname": "Inst_S_WARMBOOT_switch_matrix inst_cus_mux81_buf_SLOT0 cus_mux41_buf_inst0 B0",
+            "src": "/home/leo/Repositories/gf180mcu-fabulous-fpga/ip/tile_library/models_pack.v:190.7-190.9"
+          }
+        },
+        "Inst_S_WARMBOOT_switch_matrix.inst_cus_mux81_buf_SLOT0.cus_mux41_buf_inst0.B1": {
+          "hide_name": 0,
+          "bits": [ 147 ],
+          "attributes": {
+            "hdlname": "Inst_S_WARMBOOT_switch_matrix inst_cus_mux81_buf_SLOT0 cus_mux41_buf_inst0 B1",
+            "src": "/home/leo/Repositories/gf180mcu-fabulous-fpga/ip/tile_library/models_pack.v:191.7-191.9"
+          }
+        },
+        "Inst_S_WARMBOOT_switch_matrix.inst_cus_mux81_buf_SLOT0.cus_mux41_buf_inst1.B0": {
+          "hide_name": 0,
+          "bits": [ 148 ],
+          "attributes": {
+            "hdlname": "Inst_S_WARMBOOT_switch_matrix inst_cus_mux81_buf_SLOT0 cus_mux41_buf_inst1 B0",
+            "src": "/home/leo/Repositories/gf180mcu-fabulous-fpga/ip/tile_library/models_pack.v:190.7-190.9"
+          }
+        },
+        "Inst_S_WARMBOOT_switch_matrix.inst_cus_mux81_buf_SLOT0.cus_mux41_buf_inst1.B1": {
+          "hide_name": 0,
+          "bits": [ 149 ],
+          "attributes": {
+            "hdlname": "Inst_S_WARMBOOT_switch_matrix inst_cus_mux81_buf_SLOT0 cus_mux41_buf_inst1 B1",
+            "src": "/home/leo/Repositories/gf180mcu-fabulous-fpga/ip/tile_library/models_pack.v:191.7-191.9"
+          }
+        },
+        "Inst_S_WARMBOOT_switch_matrix.inst_cus_mux81_buf_SLOT1.cus_mux21_inst.A0": {
+          "hide_name": 0,
+          "bits": [ 150 ],
+          "attributes": {
+            "hdlname": "Inst_S_WARMBOOT_switch_matrix inst_cus_mux81_buf_SLOT1 cus_mux21_inst A0",
+            "src": "/home/leo/Repositories/gf180mcu-fabulous-fpga/ip/tile_library/models_pack.v:196.8-196.10"
+          }
+        },
+        "Inst_S_WARMBOOT_switch_matrix.inst_cus_mux81_buf_SLOT1.cus_mux21_inst.A1": {
+          "hide_name": 0,
+          "bits": [ 151 ],
+          "attributes": {
+            "hdlname": "Inst_S_WARMBOOT_switch_matrix inst_cus_mux81_buf_SLOT1 cus_mux21_inst A1",
+            "src": "/home/leo/Repositories/gf180mcu-fabulous-fpga/ip/tile_library/models_pack.v:197.8-197.10"
+          }
+        },
+        "Inst_S_WARMBOOT_switch_matrix.inst_cus_mux81_buf_SLOT1.cus_mux41_buf_inst0.B0": {
+          "hide_name": 0,
+          "bits": [ 152 ],
+          "attributes": {
+            "hdlname": "Inst_S_WARMBOOT_switch_matrix inst_cus_mux81_buf_SLOT1 cus_mux41_buf_inst0 B0",
+            "src": "/home/leo/Repositories/gf180mcu-fabulous-fpga/ip/tile_library/models_pack.v:190.7-190.9"
+          }
+        },
+        "Inst_S_WARMBOOT_switch_matrix.inst_cus_mux81_buf_SLOT1.cus_mux41_buf_inst0.B1": {
+          "hide_name": 0,
+          "bits": [ 153 ],
+          "attributes": {
+            "hdlname": "Inst_S_WARMBOOT_switch_matrix inst_cus_mux81_buf_SLOT1 cus_mux41_buf_inst0 B1",
+            "src": "/home/leo/Repositories/gf180mcu-fabulous-fpga/ip/tile_library/models_pack.v:191.7-191.9"
+          }
+        },
+        "Inst_S_WARMBOOT_switch_matrix.inst_cus_mux81_buf_SLOT1.cus_mux41_buf_inst1.B0": {
+          "hide_name": 0,
+          "bits": [ 154 ],
+          "attributes": {
+            "hdlname": "Inst_S_WARMBOOT_switch_matrix inst_cus_mux81_buf_SLOT1 cus_mux41_buf_inst1 B0",
+            "src": "/home/leo/Repositories/gf180mcu-fabulous-fpga/ip/tile_library/models_pack.v:190.7-190.9"
+          }
+        },
+        "Inst_S_WARMBOOT_switch_matrix.inst_cus_mux81_buf_SLOT1.cus_mux41_buf_inst1.B1": {
+          "hide_name": 0,
+          "bits": [ 155 ],
+          "attributes": {
+            "hdlname": "Inst_S_WARMBOOT_switch_matrix inst_cus_mux81_buf_SLOT1 cus_mux41_buf_inst1 B1",
+            "src": "/home/leo/Repositories/gf180mcu-fabulous-fpga/ip/tile_library/models_pack.v:191.7-191.9"
+          }
+        },
+        "Inst_S_WARMBOOT_switch_matrix.inst_cus_mux81_buf_SLOT2.cus_mux21_inst.A0": {
+          "hide_name": 0,
+          "bits": [ 156 ],
+          "attributes": {
+            "hdlname": "Inst_S_WARMBOOT_switch_matrix inst_cus_mux81_buf_SLOT2 cus_mux21_inst A0",
+            "src": "/home/leo/Repositories/gf180mcu-fabulous-fpga/ip/tile_library/models_pack.v:196.8-196.10"
+          }
+        },
+        "Inst_S_WARMBOOT_switch_matrix.inst_cus_mux81_buf_SLOT2.cus_mux21_inst.A1": {
+          "hide_name": 0,
+          "bits": [ 157 ],
+          "attributes": {
+            "hdlname": "Inst_S_WARMBOOT_switch_matrix inst_cus_mux81_buf_SLOT2 cus_mux21_inst A1",
+            "src": "/home/leo/Repositories/gf180mcu-fabulous-fpga/ip/tile_library/models_pack.v:197.8-197.10"
+          }
+        },
+        "Inst_S_WARMBOOT_switch_matrix.inst_cus_mux81_buf_SLOT2.cus_mux41_buf_inst0.B0": {
+          "hide_name": 0,
+          "bits": [ 158 ],
+          "attributes": {
+            "hdlname": "Inst_S_WARMBOOT_switch_matrix inst_cus_mux81_buf_SLOT2 cus_mux41_buf_inst0 B0",
+            "src": "/home/leo/Repositories/gf180mcu-fabulous-fpga/ip/tile_library/models_pack.v:190.7-190.9"
+          }
+        },
+        "Inst_S_WARMBOOT_switch_matrix.inst_cus_mux81_buf_SLOT2.cus_mux41_buf_inst0.B1": {
+          "hide_name": 0,
+          "bits": [ 159 ],
+          "attributes": {
+            "hdlname": "Inst_S_WARMBOOT_switch_matrix inst_cus_mux81_buf_SLOT2 cus_mux41_buf_inst0 B1",
+            "src": "/home/leo/Repositories/gf180mcu-fabulous-fpga/ip/tile_library/models_pack.v:191.7-191.9"
+          }
+        },
+        "Inst_S_WARMBOOT_switch_matrix.inst_cus_mux81_buf_SLOT2.cus_mux41_buf_inst1.B0": {
+          "hide_name": 0,
+          "bits": [ 160 ],
+          "attributes": {
+            "hdlname": "Inst_S_WARMBOOT_switch_matrix inst_cus_mux81_buf_SLOT2 cus_mux41_buf_inst1 B0",
+            "src": "/home/leo/Repositories/gf180mcu-fabulous-fpga/ip/tile_library/models_pack.v:190.7-190.9"
+          }
+        },
+        "Inst_S_WARMBOOT_switch_matrix.inst_cus_mux81_buf_SLOT2.cus_mux41_buf_inst1.B1": {
+          "hide_name": 0,
+          "bits": [ 161 ],
+          "attributes": {
+            "hdlname": "Inst_S_WARMBOOT_switch_matrix inst_cus_mux81_buf_SLOT2 cus_mux41_buf_inst1 B1",
+            "src": "/home/leo/Repositories/gf180mcu-fabulous-fpga/ip/tile_library/models_pack.v:191.7-191.9"
+          }
+        },
+        "Inst_S_WARMBOOT_switch_matrix.inst_cus_mux81_buf_SLOT3.cus_mux21_inst.A0": {
+          "hide_name": 0,
+          "bits": [ 162 ],
+          "attributes": {
+            "hdlname": "Inst_S_WARMBOOT_switch_matrix inst_cus_mux81_buf_SLOT3 cus_mux21_inst A0",
+            "src": "/home/leo/Repositories/gf180mcu-fabulous-fpga/ip/tile_library/models_pack.v:196.8-196.10"
+          }
+        },
+        "Inst_S_WARMBOOT_switch_matrix.inst_cus_mux81_buf_SLOT3.cus_mux21_inst.A1": {
+          "hide_name": 0,
+          "bits": [ 163 ],
+          "attributes": {
+            "hdlname": "Inst_S_WARMBOOT_switch_matrix inst_cus_mux81_buf_SLOT3 cus_mux21_inst A1",
+            "src": "/home/leo/Repositories/gf180mcu-fabulous-fpga/ip/tile_library/models_pack.v:197.8-197.10"
+          }
+        },
+        "Inst_S_WARMBOOT_switch_matrix.inst_cus_mux81_buf_SLOT3.cus_mux41_buf_inst0.B0": {
+          "hide_name": 0,
+          "bits": [ 164 ],
+          "attributes": {
+            "hdlname": "Inst_S_WARMBOOT_switch_matrix inst_cus_mux81_buf_SLOT3 cus_mux41_buf_inst0 B0",
+            "src": "/home/leo/Repositories/gf180mcu-fabulous-fpga/ip/tile_library/models_pack.v:190.7-190.9"
+          }
+        },
+        "Inst_S_WARMBOOT_switch_matrix.inst_cus_mux81_buf_SLOT3.cus_mux41_buf_inst0.B1": {
+          "hide_name": 0,
+          "bits": [ 165 ],
+          "attributes": {
+            "hdlname": "Inst_S_WARMBOOT_switch_matrix inst_cus_mux81_buf_SLOT3 cus_mux41_buf_inst0 B1",
+            "src": "/home/leo/Repositories/gf180mcu-fabulous-fpga/ip/tile_library/models_pack.v:191.7-191.9"
+          }
+        },
+        "Inst_S_WARMBOOT_switch_matrix.inst_cus_mux81_buf_SLOT3.cus_mux41_buf_inst1.B0": {
+          "hide_name": 0,
+          "bits": [ 166 ],
+          "attributes": {
+            "hdlname": "Inst_S_WARMBOOT_switch_matrix inst_cus_mux81_buf_SLOT3 cus_mux41_buf_inst1 B0",
+            "src": "/home/leo/Repositories/gf180mcu-fabulous-fpga/ip/tile_library/models_pack.v:190.7-190.9"
+          }
+        },
+        "Inst_S_WARMBOOT_switch_matrix.inst_cus_mux81_buf_SLOT3.cus_mux41_buf_inst1.B1": {
+          "hide_name": 0,
+          "bits": [ 167 ],
+          "attributes": {
+            "hdlname": "Inst_S_WARMBOOT_switch_matrix inst_cus_mux81_buf_SLOT3 cus_mux41_buf_inst1 B1",
+            "src": "/home/leo/Repositories/gf180mcu-fabulous-fpga/ip/tile_library/models_pack.v:191.7-191.9"
+          }
+        },
+        "N1BEG": {
+          "hide_name": 0,
+          "bits": [ 2, 3, 4, 5 ],
+          "attributes": {
+            "src": "/home/leo/Repositories/gf180mcu-fabulous-fpga/ip/tile_library/tiles/S_WARMBOOT/S_WARMBOOT.v:12.23-12.28"
+          }
+        },
+        "N2BEG": {
+          "hide_name": 0,
+          "bits": [ 6, 7, 8, 9, 10, 11, 12, 13 ],
+          "attributes": {
+            "src": "/home/leo/Repositories/gf180mcu-fabulous-fpga/ip/tile_library/tiles/S_WARMBOOT/S_WARMBOOT.v:13.23-13.28"
+          }
+        },
+        "N2BEGb": {
+          "hide_name": 0,
+          "bits": [ 14, 15, 16, 17, 18, 19, 20, 21 ],
+          "attributes": {
+            "src": "/home/leo/Repositories/gf180mcu-fabulous-fpga/ip/tile_library/tiles/S_WARMBOOT/S_WARMBOOT.v:14.23-14.29"
+          }
+        },
+        "N4BEG": {
+          "hide_name": 0,
+          "bits": [ 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37 ],
+          "attributes": {
+            "src": "/home/leo/Repositories/gf180mcu-fabulous-fpga/ip/tile_library/tiles/S_WARMBOOT/S_WARMBOOT.v:15.24-15.29"
+          }
+        },
+        "NN4BEG": {
+          "hide_name": 0,
+          "bits": [ 38, 39, 40, 41, 42, 43, 44, 45, 46, 47, 48, 49, 50, 51, 52, 53 ],
+          "attributes": {
+            "src": "/home/leo/Repositories/gf180mcu-fabulous-fpga/ip/tile_library/tiles/S_WARMBOOT/S_WARMBOOT.v:16.24-16.30"
+          }
+        },
+        "RESET_top": {
+          "hide_name": 0,
+          "bits": [ 58 ],
+          "attributes": {
+            "src": "/home/leo/Repositories/gf180mcu-fabulous-fpga/ip/tile_library/tiles/S_WARMBOOT/S_WARMBOOT.v:23.16-23.25"
+          }
+        },
+        "S1END": {
+          "hide_name": 0,
+          "bits": [ 54, 55, 56, 57 ],
+          "attributes": {
+            "src": "/home/leo/Repositories/gf180mcu-fabulous-fpga/ip/tile_library/tiles/S_WARMBOOT/S_WARMBOOT.v:18.22-18.27"
+          }
+        },
+        "S2END": {
+          "hide_name": 0,
+          "bits": [ 21, 20, 19, 18, 17, 16, 15, 14 ],
+          "attributes": {
+            "src": "/home/leo/Repositories/gf180mcu-fabulous-fpga/ip/tile_library/tiles/S_WARMBOOT/S_WARMBOOT.v:20.22-20.27"
+          }
+        },
+        "S2MID": {
+          "hide_name": 0,
+          "bits": [ 13, 12, 11, 10, 9, 8, 7, 6 ],
+          "attributes": {
+            "src": "/home/leo/Repositories/gf180mcu-fabulous-fpga/ip/tile_library/tiles/S_WARMBOOT/S_WARMBOOT.v:19.22-19.27"
+          }
+        },
+        "S4END": {
+          "hide_name": 0,
+          "bits": [ 37, 36, 35, 34, 33, 32, 31, 30, 29, 28, 27, 26, 25, 24, 23, 22 ],
+          "attributes": {
+            "src": "/home/leo/Repositories/gf180mcu-fabulous-fpga/ip/tile_library/tiles/S_WARMBOOT/S_WARMBOOT.v:21.23-21.28"
+          }
+        },
+        "SLOT_top0": {
+          "hide_name": 0,
+          "bits": [ 60 ],
+          "attributes": {
+            "src": "/home/leo/Repositories/gf180mcu-fabulous-fpga/ip/tile_library/tiles/S_WARMBOOT/S_WARMBOOT.v:25.17-25.26"
+          }
+        },
+        "SLOT_top1": {
+          "hide_name": 0,
+          "bits": [ 61 ],
+          "attributes": {
+            "src": "/home/leo/Repositories/gf180mcu-fabulous-fpga/ip/tile_library/tiles/S_WARMBOOT/S_WARMBOOT.v:26.17-26.26"
+          }
+        },
+        "SLOT_top2": {
+          "hide_name": 0,
+          "bits": [ 62 ],
+          "attributes": {
+            "src": "/home/leo/Repositories/gf180mcu-fabulous-fpga/ip/tile_library/tiles/S_WARMBOOT/S_WARMBOOT.v:27.17-27.26"
+          }
+        },
+        "SLOT_top3": {
+          "hide_name": 0,
+          "bits": [ 63 ],
+          "attributes": {
+            "src": "/home/leo/Repositories/gf180mcu-fabulous-fpga/ip/tile_library/tiles/S_WARMBOOT/S_WARMBOOT.v:28.17-28.26"
+          }
+        },
+        "SS4END": {
+          "hide_name": 0,
+          "bits": [ 53, 52, 51, 50, 49, 48, 47, 46, 45, 44, 43, 42, 41, 40, 39, 38 ],
+          "attributes": {
+            "src": "/home/leo/Repositories/gf180mcu-fabulous-fpga/ip/tile_library/tiles/S_WARMBOOT/S_WARMBOOT.v:22.23-22.29"
+          }
+        },
+        "UserCLK": {
+          "hide_name": 0,
+          "bits": [ 65 ],
+          "attributes": {
+            "src": "/home/leo/Repositories/gf180mcu-fabulous-fpga/ip/tile_library/tiles/S_WARMBOOT/S_WARMBOOT.v:31.16-31.23"
+          }
+        },
+        "UserCLKo": {
+          "hide_name": 0,
+          "bits": [ 65 ],
+          "attributes": {
+            "src": "/home/leo/Repositories/gf180mcu-fabulous-fpga/ip/tile_library/tiles/S_WARMBOOT/S_WARMBOOT.v:32.17-32.25"
+          }
+        }
+      }
+    }
+  }
+}
