@@ -1,5 +1,5 @@
 # Adjust sources
-RTL = ../top_wrapper.v counter_top.v
+RTL = ../top_wrapper.v counter_top.v ../primitive_wrappers.v
 TOP = top_wrapper
 DESIGN_NAME = counter_top
 

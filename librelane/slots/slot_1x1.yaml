@@ -12,46 +12,45 @@ PAD_SOUTH: [
     clk_pad,
     rst_n_pad,
 
-    "bidir\\[0\\].pad",
-    "bidir\\[1\\].pad",
-    "bidir\\[2\\].pad",
-    "bidir\\[3\\].pad",
-    "bidir\\[4\\].pad",
-    "bidir\\[5\\].pad",
+    "fpga\\[0\\].pad",
+    "fpga\\[1\\].pad",
+    "fpga\\[2\\].pad",
+    "fpga\\[3\\].pad",
+    "fpga\\[4\\].pad",
+    "fpga\\[5\\].pad",
 
     "dvss_pads\\[0\\].pad",
 
-    "bidir\\[6\\].pad",
-    "bidir\\[7\\].pad",
-    "bidir\\[8\\].pad",
-    "bidir\\[9\\].pad",
-    "bidir\\[10\\].pad",
-    "bidir\\[11\\].pad",
-    "bidir\\[12\\].pad",
-    "bidir\\[13\\].pad"
+    "fpga\\[6\\].pad",
+    "fpga\\[7\\].pad",
+    "fpga\\[8\\].pad",
+    "fpga\\[9\\].pad",
+    "fpga\\[10\\].pad",
+    "fpga\\[11\\].pad",
+    "fpga\\[12\\].pad",
+    "fpga\\[13\\].pad"
 ]
 
 PAD_EAST: [
     "dvdd_pads\\[0\\].pad",
     "dvss_pads\\[1\\].pad",
 
-    "bidir\\[14\\].pad",
-    "bidir\\[15\\].pad",
-    "bidir\\[16\\].pad",
-    "bidir\\[17\\].pad",
-    "bidir\\[18\\].pad",
-    "bidir\\[19\\].pad",
+    "fpga\\[14\\].pad",
+    "fpga\\[15\\].pad",
+    "fpga\\[16\\].pad",
+    "fpga\\[17\\].pad",
+    "fpga\\[18\\].pad",
+    "fpga\\[19\\].pad",
     
     "dvdd_pads\\[1\\].pad",
     "dvss_pads\\[2\\].pad",
 
-    
-    "bidir\\[20\\].pad",
-    "bidir\\[21\\].pad",
-    "bidir\\[22\\].pad",
-    "bidir\\[23\\].pad",
-    "bidir\\[24\\].pad",
-    "bidir\\[25\\].pad",
+    "fpga\\[20\\].pad",
+    "fpga\\[21\\].pad",
+    "fpga\\[22\\].pad",
+    "fpga\\[23\\].pad",
+    "fpga\\[24\\].pad",
+    "fpga\\[25\\].pad",
     
     "dvss_pads\\[3\\].pad",
     "dvdd_pads\\[2\\].pad",
@@ -60,25 +59,25 @@ PAD_EAST: [
 ]
 
 PAD_NORTH: [
-    "bidir\\[41\\].pad",
-    "bidir\\[40\\].pad",
-    "bidir\\[39\\].pad",
-    "bidir\\[38\\].pad",
-    "bidir\\[37\\].pad",
-    "bidir\\[36\\].pad",
-    "bidir\\[35\\].pad",
-    "bidir\\[34\\].pad",
+    "fpga\\[41\\].pad",
+    "fpga\\[40\\].pad",
+    "fpga\\[39\\].pad",
+    "fpga\\[38\\].pad",
+    "fpga\\[37\\].pad",
+    "fpga\\[36\\].pad",
+    "fpga\\[35\\].pad",
+    "fpga\\[34\\].pad",
 
     "dvss_pads\\[5\\].pad",
 
-    "bidir\\[33\\].pad",
-    "bidir\\[32\\].pad",
-    "bidir\\[31\\].pad",
-    "bidir\\[30\\].pad",
-    "bidir\\[29\\].pad",
-    "bidir\\[28\\].pad",
-    "bidir\\[27\\].pad",
-    "bidir\\[26\\].pad"
+    "fpga\\[33\\].pad",
+    "fpga\\[32\\].pad",
+    "fpga\\[31\\].pad",
+    "fpga\\[30\\].pad",
+    "fpga\\[29\\].pad",
+    "fpga\\[28\\].pad",
+    "fpga\\[27\\].pad",
+    "fpga\\[26\\].pad"
 ]
 
 
@@ -88,24 +87,24 @@ PAD_WEST: [
     "dvdd_pads\\[6\\].pad",
     "dvss_pads\\[8\\].pad",
 
-    "bidir\\[52\\].pad",
-    "bidir\\[51\\].pad",
-    "bidir\\[50\\].pad",
-    "bidir\\[49\\].pad",
-    "bidir\\[48\\].pad",
-    "bidir\\[47\\].pad",
+    "config_busy_pad",
+    "fpga_mode_pad",
+    "fpga_miso_pad",
+    "fpga_mosi_pad",
+    "fpga_cs_n_pad",
+    "fpga_sclk_pad",
 
     "dvdd_pads\\[5\\].pad",
     "dvss_pads\\[7\\].pad",
 
-    "bidir\\[46\\].pad",
-    "bidir\\[45\\].pad",
-    "bidir\\[44\\].pad",
-    "bidir\\[43\\].pad",
+    "fpga\\[47\\].pad",
+    "fpga\\[46\\].pad",
+    "fpga\\[45\\].pad",
+    "fpga\\[44\\].pad",
 
     "dvdd_pads\\[4\\].pad",
     "dvss_pads\\[6\\].pad",
     
-    "bidir\\[42\\].pad",
-    "inputs\\[0\\].pad"
+    "fpga\\[43\\].pad",
+    "fpga\\[42\\].pad"
 ]

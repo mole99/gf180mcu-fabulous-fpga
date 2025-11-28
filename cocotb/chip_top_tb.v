@@ -14,11 +14,7 @@ module chip_top_tb;
     parameter NUM_DVSS_PADS = `NUM_DVSS_PADS;
 
     // Signal pads
-    parameter NUM_INPUT_PADS = `NUM_INPUT_PADS;
-    parameter NUM_BIDIR_PADS = `NUM_BIDIR_PADS;
-    parameter NUM_ANALOG_PADS = `NUM_ANALOG_PADS;
-
-    parameter FABRIC_NUM_IO_WEST = 48;
+    parameter NUM_FPGA_PADS = `NUM_FPGA_PADS;
 
     /*initial begin
         `ifdef DUMP_WAVEFORMS
@@ -35,25 +31,24 @@ module chip_top_tb;
     wire clk_PAD;
     wire rst_n_PAD;
     
-    wire [NUM_INPUT_PADS-1:0] input_PAD;
-    wire [NUM_BIDIR_PADS-1:0] bidir_PAD;
+    wire fpga_mode_PAD;
+    wire config_busy_PAD;
     
-    wire fpga_mode_i;
-    wire config_busy_o;
-    wire [FABRIC_NUM_IO_WEST-1:0] fpga_io;
-    
-    assign input_PAD[0] = fpga_mode_i;
-    assign config_busy_o = bidir_PAD[FABRIC_NUM_IO_WEST-1+5];
-    assign fpga_io = bidir_PAD[FABRIC_NUM_IO_WEST-1:0];
+    wire fpga_sclk_PAD;
+    wire fpga_cs_n_PAD;
+    wire fpga_mosi_PAD;
+    wire fpga_miso_PAD;
+
+    wire [NUM_FPGA_PADS-1:0] fpga_PAD;
     
     `ifdef BITSTREAM_FLASH
     
     // SPI Flash - Bitstream
     spiflash_powered i_spiflash_powered (
-	    .csb (bidir_PAD[FABRIC_NUM_IO_WEST-1+2]),
-	    .clk (bidir_PAD[FABRIC_NUM_IO_WEST-1+1]),
-	    .io0 (bidir_PAD[FABRIC_NUM_IO_WEST-1+3]), // MOSI
-	    .io1 (bidir_PAD[FABRIC_NUM_IO_WEST-1+4]), // MISO
+	    .csb (fpga_cs_n_PAD),
+	    .clk (fpga_sclk_PAD),
+	    .io0 (fpga_mosi_PAD), // MOSI
+	    .io1 (fpga_miso_PAD), // MISO
 	    .io2 (  ),
 	    .io3 (  )
     );
@@ -63,9 +58,9 @@ module chip_top_tb;
     
     `else
 
-    assign bidir_PAD[FABRIC_NUM_IO_WEST-1+2] = 1'b1;
-    assign bidir_PAD[FABRIC_NUM_IO_WEST-1+1] = 1'b0;
-    assign bidir_PAD[FABRIC_NUM_IO_WEST-1+3] = 1'b0;
+    assign fpga_cs_n_PAD = 1'b1;
+    assign fpga_sclk_PAD = 1'b0;
+    assign fpga_mosi_PAD = 1'b0;
 
     `endif
 
@@ -78,9 +73,16 @@ module chip_top_tb;
 
         .clk_PAD,
         .rst_n_PAD,
-        
-        .input_PAD,
-        .bidir_PAD
+            
+        .fpga_mode_PAD,
+        .config_busy_PAD,
+            
+        .fpga_sclk_PAD,
+        .fpga_cs_n_PAD,
+        .fpga_mosi_PAD,
+        .fpga_miso_PAD,
+
+        .fpga_PAD
     );
 
 endmodule

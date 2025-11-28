@@ -11,9 +11,7 @@ module chip_top #(
     parameter NUM_DVSS_PADS = `NUM_DVSS_PADS,
 
     // Signal pads
-    parameter NUM_INPUT_PADS = `NUM_INPUT_PADS,
-    parameter NUM_BIDIR_PADS = `NUM_BIDIR_PADS,
-    parameter NUM_ANALOG_PADS = `NUM_ANALOG_PADS
+    parameter NUM_FPGA_PADS = `NUM_FPGA_PADS
     )(
     `ifdef USE_POWER_PINS
     inout  wire VDD,
@@ -23,27 +21,47 @@ module chip_top #(
     inout  wire clk_PAD,
     inout  wire rst_n_PAD,
     
-    inout  wire [NUM_INPUT_PADS-1:0] input_PAD,
-    inout  wire [NUM_BIDIR_PADS-1:0] bidir_PAD
+    inout  wire fpga_mode_PAD,
+    inout  wire config_busy_PAD,
     
-    //inout  wire [NUM_ANALOG_PADS-1:0] analog_PAD
+    inout  wire fpga_sclk_PAD,
+    inout  wire fpga_cs_n_PAD,
+    inout  wire fpga_mosi_PAD,
+    inout  wire fpga_miso_PAD,
+
+    inout  wire [NUM_FPGA_PADS-1:0] fpga_PAD
 );
 
     wire clk_PAD2CORE;
     wire rst_n_PAD2CORE;
     
-    wire [NUM_INPUT_PADS-1:0] input_PAD2CORE;
-    wire [NUM_INPUT_PADS-1:0] input_CORE2PAD_PU;
-    wire [NUM_INPUT_PADS-1:0] input_CORE2PAD_PD;
+    wire fpga_mode_PAD2CORE;
+    wire config_busy_CORE2PAD;
+    
+    wire fpga_sclk_PAD2CORE;
+    wire fpga_sclk_CORE2PAD;
+    wire fpga_sclk_CORE2PAD_OE;
+    
+    wire fpga_cs_n_PAD2CORE;
+    wire fpga_cs_n_CORE2PAD;
+    wire fpga_cs_n_CORE2PAD_OE;
+    
+    wire fpga_mosi_PAD2CORE;
+    wire fpga_mosi_CORE2PAD;
+    wire fpga_mosi_CORE2PAD_OE;
+    
+    wire fpga_miso_PAD2CORE;
+    wire fpga_miso_CORE2PAD;
+    wire fpga_miso_CORE2PAD_OE;
 
-    wire [NUM_BIDIR_PADS-1:0] bidir_PAD2CORE;
-    wire [NUM_BIDIR_PADS-1:0] bidir_CORE2PAD;
-    wire [NUM_BIDIR_PADS-1:0] bidir_CORE2PAD_OE;
-    wire [NUM_BIDIR_PADS-1:0] bidir_CORE2PAD_CS;
-    wire [NUM_BIDIR_PADS-1:0] bidir_CORE2PAD_SL;
-    wire [NUM_BIDIR_PADS-1:0] bidir_CORE2PAD_IE;
-    wire [NUM_BIDIR_PADS-1:0] bidir_CORE2PAD_PU;
-    wire [NUM_BIDIR_PADS-1:0] bidir_CORE2PAD_PD;
+    wire [NUM_FPGA_PADS-1:0] fpga_PAD2CORE;
+    wire [NUM_FPGA_PADS-1:0] fpga_CORE2PAD;
+    wire [NUM_FPGA_PADS-1:0] fpga_CORE2PAD_OE;
+    wire [NUM_FPGA_PADS-1:0] fpga_CORE2PAD_CS;
+    wire [NUM_FPGA_PADS-1:0] fpga_CORE2PAD_SL;
+    wire [NUM_FPGA_PADS-1:0] fpga_CORE2PAD_IE;
+    wire [NUM_FPGA_PADS-1:0] fpga_CORE2PAD_PU;
+    wire [NUM_FPGA_PADS-1:0] fpga_CORE2PAD_PD;
 
     // Power/ground pad instances
     generate
@@ -103,29 +121,130 @@ module chip_top #(
         .PU     (1'b0),
         .PD     (1'b0)
     );
-
-    generate
-    for (genvar i=0; i<NUM_INPUT_PADS; i++) begin : inputs
-        (* keep *)
-        gf180mcu_fd_io__in_c pad (
-            `ifdef USE_POWER_PINS
-            .DVDD   (VDD),
-            .DVSS   (VSS),
-            .VDD    (VDD),
-            .VSS    (VSS),
-            `endif
+    
+    // Normal input
+    gf180mcu_fd_io__in_c fpga_mode_pad (
+        `ifdef USE_POWER_PINS
+        .DVDD   (VDD),
+        .DVSS   (VSS),
+        .VDD    (VDD),
+        .VSS    (VSS),
+        `endif
+    
+        .Y      (fpga_mode_PAD2CORE),
+        .PAD    (fpga_mode_PAD),
         
-            .Y      (input_PAD2CORE[i]),
-            .PAD    (input_PAD[i]),
-            
-            .PU     (input_CORE2PAD_PU[i]),
-            .PD     (input_CORE2PAD_PD[i])
-        );
-    end
-    endgenerate
+        .PU     (1'b0),
+        .PD     (1'b0)
+    );
+
+    gf180mcu_fd_io__bi_24t config_busy_pad (
+        `ifdef USE_POWER_PINS
+        .DVDD   (VDD),
+        .DVSS   (VSS),
+        .VDD    (VDD),
+        .VSS    (VSS),
+        `endif
+    
+        .A      (config_busy_CORE2PAD),
+        .OE     (1'b1),
+        .Y      (  ),
+        .PAD    (config_busy_PAD),
+        
+        .CS     (1'b0),
+        .SL     (1'b0),
+        .IE     (1'b0),
+
+        .PU     (1'b0),
+        .PD     (1'b0)
+    );
+
+    gf180mcu_fd_io__bi_24t fpga_sclk_pad (
+        `ifdef USE_POWER_PINS
+        .DVDD   (VDD),
+        .DVSS   (VSS),
+        .VDD    (VDD),
+        .VSS    (VSS),
+        `endif
+    
+        .A      (fpga_sclk_CORE2PAD),
+        .OE     (fpga_sclk_CORE2PAD_OE),
+        .Y      (fpga_sclk_PAD2CORE),
+        .PAD    (fpga_sclk_PAD),
+        
+        .CS     (1'b0),
+        .SL     (1'b0),
+        .IE     (!fpga_sclk_CORE2PAD_OE),
+
+        .PU     (1'b0),
+        .PD     (1'b0)
+    );
+
+    gf180mcu_fd_io__bi_24t fpga_cs_n_pad (
+        `ifdef USE_POWER_PINS
+        .DVDD   (VDD),
+        .DVSS   (VSS),
+        .VDD    (VDD),
+        .VSS    (VSS),
+        `endif
+    
+        .A      (fpga_cs_n_CORE2PAD),
+        .OE     (fpga_cs_n_CORE2PAD_OE),
+        .Y      (fpga_cs_n_PAD2CORE),
+        .PAD    (fpga_cs_n_PAD),
+        
+        .CS     (1'b0),
+        .SL     (1'b0),
+        .IE     (!fpga_cs_n_CORE2PAD_OE),
+
+        .PU     (1'b0),
+        .PD     (1'b0)
+    );
+
+    gf180mcu_fd_io__bi_24t fpga_mosi_pad (
+        `ifdef USE_POWER_PINS
+        .DVDD   (VDD),
+        .DVSS   (VSS),
+        .VDD    (VDD),
+        .VSS    (VSS),
+        `endif
+    
+        .A      (fpga_mosi_CORE2PAD),
+        .OE     (fpga_mosi_CORE2PAD_OE),
+        .Y      (fpga_mosi_PAD2CORE),
+        .PAD    (fpga_mosi_PAD),
+        
+        .CS     (1'b0),
+        .SL     (1'b0),
+        .IE     (!fpga_mosi_CORE2PAD_OE),
+
+        .PU     (1'b0),
+        .PD     (1'b0)
+    );
+
+    gf180mcu_fd_io__bi_24t fpga_miso_pad (
+        `ifdef USE_POWER_PINS
+        .DVDD   (VDD),
+        .DVSS   (VSS),
+        .VDD    (VDD),
+        .VSS    (VSS),
+        `endif
+    
+        .A      (fpga_miso_CORE2PAD),
+        .OE     (fpga_miso_CORE2PAD_OE),
+        .Y      (fpga_miso_PAD2CORE),
+        .PAD    (fpga_miso_PAD),
+        
+        .CS     (1'b0),
+        .SL     (1'b0),
+        .IE     (!fpga_miso_CORE2PAD_OE),
+
+        .PU     (1'b0),
+        .PD     (1'b0)
+    );
 
     generate
-    for (genvar i=0; i<NUM_BIDIR_PADS; i++) begin : bidir
+    for (genvar i=0; i<NUM_FPGA_PADS; i++) begin : fpga
         (* keep *)
         gf180mcu_fd_io__bi_24t pad (
             `ifdef USE_POWER_PINS
@@ -135,42 +254,25 @@ module chip_top #(
             .VSS    (VSS),
             `endif
         
-            .A      (bidir_CORE2PAD[i]),
-            .OE     (bidir_CORE2PAD_OE[i]),
-            .Y      (bidir_PAD2CORE[i]),
-            .PAD    (bidir_PAD[i]),
+            .A      (fpga_CORE2PAD[i]),
+            .OE     (fpga_CORE2PAD_OE[i]),
+            .Y      (fpga_PAD2CORE[i]),
+            .PAD    (fpga_PAD[i]),
             
-            .CS     (bidir_CORE2PAD_CS[i]),
-            .SL     (bidir_CORE2PAD_SL[i]),
-            .IE     (bidir_CORE2PAD_IE[i]),
+            .CS     (fpga_CORE2PAD_CS[i]),
+            .SL     (fpga_CORE2PAD_SL[i]),
+            .IE     (fpga_CORE2PAD_IE[i]),
 
-            .PU     (bidir_CORE2PAD_PU[i]),
-            .PD     (bidir_CORE2PAD_PD[i])
+            .PU     (fpga_CORE2PAD_PU[i]),
+            .PD     (fpga_CORE2PAD_PD[i])
         );
     end
     endgenerate
 
-    /*generate
-    for (genvar i=0; i<NUM_ANALOG_PADS; i++) begin : analog
-        (* keep *)
-        gf180mcu_fd_io__asig_5p0 pad (
-            `ifdef USE_POWER_PINS
-            .DVDD   (VDD),
-            .DVSS   (VSS),
-            .VDD    (VDD),
-            .VSS    (VSS),
-            `endif
-            .ASIG5V (analog_PAD[i])
-        );
-    end
-    endgenerate*/
-
     // Core design
 
     chip_core #(
-        .NUM_INPUT_PADS  (NUM_INPUT_PADS),
-        .NUM_BIDIR_PADS  (NUM_BIDIR_PADS),
-        .NUM_ANALOG_PADS (NUM_ANALOG_PADS)
+        .NUM_FPGA_PADS   (NUM_FPGA_PADS)
     ) i_chip_core (
         `ifdef USE_POWER_PINS
         .VDD        (VDD),
@@ -179,19 +281,34 @@ module chip_top #(
     
         .clk        (clk_PAD2CORE),
         .rst_n      (rst_n_PAD2CORE),
-    
-        .input_in   (input_PAD2CORE),
-        .input_pu   (input_CORE2PAD_PU),
-        .input_pd   (input_CORE2PAD_PD),
+        
+        .fpga_mode_i    (fpga_mode_PAD2CORE),
+        .config_busy_o  (config_busy_CORE2PAD),
 
-        .bidir_in   (bidir_PAD2CORE),
-        .bidir_out  (bidir_CORE2PAD),
-        .bidir_oe   (bidir_CORE2PAD_OE),
-        .bidir_cs   (bidir_CORE2PAD_CS),
-        .bidir_sl   (bidir_CORE2PAD_SL),
-        .bidir_ie   (bidir_CORE2PAD_IE),
-        .bidir_pu   (bidir_CORE2PAD_PU),
-        .bidir_pd   (bidir_CORE2PAD_PD)
+        .fpga_sclk_i    (fpga_sclk_PAD2CORE),
+        .fpga_sclk_o    (fpga_sclk_CORE2PAD),
+        .fpga_sclk_oe_o (fpga_sclk_CORE2PAD_OE),
+            
+        .fpga_cs_n_i    (fpga_cs_n_PAD2CORE),
+        .fpga_cs_n_o    (fpga_cs_n_CORE2PAD),
+        .fpga_cs_n_oe_o (fpga_cs_n_CORE2PAD_OE),
+            
+        .fpga_mosi_i    (fpga_mosi_PAD2CORE),
+        .fpga_mosi_o    (fpga_mosi_CORE2PAD),
+        .fpga_mosi_oe_o (fpga_mosi_CORE2PAD_OE),
+            
+        .fpga_miso_i    (fpga_miso_PAD2CORE),
+        .fpga_miso_o    (fpga_miso_CORE2PAD),
+        .fpga_miso_oe_o (fpga_miso_CORE2PAD_OE),
+
+        .fpga_in   (fpga_PAD2CORE),
+        .fpga_out  (fpga_CORE2PAD),
+        .fpga_oe   (fpga_CORE2PAD_OE),
+        .fpga_cs   (fpga_CORE2PAD_CS),
+        .fpga_sl   (fpga_CORE2PAD_SL),
+        .fpga_ie   (fpga_CORE2PAD_IE),
+        .fpga_pu   (fpga_CORE2PAD_PU),
+        .fpga_pd   (fpga_CORE2PAD_PD)
         
         //.analog     (analog_PAD)
     );

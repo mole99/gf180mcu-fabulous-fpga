@@ -21,15 +21,30 @@ slot = os.getenv("SLOT", "1x1")
 hdl_toplevel = "chip_top"
 tb_toplevel = "chip_top_tb"
 
-hello_world = {
+all_ones = {
     'flash1_slot0': proj_path / "../ip/fabric/user_designs/all_ones/all_ones.hex",
-    'flash1_slot1': proj_path / "../ip/fabric/user_designs/all_zeros/all_zeros.hex",
+    'flash1_slot1': "",
 }
 
-enabled = hello_world
+all_zeros = {
+    'flash1_slot0': proj_path / "../ip/fabric/user_designs/all_zeros/all_zeros.hex",
+    'flash1_slot1': "",
+}
+
+counter_top = {
+    'flash1_slot0': proj_path / "../ip/fabric/user_designs/counter_top/counter_top.hex",
+    'flash1_slot1': "",
+}
+
+trigger_slot = {
+    'flash1_slot0': proj_path / "../ip/fabric/user_designs/trigger_slot1/trigger_slot1.hex",
+    'flash1_slot1': proj_path / "../ip/fabric/user_designs/trigger_slot0/trigger_slot0.hex",
+}
+
+enabled = trigger_slot
 
 async def set_defaults(dut):
-    dut.input_PAD.value = 0
+    dut.fpga_mode_PAD.value = 0
 
 async def enable_power(dut):
     dut.VDD.value = 1
@@ -61,9 +76,9 @@ async def start_up(dut):
     await reset(dut.rst_n_PAD)
 
 
-@cocotb.test()
-async def test_counter(dut):
-    """Run the counter test"""
+@cocotb.test(skip=enabled!=all_ones)
+async def test_all_ones(dut):
+    """Load bitstream that sets all ones"""
 
     # Create a logger for this testbench
     logger = logging.getLogger("my_testbench")
@@ -73,7 +88,7 @@ async def test_counter(dut):
     # FPGA config mode
     # if mode == 0: SPI controller
     # if mode == 1: SPI receiver
-    dut.fpga_mode_i.value = 0
+    dut.fpga_mode_PAD.value = 0
 
     logger.info("Startup sequence...")
 
@@ -86,12 +101,111 @@ async def test_counter(dut):
     await ClockCycles(dut.clk_PAD, 10000)
     
     # Wait for done
-    await FallingEdge(dut.config_busy_o)
+    await FallingEdge(dut.config_busy_PAD)
 
-    assert (dut.fpga_io.value == (1<<48)-1)
+    assert (dut.fpga_PAD.value == (1<<48)-1)
 
     logger.info("Done!")
 
+@cocotb.test(skip=enabled!=all_zeros)
+async def test_all_zeros(dut):
+    """Load bitstream that sets all zeros"""
+
+    # Create a logger for this testbench
+    logger = logging.getLogger("my_testbench")
+
+    logger.info("Setting defaults...")
+
+    # FPGA config mode
+    # if mode == 0: SPI controller
+    # if mode == 1: SPI receiver
+    dut.fpga_mode_PAD.value = 0
+
+    logger.info("Startup sequence...")
+
+    # Start up
+    await start_up(dut)
+
+    logger.info("Running the test...")
+
+    # Wait for a number of clock cycles
+    await ClockCycles(dut.clk_PAD, 10000)
+    
+    # Wait for done
+    await FallingEdge(dut.config_busy_PAD)
+
+    assert (dut.fpga_PAD.value == 0)
+
+    logger.info("Done!")
+
+@cocotb.test(skip=enabled!=counter_top)
+async def test_counter_top(dut):
+    """Load bitstream that counts"""
+
+    # Create a logger for this testbench
+    logger = logging.getLogger("my_testbench")
+
+    logger.info("Setting defaults...")
+
+    # FPGA config mode
+    # if mode == 0: SPI controller
+    # if mode == 1: SPI receiver
+    dut.fpga_mode_PAD.value = 0
+
+    logger.info("Startup sequence...")
+
+    # Start up
+    await start_up(dut)
+
+    logger.info("Running the test...")
+    
+    # Wait for done
+    await FallingEdge(dut.config_busy_PAD)
+
+    # Wait for a number of clock cycles
+    await ClockCycles(dut.clk_PAD, 42)
+
+    assert (dut.fpga_PAD.value == 41)
+
+    logger.info("Done!")
+
+@cocotb.test(skip=enabled!=trigger_slot)
+async def test_trigger_slot(dut):
+    """Load bitstream that loads another bitstream"""
+
+    # Create a logger for this testbench
+    logger = logging.getLogger("my_testbench")
+
+    logger.info("Setting defaults...")
+
+    # FPGA config mode
+    # if mode == 0: SPI controller
+    # if mode == 1: SPI receiver
+    dut.fpga_mode_PAD.value = 0
+
+    logger.info("Startup sequence...")
+
+    # Start up
+    await start_up(dut)
+
+    logger.info("Running the test...")
+    
+    # Wait for done
+    await FallingEdge(dut.config_busy_PAD)
+
+    assert (dut.fpga_PAD.value == 0)
+
+    # Wait for done
+    await FallingEdge(dut.config_busy_PAD)
+
+    assert (dut.fpga_PAD.value == (1<<48)-1)
+
+    # Wait for done
+    await FallingEdge(dut.config_busy_PAD)
+
+    assert (dut.fpga_PAD.value == 0)
+
+    logger.info("Done!")
 
 def chip_top_runner():
 
