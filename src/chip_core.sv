@@ -1,12 +1,10 @@
-// SPDX-FileCopyrightText: © 2025 XXX Authors
+// SPDX-FileCopyrightText: © 2025 Leo Moser
 // SPDX-License-Identifier: Apache-2.0
 
 `default_nettype none
 
 module chip_core #(
-    parameter NUM_INPUT_PADS,
-    parameter NUM_BIDIR_PADS,
-    parameter NUM_ANALOG_PADS
+    parameter NUM_FPGA_PADS
     )(
     `ifdef USE_POWER_PINS
     inout  wire VDD,
@@ -16,23 +14,38 @@ module chip_core #(
     input  wire clk,       // clock
     input  wire rst_n,     // reset (active low)
     
-    input  wire [NUM_INPUT_PADS-1:0] input_in,   // Input value
-    output wire [NUM_INPUT_PADS-1:0] input_pu,   // Pull-up
-    output wire [NUM_INPUT_PADS-1:0] input_pd,   // Pull-down
-
-    input  wire [NUM_BIDIR_PADS-1:0] bidir_in,   // Input value
-    output wire [NUM_BIDIR_PADS-1:0] bidir_out,  // Output value
-    output wire [NUM_BIDIR_PADS-1:0] bidir_oe,   // Output enable
-    output wire [NUM_BIDIR_PADS-1:0] bidir_cs,   // Input type (0=CMOS Buffer, 1=Schmitt Trigger)
-    output wire [NUM_BIDIR_PADS-1:0] bidir_sl,   // Slew rate (0=fast, 1=slow)
-    output wire [NUM_BIDIR_PADS-1:0] bidir_ie,   // Input enable
-    output wire [NUM_BIDIR_PADS-1:0] bidir_pu,   // Pull-up
-    output wire [NUM_BIDIR_PADS-1:0] bidir_pd    // Pull-down
-
-    //inout  wire [NUM_ANALOG_PADS-1:0] analog  // Analog
+    // FPGA config mode
+    // if mode == 0: SPI controller
+    // if mode == 1: SPI receiver
+    input  wire fpga_mode_i,
+    output wire config_busy_o,
+    
+    // FPGA config
+    input  wire  fpga_sclk_i,
+    output logic fpga_sclk_o,
+    output logic fpga_sclk_oe_o,
+    
+    input  wire  fpga_cs_n_i,
+    output logic fpga_cs_n_o,
+    output logic fpga_cs_n_oe_o,
+    
+    input  wire  fpga_mosi_i,
+    output logic fpga_mosi_o,
+    output logic fpga_mosi_oe_o,
+    
+    input  wire  fpga_miso_i,
+    output logic fpga_miso_o,
+    output logic fpga_miso_oe_o,
+    
+    input  wire [NUM_FPGA_PADS-1:0] fpga_in,   // Input value
+    output wire [NUM_FPGA_PADS-1:0] fpga_out,  // Output value
+    output wire [NUM_FPGA_PADS-1:0] fpga_oe,   // Output enable
+    output wire [NUM_FPGA_PADS-1:0] fpga_cs,   // Input type (0=CMOS Buffer, 1=Schmitt Trigger)
+    output wire [NUM_FPGA_PADS-1:0] fpga_sl,   // Slew rate (0=fast, 1=slow)
+    output wire [NUM_FPGA_PADS-1:0] fpga_ie,   // Input enable
+    output wire [NUM_FPGA_PADS-1:0] fpga_pu,   // Pull-up
+    output wire [NUM_FPGA_PADS-1:0] fpga_pd    // Pull-down
 );
-
-    // -------------------
 
     // Fabric parameters
     parameter FrameBitsPerRow = 32;
@@ -42,77 +55,25 @@ module chip_core #(
     parameter NumRows = 14;
 
     parameter FABRIC_NUM_IO_WEST = 48;
-
-    // -------------------
-
-    
-    // Disable pull-up and pull-down for input
-    assign input_pu = '0;
-    assign input_pd = '0;
-
-    // Set the bidir as output
-    //assign bidir_oe[NUM_BIDIR_PADS-1:FABRIC_NUM_IO_WEST-1+6] = '1;
-    //assign bidir_out[NUM_BIDIR_PADS-1:FABRIC_NUM_IO_WEST-1+6] = '1;
-    assign bidir_cs = '0;
-    assign bidir_sl = '0;
-    assign bidir_ie = ~bidir_oe;
-    assign bidir_pu = '0;
-    assign bidir_pd = '0;
-    
-    // ------------
     
     // Fabric I/O
     logic [FABRIC_NUM_IO_WEST-1:0] fabric_gpio_i;
     logic [FABRIC_NUM_IO_WEST-1:0] fabric_gpio_o;
     logic [FABRIC_NUM_IO_WEST-1:0] fabric_gpio_oe_o;
     
-    // FPGA config
-    logic fpga_sclk_i;
-    logic fpga_sclk_o;
-    logic fpga_sclk_oe_o;
+    logic [FABRIC_NUM_IO_WEST-1:0] fabric_gpio_config0;
+    logic [FABRIC_NUM_IO_WEST-1:0] fabric_gpio_config1;
+    logic [FABRIC_NUM_IO_WEST-1:0] fabric_gpio_config2;
+    logic [FABRIC_NUM_IO_WEST-1:0] fabric_gpio_config3;
     
-    logic fpga_cs_n_i;
-    logic fpga_cs_n_o;
-    logic fpga_cs_n_oe_o;
-    
-    logic fpga_mosi_i;
-    logic fpga_mosi_o;
-    logic fpga_mosi_oe_o;
-    
-    logic fpga_miso_i;
-    logic fpga_miso_o;
-    logic fpga_miso_oe_o;
-    
-    // FPGA config mode
-    // if mode == 0: SPI controller
-    // if mode == 1: SPI receiver
-    logic fpga_mode_i;
-    logic config_busy_o;
-    
-    assign fabric_gpio_i = bidir_in[FABRIC_NUM_IO_WEST-1:0];
-    assign bidir_out[FABRIC_NUM_IO_WEST-1:0] = fabric_gpio_o;
-    assign bidir_oe[FABRIC_NUM_IO_WEST-1:0] = fabric_gpio_oe_o;
-    
-    assign fpga_sclk_i = bidir_in[FABRIC_NUM_IO_WEST-1+1];
-    assign bidir_out[FABRIC_NUM_IO_WEST-1+1] = fpga_sclk_o;
-    assign bidir_oe[FABRIC_NUM_IO_WEST-1+1] = fpga_sclk_oe_o;
-    
-    assign fpga_cs_n_i = bidir_in[FABRIC_NUM_IO_WEST-1+2];
-    assign bidir_out[FABRIC_NUM_IO_WEST-1+2] = fpga_cs_n_o;
-    assign bidir_oe[FABRIC_NUM_IO_WEST-1+2] = fpga_cs_n_oe_o;
-
-    assign fpga_mosi_i = bidir_in[FABRIC_NUM_IO_WEST-1+3];
-    assign bidir_out[FABRIC_NUM_IO_WEST-1+3] = fpga_mosi_o;
-    assign bidir_oe[FABRIC_NUM_IO_WEST-1+3] = fpga_mosi_oe_o;
-
-    assign fpga_miso_i = bidir_in[FABRIC_NUM_IO_WEST-1+4];
-    assign bidir_out[FABRIC_NUM_IO_WEST-1+4] = fpga_miso_o;
-    assign bidir_oe[FABRIC_NUM_IO_WEST-1+4] = fpga_miso_oe_o;
-
-    assign bidir_out[FABRIC_NUM_IO_WEST-1+5] = config_busy_o;
-    assign bidir_oe[FABRIC_NUM_IO_WEST-1+5] = 1'b1;
-
-    assign fpga_mode_i = input_in[0];
+    assign fabric_gpio_i = fpga_in[FABRIC_NUM_IO_WEST-1:0];
+    assign fpga_out[FABRIC_NUM_IO_WEST-1:0] = fabric_gpio_o;
+    assign fpga_oe[FABRIC_NUM_IO_WEST-1:0] = fabric_gpio_oe_o;
+    assign fpga_cs = fabric_gpio_config2;
+    assign fpga_sl = fabric_gpio_config3;
+    assign fpga_ie = ~fpga_oe;
+    assign fpga_pu = fabric_gpio_config0;
+    assign fpga_pd = fabric_gpio_config1;
     
     // ------------
     
@@ -178,11 +139,21 @@ module chip_core #(
     wire [FABRIC_NUM_IO_WEST-1:0]      fabric_io_west_in_i;
     wire [FABRIC_NUM_IO_WEST-1:0]      fabric_io_west_out_o;
     wire [FABRIC_NUM_IO_WEST-1:0]      fabric_io_west_oe_o;
+    
+    wire [FABRIC_NUM_IO_WEST-1:0]      fabric_io_west_config0_o;
+    wire [FABRIC_NUM_IO_WEST-1:0]      fabric_io_west_config1_o;
+    wire [FABRIC_NUM_IO_WEST-1:0]      fabric_io_west_config2_o;
+    wire [FABRIC_NUM_IO_WEST-1:0]      fabric_io_west_config3_o;
 
     // Assign fabric IOs
     assign fabric_io_west_in_i  = fabric_gpio_i;
     assign fabric_gpio_o        = fabric_io_west_out_o;
     assign fabric_gpio_oe_o     = fabric_io_west_oe_o;
+    
+    assign fabric_gpio_config0 = fabric_io_west_config0_o;
+    assign fabric_gpio_config1 = fabric_io_west_config1_o;
+    assign fabric_gpio_config2 = fabric_io_west_config2_o;
+    assign fabric_gpio_config3 = fabric_io_west_config3_o;
 
     // WARMBOOT
     wire        fabric_warmboot_boot_o;
@@ -194,9 +165,9 @@ module chip_core #(
     logic startup_trigger;
     always_ff @(posedge clk, negedge rst_n_sync) begin
         if (!rst_n_sync) begin
-            startup_trigger = 1'b1;
+            startup_trigger <= 1'b1;
         end else begin
-            startup_trigger = 1'b0;
+            startup_trigger <= 1'b0;
         end
     end
     
@@ -374,6 +345,11 @@ module chip_core #(
         .fabric_io_west_in_i,
         .fabric_io_west_out_o,
         .fabric_io_west_oe_o,
+        
+        .fabric_io_west_config0_o,
+        .fabric_io_west_config1_o,
+        .fabric_io_west_config2_o,
+        .fabric_io_west_config3_o,
 
         // WARMBOOT
         .fabric_warmboot_boot_o,

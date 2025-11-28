@@ -20,6 +20,11 @@ module fabric_wrapper #(
     input  [FABRIC_NUM_IO_WEST-1:0]      fabric_io_west_in_i,
     output [FABRIC_NUM_IO_WEST-1:0]      fabric_io_west_out_o,
     output [FABRIC_NUM_IO_WEST-1:0]      fabric_io_west_oe_o,
+    
+    output [FABRIC_NUM_IO_WEST-1:0]      fabric_io_west_config0_o,
+    output [FABRIC_NUM_IO_WEST-1:0]      fabric_io_west_config1_o,
+    output [FABRIC_NUM_IO_WEST-1:0]      fabric_io_west_config2_o,
+    output [FABRIC_NUM_IO_WEST-1:0]      fabric_io_west_config3_o,
 
     // WARMBOOT
     output        fabric_warmboot_boot_o,
@@ -97,194 +102,434 @@ module fabric_wrapper #(
         .Tile_X0Y1_A_O_top(fabric_io_west_in_i[47]),
         .Tile_X0Y1_A_I_top(fabric_io_west_out_o[47]),
         .Tile_X0Y1_A_T_top(fabric_io_west_oe_o[47]),
+        
+        .Tile_X0Y1_A_config_C_bit0(fabric_io_west_config0_o[47]),
+        .Tile_X0Y1_A_config_C_bit1(fabric_io_west_config1_o[47]),
+        .Tile_X0Y1_A_config_C_bit2(fabric_io_west_config2_o[47]),
+        .Tile_X0Y1_A_config_C_bit3(fabric_io_west_config3_o[47]),
 
         .Tile_X0Y1_B_O_top(fabric_io_west_in_i[46]),
         .Tile_X0Y1_B_I_top(fabric_io_west_out_o[46]),
         .Tile_X0Y1_B_T_top(fabric_io_west_oe_o[46]),
+        
+        .Tile_X0Y1_B_config_C_bit0(fabric_io_west_config0_o[46]),
+        .Tile_X0Y1_B_config_C_bit1(fabric_io_west_config1_o[46]),
+        .Tile_X0Y1_B_config_C_bit2(fabric_io_west_config2_o[46]),
+        .Tile_X0Y1_B_config_C_bit3(fabric_io_west_config3_o[46]),
 
         .Tile_X0Y1_C_O_top(fabric_io_west_in_i[45]),
         .Tile_X0Y1_C_I_top(fabric_io_west_out_o[45]),
         .Tile_X0Y1_C_T_top(fabric_io_west_oe_o[45]),
+        
+        .Tile_X0Y1_C_config_C_bit0(fabric_io_west_config0_o[45]),
+        .Tile_X0Y1_C_config_C_bit1(fabric_io_west_config1_o[45]),
+        .Tile_X0Y1_C_config_C_bit2(fabric_io_west_config2_o[45]),
+        .Tile_X0Y1_C_config_C_bit3(fabric_io_west_config3_o[45]),
 
         .Tile_X0Y1_D_O_top(fabric_io_west_in_i[44]),
         .Tile_X0Y1_D_I_top(fabric_io_west_out_o[44]),
         .Tile_X0Y1_D_T_top(fabric_io_west_oe_o[44]),
+        
+        .Tile_X0Y1_D_config_C_bit0(fabric_io_west_config0_o[44]),
+        .Tile_X0Y1_D_config_C_bit1(fabric_io_west_config1_o[44]),
+        .Tile_X0Y1_D_config_C_bit2(fabric_io_west_config2_o[44]),
+        .Tile_X0Y1_D_config_C_bit3(fabric_io_west_config3_o[44]),
 
         .Tile_X0Y2_A_O_top(fabric_io_west_in_i[43]),
         .Tile_X0Y2_A_I_top(fabric_io_west_out_o[43]),
         .Tile_X0Y2_A_T_top(fabric_io_west_oe_o[43]),
+        
+        .Tile_X0Y2_A_config_C_bit0(fabric_io_west_config0_o[43]),
+        .Tile_X0Y2_A_config_C_bit1(fabric_io_west_config1_o[43]),
+        .Tile_X0Y2_A_config_C_bit2(fabric_io_west_config2_o[43]),
+        .Tile_X0Y2_A_config_C_bit3(fabric_io_west_config3_o[43]),
 
         .Tile_X0Y2_B_O_top(fabric_io_west_in_i[42]),
         .Tile_X0Y2_B_I_top(fabric_io_west_out_o[42]),
         .Tile_X0Y2_B_T_top(fabric_io_west_oe_o[42]),
+        
+        .Tile_X0Y2_B_config_C_bit0(fabric_io_west_config0_o[42]),
+        .Tile_X0Y2_B_config_C_bit1(fabric_io_west_config1_o[42]),
+        .Tile_X0Y2_B_config_C_bit2(fabric_io_west_config2_o[42]),
+        .Tile_X0Y2_B_config_C_bit3(fabric_io_west_config3_o[42]),
 
         .Tile_X0Y2_C_O_top(fabric_io_west_in_i[41]),
         .Tile_X0Y2_C_I_top(fabric_io_west_out_o[41]),
         .Tile_X0Y2_C_T_top(fabric_io_west_oe_o[41]),
+        
+        .Tile_X0Y2_C_config_C_bit0(fabric_io_west_config0_o[41]),
+        .Tile_X0Y2_C_config_C_bit1(fabric_io_west_config1_o[41]),
+        .Tile_X0Y2_C_config_C_bit2(fabric_io_west_config2_o[41]),
+        .Tile_X0Y2_C_config_C_bit3(fabric_io_west_config3_o[41]),
 
         .Tile_X0Y2_D_O_top(fabric_io_west_in_i[40]),
         .Tile_X0Y2_D_I_top(fabric_io_west_out_o[40]),
         .Tile_X0Y2_D_T_top(fabric_io_west_oe_o[40]),
+        
+        .Tile_X0Y2_D_config_C_bit0(fabric_io_west_config0_o[40]),
+        .Tile_X0Y2_D_config_C_bit1(fabric_io_west_config1_o[40]),
+        .Tile_X0Y2_D_config_C_bit2(fabric_io_west_config2_o[40]),
+        .Tile_X0Y2_D_config_C_bit3(fabric_io_west_config3_o[40]),
 
         .Tile_X0Y3_A_O_top(fabric_io_west_in_i[39]),
         .Tile_X0Y3_A_I_top(fabric_io_west_out_o[39]),
         .Tile_X0Y3_A_T_top(fabric_io_west_oe_o[39]),
+        
+        .Tile_X0Y3_A_config_C_bit0(fabric_io_west_config0_o[39]),
+        .Tile_X0Y3_A_config_C_bit1(fabric_io_west_config1_o[39]),
+        .Tile_X0Y3_A_config_C_bit2(fabric_io_west_config2_o[39]),
+        .Tile_X0Y3_A_config_C_bit3(fabric_io_west_config3_o[39]),
 
         .Tile_X0Y3_B_O_top(fabric_io_west_in_i[38]),
         .Tile_X0Y3_B_I_top(fabric_io_west_out_o[38]),
         .Tile_X0Y3_B_T_top(fabric_io_west_oe_o[38]),
+        
+        .Tile_X0Y3_B_config_C_bit0(fabric_io_west_config0_o[38]),
+        .Tile_X0Y3_B_config_C_bit1(fabric_io_west_config1_o[38]),
+        .Tile_X0Y3_B_config_C_bit2(fabric_io_west_config2_o[38]),
+        .Tile_X0Y3_B_config_C_bit3(fabric_io_west_config3_o[38]),
 
         .Tile_X0Y3_C_O_top(fabric_io_west_in_i[37]),
         .Tile_X0Y3_C_I_top(fabric_io_west_out_o[37]),
         .Tile_X0Y3_C_T_top(fabric_io_west_oe_o[37]),
+        
+        .Tile_X0Y3_C_config_C_bit0(fabric_io_west_config0_o[37]),
+        .Tile_X0Y3_C_config_C_bit1(fabric_io_west_config1_o[37]),
+        .Tile_X0Y3_C_config_C_bit2(fabric_io_west_config2_o[37]),
+        .Tile_X0Y3_C_config_C_bit3(fabric_io_west_config3_o[37]),
 
         .Tile_X0Y3_D_O_top(fabric_io_west_in_i[36]),
         .Tile_X0Y3_D_I_top(fabric_io_west_out_o[36]),
         .Tile_X0Y3_D_T_top(fabric_io_west_oe_o[36]),
+        
+        .Tile_X0Y3_D_config_C_bit0(fabric_io_west_config0_o[36]),
+        .Tile_X0Y3_D_config_C_bit1(fabric_io_west_config1_o[36]),
+        .Tile_X0Y3_D_config_C_bit2(fabric_io_west_config2_o[36]),
+        .Tile_X0Y3_D_config_C_bit3(fabric_io_west_config3_o[36]),
 
         .Tile_X0Y4_A_O_top(fabric_io_west_in_i[35]),
         .Tile_X0Y4_A_I_top(fabric_io_west_out_o[35]),
         .Tile_X0Y4_A_T_top(fabric_io_west_oe_o[35]),
+        
+        .Tile_X0Y4_A_config_C_bit0(fabric_io_west_config0_o[35]),
+        .Tile_X0Y4_A_config_C_bit1(fabric_io_west_config1_o[35]),
+        .Tile_X0Y4_A_config_C_bit2(fabric_io_west_config2_o[35]),
+        .Tile_X0Y4_A_config_C_bit3(fabric_io_west_config3_o[35]),
 
         .Tile_X0Y4_B_O_top(fabric_io_west_in_i[34]),
         .Tile_X0Y4_B_I_top(fabric_io_west_out_o[34]),
         .Tile_X0Y4_B_T_top(fabric_io_west_oe_o[34]),
+        
+        .Tile_X0Y4_B_config_C_bit0(fabric_io_west_config0_o[34]),
+        .Tile_X0Y4_B_config_C_bit1(fabric_io_west_config1_o[34]),
+        .Tile_X0Y4_B_config_C_bit2(fabric_io_west_config2_o[34]),
+        .Tile_X0Y4_B_config_C_bit3(fabric_io_west_config3_o[34]),
 
         .Tile_X0Y4_C_O_top(fabric_io_west_in_i[33]),
         .Tile_X0Y4_C_I_top(fabric_io_west_out_o[33]),
         .Tile_X0Y4_C_T_top(fabric_io_west_oe_o[33]),
+        
+        .Tile_X0Y4_C_config_C_bit0(fabric_io_west_config0_o[33]),
+        .Tile_X0Y4_C_config_C_bit1(fabric_io_west_config1_o[33]),
+        .Tile_X0Y4_C_config_C_bit2(fabric_io_west_config2_o[33]),
+        .Tile_X0Y4_C_config_C_bit3(fabric_io_west_config3_o[33]),
 
         .Tile_X0Y4_D_O_top(fabric_io_west_in_i[32]),
         .Tile_X0Y4_D_I_top(fabric_io_west_out_o[32]),
         .Tile_X0Y4_D_T_top(fabric_io_west_oe_o[32]),
+        
+        .Tile_X0Y4_D_config_C_bit0(fabric_io_west_config0_o[32]),
+        .Tile_X0Y4_D_config_C_bit1(fabric_io_west_config1_o[32]),
+        .Tile_X0Y4_D_config_C_bit2(fabric_io_west_config2_o[32]),
+        .Tile_X0Y4_D_config_C_bit3(fabric_io_west_config3_o[32]),
 
         .Tile_X0Y5_A_O_top(fabric_io_west_in_i[31]),
         .Tile_X0Y5_A_I_top(fabric_io_west_out_o[31]),
         .Tile_X0Y5_A_T_top(fabric_io_west_oe_o[31]),
+        
+        .Tile_X0Y5_A_config_C_bit0(fabric_io_west_config0_o[31]),
+        .Tile_X0Y5_A_config_C_bit1(fabric_io_west_config1_o[31]),
+        .Tile_X0Y5_A_config_C_bit2(fabric_io_west_config2_o[31]),
+        .Tile_X0Y5_A_config_C_bit3(fabric_io_west_config3_o[31]),
 
         .Tile_X0Y5_B_O_top(fabric_io_west_in_i[30]),
         .Tile_X0Y5_B_I_top(fabric_io_west_out_o[30]),
         .Tile_X0Y5_B_T_top(fabric_io_west_oe_o[30]),
+        
+        .Tile_X0Y5_B_config_C_bit0(fabric_io_west_config0_o[30]),
+        .Tile_X0Y5_B_config_C_bit1(fabric_io_west_config1_o[30]),
+        .Tile_X0Y5_B_config_C_bit2(fabric_io_west_config2_o[30]),
+        .Tile_X0Y5_B_config_C_bit3(fabric_io_west_config3_o[30]),
 
         .Tile_X0Y5_C_O_top(fabric_io_west_in_i[29]),
         .Tile_X0Y5_C_I_top(fabric_io_west_out_o[29]),
         .Tile_X0Y5_C_T_top(fabric_io_west_oe_o[29]),
+        
+        .Tile_X0Y5_C_config_C_bit0(fabric_io_west_config0_o[29]),
+        .Tile_X0Y5_C_config_C_bit1(fabric_io_west_config1_o[29]),
+        .Tile_X0Y5_C_config_C_bit2(fabric_io_west_config2_o[29]),
+        .Tile_X0Y5_C_config_C_bit3(fabric_io_west_config3_o[29]),
 
         .Tile_X0Y5_D_O_top(fabric_io_west_in_i[28]),
         .Tile_X0Y5_D_I_top(fabric_io_west_out_o[28]),
         .Tile_X0Y5_D_T_top(fabric_io_west_oe_o[28]),
+        
+        .Tile_X0Y5_D_config_C_bit0(fabric_io_west_config0_o[28]),
+        .Tile_X0Y5_D_config_C_bit1(fabric_io_west_config1_o[28]),
+        .Tile_X0Y5_D_config_C_bit2(fabric_io_west_config2_o[28]),
+        .Tile_X0Y5_D_config_C_bit3(fabric_io_west_config3_o[28]),
 
         .Tile_X0Y6_A_O_top(fabric_io_west_in_i[27]),
         .Tile_X0Y6_A_I_top(fabric_io_west_out_o[27]),
         .Tile_X0Y6_A_T_top(fabric_io_west_oe_o[27]),
+        
+        .Tile_X0Y6_A_config_C_bit0(fabric_io_west_config0_o[27]),
+        .Tile_X0Y6_A_config_C_bit1(fabric_io_west_config1_o[27]),
+        .Tile_X0Y6_A_config_C_bit2(fabric_io_west_config2_o[27]),
+        .Tile_X0Y6_A_config_C_bit3(fabric_io_west_config3_o[27]),
 
         .Tile_X0Y6_B_O_top(fabric_io_west_in_i[26]),
         .Tile_X0Y6_B_I_top(fabric_io_west_out_o[26]),
         .Tile_X0Y6_B_T_top(fabric_io_west_oe_o[26]),
+        
+        .Tile_X0Y6_B_config_C_bit0(fabric_io_west_config0_o[26]),
+        .Tile_X0Y6_B_config_C_bit1(fabric_io_west_config1_o[26]),
+        .Tile_X0Y6_B_config_C_bit2(fabric_io_west_config2_o[26]),
+        .Tile_X0Y6_B_config_C_bit3(fabric_io_west_config3_o[26]),
 
         .Tile_X0Y6_C_O_top(fabric_io_west_in_i[25]),
         .Tile_X0Y6_C_I_top(fabric_io_west_out_o[25]),
         .Tile_X0Y6_C_T_top(fabric_io_west_oe_o[25]),
+        
+        .Tile_X0Y6_C_config_C_bit0(fabric_io_west_config0_o[25]),
+        .Tile_X0Y6_C_config_C_bit1(fabric_io_west_config1_o[25]),
+        .Tile_X0Y6_C_config_C_bit2(fabric_io_west_config2_o[25]),
+        .Tile_X0Y6_C_config_C_bit3(fabric_io_west_config3_o[25]),
 
         .Tile_X0Y6_D_O_top(fabric_io_west_in_i[24]),
         .Tile_X0Y6_D_I_top(fabric_io_west_out_o[24]),
         .Tile_X0Y6_D_T_top(fabric_io_west_oe_o[24]),
+        
+        .Tile_X0Y6_D_config_C_bit0(fabric_io_west_config0_o[24]),
+        .Tile_X0Y6_D_config_C_bit1(fabric_io_west_config1_o[24]),
+        .Tile_X0Y6_D_config_C_bit2(fabric_io_west_config2_o[24]),
+        .Tile_X0Y6_D_config_C_bit3(fabric_io_west_config3_o[24]),
 
         .Tile_X0Y7_A_O_top(fabric_io_west_in_i[23]),
         .Tile_X0Y7_A_I_top(fabric_io_west_out_o[23]),
         .Tile_X0Y7_A_T_top(fabric_io_west_oe_o[23]),
+        
+        .Tile_X0Y7_A_config_C_bit0(fabric_io_west_config0_o[23]),
+        .Tile_X0Y7_A_config_C_bit1(fabric_io_west_config1_o[23]),
+        .Tile_X0Y7_A_config_C_bit2(fabric_io_west_config2_o[23]),
+        .Tile_X0Y7_A_config_C_bit3(fabric_io_west_config3_o[23]),
 
         .Tile_X0Y7_B_O_top(fabric_io_west_in_i[22]),
         .Tile_X0Y7_B_I_top(fabric_io_west_out_o[22]),
         .Tile_X0Y7_B_T_top(fabric_io_west_oe_o[22]),
+        
+        .Tile_X0Y7_B_config_C_bit0(fabric_io_west_config0_o[22]),
+        .Tile_X0Y7_B_config_C_bit1(fabric_io_west_config1_o[22]),
+        .Tile_X0Y7_B_config_C_bit2(fabric_io_west_config2_o[22]),
+        .Tile_X0Y7_B_config_C_bit3(fabric_io_west_config3_o[22]),
 
         .Tile_X0Y7_C_O_top(fabric_io_west_in_i[21]),
         .Tile_X0Y7_C_I_top(fabric_io_west_out_o[21]),
         .Tile_X0Y7_C_T_top(fabric_io_west_oe_o[21]),
+        
+        .Tile_X0Y7_C_config_C_bit0(fabric_io_west_config0_o[21]),
+        .Tile_X0Y7_C_config_C_bit1(fabric_io_west_config1_o[21]),
+        .Tile_X0Y7_C_config_C_bit2(fabric_io_west_config2_o[21]),
+        .Tile_X0Y7_C_config_C_bit3(fabric_io_west_config3_o[21]),
 
         .Tile_X0Y7_D_O_top(fabric_io_west_in_i[20]),
         .Tile_X0Y7_D_I_top(fabric_io_west_out_o[20]),
         .Tile_X0Y7_D_T_top(fabric_io_west_oe_o[20]),
+        
+        .Tile_X0Y7_D_config_C_bit0(fabric_io_west_config0_o[20]),
+        .Tile_X0Y7_D_config_C_bit1(fabric_io_west_config1_o[20]),
+        .Tile_X0Y7_D_config_C_bit2(fabric_io_west_config2_o[20]),
+        .Tile_X0Y7_D_config_C_bit3(fabric_io_west_config3_o[20]),
 
         .Tile_X0Y8_A_O_top(fabric_io_west_in_i[19]),
         .Tile_X0Y8_A_I_top(fabric_io_west_out_o[19]),
         .Tile_X0Y8_A_T_top(fabric_io_west_oe_o[19]),
+        
+        .Tile_X0Y8_A_config_C_bit0(fabric_io_west_config0_o[19]),
+        .Tile_X0Y8_A_config_C_bit1(fabric_io_west_config1_o[19]),
+        .Tile_X0Y8_A_config_C_bit2(fabric_io_west_config2_o[19]),
+        .Tile_X0Y8_A_config_C_bit3(fabric_io_west_config3_o[19]),
 
         .Tile_X0Y8_B_O_top(fabric_io_west_in_i[18]),
         .Tile_X0Y8_B_I_top(fabric_io_west_out_o[18]),
         .Tile_X0Y8_B_T_top(fabric_io_west_oe_o[18]),
+        
+        .Tile_X0Y8_B_config_C_bit0(fabric_io_west_config0_o[18]),
+        .Tile_X0Y8_B_config_C_bit1(fabric_io_west_config1_o[18]),
+        .Tile_X0Y8_B_config_C_bit2(fabric_io_west_config2_o[18]),
+        .Tile_X0Y8_B_config_C_bit3(fabric_io_west_config3_o[18]),
 
         .Tile_X0Y8_C_O_top(fabric_io_west_in_i[17]),
         .Tile_X0Y8_C_I_top(fabric_io_west_out_o[17]),
         .Tile_X0Y8_C_T_top(fabric_io_west_oe_o[17]),
+        
+        .Tile_X0Y8_C_config_C_bit0(fabric_io_west_config0_o[17]),
+        .Tile_X0Y8_C_config_C_bit1(fabric_io_west_config1_o[17]),
+        .Tile_X0Y8_C_config_C_bit2(fabric_io_west_config2_o[17]),
+        .Tile_X0Y8_C_config_C_bit3(fabric_io_west_config3_o[17]),
 
         .Tile_X0Y8_D_O_top(fabric_io_west_in_i[16]),
         .Tile_X0Y8_D_I_top(fabric_io_west_out_o[16]),
         .Tile_X0Y8_D_T_top(fabric_io_west_oe_o[16]),
+        
+        .Tile_X0Y8_D_config_C_bit0(fabric_io_west_config0_o[16]),
+        .Tile_X0Y8_D_config_C_bit1(fabric_io_west_config1_o[16]),
+        .Tile_X0Y8_D_config_C_bit2(fabric_io_west_config2_o[16]),
+        .Tile_X0Y8_D_config_C_bit3(fabric_io_west_config3_o[16]),
 
         .Tile_X0Y9_A_O_top(fabric_io_west_in_i[15]),
         .Tile_X0Y9_A_I_top(fabric_io_west_out_o[15]),
         .Tile_X0Y9_A_T_top(fabric_io_west_oe_o[15]),
+        
+        .Tile_X0Y9_A_config_C_bit0(fabric_io_west_config0_o[15]),
+        .Tile_X0Y9_A_config_C_bit1(fabric_io_west_config1_o[15]),
+        .Tile_X0Y9_A_config_C_bit2(fabric_io_west_config2_o[15]),
+        .Tile_X0Y9_A_config_C_bit3(fabric_io_west_config3_o[15]),
 
         .Tile_X0Y9_B_O_top(fabric_io_west_in_i[14]),
         .Tile_X0Y9_B_I_top(fabric_io_west_out_o[14]),
         .Tile_X0Y9_B_T_top(fabric_io_west_oe_o[14]),
+        
+        .Tile_X0Y9_B_config_C_bit0(fabric_io_west_config0_o[14]),
+        .Tile_X0Y9_B_config_C_bit1(fabric_io_west_config1_o[14]),
+        .Tile_X0Y9_B_config_C_bit2(fabric_io_west_config2_o[14]),
+        .Tile_X0Y9_B_config_C_bit3(fabric_io_west_config3_o[14]),
 
         .Tile_X0Y9_C_O_top(fabric_io_west_in_i[13]),
         .Tile_X0Y9_C_I_top(fabric_io_west_out_o[13]),
         .Tile_X0Y9_C_T_top(fabric_io_west_oe_o[13]),
+        
+        .Tile_X0Y9_C_config_C_bit0(fabric_io_west_config0_o[13]),
+        .Tile_X0Y9_C_config_C_bit1(fabric_io_west_config1_o[13]),
+        .Tile_X0Y9_C_config_C_bit2(fabric_io_west_config2_o[13]),
+        .Tile_X0Y9_C_config_C_bit3(fabric_io_west_config3_o[13]),
 
         .Tile_X0Y9_D_O_top(fabric_io_west_in_i[12]),
         .Tile_X0Y9_D_I_top(fabric_io_west_out_o[12]),
         .Tile_X0Y9_D_T_top(fabric_io_west_oe_o[12]),
+        
+        .Tile_X0Y9_D_config_C_bit0(fabric_io_west_config0_o[12]),
+        .Tile_X0Y9_D_config_C_bit1(fabric_io_west_config1_o[12]),
+        .Tile_X0Y9_D_config_C_bit2(fabric_io_west_config2_o[12]),
+        .Tile_X0Y9_D_config_C_bit3(fabric_io_west_config3_o[12]),
 
         .Tile_X0Y10_A_O_top(fabric_io_west_in_i[11]),
         .Tile_X0Y10_A_I_top(fabric_io_west_out_o[11]),
         .Tile_X0Y10_A_T_top(fabric_io_west_oe_o[11]),
+        
+        .Tile_X0Y10_A_config_C_bit0(fabric_io_west_config0_o[11]),
+        .Tile_X0Y10_A_config_C_bit1(fabric_io_west_config1_o[11]),
+        .Tile_X0Y10_A_config_C_bit2(fabric_io_west_config2_o[11]),
+        .Tile_X0Y10_A_config_C_bit3(fabric_io_west_config3_o[11]),
 
         .Tile_X0Y10_B_O_top(fabric_io_west_in_i[10]),
         .Tile_X0Y10_B_I_top(fabric_io_west_out_o[10]),
         .Tile_X0Y10_B_T_top(fabric_io_west_oe_o[10]),
+        
+        .Tile_X0Y10_B_config_C_bit0(fabric_io_west_config0_o[10]),
+        .Tile_X0Y10_B_config_C_bit1(fabric_io_west_config1_o[10]),
+        .Tile_X0Y10_B_config_C_bit2(fabric_io_west_config2_o[10]),
+        .Tile_X0Y10_B_config_C_bit3(fabric_io_west_config3_o[10]),
 
         .Tile_X0Y10_C_O_top(fabric_io_west_in_i[9]),
         .Tile_X0Y10_C_I_top(fabric_io_west_out_o[9]),
         .Tile_X0Y10_C_T_top(fabric_io_west_oe_o[9]),
+        
+        .Tile_X0Y10_C_config_C_bit0(fabric_io_west_config0_o[9]),
+        .Tile_X0Y10_C_config_C_bit1(fabric_io_west_config1_o[9]),
+        .Tile_X0Y10_C_config_C_bit2(fabric_io_west_config2_o[9]),
+        .Tile_X0Y10_C_config_C_bit3(fabric_io_west_config3_o[9]),
 
         .Tile_X0Y10_D_O_top(fabric_io_west_in_i[8]),
         .Tile_X0Y10_D_I_top(fabric_io_west_out_o[8]),
         .Tile_X0Y10_D_T_top(fabric_io_west_oe_o[8]),
+        
+        .Tile_X0Y10_D_config_C_bit0(fabric_io_west_config0_o[8]),
+        .Tile_X0Y10_D_config_C_bit1(fabric_io_west_config1_o[8]),
+        .Tile_X0Y10_D_config_C_bit2(fabric_io_west_config2_o[8]),
+        .Tile_X0Y10_D_config_C_bit3(fabric_io_west_config3_o[8]),
 
         .Tile_X0Y11_A_O_top(fabric_io_west_in_i[7]),
         .Tile_X0Y11_A_I_top(fabric_io_west_out_o[7]),
         .Tile_X0Y11_A_T_top(fabric_io_west_oe_o[7]),
+        
+        .Tile_X0Y11_A_config_C_bit0(fabric_io_west_config0_o[7]),
+        .Tile_X0Y11_A_config_C_bit1(fabric_io_west_config1_o[7]),
+        .Tile_X0Y11_A_config_C_bit2(fabric_io_west_config2_o[7]),
+        .Tile_X0Y11_A_config_C_bit3(fabric_io_west_config3_o[7]),
 
         .Tile_X0Y11_B_O_top(fabric_io_west_in_i[6]),
         .Tile_X0Y11_B_I_top(fabric_io_west_out_o[6]),
         .Tile_X0Y11_B_T_top(fabric_io_west_oe_o[6]),
+        
+        .Tile_X0Y11_B_config_C_bit0(fabric_io_west_config0_o[6]),
+        .Tile_X0Y11_B_config_C_bit1(fabric_io_west_config1_o[6]),
+        .Tile_X0Y11_B_config_C_bit2(fabric_io_west_config2_o[6]),
+        .Tile_X0Y11_B_config_C_bit3(fabric_io_west_config3_o[6]),
 
         .Tile_X0Y11_C_O_top(fabric_io_west_in_i[5]),
         .Tile_X0Y11_C_I_top(fabric_io_west_out_o[5]),
         .Tile_X0Y11_C_T_top(fabric_io_west_oe_o[5]),
+        
+        .Tile_X0Y11_C_config_C_bit0(fabric_io_west_config0_o[5]),
+        .Tile_X0Y11_C_config_C_bit1(fabric_io_west_config1_o[5]),
+        .Tile_X0Y11_C_config_C_bit2(fabric_io_west_config2_o[5]),
+        .Tile_X0Y11_C_config_C_bit3(fabric_io_west_config3_o[5]),
 
         .Tile_X0Y11_D_O_top(fabric_io_west_in_i[4]),
         .Tile_X0Y11_D_I_top(fabric_io_west_out_o[4]),
         .Tile_X0Y11_D_T_top(fabric_io_west_oe_o[4]),
+        
+        .Tile_X0Y11_D_config_C_bit0(fabric_io_west_config0_o[4]),
+        .Tile_X0Y11_D_config_C_bit1(fabric_io_west_config1_o[4]),
+        .Tile_X0Y11_D_config_C_bit2(fabric_io_west_config2_o[4]),
+        .Tile_X0Y11_D_config_C_bit3(fabric_io_west_config3_o[4]),
 
         .Tile_X0Y12_A_O_top(fabric_io_west_in_i[3]),
         .Tile_X0Y12_A_I_top(fabric_io_west_out_o[3]),
         .Tile_X0Y12_A_T_top(fabric_io_west_oe_o[3]),
+        
+        .Tile_X0Y12_A_config_C_bit0(fabric_io_west_config0_o[3]),
+        .Tile_X0Y12_A_config_C_bit1(fabric_io_west_config1_o[3]),
+        .Tile_X0Y12_A_config_C_bit2(fabric_io_west_config2_o[3]),
+        .Tile_X0Y12_A_config_C_bit3(fabric_io_west_config3_o[3]),
 
         .Tile_X0Y12_B_O_top(fabric_io_west_in_i[2]),
         .Tile_X0Y12_B_I_top(fabric_io_west_out_o[2]),
         .Tile_X0Y12_B_T_top(fabric_io_west_oe_o[2]),
+        
+        .Tile_X0Y12_B_config_C_bit0(fabric_io_west_config0_o[2]),
+        .Tile_X0Y12_B_config_C_bit1(fabric_io_west_config1_o[2]),
+        .Tile_X0Y12_B_config_C_bit2(fabric_io_west_config2_o[2]),
+        .Tile_X0Y12_B_config_C_bit3(fabric_io_west_config3_o[2]),
 
         .Tile_X0Y12_C_O_top(fabric_io_west_in_i[1]),
         .Tile_X0Y12_C_I_top(fabric_io_west_out_o[1]),
         .Tile_X0Y12_C_T_top(fabric_io_west_oe_o[1]),
+        
+        .Tile_X0Y12_C_config_C_bit0(fabric_io_west_config0_o[1]),
+        .Tile_X0Y12_C_config_C_bit1(fabric_io_west_config1_o[1]),
+        .Tile_X0Y12_C_config_C_bit2(fabric_io_west_config2_o[1]),
+        .Tile_X0Y12_C_config_C_bit3(fabric_io_west_config3_o[1]),
 
         .Tile_X0Y12_D_O_top(fabric_io_west_in_i[0]),
         .Tile_X0Y12_D_I_top(fabric_io_west_out_o[0]),
         .Tile_X0Y12_D_T_top(fabric_io_west_oe_o[0]),
+        
+        .Tile_X0Y12_D_config_C_bit0(fabric_io_west_config0_o[0]),
+        .Tile_X0Y12_D_config_C_bit1(fabric_io_west_config1_o[0]),
+        .Tile_X0Y12_D_config_C_bit2(fabric_io_west_config2_o[0]),
+        .Tile_X0Y12_D_config_C_bit3(fabric_io_west_config3_o[0]),
 
         // WARMBOOT
         .Tile_X1Y13_RESET_top(fabric_warmboot_reset_i),

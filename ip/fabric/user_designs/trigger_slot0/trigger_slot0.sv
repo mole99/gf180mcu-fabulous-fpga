@@ -36,7 +36,7 @@ module top(
         .RESET  (RESET)
     );
     
-    	assign io_out = '1;
-	assign io_oeb = '0;
+    assign io_out = '1;
+    assign io_oeb = '0;
 
 endmodule
