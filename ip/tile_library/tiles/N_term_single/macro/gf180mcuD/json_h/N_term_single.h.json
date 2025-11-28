@@ -1,0 +1,211 @@
+{
+  "creator": "Yosys 0.54 (git sha1 db72ec3bde296a9512b2d1e6fabf81cfb07c2c1b, clang++ 19.1.7 -fPIC -O3)",
+  "modules": {
+    "N_term_single": {
+      "attributes": {
+        "hdlname": "N_term_single",
+        "dynports": "00000000000000000000000000000001",
+        "top": "00000000000000000000000000000001",
+        "src": "/home/leo/Repositories/gf180mcu-fabulous-fpga/ip/tile_library/tiles/N_term_single/N_term_single.v:1.1-680.10"
+      },
+      "parameter_default_values": {
+        "FrameBitsPerRow": "00000000000000000000000000100000",
+        "MaxFramesPerCol": "00000000000000000000000000010100"
+      },
+      "ports": {
+        "N1END": {
+          "direction": "input",
+          "bits": [ 2, 3, 4, 5 ]
+        },
+        "N2MID": {
+          "direction": "input",
+          "bits": [ 6, 7, 8, 9, 10, 11, 12, 13 ]
+        },
+        "N2END": {
+          "direction": "input",
+          "bits": [ 14, 15, 16, 17, 18, 19, 20, 21 ]
+        },
+        "N4END": {
+          "direction": "input",
+          "bits": [ 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37 ]
+        },
+        "NN4END": {
+          "direction": "input",
+          "bits": [ 38, 39, 40, 41, 42, 43, 44, 45, 46, 47, 48, 49, 50, 51, 52, 53 ]
+        },
+        "Ci": {
+          "direction": "input",
+          "bits": [ 54 ]
+        },
+        "S1BEG": {
+          "direction": "output",
+          "bits": [ 5, 4, 3, 2 ]
+        },
+        "S2BEG": {
+          "direction": "output",
+          "bits": [ 13, 12, 11, 10, 9, 8, 7, 6 ]
+        },
+        "S2BEGb": {
+          "direction": "output",
+          "bits": [ 21, 20, 19, 18, 17, 16, 15, 14 ]
+        },
+        "S4BEG": {
+          "direction": "output",
+          "bits": [ 37, 36, 35, 34, 33, 32, 31, 30, 29, 28, 27, 26, 25, 24, 23, 22 ]
+        },
+        "SS4BEG": {
+          "direction": "output",
+          "bits": [ 53, 52, 51, 50, 49, 48, 47, 46, 45, 44, 43, 42, 41, 40, 39, 38 ]
+        },
+        "UserCLK": {
+          "direction": "input",
+          "bits": [ 55 ]
+        },
+        "UserCLKo": {
+          "direction": "output",
+          "bits": [ 55 ]
+        },
+        "FrameData": {
+          "direction": "input",
+          "bits": [ 56, 57, 58, 59, 60, 61, 62, 63, 64, 65, 66, 67, 68, 69, 70, 71, 72, 73, 74, 75, 76, 77, 78, 79, 80, 81, 82, 83, 84, 85, 86, 87 ]
+        },
+        "FrameData_O": {
+          "direction": "output",
+          "bits": [ 56, 57, 58, 59, 60, 61, 62, 63, 64, 65, 66, 67, 68, 69, 70, 71, 72, 73, 74, 75, 76, 77, 78, 79, 80, 81, 82, 83, 84, 85, 86, 87 ]
+        },
+        "FrameStrobe": {
+          "direction": "input",
+          "bits": [ 88, 89, 90, 91, 92, 93, 94, 95, 96, 97, 98, 99, 100, 101, 102, 103, 104, 105, 106, 107 ]
+        },
+        "FrameStrobe_O": {
+          "direction": "output",
+          "bits": [ 88, 89, 90, 91, 92, 93, 94, 95, 96, 97, 98, 99, 100, 101, 102, 103, 104, 105, 106, 107 ]
+        }
+      },
+      "cells": {
+      },
+      "netnames": {
+        "Ci": {
+          "hide_name": 0,
+          "bits": [ 54 ],
+          "attributes": {
+            "single_bit_vector": "00000000000000000000000000000001",
+            "src": "/home/leo/Repositories/gf180mcu-fabulous-fpga/ip/tile_library/tiles/N_term_single/N_term_single.v:16.22-16.24"
+          }
+        },
+        "FrameData": {
+          "hide_name": 0,
+          "bits": [ 56, 57, 58, 59, 60, 61, 62, 63, 64, 65, 66, 67, 68, 69, 70, 71, 72, 73, 74, 75, 76, 77, 78, 79, 80, 81, 82, 83, 84, 85, 86, 87 ],
+          "attributes": {
+            "src": "/home/leo/Repositories/gf180mcu-fabulous-fpga/ip/tile_library/tiles/N_term_single/N_term_single.v:25.38-25.47"
+          }
+        },
+        "FrameData_O": {
+          "hide_name": 0,
+          "bits": [ 56, 57, 58, 59, 60, 61, 62, 63, 64, 65, 66, 67, 68, 69, 70, 71, 72, 73, 74, 75, 76, 77, 78, 79, 80, 81, 82, 83, 84, 85, 86, 87 ],
+          "attributes": {
+            "src": "/home/leo/Repositories/gf180mcu-fabulous-fpga/ip/tile_library/tiles/N_term_single/N_term_single.v:26.39-26.50"
+          }
+        },
+        "FrameStrobe": {
+          "hide_name": 0,
+          "bits": [ 88, 89, 90, 91, 92, 93, 94, 95, 96, 97, 98, 99, 100, 101, 102, 103, 104, 105, 106, 107 ],
+          "attributes": {
+            "src": "/home/leo/Repositories/gf180mcu-fabulous-fpga/ip/tile_library/tiles/N_term_single/N_term_single.v:27.38-27.49"
+          }
+        },
+        "FrameStrobe_O": {
+          "hide_name": 0,
+          "bits": [ 88, 89, 90, 91, 92, 93, 94, 95, 96, 97, 98, 99, 100, 101, 102, 103, 104, 105, 106, 107 ],
+          "attributes": {
+            "src": "/home/leo/Repositories/gf180mcu-fabulous-fpga/ip/tile_library/tiles/N_term_single/N_term_single.v:28.39-28.52"
+          }
+        },
+        "N1END": {
+          "hide_name": 0,
+          "bits": [ 2, 3, 4, 5 ],
+          "attributes": {
+            "src": "/home/leo/Repositories/gf180mcu-fabulous-fpga/ip/tile_library/tiles/N_term_single/N_term_single.v:11.22-11.27"
+          }
+        },
+        "N2END": {
+          "hide_name": 0,
+          "bits": [ 14, 15, 16, 17, 18, 19, 20, 21 ],
+          "attributes": {
+            "src": "/home/leo/Repositories/gf180mcu-fabulous-fpga/ip/tile_library/tiles/N_term_single/N_term_single.v:13.22-13.27"
+          }
+        },
+        "N2MID": {
+          "hide_name": 0,
+          "bits": [ 6, 7, 8, 9, 10, 11, 12, 13 ],
+          "attributes": {
+            "src": "/home/leo/Repositories/gf180mcu-fabulous-fpga/ip/tile_library/tiles/N_term_single/N_term_single.v:12.22-12.27"
+          }
+        },
+        "N4END": {
+          "hide_name": 0,
+          "bits": [ 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37 ],
+          "attributes": {
+            "src": "/home/leo/Repositories/gf180mcu-fabulous-fpga/ip/tile_library/tiles/N_term_single/N_term_single.v:14.23-14.28"
+          }
+        },
+        "NN4END": {
+          "hide_name": 0,
+          "bits": [ 38, 39, 40, 41, 42, 43, 44, 45, 46, 47, 48, 49, 50, 51, 52, 53 ],
+          "attributes": {
+            "src": "/home/leo/Repositories/gf180mcu-fabulous-fpga/ip/tile_library/tiles/N_term_single/N_term_single.v:15.23-15.29"
+          }
+        },
+        "S1BEG": {
+          "hide_name": 0,
+          "bits": [ 5, 4, 3, 2 ],
+          "attributes": {
+            "src": "/home/leo/Repositories/gf180mcu-fabulous-fpga/ip/tile_library/tiles/N_term_single/N_term_single.v:17.23-17.28"
+          }
+        },
+        "S2BEG": {
+          "hide_name": 0,
+          "bits": [ 13, 12, 11, 10, 9, 8, 7, 6 ],
+          "attributes": {
+            "src": "/home/leo/Repositories/gf180mcu-fabulous-fpga/ip/tile_library/tiles/N_term_single/N_term_single.v:18.23-18.28"
+          }
+        },
+        "S2BEGb": {
+          "hide_name": 0,
+          "bits": [ 21, 20, 19, 18, 17, 16, 15, 14 ],
+          "attributes": {
+            "src": "/home/leo/Repositories/gf180mcu-fabulous-fpga/ip/tile_library/tiles/N_term_single/N_term_single.v:19.23-19.29"
+          }
+        },
+        "S4BEG": {
+          "hide_name": 0,
+          "bits": [ 37, 36, 35, 34, 33, 32, 31, 30, 29, 28, 27, 26, 25, 24, 23, 22 ],
+          "attributes": {
+            "src": "/home/leo/Repositories/gf180mcu-fabulous-fpga/ip/tile_library/tiles/N_term_single/N_term_single.v:20.24-20.29"
+          }
+        },
+        "SS4BEG": {
+          "hide_name": 0,
+          "bits": [ 53, 52, 51, 50, 49, 48, 47, 46, 45, 44, 43, 42, 41, 40, 39, 38 ],
+          "attributes": {
+            "src": "/home/leo/Repositories/gf180mcu-fabulous-fpga/ip/tile_library/tiles/N_term_single/N_term_single.v:21.24-21.30"
+          }
+        },
+        "UserCLK": {
+          "hide_name": 0,
+          "bits": [ 55 ],
+          "attributes": {
+            "src": "/home/leo/Repositories/gf180mcu-fabulous-fpga/ip/tile_library/tiles/N_term_single/N_term_single.v:23.16-23.23"
+          }
+        },
+        "UserCLKo": {
+          "hide_name": 0,
+          "bits": [ 55 ],
+          "attributes": {
+            "src": "/home/leo/Repositories/gf180mcu-fabulous-fpga/ip/tile_library/tiles/N_term_single/N_term_single.v:24.17-24.25"
+          }
+        }
+      }
+    }
+  }
+}
