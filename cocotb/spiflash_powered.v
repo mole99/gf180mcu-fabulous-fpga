@@ -105,7 +105,7 @@ module spiflash_powered (
 	reg [1023:0] flash1_slot1_file;
 	initial begin
 		if ($value$plusargs("flash1_slot0=%s", flash1_slot0_file)) $readmemh(flash1_slot0_file, memory);
-		if ($value$plusargs("flash1_slot1=%s", flash1_slot1_file)) $readmemh(flash1_slot1_file, memory, 32'h8000);
+		if ($value$plusargs("flash1_slot1=%s", flash1_slot1_file)) $readmemh(flash1_slot1_file, memory, 32'h4000);
 	end
 
 	task spi_action;

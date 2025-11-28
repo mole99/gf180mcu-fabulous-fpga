@@ -35,7 +35,12 @@ with open('fabric_wrapper.sv', 'w') as f:
         print(f'    // I/Os West')
         print("""    input  [FABRIC_NUM_IO_WEST-1:0]      fabric_io_west_in_i,
     output [FABRIC_NUM_IO_WEST-1:0]      fabric_io_west_out_o,
-    output [FABRIC_NUM_IO_WEST-1:0]      fabric_io_west_oe_o,\n""")
+    output [FABRIC_NUM_IO_WEST-1:0]      fabric_io_west_oe_o,
+    
+    output [FABRIC_NUM_IO_WEST-1:0]      fabric_io_west_config0_o,
+    output [FABRIC_NUM_IO_WEST-1:0]      fabric_io_west_config1_o,
+    output [FABRIC_NUM_IO_WEST-1:0]      fabric_io_west_config2_o,
+    output [FABRIC_NUM_IO_WEST-1:0]      fabric_io_west_config3_o,\n""")
 
         # WARMBOOT
         print(f'    // WARMBOOT')
@@ -76,7 +81,12 @@ with open('fabric_wrapper.sv', 'w') as f:
             for j, bel in enumerate(BELS_PER_IO_TILE):
                 print(f"""        .Tile_X0Y{i}_{bel}_O_top(fabric_io_west_in_i[{FABRIC_NUM_IO_WEST-1-((i-IO_WEST_OFFSET)*num_bels+j)}]),
         .Tile_X0Y{i}_{bel}_I_top(fabric_io_west_out_o[{FABRIC_NUM_IO_WEST-1-((i-IO_WEST_OFFSET)*num_bels+j)}]),
-        .Tile_X0Y{i}_{bel}_T_top(fabric_io_west_oe_o[{FABRIC_NUM_IO_WEST-1-((i-IO_WEST_OFFSET)*num_bels+j)}]),\n""")
+        .Tile_X0Y{i}_{bel}_T_top(fabric_io_west_oe_o[{FABRIC_NUM_IO_WEST-1-((i-IO_WEST_OFFSET)*num_bels+j)}]),
+        
+        .Tile_X0Y{i}_{bel}_config_C_bit0(fabric_io_west_config0_o[{FABRIC_NUM_IO_WEST-1-((i-IO_WEST_OFFSET)*num_bels+j)}]),
+        .Tile_X0Y{i}_{bel}_config_C_bit1(fabric_io_west_config1_o[{FABRIC_NUM_IO_WEST-1-((i-IO_WEST_OFFSET)*num_bels+j)}]),
+        .Tile_X0Y{i}_{bel}_config_C_bit2(fabric_io_west_config2_o[{FABRIC_NUM_IO_WEST-1-((i-IO_WEST_OFFSET)*num_bels+j)}]),
+        .Tile_X0Y{i}_{bel}_config_C_bit3(fabric_io_west_config3_o[{FABRIC_NUM_IO_WEST-1-((i-IO_WEST_OFFSET)*num_bels+j)}]),\n""")
 
         # WARMBOOT
         warmboot_coords = f'X1Y{ROWS-1}'
