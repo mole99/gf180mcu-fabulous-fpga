@@ -9,7 +9,7 @@ Based on the [project template](https://github.com/wafer-space/gf180mcu-project-
 </p>
 
 - [FABulous](https://github.com/FPGA-Research/FABulous) eFPGA
-- 48x I/Os
+  - 48x I/Os
   - 480x LUT4 + FF
     - w. carry chain
   - 60x MUX
