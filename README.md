@@ -1,6 +1,33 @@
-# gf180mcu Project Template
+# gf180mcu FABulous FPGA
 
-Project template for wafer.space MPW runs using the gf180mcu PDK.
+Based on the [project template](https://github.com/wafer-space/gf180mcu-project-template) for wafer.space MPW runs using the gf180mcu PDK.
+
+<p align="center">
+  <a href="img/chip_top_white.png">
+    <img src="img/chip_top_white.png" alt="chip layout" width=35%>
+  </a>
+</p>
+
+- [FABulous](https://github.com/FPGA-Research/FABulous) eFPGA
+- 48x I/Os
+  - 480x LUT4 + FF
+    - w. carry chain
+  - 60x MUX
+    - Either 1xMUX8, 2xMUX4 or 4xMUX2
+  - 6x SRAM 512x8
+    - individual bit-enable
+  - 6x MAC
+    - 8bit*8bit + 20bit
+    - sign-extend
+    - sync/async operands and/or ACC
+  - 12x Register file
+    - 32x4bit each
+    - 1w1r1r
+    - sync/async output
+  - 1x Global clock network
+  - 1x WARMBOOT
+    - Trigger a reconfiguration from one of 16 slots
+    - Provides a reset signal which is asserted during reconfiguration
 
 ## Prerequisites
 
