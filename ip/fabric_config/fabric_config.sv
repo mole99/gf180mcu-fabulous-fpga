@@ -75,7 +75,7 @@ module fabric_config #(
     assign busy_o = curr_state != S_IDLE;
 
     // State transition
-    always_ff @(posedge clk_i, negedge rst_ni) begin
+    always_ff @(posedge clk_i) begin
         if (!rst_ni) begin
             curr_state <= S_IDLE;
         end else begin
@@ -83,7 +83,7 @@ module fabric_config #(
         end
     end
     
-    always_ff @(posedge clk_i, negedge rst_ni) begin
+    always_ff @(posedge clk_i) begin
         if (!rst_ni) begin
             configured_o <= '0;
         end else begin
@@ -95,7 +95,7 @@ module fabric_config #(
     end
     
     
-    always_ff @(posedge clk_i, negedge rst_ni) begin
+    always_ff @(posedge clk_i) begin
         if (!rst_ni) begin
             column_select <= '0;
             frame_select  <= '0;
