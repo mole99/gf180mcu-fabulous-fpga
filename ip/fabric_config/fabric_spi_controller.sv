@@ -84,7 +84,7 @@ module fabric_spi_controller #(
     assign busy_o = curr_state != S_IDLE;
 
     // State transition
-    always_ff @(posedge clk_i, negedge rst_ni) begin
+    always_ff @(posedge clk_i) begin
         if (!rst_ni) begin
             curr_state <= S_IDLE;
         end else begin
@@ -92,7 +92,7 @@ module fabric_spi_controller #(
         end
     end
     
-    always_ff @(posedge clk_i, negedge rst_ni) begin
+    always_ff @(posedge clk_i) begin
         if (!rst_ni) begin
             shift_cnt <= '0;
             shift_register <= '0;

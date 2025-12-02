@@ -102,6 +102,7 @@ async def test_all_ones(dut):
     
     # Wait for done
     await FallingEdge(dut.config_busy_PAD)
+    await ClockCycles(dut.clk_PAD, 1)
 
     assert (dut.fpga_PAD.value == (1<<48)-1)
 
@@ -133,6 +134,7 @@ async def test_all_zeros(dut):
     
     # Wait for done
     await FallingEdge(dut.config_busy_PAD)
+    await ClockCycles(dut.clk_PAD, 1)
 
     assert (dut.fpga_PAD.value == 0)
 
@@ -192,16 +194,19 @@ async def test_trigger_slot(dut):
     
     # Wait for done
     await FallingEdge(dut.config_busy_PAD)
+    await ClockCycles(dut.clk_PAD, 1)
 
     assert (dut.fpga_PAD.value == 0)
 
     # Wait for done
     await FallingEdge(dut.config_busy_PAD)
+    await ClockCycles(dut.clk_PAD, 1)
 
     assert (dut.fpga_PAD.value == (1<<48)-1)
 
     # Wait for done
     await FallingEdge(dut.config_busy_PAD)
+    await ClockCycles(dut.clk_PAD, 1)
 
     assert (dut.fpga_PAD.value == 0)
 

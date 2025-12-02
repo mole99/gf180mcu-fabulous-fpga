@@ -47,6 +47,21 @@ module chip_core #(
     output wire [NUM_FPGA_PADS-1:0] fpga_pd    // Pull-down
 );
 
+    // Reset with asynchronous assertion and synchronous relase
+    logic [1:0] rst_nd;
+    logic rst_n_sync;
+    
+    always_ff @(posedge clk, negedge rst_n) begin
+        if (!rst_n) begin
+            rst_nd <= '0;
+        end else begin
+            rst_nd[0] <= 1'b1;
+            rst_nd[1] <= rst_nd[0];
+        end
+    end
+    
+    assign rst_n_sync = rst_nd[1];
+
     // Fabric parameters
     parameter FrameBitsPerRow = 32;
     parameter MaxFramesPerCol = 20;
@@ -66,17 +81,6 @@ module chip_core #(
     logic [FABRIC_NUM_IO_WEST-1:0] fabric_gpio_config2;
     logic [FABRIC_NUM_IO_WEST-1:0] fabric_gpio_config3;
     
-    assign fabric_gpio_i = fpga_in[FABRIC_NUM_IO_WEST-1:0];
-    assign fpga_out[FABRIC_NUM_IO_WEST-1:0] = fabric_gpio_o;
-    assign fpga_oe[FABRIC_NUM_IO_WEST-1:0] = fabric_gpio_oe_o;
-    assign fpga_cs = fabric_gpio_config2;
-    assign fpga_sl = fabric_gpio_config3;
-    assign fpga_ie = ~fpga_oe;
-    assign fpga_pu = fabric_gpio_config0;
-    assign fpga_pd = fabric_gpio_config1;
-    
-    // ------------
-    
     // Fabric config is currently
     // configuring the fabric
     wire            fabric_config_busy;
@@ -91,20 +95,17 @@ module chip_core #(
     wire [(FrameBitsPerRow*NumRows)-1:0]    FrameData;
     wire [(MaxFramesPerCol*NumColumns)-1:0] FrameStrobe;
 
-    // Reset with asynchronous assertion and synchronous relase
-    logic [1:0] rst_nd;
-    logic rst_n_sync;
-    
-    always_ff @(posedge clk, negedge rst_n) begin
-        if (!rst_n) begin
-            rst_nd <= '0;
-        end else begin
-            rst_nd[0] <= 1'b1;
-            rst_nd[1] <= rst_nd[0];
-        end
-    end
-    
-    assign rst_n_sync = rst_nd[1];
+    // Assign all control signals
+    // Make sure the I/Os are tristate if reset is applied
+    // or if the fabric is not configured
+    assign fabric_gpio_i = fpga_in[FABRIC_NUM_IO_WEST-1:0];
+    assign fpga_out[FABRIC_NUM_IO_WEST-1:0] = fabric_gpio_o;
+    assign fpga_oe[FABRIC_NUM_IO_WEST-1:0] = fabric_gpio_oe_o & {FABRIC_NUM_IO_WEST{rst_n_sync}} & {FABRIC_NUM_IO_WEST{fabric_config_configured}};
+    assign fpga_cs = fabric_gpio_config2;
+    assign fpga_sl = fabric_gpio_config3;
+    assign fpga_ie = ~fpga_oe;
+    assign fpga_pu = fabric_gpio_config0;
+    assign fpga_pd = fabric_gpio_config1;
 
     // Sync fpga_mode_i
     logic [1:0] fpga_mode_d;
