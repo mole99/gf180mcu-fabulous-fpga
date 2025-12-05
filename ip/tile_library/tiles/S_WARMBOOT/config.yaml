@@ -11,6 +11,8 @@ VERILOG_FILES:
   - dir::../../custom.v
 FABULOUS_EXTERNAL_SIDE: S
 
+DIODE_ON_PORTS: in
+
 # Clock
 CLOCK_PERIOD: 20
 CLOCK_PORT: UserCLK
@@ -29,5 +31,8 @@ pdk::gf180mcuD:
     # Height should be multiple of 0.56 (Metal3 pitch)
     # Standard cell row height: 3.92 (8 Metal3 track)
     DIE_AREA: [0, 0, 287.28, 71.12]
+
+    ROUTING_OBSTRUCTIONS:
+      - [Metal4, 0, 71.12, 287.28, 72.12]
 
 SYNTH_LATCH_MAP: dir::../../latch_map.v
