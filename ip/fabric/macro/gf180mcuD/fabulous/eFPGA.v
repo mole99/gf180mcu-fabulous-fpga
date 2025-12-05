@@ -4,10 +4,6 @@ module eFPGA
         parameter FrameBitsPerRow=32
     )
     (
-        `ifdef USE_POWER_PINS
-        inout VDD,
-        inout VSS,
-        `endif
         input  Tile_X0Y1_A_O_top, //EXTERNAL
         output  Tile_X0Y1_A_I_top, //EXTERNAL
         output  Tile_X0Y1_A_T_top, //EXTERNAL

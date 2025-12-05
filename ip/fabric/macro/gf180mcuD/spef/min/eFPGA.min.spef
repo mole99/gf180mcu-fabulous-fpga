@@ -1,6 +1,6 @@
 *SPEF "ieee 1481-1999"
 *DESIGN "eFPGA"
-*DATE "11:21:29 Friday November 28, 2025"
+*DATE "23:06:55 Friday December 05, 2025"
 *VENDOR "The OpenROAD Project"
 *PROGRAM "OpenROAD"
 *VERSION "341650e72dad0dc8571822ff8c5d9c5e365327f7"
@@ -30043,15 +30043,17 @@ UserCLK I
 1 FrameData[279] *26152:FrameData[23] 0.152 
 *END
 
-*D_NET *200 0.0120968
+*D_NET *200 0.0113914
 *CONN
 *P FrameData[27] I
 *I *26154:FrameData[27] I *D N_term_single
 *CAP
-1 FrameData[27] 0.00192515
-2 *26154:FrameData[27] 0.00192515
-3 *26154:FrameData[27] *26154:FrameData[28] 0.00412328
-4 *26154:FrameData[26] *26154:FrameData[27] 0.00412328
+1 FrameData[27] 0.00346543
+2 *26154:FrameData[27] 0.00346543
+3 *26154:FrameData[27] *26154:FrameData[28] 7.55721e-05
+4 *26154:FrameData[27] *26154:FrameData[29] 0
+5 *26154:FrameData[27] *211:13 0.000261731
+6 *26154:FrameData[26] *26154:FrameData[27] 0.00412328
 *RES
 1 FrameData[27] *26154:FrameData[27] 38.912 
 *END
@@ -30185,17 +30187,22 @@ UserCLK I
 1 FrameData[289] *26153:FrameData[1] 0.152 
 *END
 
-*D_NET *211 0.0120968
+*D_NET *211 0.0135733
 *CONN
 *P FrameData[28] I
 *I *26154:FrameData[28] I *D N_term_single
 *CAP
-1 FrameData[28] 0.00192515
-2 *26154:FrameData[28] 0.00192515
-3 *26154:FrameData[28] *26154:FrameData[29] 0.00412328
-4 *26154:FrameData[27] *26154:FrameData[28] 0.00412328
+1 FrameData[28] 0.00338763
+2 *26154:FrameData[28] 0.000418163
+3 *211:13 0.0038058
+4 *26154:FrameData[28] *26154:FrameData[29] 8.65071e-05
+5 *211:13 *26154:FrameData[29] 0.000256096
+6 *211:13 *26154:FrameData[31] 0.00528184
+7 *26154:FrameData[27] *26154:FrameData[28] 7.55721e-05
+8 *26154:FrameData[27] *211:13 0.000261731
 *RES
-1 FrameData[28] *26154:FrameData[28] 38.912 
+1 FrameData[28] *211:13 49.622 
+2 *211:13 *26154:FrameData[28] 12.078 
 *END
 
 *D_NET *212 4.12747e-05
@@ -30328,15 +30335,17 @@ UserCLK I
 1 FrameData[299] *26153:FrameData[11] 0.152 
 *END
 
-*D_NET *222 0.0120968
+*D_NET *222 0.011436
 *CONN
 *P FrameData[29] I
 *I *26154:FrameData[29] I *D N_term_single
 *CAP
-1 FrameData[29] 0.00192515
-2 *26154:FrameData[29] 0.00192515
-3 *26154:FrameData[29] *26154:FrameData[30] 0.00412328
-4 *26154:FrameData[28] *26154:FrameData[29] 0.00412328
+1 FrameData[29] 0.00349341
+2 *26154:FrameData[29] 0.00349341
+3 *26154:FrameData[29] *26154:FrameData[30] 0.00410653
+4 *26154:FrameData[27] *26154:FrameData[29] 0
+5 *26154:FrameData[28] *26154:FrameData[29] 8.65071e-05
+6 *211:13 *26154:FrameData[29] 0.000256096
 *RES
 1 FrameData[29] *26154:FrameData[29] 38.912 
 *END
@@ -30484,15 +30493,15 @@ UserCLK I
 1 FrameData[309] *26153:FrameData[21] 0.152 
 *END
 
-*D_NET *234 0.0115685
+*D_NET *234 0.0121386
 *CONN
 *P FrameData[30] I
 *I *26154:FrameData[30] I *D N_term_single
 *CAP
-1 FrameData[30] 0.00307563
-2 *26154:FrameData[30] 0.00307563
-3 *26154:FrameData[30] *26154:FrameData[31] 0.00129393
-4 *26154:FrameData[29] *26154:FrameData[30] 0.00412328
+1 FrameData[30] 0.00196279
+2 *26154:FrameData[30] 0.00196279
+3 *26154:FrameData[30] *26154:FrameData[31] 0.00410653
+4 *26154:FrameData[29] *26154:FrameData[30] 0.00410653
 *RES
 1 FrameData[30] *26154:FrameData[30] 38.912 
 *END
@@ -30626,16 +30635,17 @@ UserCLK I
 1 FrameData[319] *26153:FrameData[31] 0.152 
 *END
 
-*D_NET *245 0.0110742
+*D_NET *245 0.0126243
 *CONN
 *P FrameData[31] I
 *I *26154:FrameData[31] I *D N_term_single
 *CAP
-1 FrameData[31] 0.00489013
-2 *26154:FrameData[31] 0.00489013
-3 *26154:FrameData[30] *26154:FrameData[31] 0.00129393
+1 FrameData[31] 0.00161799
+2 *26154:FrameData[31] 0.00161799
+3 *26154:FrameData[30] *26154:FrameData[31] 0.00410653
+4 *211:13 *26154:FrameData[31] 0.00528184
 *RES
-1 FrameData[31] *26154:FrameData[31] 40.052 
+1 FrameData[31] *26154:FrameData[31] 38.912 
 *END
 
 *D_NET *246 4.12747e-05
@@ -33272,15 +33282,15 @@ UserCLK I
 1 FrameData[9] *26154:FrameData[9] 38.912 
 *END
 
-*D_NET *449 0.00683759
+*D_NET *449 0.00682666
 *CONN
 *P FrameStrobe[0] I
 *I *26144:FrameStrobe[0] I *D W_IO4
 *CAP
-1 FrameStrobe[0] 0.0034188
-2 *26144:FrameStrobe[0] 0.0034188
+1 FrameStrobe[0] 0.00341333
+2 *26144:FrameStrobe[0] 0.00341333
 *RES
-1 FrameStrobe[0] *26144:FrameStrobe[0] 20.824 
+1 FrameStrobe[0] *26144:FrameStrobe[0] 20.786 
 *END
 
 *D_NET *450 0.000454714
@@ -33393,15 +33403,15 @@ UserCLK I
 1 FrameStrobe[109] *26214:FrameStrobe[9] 1.482 
 *END
 
-*D_NET *460 0.00682477
+*D_NET *460 0.00681384
 *CONN
 *P FrameStrobe[10] I
 *I *26144:FrameStrobe[10] I *D W_IO4
 *CAP
-1 FrameStrobe[10] 0.00341238
-2 *26144:FrameStrobe[10] 0.00341238
+1 FrameStrobe[10] 0.00340692
+2 *26144:FrameStrobe[10] 0.00340692
 *RES
-1 FrameStrobe[10] *26144:FrameStrobe[10] 20.824 
+1 FrameStrobe[10] *26144:FrameStrobe[10] 20.786 
 *END
 
 *D_NET *461 0.000452066
@@ -33514,15 +33524,15 @@ UserCLK I
 1 FrameStrobe[119] *26214:FrameStrobe[19] 1.482 
 *END
 
-*D_NET *471 0.00682477
+*D_NET *471 0.00681384
 *CONN
 *P FrameStrobe[11] I
 *I *26144:FrameStrobe[11] I *D W_IO4
 *CAP
-1 FrameStrobe[11] 0.00341238
-2 *26144:FrameStrobe[11] 0.00341238
+1 FrameStrobe[11] 0.00340692
+2 *26144:FrameStrobe[11] 0.00340692
 *RES
-1 FrameStrobe[11] *26144:FrameStrobe[11] 20.824 
+1 FrameStrobe[11] *26144:FrameStrobe[11] 20.786 
 *END
 
 *D_NET *472 0.000454714
@@ -33635,15 +33645,15 @@ UserCLK I
 1 FrameStrobe[129] *26226:FrameStrobe[9] 1.482 
 *END
 
-*D_NET *482 0.00682477
+*D_NET *482 0.00681384
 *CONN
 *P FrameStrobe[12] I
 *I *26144:FrameStrobe[12] I *D W_IO4
 *CAP
-1 FrameStrobe[12] 0.00341238
-2 *26144:FrameStrobe[12] 0.00341238
+1 FrameStrobe[12] 0.00340692
+2 *26144:FrameStrobe[12] 0.00340692
 *RES
-1 FrameStrobe[12] *26144:FrameStrobe[12] 20.824 
+1 FrameStrobe[12] *26144:FrameStrobe[12] 20.786 
 *END
 
 *D_NET *483 0.000452066
@@ -33756,15 +33766,15 @@ UserCLK I
 1 FrameStrobe[139] *26226:FrameStrobe[19] 1.482 
 *END
 
-*D_NET *493 0.00682477
+*D_NET *493 0.00681384
 *CONN
 *P FrameStrobe[13] I
 *I *26144:FrameStrobe[13] I *D W_IO4
 *CAP
-1 FrameStrobe[13] 0.00341238
-2 *26144:FrameStrobe[13] 0.00341238
+1 FrameStrobe[13] 0.00340692
+2 *26144:FrameStrobe[13] 0.00340692
 *RES
-1 FrameStrobe[13] *26144:FrameStrobe[13] 20.824 
+1 FrameStrobe[13] *26144:FrameStrobe[13] 20.786 
 *END
 
 *D_NET *494 0.000454714
@@ -33877,15 +33887,15 @@ UserCLK I
 1 FrameStrobe[149] *26236:FrameStrobe[9] 1.482 
 *END
 
-*D_NET *504 0.00682479
+*D_NET *504 0.00681386
 *CONN
 *P FrameStrobe[14] I
 *I *26144:FrameStrobe[14] I *D W_IO4
 *CAP
-1 FrameStrobe[14] 0.0034124
-2 *26144:FrameStrobe[14] 0.0034124
+1 FrameStrobe[14] 0.00340693
+2 *26144:FrameStrobe[14] 0.00340693
 *RES
-1 FrameStrobe[14] *26144:FrameStrobe[14] 20.824 
+1 FrameStrobe[14] *26144:FrameStrobe[14] 20.786 
 *END
 
 *D_NET *505 0.000452066
@@ -33998,15 +34008,15 @@ UserCLK I
 1 FrameStrobe[159] *26236:FrameStrobe[19] 1.482 
 *END
 
-*D_NET *515 0.00682479
+*D_NET *515 0.00681386
 *CONN
 *P FrameStrobe[15] I
 *I *26144:FrameStrobe[15] I *D W_IO4
 *CAP
-1 FrameStrobe[15] 0.0034124
-2 *26144:FrameStrobe[15] 0.0034124
+1 FrameStrobe[15] 0.00340693
+2 *26144:FrameStrobe[15] 0.00340693
 *RES
-1 FrameStrobe[15] *26144:FrameStrobe[15] 20.824 
+1 FrameStrobe[15] *26144:FrameStrobe[15] 20.786 
 *END
 
 *D_NET *516 0.000426445
@@ -34121,15 +34131,15 @@ UserCLK I
 1 FrameStrobe[169] *26248:FrameStrobe[9] 1.482 
 *END
 
-*D_NET *526 0.00682479
+*D_NET *526 0.00681386
 *CONN
 *P FrameStrobe[16] I
 *I *26144:FrameStrobe[16] I *D W_IO4
 *CAP
-1 FrameStrobe[16] 0.0034124
-2 *26144:FrameStrobe[16] 0.0034124
+1 FrameStrobe[16] 0.00340693
+2 *26144:FrameStrobe[16] 0.00340693
 *RES
-1 FrameStrobe[16] *26144:FrameStrobe[16] 20.824 
+1 FrameStrobe[16] *26144:FrameStrobe[16] 20.786 
 *END
 
 *D_NET *527 0.000426445
@@ -34242,48 +34252,48 @@ UserCLK I
 1 FrameStrobe[179] *26248:FrameStrobe[19] 1.482 
 *END
 
-*D_NET *537 0.00682479
+*D_NET *537 0.00681386
 *CONN
 *P FrameStrobe[17] I
 *I *26144:FrameStrobe[17] I *D W_IO4
 *CAP
-1 FrameStrobe[17] 0.0034124
-2 *26144:FrameStrobe[17] 0.0034124
+1 FrameStrobe[17] 0.00340693
+2 *26144:FrameStrobe[17] 0.00340693
 *RES
-1 FrameStrobe[17] *26144:FrameStrobe[17] 20.824 
+1 FrameStrobe[17] *26144:FrameStrobe[17] 20.786 
 *END
 
-*D_NET *538 0.00682479
+*D_NET *538 0.00681386
 *CONN
 *P FrameStrobe[18] I
 *I *26144:FrameStrobe[18] I *D W_IO4
 *CAP
-1 FrameStrobe[18] 0.0034124
-2 *26144:FrameStrobe[18] 0.0034124
+1 FrameStrobe[18] 0.00340693
+2 *26144:FrameStrobe[18] 0.00340693
 *RES
-1 FrameStrobe[18] *26144:FrameStrobe[18] 20.824 
+1 FrameStrobe[18] *26144:FrameStrobe[18] 20.786 
 *END
 
-*D_NET *539 0.00682479
+*D_NET *539 0.00681386
 *CONN
 *P FrameStrobe[19] I
 *I *26144:FrameStrobe[19] I *D W_IO4
 *CAP
-1 FrameStrobe[19] 0.0034124
-2 *26144:FrameStrobe[19] 0.0034124
+1 FrameStrobe[19] 0.00340693
+2 *26144:FrameStrobe[19] 0.00340693
 *RES
-1 FrameStrobe[19] *26144:FrameStrobe[19] 20.824 
+1 FrameStrobe[19] *26144:FrameStrobe[19] 20.786 
 *END
 
-*D_NET *540 0.00683759
+*D_NET *540 0.00682666
 *CONN
 *P FrameStrobe[1] I
 *I *26144:FrameStrobe[1] I *D W_IO4
 *CAP
-1 FrameStrobe[1] 0.0034188
-2 *26144:FrameStrobe[1] 0.0034188
+1 FrameStrobe[1] 0.00341333
+2 *26144:FrameStrobe[1] 0.00341333
 *RES
-1 FrameStrobe[1] *26144:FrameStrobe[1] 20.824 
+1 FrameStrobe[1] *26144:FrameStrobe[1] 20.786 
 *END
 
 *D_NET *541 0.000452066
@@ -34396,15 +34406,15 @@ UserCLK I
 1 FrameStrobe[29] *26158:FrameStrobe[9] 1.482 
 *END
 
-*D_NET *551 0.00684289
+*D_NET *551 0.00682931
 *CONN
 *P FrameStrobe[2] I
 *I *26144:FrameStrobe[2] I *D W_IO4
 *CAP
-1 FrameStrobe[2] 0.00342144
-2 *26144:FrameStrobe[2] 0.00342144
+1 FrameStrobe[2] 0.00341465
+2 *26144:FrameStrobe[2] 0.00341465
 *RES
-1 FrameStrobe[2] *26144:FrameStrobe[2] 20.824 
+1 FrameStrobe[2] *26144:FrameStrobe[2] 20.786 
 *END
 
 *D_NET *552 0.000452066
@@ -34517,15 +34527,15 @@ UserCLK I
 1 FrameStrobe[39] *26158:FrameStrobe[19] 1.482 
 *END
 
-*D_NET *562 0.00683759
+*D_NET *562 0.00682666
 *CONN
 *P FrameStrobe[3] I
 *I *26144:FrameStrobe[3] I *D W_IO4
 *CAP
-1 FrameStrobe[3] 0.0034188
-2 *26144:FrameStrobe[3] 0.0034188
+1 FrameStrobe[3] 0.00341333
+2 *26144:FrameStrobe[3] 0.00341333
 *RES
-1 FrameStrobe[3] *26144:FrameStrobe[3] 20.824 
+1 FrameStrobe[3] *26144:FrameStrobe[3] 20.786 
 *END
 
 *D_NET *563 0.000454714
@@ -34638,15 +34648,15 @@ UserCLK I
 1 FrameStrobe[49] *26172:FrameStrobe[9] 1.482 
 *END
 
-*D_NET *573 0.00683759
+*D_NET *573 0.00682666
 *CONN
 *P FrameStrobe[4] I
 *I *26144:FrameStrobe[4] I *D W_IO4
 *CAP
-1 FrameStrobe[4] 0.0034188
-2 *26144:FrameStrobe[4] 0.0034188
+1 FrameStrobe[4] 0.00341333
+2 *26144:FrameStrobe[4] 0.00341333
 *RES
-1 FrameStrobe[4] *26144:FrameStrobe[4] 20.824 
+1 FrameStrobe[4] *26144:FrameStrobe[4] 20.786 
 *END
 
 *D_NET *574 0.000452066
@@ -34759,15 +34769,15 @@ UserCLK I
 1 FrameStrobe[59] *26172:FrameStrobe[19] 1.482 
 *END
 
-*D_NET *584 0.00682477
+*D_NET *584 0.00681384
 *CONN
 *P FrameStrobe[5] I
 *I *26144:FrameStrobe[5] I *D W_IO4
 *CAP
-1 FrameStrobe[5] 0.00341238
-2 *26144:FrameStrobe[5] 0.00341238
+1 FrameStrobe[5] 0.00340692
+2 *26144:FrameStrobe[5] 0.00340692
 *RES
-1 FrameStrobe[5] *26144:FrameStrobe[5] 20.824 
+1 FrameStrobe[5] *26144:FrameStrobe[5] 20.786 
 *END
 
 *D_NET *585 0.000454714
@@ -34880,15 +34890,15 @@ UserCLK I
 1 FrameStrobe[69] *26186:FrameStrobe[9] 1.482 
 *END
 
-*D_NET *595 0.00682477
+*D_NET *595 0.00681384
 *CONN
 *P FrameStrobe[6] I
 *I *26144:FrameStrobe[6] I *D W_IO4
 *CAP
-1 FrameStrobe[6] 0.00341238
-2 *26144:FrameStrobe[6] 0.00341238
+1 FrameStrobe[6] 0.00340692
+2 *26144:FrameStrobe[6] 0.00340692
 *RES
-1 FrameStrobe[6] *26144:FrameStrobe[6] 20.824 
+1 FrameStrobe[6] *26144:FrameStrobe[6] 20.786 
 *END
 
 *D_NET *596 0.000452066
@@ -35001,15 +35011,15 @@ UserCLK I
 1 FrameStrobe[79] *26186:FrameStrobe[19] 1.482 
 *END
 
-*D_NET *606 0.00682477
+*D_NET *606 0.00681384
 *CONN
 *P FrameStrobe[7] I
 *I *26144:FrameStrobe[7] I *D W_IO4
 *CAP
-1 FrameStrobe[7] 0.00341238
-2 *26144:FrameStrobe[7] 0.00341238
+1 FrameStrobe[7] 0.00340692
+2 *26144:FrameStrobe[7] 0.00340692
 *RES
-1 FrameStrobe[7] *26144:FrameStrobe[7] 20.824 
+1 FrameStrobe[7] *26144:FrameStrobe[7] 20.786 
 *END
 
 *D_NET *607 0.000452066
@@ -35122,15 +35132,15 @@ UserCLK I
 1 FrameStrobe[89] *26200:FrameStrobe[9] 1.482 
 *END
 
-*D_NET *617 0.00682477
+*D_NET *617 0.00681384
 *CONN
 *P FrameStrobe[8] I
 *I *26144:FrameStrobe[8] I *D W_IO4
 *CAP
-1 FrameStrobe[8] 0.00341238
-2 *26144:FrameStrobe[8] 0.00341238
+1 FrameStrobe[8] 0.00340692
+2 *26144:FrameStrobe[8] 0.00340692
 *RES
-1 FrameStrobe[8] *26144:FrameStrobe[8] 20.824 
+1 FrameStrobe[8] *26144:FrameStrobe[8] 20.786 
 *END
 
 *D_NET *618 0.000452066
@@ -35243,15 +35253,15 @@ UserCLK I
 1 FrameStrobe[99] *26200:FrameStrobe[19] 1.482 
 *END
 
-*D_NET *628 0.00682477
+*D_NET *628 0.00681384
 *CONN
 *P FrameStrobe[9] I
 *I *26144:FrameStrobe[9] I *D W_IO4
 *CAP
-1 FrameStrobe[9] 0.00341238
-2 *26144:FrameStrobe[9] 0.00341238
+1 FrameStrobe[9] 0.00340692
+2 *26144:FrameStrobe[9] 0.00340692
 *RES
-1 FrameStrobe[9] *26144:FrameStrobe[9] 20.824 
+1 FrameStrobe[9] *26144:FrameStrobe[9] 20.786 
 *END
 
 *D_NET *629 4.12747e-05
@@ -42561,7 +42571,7 @@ UserCLK I
 1 *26252:WEN_SRAM7 Tile_X8Y8_WEN_SRAM7 0.114 
 *END
 
-*D_NET *1194 0.172922
+*D_NET *1194 0.172911
 *CONN
 *P UserCLK I
 *I *26144:UserCLK I *D W_IO4
@@ -42575,7 +42585,7 @@ UserCLK I
 *I *26172:UserCLK I *D S_term_single
 *CAP
 1 UserCLK 3.69527e-05
-2 *26144:UserCLK 0.00339919
+2 *26144:UserCLK 0.00339372
 3 *26158:UserCLK 4.46702e-05
 4 *26248:UserCLK 5.3343e-05
 5 *26236:UserCLK 5.3343e-05
@@ -42595,7 +42605,7 @@ UserCLK I
 19 *1194:19 0.000251096
 20 *1194:13 0.00681352
 21 *1194:11 0.00811494
-22 *1194:5 0.00494399
+22 *1194:5 0.00493852
 23 *26158:FrameData[0] *1194:11 2.97354e-06
 24 *26158:FrameData[0] *1194:13 0
 *RES
@@ -42619,5 +42629,5 @@ UserCLK I
 18 *1194:73 *1194:83 78.584 
 19 *1194:83 *26248:UserCLK 4.804 
 20 *1194:19 *26158:UserCLK 0.304 
-21 *1194:5 *26144:UserCLK 20.71 
+21 *1194:5 *26144:UserCLK 20.672 
 *END
