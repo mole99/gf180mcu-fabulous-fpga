@@ -8,16 +8,12 @@
 .subckt gf180mcu_fd_sc_mcu7t5v0__fill_1 VDD VNW VPW VSS
 .ends
 
-* Black-box entry subcircuit for gf180mcu_fd_sc_mcu7t5v0__fillcap_32 abstract view
-.subckt gf180mcu_fd_sc_mcu7t5v0__fillcap_32 VDD VNW VPW VSS
+* Black-box entry subcircuit for gf180mcu_fd_sc_mcu7t5v0__fillcap_64 abstract view
+.subckt gf180mcu_fd_sc_mcu7t5v0__fillcap_64 VDD VNW VPW VSS
 .ends
 
 * Black-box entry subcircuit for gf180mcu_fd_sc_mcu7t5v0__fillcap_4 abstract view
 .subckt gf180mcu_fd_sc_mcu7t5v0__fillcap_4 VDD VNW VPW VSS
-.ends
-
-* Black-box entry subcircuit for gf180mcu_fd_sc_mcu7t5v0__buf_2 abstract view
-.subckt gf180mcu_fd_sc_mcu7t5v0__buf_2 I Z VDD VNW VPW VSS
 .ends
 
 * Black-box entry subcircuit for gf180mcu_fd_sc_mcu7t5v0__endcap abstract view
@@ -28,12 +24,12 @@
 .subckt gf180mcu_fd_sc_mcu7t5v0__fillcap_8 VDD VNW VPW VSS
 .ends
 
-* Black-box entry subcircuit for gf180mcu_fd_sc_mcu7t5v0__fill_2 abstract view
-.subckt gf180mcu_fd_sc_mcu7t5v0__fill_2 VDD VNW VPW VSS
+* Black-box entry subcircuit for gf180mcu_fd_sc_mcu7t5v0__buf_2 abstract view
+.subckt gf180mcu_fd_sc_mcu7t5v0__buf_2 I Z VDD VNW VPW VSS
 .ends
 
-* Black-box entry subcircuit for gf180mcu_fd_sc_mcu7t5v0__fillcap_64 abstract view
-.subckt gf180mcu_fd_sc_mcu7t5v0__fillcap_64 VDD VNW VPW VSS
+* Black-box entry subcircuit for gf180mcu_fd_sc_mcu7t5v0__fill_2 abstract view
+.subckt gf180mcu_fd_sc_mcu7t5v0__fill_2 VDD VNW VPW VSS
 .ends
 
 * Black-box entry subcircuit for gf180mcu_fd_sc_mcu7t5v0__latq_1 abstract view
@@ -62,6 +58,14 @@
 
 * Black-box entry subcircuit for gf180mcu_fd_sc_mcu7t5v0__nand2_1 abstract view
 .subckt gf180mcu_fd_sc_mcu7t5v0__nand2_1 A1 A2 ZN VDD VNW VPW VSS
+.ends
+
+* Black-box entry subcircuit for gf180mcu_fd_sc_mcu7t5v0__fillcap_32 abstract view
+.subckt gf180mcu_fd_sc_mcu7t5v0__fillcap_32 VDD VNW VPW VSS
+.ends
+
+* Black-box entry subcircuit for gf180mcu_fd_sc_mcu7t5v0__clkbuf_1 abstract view
+.subckt gf180mcu_fd_sc_mcu7t5v0__clkbuf_1 I Z VDD VNW VPW VSS
 .ends
 
 * Black-box entry subcircuit for gf180mcu_fd_sc_mcu7t5v0__clkbuf_16 abstract view
@@ -108,10 +112,6 @@
 .subckt gf180mcu_fd_sc_mcu7t5v0__dffq_4 D CLK Q VDD VNW VPW VSS
 .ends
 
-* Black-box entry subcircuit for gf180mcu_fd_sc_mcu7t5v0__clkbuf_1 abstract view
-.subckt gf180mcu_fd_sc_mcu7t5v0__clkbuf_1 I Z VDD VNW VPW VSS
-.ends
-
 .subckt W_IO A_I_top A_O_top A_T_top B_I_top B_O_top B_T_top E1BEG[0] E1BEG[1] E1BEG[2]
 + E1BEG[3] E2BEG[0] E2BEG[1] E2BEG[2] E2BEG[3] E2BEG[4] E2BEG[5] E2BEG[6] E2BEG[7]
 + E2BEGb[0] E2BEGb[1] E2BEGb[2] E2BEGb[3] E2BEGb[4] E2BEGb[5] E2BEGb[6] E2BEGb[7]
@@ -145,12 +145,12 @@
 + WW4END[5] WW4END[6] WW4END[7] WW4END[8] WW4END[9]
 XTAP_TAPCELL_ROW_49_294 VDD VSS gf180mcu_fd_sc_mcu7t5v0__filltie
 XFILLER_22_111 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__fill_1
-XFILLER_22_177 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__fillcap_32
+XFILLER_22_177 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__fillcap_64
 XFILLER_52_18 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__fillcap_4
 XFILLER_13_133 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__fillcap_4
-X_294_ FrameStrobe[4] net198 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__buf_2
 XPHY_EDGE_ROW_39_Left_110 VDD VSS gf180mcu_fd_sc_mcu7t5v0__endcap
 XFILLER_42_95 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__fillcap_8
+X_294_ FrameStrobe[4] net114 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__buf_2
 XTAP_TAPCELL_ROW_8_170 VDD VSS gf180mcu_fd_sc_mcu7t5v0__filltie
 XFILLER_36_225 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__fill_2
 XTAP_TAPCELL_ROW_46_286 VDD VSS gf180mcu_fd_sc_mcu7t5v0__filltie
@@ -159,27 +159,27 @@ XFILLER_6_107 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__fillcap_64
 XTAP_TAPCELL_ROW_5_162 VDD VSS gf180mcu_fd_sc_mcu7t5v0__filltie
 XTAP_TAPCELL_ROW_28_231 VDD VSS gf180mcu_fd_sc_mcu7t5v0__filltie
 XFILLER_53_72 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__fillcap_64
-X_277_ net13 net162 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__buf_2
+X_277_ FrameData[19] net78 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__buf_2
 XTAP_TAPCELL_ROW_2_154 VDD VSS gf180mcu_fd_sc_mcu7t5v0__filltie
 XFILLER_59_136 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__fillcap_4
+XFILLER_15_228 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__fillcap_8
 XFILLER_15_206 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__fillcap_4
 XTAP_TAPCELL_ROW_25_223 VDD VSS gf180mcu_fd_sc_mcu7t5v0__filltie
 XFILLER_30_209 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__fillcap_4
-X_200_ net17 net32 Inst_W_IO_ConfigMem.Inst_frame1_bit22.Q VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__latq_1
+X_200_ FrameData[22] net32 Inst_W_IO_ConfigMem.Inst_frame1_bit22.Q VDD VDD VSS VSS
++ gf180mcu_fd_sc_mcu7t5v0__latq_1
 X_131_ Inst_W_IO_ConfigMem.Inst_frame0_bit31.Q _037_ _038_ VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__nor2_1
-X_062_ net60 net61 net62 net63 Inst_W_IO_ConfigMem.Inst_frame0_bit18.Q Inst_W_IO_ConfigMem.Inst_frame0_bit19.Q
-+ _019_ VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__mux4_1
+X_062_ W2END[4] W2END[5] W2END[6] W2END[7] Inst_W_IO_ConfigMem.Inst_frame0_bit18.Q
++ Inst_W_IO_ConfigMem.Inst_frame0_bit19.Q _019_ VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__mux4_1
 XFILLER_48_61 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__fillcap_16
-XFILLER_0_57 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__fillcap_8
-X_329_ Inst_W_IO_switch_matrix.E2BEGb6 net122 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__buf_2
+X_329_ Inst_W_IO_switch_matrix.E2BEGb6 net23 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__buf_2
 XPHY_EDGE_ROW_24_Left_95 VDD VSS gf180mcu_fd_sc_mcu7t5v0__endcap
-XFILLER_12_209 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__fillcap_16
+XFILLER_43_2 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__fillcap_4
 XFILLER_69_27 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__fillcap_16
-XFILLER_11_220 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__fillcap_4
-X_045_ net57 _003_ VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__inv_1
-X_114_ net71 net97 net90 net81 Inst_W_IO_ConfigMem.Inst_frame3_bit26.Q Inst_W_IO_ConfigMem.Inst_frame3_bit27.Q
-+ Inst_W_IO_switch_matrix.E2BEG0 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__mux4_1
-XFILLER_7_224 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__fill_1
+X_045_ W2END[1] _003_ VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__inv_1
+X_114_ W2MID[7] WW4END[7] WW4END[15] W6END[7] Inst_W_IO_ConfigMem.Inst_frame3_bit26.Q
++ Inst_W_IO_ConfigMem.Inst_frame3_bit27.Q Inst_W_IO_switch_matrix.E2BEG0 VDD VDD VSS
++ VSS gf180mcu_fd_sc_mcu7t5v0__mux4_1
 XFILLER_38_117 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__fill_1
 XFILLER_61_142 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__fillcap_64
 XFILLER_29_139 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__fill_1
@@ -189,40 +189,51 @@ XFILLER_61_72 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__fillcap_64
 XFILLER_19_194 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__fillcap_16
 XFILLER_57_212 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__fill_1
 XPHY_EDGE_ROW_11_Left_82 VDD VSS gf180mcu_fd_sc_mcu7t5v0__endcap
-Xoutput86 net206 A_T_top VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__buf_4
-Xoutput97 net112 E2BEG[4] VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__buf_4
+Xoutput7 net7 E1BEG[2] VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__buf_4
+Xoutput20 net20 E2BEGb[3] VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__buf_4
+Xoutput42 net57 EE4BEG[14] VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__buf_4
+Xoutput31 net46 E6BEG[4] VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__buf_4
+Xoutput53 net68 FrameData_O[0] VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__buf_4
+Xoutput75 net90 FrameData_O[2] VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__buf_4
+Xoutput64 net79 FrameData_O[1] VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__buf_4
+Xoutput86 net101 FrameStrobe_O[10] VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__buf_4
+Xoutput97 net112 FrameStrobe_O[2] VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__buf_4
 XFILLER_39_212 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__fill_1
 XTAP_TAPCELL_ROW_49_295 VDD VSS gf180mcu_fd_sc_mcu7t5v0__filltie
 XFILLER_45_204 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__fillcap_4
 XFILLER_9_138 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__fill_2
-X_293_ net27 net197 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__buf_2
+X_293_ net27 net113 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__buf_2
 XTAP_TAPCELL_ROW_8_171 VDD VSS gf180mcu_fd_sc_mcu7t5v0__filltie
 XFILLER_8_171 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__fillcap_4
 XFILLER_10_104 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__fill_1
 XTAP_TAPCELL_ROW_5_163 VDD VSS gf180mcu_fd_sc_mcu7t5v0__filltie
 XTAP_TAPCELL_ROW_28_232 VDD VSS gf180mcu_fd_sc_mcu7t5v0__filltie
-X_276_ net12 net161 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__buf_2
+X_276_ FrameData[18] net77 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__buf_2
 XFILLER_68_159 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__fill_2
 XPHY_EDGE_ROW_12_Right_12 VDD VSS gf180mcu_fd_sc_mcu7t5v0__endcap
 XPHY_EDGE_ROW_58_Left_129 VDD VSS gf180mcu_fd_sc_mcu7t5v0__endcap
-XFILLER_67_170 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__fill_1
 XPHY_EDGE_ROW_21_Right_21 VDD VSS gf180mcu_fd_sc_mcu7t5v0__endcap
+XFILLER_67_170 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__fill_1
+X_130_ W2MID[7] _006_ _037_ VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__nand2_1
+XFILLER_23_240 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__fill_1
 XPHY_EDGE_ROW_67_Left_138 VDD VSS gf180mcu_fd_sc_mcu7t5v0__endcap
-X_130_ net71 _006_ _037_ VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__nand2_1
 X_061_ Inst_W_IO_ConfigMem.Inst_frame0_bit20.Q _017_ _018_ VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__nor2_1
 XPHY_EDGE_ROW_30_Right_30 VDD VSS gf180mcu_fd_sc_mcu7t5v0__endcap
-XFILLER_2_177 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__fillcap_32
+XFILLER_2_177 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__fillcap_64
 XFILLER_3_2 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__fillcap_64
-XFILLER_0_36 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__fill_1
-X_328_ Inst_W_IO_switch_matrix.E2BEGb5 net121 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__buf_2
-X_259_ net14 net163 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__buf_2
+XFILLER_0_36 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__fillcap_32
+X_328_ Inst_W_IO_switch_matrix.E2BEGb5 net22 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__buf_2
+XFILLER_9_34 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__fillcap_16
+X_259_ FrameData[1] net79 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__buf_2
 XFILLER_49_192 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__fillcap_16
 XTAP_TAPCELL_ROW_54_308 VDD VSS gf180mcu_fd_sc_mcu7t5v0__filltie
 XFILLER_56_107 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__fillcap_64
 XFILLER_64_195 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__fill_1
-X_113_ net70 net96 net89 net80 Inst_W_IO_ConfigMem.Inst_frame3_bit28.Q Inst_W_IO_ConfigMem.Inst_frame3_bit29.Q
-+ Inst_W_IO_switch_matrix.E2BEG1 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__mux4_1
-X_044_ net56 _002_ VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__inv_1
+XFILLER_7_236 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__fillcap_4
+X_113_ W2MID[6] WW4END[6] WW4END[14] W6END[6] Inst_W_IO_ConfigMem.Inst_frame3_bit28.Q
++ Inst_W_IO_ConfigMem.Inst_frame3_bit29.Q Inst_W_IO_switch_matrix.E2BEG1 VDD VDD VSS
++ VSS gf180mcu_fd_sc_mcu7t5v0__mux4_1
+X_044_ W2END[0] _002_ VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__inv_1
 XFILLER_38_107 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__fillcap_8
 XFILLER_59_72 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__fillcap_64
 XFILLER_37_162 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__fillcap_32
@@ -232,73 +243,92 @@ XPHY_EDGE_ROW_6_Right_6 VDD VSS gf180mcu_fd_sc_mcu7t5v0__endcap
 XFILLER_40_124 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__fill_2
 XFILLER_31_10 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__fill_1
 XFILLER_31_43 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__fillcap_4
-Xoutput87 net205 B_I_top VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__buf_4
-Xoutput98 net113 E2BEG[5] VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__buf_4
+Xoutput87 net102 FrameStrobe_O[11] VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__buf_4
+Xoutput8 net8 E1BEG[3] VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__buf_4
+Xoutput10 net10 E2BEG[1] VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__buf_4
+Xoutput21 net21 E2BEGb[4] VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__buf_4
+Xoutput43 net58 EE4BEG[15] VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__buf_4
+Xoutput32 net47 E6BEG[5] VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__buf_4
+Xoutput54 net69 FrameData_O[10] VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__buf_4
+Xoutput76 net91 FrameData_O[30] VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__buf_4
+Xoutput65 net80 FrameData_O[20] VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__buf_4
+Xoutput98 net113 FrameStrobe_O[3] VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__buf_4
 XFILLER_31_146 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__fill_2
 XPHY_EDGE_ROW_59_Right_59 VDD VSS gf180mcu_fd_sc_mcu7t5v0__endcap
 XPHY_EDGE_ROW_68_Right_68 VDD VSS gf180mcu_fd_sc_mcu7t5v0__endcap
-XFILLER_26_10 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__fillcap_4
 XFILLER_13_113 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__fillcap_4
-X_292_ net50 net196 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__buf_2
-XFILLER_67_72 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__fillcap_64
+X_292_ FrameStrobe[2] net112 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__buf_2
 XTAP_TAPCELL_ROW_8_172 VDD VSS gf180mcu_fd_sc_mcu7t5v0__filltie
+XFILLER_67_72 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__fillcap_64
+XFILLER_66_2 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__fillcap_32
 XFILLER_12_34 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__fill_1
-X_275_ net11 net160 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__buf_2
-X_344_ Inst_W_IO_switch_matrix.EE4BEG1 net143 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__buf_2
+X_275_ FrameData[17] net76 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__buf_2
+X_344_ Inst_W_IO_switch_matrix.EE4BEG1 net59 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__buf_2
 XFILLER_5_142 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__fillcap_64
 XTAP_TAPCELL_ROW_57_317 VDD VSS gf180mcu_fd_sc_mcu7t5v0__filltie
 XFILLER_2_101 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__fillcap_4
-X_060_ net56 net57 net58 net59 Inst_W_IO_ConfigMem.Inst_frame0_bit18.Q Inst_W_IO_ConfigMem.Inst_frame0_bit19.Q
-+ _017_ VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__mux4_1
+X_060_ W2END[0] W2END[1] W2END[2] W2END[3] Inst_W_IO_ConfigMem.Inst_frame0_bit18.Q
++ Inst_W_IO_ConfigMem.Inst_frame0_bit19.Q _017_ VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__mux4_1
 XFILLER_58_171 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__fillcap_4
 XTAP_TAPCELL_ROW_31_239 VDD VSS gf180mcu_fd_sc_mcu7t5v0__filltie
-X_327_ Inst_W_IO_switch_matrix.E2BEGb4 net120 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__buf_2
-X_189_ net5 net34 Inst_W_IO_ConfigMem.Inst_frame1_bit11.Q VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__latq_1
-X_258_ net3 net152 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__buf_2
+X_327_ Inst_W_IO_switch_matrix.E2BEGb4 net21 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__buf_2
+X_189_ FrameData[11] net34 Inst_W_IO_ConfigMem.Inst_frame1_bit11.Q VDD VDD VSS VSS
++ gf180mcu_fd_sc_mcu7t5v0__latq_1
+X_258_ FrameData[0] net68 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__buf_2
+XFILLER_29_2 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__fillcap_4
 XTAP_TAPCELL_ROW_54_309 VDD VSS gf180mcu_fd_sc_mcu7t5v0__filltie
 XFILLER_18_33 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__fill_2
 XFILLER_34_10 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__fillcap_4
 X_043_ Inst_W_IO_ConfigMem.Inst_frame0_bit27.Q _001_ VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__inv_1
-X_112_ net69 net95 net88 net79 Inst_W_IO_ConfigMem.Inst_frame3_bit30.Q Inst_W_IO_ConfigMem.Inst_frame3_bit31.Q
-+ Inst_W_IO_switch_matrix.E2BEG2 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__mux4_1
+X_112_ W2MID[5] WW4END[5] WW4END[13] W6END[5] Inst_W_IO_ConfigMem.Inst_frame3_bit30.Q
++ Inst_W_IO_ConfigMem.Inst_frame3_bit31.Q Inst_W_IO_switch_matrix.E2BEG2 VDD VDD VSS
++ VSS gf180mcu_fd_sc_mcu7t5v0__mux4_1
 XFILLER_52_177 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__fillcap_32
-XFILLER_29_10 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__fillcap_4
 XFILLER_45_42 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__fillcap_4
+XFILLER_3_240 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__fill_1
 XFILLER_34_111 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__fill_2
 XFILLER_34_177 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__fillcap_32
-Xoutput88 net103 B_T_top VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__buf_4
-Xoutput99 net114 E2BEG[6] VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__buf_4
+Xoutput88 net103 FrameStrobe_O[12] VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__buf_4
+Xoutput99 net114 FrameStrobe_O[4] VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__buf_4
+Xoutput9 net9 E2BEG[0] VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__buf_4
+Xoutput11 net11 E2BEG[2] VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__buf_4
+Xoutput22 net22 E2BEGb[5] VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__buf_4
+Xoutput44 net59 EE4BEG[1] VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__buf_4
 XFILLER_48_225 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__fill_2
-XFILLER_16_177 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__fillcap_32
+Xoutput33 net48 E6BEG[6] VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__buf_4
+Xoutput55 net70 FrameData_O[11] VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__buf_4
+Xoutput66 net81 FrameData_O[21] VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__buf_4
+Xoutput77 net92 FrameData_O[31] VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__buf_4
+XFILLER_16_177 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__fillcap_64
 XFILLER_22_103 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__fill_2
 XFILLER_60_209 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__fill_2
-X_291_ net36 net195 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__buf_2
+X_291_ net36 net111 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__buf_2
+XFILLER_59_2 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__fillcap_64
 XFILLER_42_209 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__fillcap_4
 XFILLER_37_32 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__fillcap_4
 XFILLER_37_76 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__fill_1
-XFILLER_53_42 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__fillcap_16
-X_274_ net10 net159 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__buf_2
-X_343_ Inst_W_IO_switch_matrix.EE4BEG0 net136 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__buf_2
+X_274_ FrameData[16] net75 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__buf_2
+X_343_ Inst_W_IO_switch_matrix.EE4BEG0 net52 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__buf_2
 XFILLER_68_139 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__fillcap_16
-XFILLER_24_209 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__fillcap_16
 XTAP_TAPCELL_ROW_34_248 VDD VSS gf180mcu_fd_sc_mcu7t5v0__filltie
-XFILLER_23_220 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__fillcap_4
 XTAP_TAPCELL_ROW_57_318 VDD VSS gf180mcu_fd_sc_mcu7t5v0__filltie
 XFILLER_9_58 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__fillcap_4
-X_326_ Inst_W_IO_switch_matrix.E2BEGb3 net119 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__buf_2
-X_257_ Inst_W_IO_switch_matrix.EE4BEG15 net142 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__buf_2
-X_188_ net4 net34 Inst_W_IO_ConfigMem.Inst_frame1_bit10.Q VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__latq_1
+X_326_ Inst_W_IO_switch_matrix.E2BEGb3 net20 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__buf_2
+X_257_ Inst_W_IO_switch_matrix.EE4BEG15 net58 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__buf_2
+X_188_ FrameData[10] net34 Inst_W_IO_ConfigMem.Inst_frame1_bit10.Q VDD VDD VSS VSS
++ gf180mcu_fd_sc_mcu7t5v0__latq_1
 XFILLER_50_6 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__fill_1
 XTAP_TAPCELL_ROW_62_332 VDD VSS gf180mcu_fd_sc_mcu7t5v0__filltie
 XFILLER_55_142 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__fillcap_64
 XFILLER_70_101 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__fill_1
-XFILLER_11_212 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__fillcap_8
-X_042_ net69 _000_ VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__inv_1
-X_111_ net68 net94 net87 net78 Inst_W_IO_ConfigMem.Inst_frame2_bit0.Q Inst_W_IO_ConfigMem.Inst_frame2_bit1.Q
-+ Inst_W_IO_switch_matrix.E2BEG3 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__mux4_1
+XFILLER_11_212 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__fillcap_16
+X_042_ W2MID[5] _000_ VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__inv_1
+X_111_ W2MID[4] WW4END[4] WW4END[12] W6END[4] Inst_W_IO_ConfigMem.Inst_frame2_bit0.Q
++ Inst_W_IO_ConfigMem.Inst_frame2_bit1.Q Inst_W_IO_switch_matrix.E2BEG3 VDD VDD VSS
++ VSS gf180mcu_fd_sc_mcu7t5v0__mux4_1
 XFILLER_50_98 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__fillcap_4
 XPHY_EDGE_ROW_28_Left_99 VDD VSS gf180mcu_fd_sc_mcu7t5v0__endcap
-X_309_ FrameStrobe[19] net194 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__buf_2
+X_309_ FrameStrobe[19] net110 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__buf_2
 XFILLER_69_212 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__fill_1
 XFILLER_37_131 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__fill_1
 XFILLER_52_101 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__fillcap_4
@@ -306,55 +336,66 @@ XFILLER_52_123 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__fill_2
 XFILLER_20_79 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__fill_2
 XFILLER_29_66 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__fillcap_4
 XFILLER_43_178 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__fillcap_32
-XFILLER_61_42 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__fillcap_16
 XFILLER_6_37 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__fillcap_64
 XFILLER_40_126 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__fill_1
 XFILLER_31_67 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__fill_2
-Xoutput89 net104 E1BEG[0] VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__buf_4
+Xoutput12 net12 E2BEG[3] VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__buf_4
+Xoutput23 net23 E2BEGb[6] VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__buf_4
+Xoutput34 net49 E6BEG[7] VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__buf_4
+Xoutput89 net104 FrameStrobe_O[13] VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__buf_4
+Xoutput45 net60 EE4BEG[2] VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__buf_4
+Xoutput78 net93 FrameData_O[3] VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__buf_4
+Xoutput56 net71 FrameData_O[12] VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__buf_4
+Xoutput67 net82 FrameData_O[22] VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__buf_4
 XFILLER_16_167 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__fillcap_8
 XFILLER_31_148 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__fill_1
 XPHY_EDGE_ROW_15_Left_86 VDD VSS gf180mcu_fd_sc_mcu7t5v0__endcap
 XFILLER_30_170 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__fillcap_4
 XFILLER_13_137 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__fill_2
-X_290_ net41 net184 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__buf_2
+X_290_ net41 net100 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__buf_2
 XFILLER_27_207 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__fill_2
 XTAP_TAPCELL_ROW_37_257 VDD VSS gf180mcu_fd_sc_mcu7t5v0__filltie
 XFILLER_10_107 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__fillcap_64
-X_342_ Inst_W_IO_switch_matrix.E6BEG11 net126 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__buf_2
-XFILLER_53_10 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__fillcap_32
+X_342_ Inst_W_IO_switch_matrix.E6BEG11 net42 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__buf_2
 XTAP_TAPCELL_ROW_11_179 VDD VSS gf180mcu_fd_sc_mcu7t5v0__filltie
-X_273_ net9 net158 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__buf_2
+X_273_ FrameData[15] net74 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__buf_2
 XFILLER_68_107 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__fillcap_32
+XFILLER_17_240 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__fill_1
 XTAP_TAPCELL_ROW_34_249 VDD VSS gf180mcu_fd_sc_mcu7t5v0__filltie
 XTAP_TAPCELL_ROW_57_319 VDD VSS gf180mcu_fd_sc_mcu7t5v0__filltie
-XFILLER_67_195 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__fill_1
 XTAP_TAPCELL_ROW_65_341 VDD VSS gf180mcu_fd_sc_mcu7t5v0__filltie
+XFILLER_67_195 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__fill_1
 XPHY_EDGE_ROW_36_Left_107 VDD VSS gf180mcu_fd_sc_mcu7t5v0__endcap
-XFILLER_48_10 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__fillcap_4
 XPHY_EDGE_ROW_45_Left_116 VDD VSS gf180mcu_fd_sc_mcu7t5v0__endcap
-X_325_ Inst_W_IO_switch_matrix.E2BEGb2 net118 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__buf_2
+X_325_ Inst_W_IO_switch_matrix.E2BEGb2 net19 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__buf_2
 XPHY_EDGE_ROW_54_Left_125 VDD VSS gf180mcu_fd_sc_mcu7t5v0__endcap
-X_187_ net49 net32 Inst_W_IO_ConfigMem.Inst_frame1_bit9.Q VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__latq_1
-X_256_ Inst_W_IO_switch_matrix.EE4BEG14 net141 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__buf_2
+X_187_ FrameData[9] net32 Inst_W_IO_ConfigMem.Inst_frame1_bit9.Q VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__latq_1
+X_256_ Inst_W_IO_switch_matrix.EE4BEG14 net57 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__buf_2
+XFILLER_43_6 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__fill_1
 XPHY_EDGE_ROW_63_Left_134 VDD VSS gf180mcu_fd_sc_mcu7t5v0__endcap
 XTAP_TAPCELL_ROW_62_333 VDD VSS gf180mcu_fd_sc_mcu7t5v0__filltie
 XFILLER_70_135 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__fill_1
-XFILLER_11_224 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__fill_1
-X_110_ net67 net93 net86 net77 Inst_W_IO_ConfigMem.Inst_frame2_bit2.Q Inst_W_IO_ConfigMem.Inst_frame2_bit3.Q
-+ Inst_W_IO_switch_matrix.E2BEG4 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__mux4_1
+X_110_ W2MID[3] WW4END[3] WW4END[11] W6END[3] Inst_W_IO_ConfigMem.Inst_frame2_bit2.Q
++ Inst_W_IO_ConfigMem.Inst_frame2_bit3.Q Inst_W_IO_switch_matrix.E2BEG4 VDD VDD VSS
++ VSS gf180mcu_fd_sc_mcu7t5v0__mux4_1
+XFILLER_7_228 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__fillcap_8
 XFILLER_7_206 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__fillcap_4
 XFILLER_1_2 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__fillcap_64
 XPHY_EDGE_ROW_3_Left_74 VDD VSS gf180mcu_fd_sc_mcu7t5v0__endcap
-XFILLER_59_42 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__fillcap_16
-X_239_ net24 net38 Inst_W_IO_ConfigMem.Inst_frame0_bit29.Q VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__latq_1
-X_308_ FrameStrobe[18] net193 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__buf_2
-XFILLER_4_209 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__fillcap_16
+X_239_ FrameData[29] net38 Inst_W_IO_ConfigMem.Inst_frame0_bit29.Q VDD VDD VSS VSS
++ gf180mcu_fd_sc_mcu7t5v0__latq_1
+X_308_ FrameStrobe[18] net109 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__buf_2
 XFILLER_6_16 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__fillcap_16
-XFILLER_61_10 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__fillcap_32
-XFILLER_3_220 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__fillcap_4
 XFILLER_19_121 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__fillcap_8
 XFILLER_34_113 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__fill_1
 XFILLER_34_146 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__fill_1
+Xoutput13 net13 E2BEG[4] VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__buf_4
+Xoutput24 net24 E2BEGb[7] VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__buf_4
+Xoutput46 net61 EE4BEG[3] VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__buf_4
+Xoutput35 net50 E6BEG[8] VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__buf_4
+Xoutput57 net72 FrameData_O[13] VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__buf_4
+Xoutput79 net94 FrameData_O[4] VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__buf_4
+Xoutput68 net83 FrameData_O[23] VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__buf_4
 XPHY_EDGE_ROW_19_Right_19 VDD VSS gf180mcu_fd_sc_mcu7t5v0__endcap
 XPHY_EDGE_ROW_28_Right_28 VDD VSS gf180mcu_fd_sc_mcu7t5v0__endcap
 XPHY_EDGE_ROW_37_Right_37 VDD VSS gf180mcu_fd_sc_mcu7t5v0__endcap
@@ -364,36 +405,35 @@ XPHY_EDGE_ROW_46_Right_46 VDD VSS gf180mcu_fd_sc_mcu7t5v0__endcap
 XFILLER_45_208 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__fill_2
 XPHY_EDGE_ROW_55_Right_55 VDD VSS gf180mcu_fd_sc_mcu7t5v0__endcap
 XPHY_EDGE_ROW_64_Right_64 VDD VSS gf180mcu_fd_sc_mcu7t5v0__endcap
-XFILLER_67_42 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__fillcap_16
 XTAP_TAPCELL_ROW_14_188 VDD VSS gf180mcu_fd_sc_mcu7t5v0__filltie
 XTAP_TAPCELL_ROW_37_258 VDD VSS gf180mcu_fd_sc_mcu7t5v0__filltie
 XFILLER_12_48 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__fillcap_4
 XFILLER_12_37 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__fill_2
-XFILLER_12_26 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__fillcap_8
 XTAP_TAPCELL_ROW_68_350 VDD VSS gf180mcu_fd_sc_mcu7t5v0__filltie
-X_341_ Inst_W_IO_switch_matrix.E6BEG10 net125 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__buf_2
-X_272_ net8 net157 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__buf_2
+X_341_ Inst_W_IO_switch_matrix.E6BEG10 net26 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__buf_2
+X_272_ FrameData[14] net73 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__buf_2
 XFILLER_53_66 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__fillcap_4
 XTAP_TAPCELL_ROW_19_203 VDD VSS gf180mcu_fd_sc_mcu7t5v0__filltie
 XTAP_TAPCELL_ROW_42_272 VDD VSS gf180mcu_fd_sc_mcu7t5v0__filltie
+XFILLER_64_2 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__fillcap_32
 XTAP_TAPCELL_ROW_65_342 VDD VSS gf180mcu_fd_sc_mcu7t5v0__filltie
 XFILLER_48_77 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__fillcap_8
-XFILLER_64_10 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__fillcap_16
-X_255_ Inst_W_IO_switch_matrix.EE4BEG13 net140 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__buf_2
-X_324_ Inst_W_IO_switch_matrix.E2BEGb1 net117 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__buf_2
+X_255_ Inst_W_IO_switch_matrix.EE4BEG13 net56 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__buf_2
+X_324_ Inst_W_IO_switch_matrix.E2BEGb1 net18 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__buf_2
 XFILLER_13_80 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__fill_1
-X_186_ net48 net32 Inst_W_IO_ConfigMem.Inst_frame1_bit8.Q VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__latq_1
+X_186_ FrameData[8] net32 Inst_W_IO_ConfigMem.Inst_frame1_bit8.Q VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__latq_1
 XTAP_TAPCELL_ROW_62_334 VDD VSS gf180mcu_fd_sc_mcu7t5v0__filltie
 XFILLER_64_177 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__fillcap_16
-XFILLER_20_225 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__fillcap_8
+XFILLER_11_236 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__fillcap_4
 XFILLER_50_45 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__fillcap_4
-XFILLER_59_10 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__fillcap_32
 XFILLER_46_100 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__fillcap_4
 XFILLER_46_177 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__fillcap_32
 XFILLER_61_136 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__fillcap_4
-X_238_ net23 net38 Inst_W_IO_ConfigMem.Inst_frame0_bit28.Q VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__latq_1
-X_169_ net18 net30 Inst_W_IO_ConfigMem.Inst_frame2_bit23.Q VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__latq_1
-X_307_ FrameStrobe[17] net192 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__buf_2
+X_238_ FrameData[28] net38 Inst_W_IO_ConfigMem.Inst_frame0_bit28.Q VDD VDD VSS VSS
++ gf180mcu_fd_sc_mcu7t5v0__latq_1
+X_169_ FrameData[23] net30 Inst_W_IO_ConfigMem.Inst_frame2_bit23.Q VDD VDD VSS VSS
++ gf180mcu_fd_sc_mcu7t5v0__latq_1
+X_307_ FrameStrobe[17] net108 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__buf_2
 XFILLER_27_2 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__fill_1
 XFILLER_1_72 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__fillcap_64
 XFILLER_20_26 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__fill_1
@@ -401,17 +441,21 @@ XFILLER_28_177 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__fillcap_32
 XFILLER_45_56 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__fillcap_4
 XFILLER_61_66 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__fillcap_4
 XFILLER_57_206 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__fillcap_4
+Xoutput69 net84 FrameData_O[24] VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__buf_4
 XFILLER_31_69 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__fill_1
+Xoutput14 net14 E2BEG[5] VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__buf_4
+Xoutput47 net62 EE4BEG[4] VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__buf_4
+Xoutput25 net25 E6BEG[0] VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__buf_4
+Xoutput36 net51 E6BEG[9] VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__buf_4
+Xoutput58 net73 FrameData_O[14] VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__buf_4
 XFILLER_16_103 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__fill_2
 XFILLER_39_206 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__fillcap_4
 XFILLER_54_209 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__fillcap_4
 XTAP_TAPCELL_ROW_17_197 VDD VSS gf180mcu_fd_sc_mcu7t5v0__filltie
-XFILLER_26_14 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__fill_1
 XFILLER_13_139 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__fill_1
 XFILLER_13_117 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__fill_1
 XFILLER_42_57 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__fill_2
 XFILLER_42_79 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__fillcap_16
-XFILLER_67_10 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__fillcap_32
 XFILLER_36_209 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__fillcap_16
 XTAP_TAPCELL_ROW_14_189 VDD VSS gf180mcu_fd_sc_mcu7t5v0__filltie
 XFILLER_12_161 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__fillcap_8
@@ -419,36 +463,40 @@ XFILLER_27_209 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__fill_1
 XFILLER_35_220 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__fillcap_4
 XTAP_TAPCELL_ROW_37_259 VDD VSS gf180mcu_fd_sc_mcu7t5v0__filltie
 XTAP_TAPCELL_ROW_45_281 VDD VSS gf180mcu_fd_sc_mcu7t5v0__filltie
+XFILLER_37_24 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__fillcap_8
 XTAP_TAPCELL_ROW_68_351 VDD VSS gf180mcu_fd_sc_mcu7t5v0__filltie
-XFILLER_18_209 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__fillcap_16
 XFILLER_41_212 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__fill_1
-X_340_ Inst_W_IO_switch_matrix.E6BEG9 net135 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__buf_2
-X_271_ net7 net156 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__buf_2
+X_340_ Inst_W_IO_switch_matrix.E6BEG9 net51 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__buf_2
+X_271_ FrameData[13] net72 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__buf_2
 XTAP_TAPCELL_ROW_19_204 VDD VSS gf180mcu_fd_sc_mcu7t5v0__filltie
-XFILLER_17_220 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__fillcap_4
 XTAP_TAPCELL_ROW_42_273 VDD VSS gf180mcu_fd_sc_mcu7t5v0__filltie
-XFILLER_67_142 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__fillcap_16
+XFILLER_57_2 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__fillcap_64
 XTAP_TAPCELL_ROW_65_343 VDD VSS gf180mcu_fd_sc_mcu7t5v0__filltie
+XFILLER_67_142 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__fillcap_16
 XFILLER_23_26 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__fill_2
 XFILLER_23_48 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__fill_2
-XFILLER_23_212 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__fillcap_8
-X_323_ Inst_W_IO_switch_matrix.E2BEGb0 net116 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__buf_2
-X_185_ net47 net32 Inst_W_IO_ConfigMem.Inst_frame1_bit7.Q VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__latq_1
-X_254_ Inst_W_IO_switch_matrix.EE4BEG12 net139 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__buf_2
+XFILLER_23_212 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__fillcap_16
+X_323_ Inst_W_IO_switch_matrix.E2BEGb0 net17 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__buf_2
+X_185_ FrameData[7] net32 Inst_W_IO_ConfigMem.Inst_frame1_bit7.Q VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__latq_1
+X_254_ Inst_W_IO_switch_matrix.EE4BEG12 net55 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__buf_2
 XFILLER_64_101 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__fillcap_4
 XFILLER_70_104 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__fill_2
 XFILLER_18_37 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__fillcap_4
 XFILLER_34_14 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__fill_1
+Xwire106 net3 net121 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__clkbuf_1
 XTAP_TAPCELL_ROW_21_210 VDD VSS gf180mcu_fd_sc_mcu7t5v0__filltie
 XFILLER_34_69 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__fillcap_4
 XFILLER_59_66 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__fillcap_4
 XFILLER_46_123 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__fill_2
-X_306_ FrameStrobe[16] net191 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__buf_2
-X_237_ net22 net37 Inst_W_IO_ConfigMem.Inst_frame0_bit27.Q VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__latq_1
+X_306_ FrameStrobe[16] net107 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__buf_2
+X_237_ FrameData[27] net37 Inst_W_IO_ConfigMem.Inst_frame0_bit27.Q VDD VDD VSS VSS
++ gf180mcu_fd_sc_mcu7t5v0__latq_1
 XFILLER_24_91 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__fillcap_4
-X_168_ net17 net30 Inst_W_IO_ConfigMem.Inst_frame2_bit22.Q VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__latq_1
-X_099_ net56 net84 net98 net72 Inst_W_IO_ConfigMem.Inst_frame2_bit24.Q Inst_W_IO_ConfigMem.Inst_frame2_bit25.Q
-+ Inst_W_IO_switch_matrix.E2BEGb7 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__mux4_1
+X_168_ FrameData[22] net30 Inst_W_IO_ConfigMem.Inst_frame2_bit22.Q VDD VDD VSS VSS
++ gf180mcu_fd_sc_mcu7t5v0__latq_1
+X_099_ W2END[0] WW4END[0] WW4END[8] W6END[0] Inst_W_IO_ConfigMem.Inst_frame2_bit24.Q
++ Inst_W_IO_ConfigMem.Inst_frame2_bit25.Q Inst_W_IO_switch_matrix.E2BEGb7 VDD VDD
++ VSS VSS gf180mcu_fd_sc_mcu7t5v0__mux4_1
 XFILLER_28_167 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__fillcap_8
 XFILLER_43_137 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__fill_2
 XFILLER_45_46 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__fill_2
@@ -457,6 +505,11 @@ XFILLER_25_148 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__fill_1
 XFILLER_33_170 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__fillcap_32
 XFILLER_40_107 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__fill_1
 XPHY_EDGE_ROW_1_Right_1 VDD VSS gf180mcu_fd_sc_mcu7t5v0__endcap
+Xoutput15 net15 E2BEG[6] VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__buf_4
+Xoutput37 net52 EE4BEG[0] VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__buf_4
+Xoutput48 net63 EE4BEG[5] VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__buf_4
+Xoutput26 net26 E6BEG[10] VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__buf_4
+Xoutput59 net74 FrameData_O[15] VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__buf_4
 XFILLER_56_34 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__fill_1
 XFILLER_22_107 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__fillcap_4
 XTAP_TAPCELL_ROW_17_198 VDD VSS gf180mcu_fd_sc_mcu7t5v0__filltie
@@ -465,36 +518,43 @@ XFILLER_26_37 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__fillcap_4
 XTAP_TAPCELL_ROW_48_290 VDD VSS gf180mcu_fd_sc_mcu7t5v0__filltie
 XFILLER_67_66 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__fillcap_4
 XFILLER_12_173 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__fill_2
-XFILLER_8_177 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__fillcap_32
+XFILLER_8_177 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__fillcap_64
 XTAP_TAPCELL_ROW_45_282 VDD VSS gf180mcu_fd_sc_mcu7t5v0__filltie
 XFILLER_12_39 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__fill_1
-XTAP_TAPCELL_ROW_68_352 VDD VSS gf180mcu_fd_sc_mcu7t5v0__filltie
 XFILLER_37_36 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__fill_2
-X_270_ net6 net155 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__buf_2
+XTAP_TAPCELL_ROW_68_352 VDD VSS gf180mcu_fd_sc_mcu7t5v0__filltie
+X_270_ FrameData[12] net71 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__buf_2
 XFILLER_5_136 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__fillcap_4
 XTAP_TAPCELL_ROW_19_205 VDD VSS gf180mcu_fd_sc_mcu7t5v0__filltie
 XTAP_TAPCELL_ROW_42_274 VDD VSS gf180mcu_fd_sc_mcu7t5v0__filltie
-XFILLER_23_224 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__fill_1
 XTAP_TAPCELL_ROW_1_150 VDD VSS gf180mcu_fd_sc_mcu7t5v0__filltie
-X_322_ Inst_W_IO_switch_matrix.E2BEG7 net115 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__buf_2
+X_322_ Inst_W_IO_switch_matrix.E2BEG7 net16 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__buf_2
 XFILLER_64_34 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__fill_1
-X_184_ net46 net32 Inst_W_IO_ConfigMem.Inst_frame1_bit6.Q VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__latq_1
-X_253_ Inst_W_IO_switch_matrix.EE4BEG11 net138 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__buf_2
+X_184_ FrameData[6] net32 Inst_W_IO_ConfigMem.Inst_frame1_bit6.Q VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__latq_1
+X_253_ Inst_W_IO_switch_matrix.EE4BEG11 net54 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__buf_2
 XPHY_EDGE_ROW_32_Left_103 VDD VSS gf180mcu_fd_sc_mcu7t5v0__endcap
 XPHY_EDGE_ROW_41_Left_112 VDD VSS gf180mcu_fd_sc_mcu7t5v0__endcap
 XPHY_EDGE_ROW_50_Left_121 VDD VSS gf180mcu_fd_sc_mcu7t5v0__endcap
 XFILLER_63_190 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__fillcap_8
+Xwire107 net2 net122 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__clkbuf_1
 XTAP_TAPCELL_ROW_21_211 VDD VSS gf180mcu_fd_sc_mcu7t5v0__filltie
-X_305_ FrameStrobe[15] net190 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__buf_2
-X_167_ net16 net29 Inst_W_IO_ConfigMem.Inst_frame2_bit21.Q VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__latq_1
-X_236_ net21 net37 Inst_W_IO_ConfigMem.Inst_frame0_bit26.Q VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__latq_1
-X_098_ net72 net78 net76 net1 Inst_W_IO_ConfigMem.Inst_frame2_bit27.Q Inst_W_IO_ConfigMem.Inst_frame2_bit26.Q
-+ Inst_W_IO_switch_matrix.EE4BEG0 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__mux4_1
+X_305_ FrameStrobe[15] net106 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__buf_2
+X_167_ FrameData[21] net29 Inst_W_IO_ConfigMem.Inst_frame2_bit21.Q VDD VDD VSS VSS
++ gf180mcu_fd_sc_mcu7t5v0__latq_1
+X_236_ FrameData[26] net37 Inst_W_IO_ConfigMem.Inst_frame0_bit26.Q VDD VDD VSS VSS
++ gf180mcu_fd_sc_mcu7t5v0__latq_1
+X_098_ W6END[0] W6END[4] W6END[2] A_O_top Inst_W_IO_ConfigMem.Inst_frame2_bit27.Q
++ Inst_W_IO_ConfigMem.Inst_frame2_bit26.Q Inst_W_IO_switch_matrix.EE4BEG0 VDD VDD
++ VSS VSS gf180mcu_fd_sc_mcu7t5v0__mux4_1
 XFILLER_60_171 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__fillcap_4
 XPHY_EDGE_ROW_7_Left_78 VDD VSS gf180mcu_fd_sc_mcu7t5v0__endcap
-XFILLER_3_212 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__fillcap_8
-X_219_ net49 net40 Inst_W_IO_ConfigMem.Inst_frame0_bit9.Q VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__latq_1
+XFILLER_3_212 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__fillcap_16
+X_219_ FrameData[9] net40 Inst_W_IO_ConfigMem.Inst_frame0_bit9.Q VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__latq_1
 XFILLER_32_2 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__fillcap_4
+Xoutput16 net16 E2BEG[7] VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__buf_4
+Xoutput49 net64 EE4BEG[6] VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__buf_4
+Xoutput38 net53 EE4BEG[10] VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__buf_4
+Xoutput27 net42 E6BEG[11] VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__buf_4
 XTAP_TAPCELL_ROW_17_199 VDD VSS gf180mcu_fd_sc_mcu7t5v0__filltie
 XFILLER_30_174 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__fill_1
 XPHY_EDGE_ROW_15_Right_15 VDD VSS gf180mcu_fd_sc_mcu7t5v0__endcap
@@ -507,38 +567,45 @@ XPHY_EDGE_ROW_51_Right_51 VDD VSS gf180mcu_fd_sc_mcu7t5v0__endcap
 XPHY_EDGE_ROW_60_Right_60 VDD VSS gf180mcu_fd_sc_mcu7t5v0__endcap
 XTAP_TAPCELL_ROW_45_283 VDD VSS gf180mcu_fd_sc_mcu7t5v0__filltie
 XFILLER_41_203 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__fillcap_4
-XFILLER_53_58 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__fillcap_8
 XFILLER_32_225 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__fill_2
 XFILLER_43_80 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__fillcap_4
 XFILLER_67_166 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__fillcap_4
+XFILLER_23_236 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__fillcap_4
 XFILLER_2_107 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__fillcap_64
-XFILLER_48_14 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__fill_1
 XTAP_TAPCELL_ROW_1_151 VDD VSS gf180mcu_fd_sc_mcu7t5v0__filltie
 XFILLER_58_177 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__fillcap_32
 XTAP_TAPCELL_ROW_24_220 VDD VSS gf180mcu_fd_sc_mcu7t5v0__filltie
-X_321_ Inst_W_IO_switch_matrix.E2BEG6 net114 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__buf_2
+X_321_ Inst_W_IO_switch_matrix.E2BEG6 net15 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__buf_2
 Xfanout40 FrameStrobe[0] net40 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__buf_4
-X_252_ Inst_W_IO_switch_matrix.EE4BEG10 net137 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__buf_2
+X_252_ Inst_W_IO_switch_matrix.EE4BEG10 net53 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__buf_2
 XFILLER_13_72 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__fillcap_8
-X_183_ net45 net33 Inst_W_IO_ConfigMem.Inst_frame1_bit5.Q VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__latq_1
+X_183_ FrameData[5] net33 Inst_W_IO_ConfigMem.Inst_frame1_bit5.Q VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__latq_1
+XFILLER_9_240 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__fill_1
+XFILLER_62_2 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__fillcap_32
 XFILLER_55_136 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__fillcap_4
 XFILLER_70_106 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__fill_1
+XFILLER_11_228 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__fillcap_8
 XFILLER_11_206 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__fillcap_4
 XFILLER_50_37 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__fillcap_8
-X_235_ net20 net37 Inst_W_IO_ConfigMem.Inst_frame0_bit25.Q VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__latq_1
-X_304_ FrameStrobe[14] net189 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__buf_2
-X_166_ net15 net29 Inst_W_IO_ConfigMem.Inst_frame2_bit20.Q VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__latq_1
+X_235_ FrameData[25] net37 Inst_W_IO_ConfigMem.Inst_frame0_bit25.Q VDD VDD VSS VSS
++ gf180mcu_fd_sc_mcu7t5v0__latq_1
+X_304_ FrameStrobe[14] net105 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__buf_2
+X_166_ FrameData[20] net29 Inst_W_IO_ConfigMem.Inst_frame2_bit20.Q VDD VDD VSS VSS
++ gf180mcu_fd_sc_mcu7t5v0__latq_1
 XFILLER_40_81 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__fillcap_4
-X_097_ net80 net73 net82 net2 Inst_W_IO_ConfigMem.Inst_frame2_bit29.Q Inst_W_IO_ConfigMem.Inst_frame2_bit28.Q
-+ Inst_W_IO_switch_matrix.EE4BEG1 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__mux4_1
+X_097_ W6END[6] W6END[10] W6END[8] B_O_top Inst_W_IO_ConfigMem.Inst_frame2_bit29.Q
++ Inst_W_IO_ConfigMem.Inst_frame2_bit28.Q Inst_W_IO_switch_matrix.EE4BEG1 VDD VDD
++ VSS VSS gf180mcu_fd_sc_mcu7t5v0__mux4_1
 XPHY_EDGE_ROW_23_Left_94 VDD VSS gf180mcu_fd_sc_mcu7t5v0__endcap
+XFILLER_20_18 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__fillcap_8
 XFILLER_43_139 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__fill_1
-XFILLER_61_58 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__fillcap_8
-XFILLER_3_224 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__fill_1
-X_149_ net43 net28 Inst_W_IO_ConfigMem.Inst_frame2_bit3.Q VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__latq_1
-X_218_ net48 net40 Inst_W_IO_ConfigMem.Inst_frame0_bit8.Q VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__latq_1
+X_149_ FrameData[3] net28 Inst_W_IO_ConfigMem.Inst_frame2_bit3.Q VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__latq_1
+X_218_ FrameData[8] net40 Inst_W_IO_ConfigMem.Inst_frame0_bit8.Q VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__latq_1
 XFILLER_51_80 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__fill_2
 XFILLER_25_2 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__fill_2
+Xoutput17 net17 E2BEGb[0] VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__buf_4
+Xoutput39 net54 EE4BEG[11] VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__buf_4
+Xoutput28 net43 E6BEG[1] VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__buf_4
 XFILLER_48_209 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__fillcap_16
 XFILLER_21_72 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__fillcap_4
 XFILLER_62_201 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__fillcap_4
@@ -547,73 +614,77 @@ XFILLER_53_212 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__fill_1
 XFILLER_21_142 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__fillcap_64
 XPHY_EDGE_ROW_10_Left_81 VDD VSS gf180mcu_fd_sc_mcu7t5v0__endcap
 XFILLER_35_212 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__fillcap_8
+XFILLER_17_212 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__fillcap_16
 XTAP_TAPCELL_ROW_4_160 VDD VSS gf180mcu_fd_sc_mcu7t5v0__filltie
-XFILLER_17_212 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__fillcap_8
 XFILLER_4_171 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__fillcap_4
 XFILLER_23_204 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__fillcap_4
 XFILLER_48_37 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__fillcap_4
 XFILLER_58_101 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__fillcap_4
-X_320_ Inst_W_IO_switch_matrix.E2BEG5 net113 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__buf_2
-X_182_ net44 net33 Inst_W_IO_ConfigMem.Inst_frame1_bit4.Q VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__latq_1
-Xfanout30 net50 net30 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__buf_4
+X_320_ Inst_W_IO_switch_matrix.E2BEG5 net14 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__buf_2
+X_182_ FrameData[4] net33 Inst_W_IO_ConfigMem.Inst_frame1_bit4.Q VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__latq_1
+Xfanout30 FrameStrobe[2] net30 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__buf_4
 Xfanout41 FrameStrobe[0] net41 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__buf_2
-X_251_ Inst_W_IO_switch_matrix.EE4BEG9 net151 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__buf_2
+X_251_ Inst_W_IO_switch_matrix.EE4BEG9 net67 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__buf_2
 XTAP_TAPCELL_ROW_70_360 VDD VSS gf180mcu_fd_sc_mcu7t5v0__filltie
+XFILLER_55_2 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__fillcap_64
 XFILLER_18_29 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__fillcap_4
 XTAP_TAPCELL_ROW_53_305 VDD VSS gf180mcu_fd_sc_mcu7t5v0__filltie
 XFILLER_50_49 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__fill_1
 XFILLER_46_104 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__fill_1
-XFILLER_59_58 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__fillcap_8
-X_303_ FrameStrobe[13] net188 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__buf_2
-X_234_ net19 net37 Inst_W_IO_ConfigMem.Inst_frame0_bit24.Q VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__latq_1
-X_165_ net13 net30 Inst_W_IO_ConfigMem.Inst_frame2_bit19.Q VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__latq_1
+X_303_ FrameStrobe[13] net104 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__buf_2
+X_234_ FrameData[24] net37 Inst_W_IO_ConfigMem.Inst_frame0_bit24.Q VDD VDD VSS VSS
++ gf180mcu_fd_sc_mcu7t5v0__latq_1
+X_165_ FrameData[19] net30 Inst_W_IO_ConfigMem.Inst_frame2_bit19.Q VDD VDD VSS VSS
++ gf180mcu_fd_sc_mcu7t5v0__latq_1
 XFILLER_69_207 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__fill_2
-X_096_ net75 net79 net77 Inst_A_IO_1_bidirectional_frame_config_pass.Q Inst_W_IO_ConfigMem.Inst_frame2_bit31.Q
+X_096_ W6END[1] W6END[5] W6END[3] Inst_A_IO_1_bidirectional_frame_config_pass.Q Inst_W_IO_ConfigMem.Inst_frame2_bit31.Q
 + Inst_W_IO_ConfigMem.Inst_frame2_bit30.Q Inst_W_IO_switch_matrix.EE4BEG2 VDD VDD
 + VSS VSS gf180mcu_fd_sc_mcu7t5v0__mux4_1
 XFILLER_52_107 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__fillcap_16
 XFILLER_10_96 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__fillcap_8
+XFILLER_3_236 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__fillcap_4
 XFILLER_19_72 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__fill_2
 XFILLER_34_107 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__fillcap_4
-X_148_ net25 net28 Inst_W_IO_ConfigMem.Inst_frame2_bit2.Q VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__latq_1
-X_217_ net47 net41 Inst_W_IO_ConfigMem.Inst_frame0_bit7.Q VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__latq_1
+X_148_ FrameData[2] net28 Inst_W_IO_ConfigMem.Inst_frame2_bit2.Q VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__latq_1
+X_217_ FrameData[7] net41 Inst_W_IO_ConfigMem.Inst_frame0_bit7.Q VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__latq_1
 XPHY_EDGE_ROW_29_Left_100 VDD VSS gf180mcu_fd_sc_mcu7t5v0__endcap
-X_079_ net96 net89 net80 net2 Inst_W_IO_ConfigMem.Inst_frame0_bit0.Q Inst_W_IO_ConfigMem.Inst_frame0_bit1.Q
-+ Inst_W_IO_switch_matrix.E6BEG3 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__mux4_1
+X_079_ WW4END[6] WW4END[14] W6END[6] B_O_top Inst_W_IO_ConfigMem.Inst_frame0_bit0.Q
++ Inst_W_IO_ConfigMem.Inst_frame0_bit1.Q Inst_W_IO_switch_matrix.E6BEG3 VDD VDD VSS
++ VSS gf180mcu_fd_sc_mcu7t5v0__mux4_1
 XFILLER_18_2 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__fillcap_4
-XFILLER_0_206 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__fillcap_8
+XFILLER_0_206 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__fillcap_32
+Xoutput18 net18 E2BEGb[1] VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__buf_4
+Xoutput29 net44 E6BEG[2] VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__buf_4
 XFILLER_56_37 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__fillcap_64
 XFILLER_16_107 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__fill_2
 XFILLER_24_173 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__fill_2
 XFILLER_46_92 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__fillcap_8
 XFILLER_7_64 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__fillcap_4
 XPHY_EDGE_ROW_5_Right_5 VDD VSS gf180mcu_fd_sc_mcu7t5v0__endcap
-XFILLER_67_58 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__fillcap_8
 XFILLER_16_95 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__fillcap_8
 XFILLER_8_103 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__fill_2
 XFILLER_35_224 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__fill_2
 XTAP_TAPCELL_ROW_51_299 VDD VSS gf180mcu_fd_sc_mcu7t5v0__filltie
 XFILLER_17_202 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__fillcap_8
-XFILLER_17_224 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__fill_1
-XFILLER_4_10 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__fillcap_16
 XTAP_TAPCELL_ROW_56_314 VDD VSS gf180mcu_fd_sc_mcu7t5v0__filltie
-XFILLER_64_26 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__fillcap_8
 XFILLER_64_37 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__fillcap_64
-X_181_ net43 net33 Inst_W_IO_ConfigMem.Inst_frame1_bit3.Q VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__latq_1
-Xfanout31 net50 net31 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__buf_4
-X_250_ Inst_W_IO_switch_matrix.EE4BEG8 net150 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__buf_2
+X_181_ FrameData[3] net33 Inst_W_IO_ConfigMem.Inst_frame1_bit3.Q VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__latq_1
+Xfanout31 FrameStrobe[2] net31 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__buf_4
+X_250_ Inst_W_IO_switch_matrix.EE4BEG8 net66 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__buf_2
 XFILLER_1_142 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__fillcap_64
 XFILLER_38_93 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__fill_1
 XFILLER_49_135 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__fillcap_4
 XTAP_TAPCELL_ROW_70_361 VDD VSS gf180mcu_fd_sc_mcu7t5v0__filltie
-XFILLER_9_220 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__fillcap_4
 XTAP_TAPCELL_ROW_30_236 VDD VSS gf180mcu_fd_sc_mcu7t5v0__filltie
+XFILLER_48_2 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__fillcap_4
 XTAP_TAPCELL_ROW_53_306 VDD VSS gf180mcu_fd_sc_mcu7t5v0__filltie
-X_302_ FrameStrobe[12] net187 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__buf_2
 XFILLER_54_171 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__fillcap_4
-X_233_ net18 net37 Inst_W_IO_ConfigMem.Inst_frame0_bit23.Q VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__latq_1
-X_164_ net12 net30 Inst_W_IO_ConfigMem.Inst_frame2_bit18.Q VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__latq_1
-X_095_ net81 net74 net83 Inst_B_IO_1_bidirectional_frame_config_pass.Q Inst_W_IO_ConfigMem.Inst_frame1_bit1.Q
+X_302_ FrameStrobe[12] net103 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__buf_2
+X_233_ FrameData[23] net37 Inst_W_IO_ConfigMem.Inst_frame0_bit23.Q VDD VDD VSS VSS
++ gf180mcu_fd_sc_mcu7t5v0__latq_1
+X_164_ FrameData[18] net30 Inst_W_IO_ConfigMem.Inst_frame2_bit18.Q VDD VDD VSS VSS
++ gf180mcu_fd_sc_mcu7t5v0__latq_1
+X_095_ W6END[7] W6END[11] W6END[9] Inst_B_IO_1_bidirectional_frame_config_pass.Q Inst_W_IO_ConfigMem.Inst_frame1_bit1.Q
 + Inst_W_IO_ConfigMem.Inst_frame1_bit0.Q Inst_W_IO_switch_matrix.EE4BEG3 VDD VDD VSS
 + VSS gf180mcu_fd_sc_mcu7t5v0__mux4_1
 XFILLER_1_66 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__fillcap_4
@@ -621,12 +692,14 @@ XFILLER_37_127 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__fillcap_4
 XFILLER_10_53 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__fill_2
 XFILLER_35_72 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__fillcap_16
 XFILLER_42_174 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__fill_1
-X_078_ net54 net93 net77 net1 Inst_W_IO_ConfigMem.Inst_frame0_bit2.Q Inst_W_IO_ConfigMem.Inst_frame0_bit3.Q
-+ Inst_W_IO_switch_matrix.E6BEG4 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__mux4_1
-X_147_ net14 net28 Inst_W_IO_ConfigMem.Inst_frame2_bit1.Q VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__latq_1
-X_216_ net46 net41 Inst_W_IO_ConfigMem.Inst_frame0_bit6.Q VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__latq_1
+X_078_ W1END[2] WW4END[3] W6END[3] A_O_top Inst_W_IO_ConfigMem.Inst_frame0_bit2.Q
++ Inst_W_IO_ConfigMem.Inst_frame0_bit3.Q Inst_W_IO_switch_matrix.E6BEG4 VDD VDD VSS
++ VSS gf180mcu_fd_sc_mcu7t5v0__mux4_1
+X_147_ FrameData[1] net28 Inst_W_IO_ConfigMem.Inst_frame2_bit1.Q VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__latq_1
+X_216_ FrameData[6] net41 Inst_W_IO_ConfigMem.Inst_frame0_bit6.Q VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__latq_1
 XFILLER_25_4 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__fill_1
 XFILLER_18_171 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__fillcap_4
+Xoutput19 net19 E2BEGb[2] VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__buf_4
 XFILLER_24_141 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__fillcap_8
 XFILLER_30_177 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__fillcap_32
 XFILLER_30_2 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__fill_1
@@ -635,32 +708,38 @@ Xclkbuf_1_0__f_UserCLK_regs clknet_0_UserCLK_regs clknet_1_0__leaf_UserCLK_regs 
 XFILLER_44_225 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__fill_2
 XPHY_EDGE_ROW_48_Left_119 VDD VSS gf180mcu_fd_sc_mcu7t5v0__endcap
 XPHY_EDGE_ROW_11_Right_11 VDD VSS gf180mcu_fd_sc_mcu7t5v0__endcap
-XFILLER_12_177 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__fillcap_32
+XFILLER_12_177 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__fillcap_64
 XFILLER_12_111 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__fill_2
 XPHY_EDGE_ROW_57_Left_128 VDD VSS gf180mcu_fd_sc_mcu7t5v0__endcap
 XPHY_EDGE_ROW_20_Right_20 VDD VSS gf180mcu_fd_sc_mcu7t5v0__endcap
 XFILLER_32_95 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__fillcap_8
 XPHY_EDGE_ROW_66_Left_137 VDD VSS gf180mcu_fd_sc_mcu7t5v0__endcap
+XFILLER_26_225 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__fill_2
 XTAP_TAPCELL_ROW_59_323 VDD VSS gf180mcu_fd_sc_mcu7t5v0__filltie
+XFILLER_17_236 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__fillcap_4
 XFILLER_43_72 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__fillcap_8
-XFILLER_67_158 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__fillcap_8
 XFILLER_67_136 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__fillcap_4
+XFILLER_67_158 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__fillcap_8
+XFILLER_23_228 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__fillcap_8
 XTAP_TAPCELL_ROW_33_245 VDD VSS gf180mcu_fd_sc_mcu7t5v0__filltie
 XTAP_TAPCELL_ROW_56_315 VDD VSS gf180mcu_fd_sc_mcu7t5v0__filltie
-X_180_ net25 net33 Inst_W_IO_ConfigMem.Inst_frame1_bit2.Q VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__latq_1
+X_180_ FrameData[2] net33 Inst_W_IO_ConfigMem.Inst_frame1_bit2.Q VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__latq_1
 Xfanout32 net36 net32 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__buf_4
+XFILLER_8_2 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__fillcap_32
 XTAP_TAPCELL_ROW_70_362 VDD VSS gf180mcu_fd_sc_mcu7t5v0__filltie
-XFILLER_20_209 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__fillcap_16
 XFILLER_70_70 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__fill_1
 XTAP_TAPCELL_ROW_30_237 VDD VSS gf180mcu_fd_sc_mcu7t5v0__filltie
 XTAP_TAPCELL_ROW_53_307 VDD VSS gf180mcu_fd_sc_mcu7t5v0__filltie
-X_301_ FrameStrobe[11] net186 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__buf_2
-X_232_ net17 net37 Inst_W_IO_ConfigMem.Inst_frame0_bit22.Q VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__latq_1
+X_232_ FrameData[22] net37 Inst_W_IO_ConfigMem.Inst_frame0_bit22.Q VDD VDD VSS VSS
++ gf180mcu_fd_sc_mcu7t5v0__latq_1
 XFILLER_24_41 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__fill_2
 XFILLER_24_30 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__fillcap_4
-X_094_ net56 net58 net60 net62 Inst_W_IO_ConfigMem.Inst_frame1_bit2.Q Inst_W_IO_ConfigMem.Inst_frame1_bit3.Q
-+ Inst_W_IO_switch_matrix.EE4BEG4 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__mux4_1
-X_163_ net11 net31 Inst_W_IO_ConfigMem.Inst_frame2_bit17.Q VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__latq_1
+X_301_ FrameStrobe[11] net102 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__buf_2
+X_094_ W2END[0] W2END[2] W2END[4] W2END[6] Inst_W_IO_ConfigMem.Inst_frame1_bit2.Q
++ Inst_W_IO_ConfigMem.Inst_frame1_bit3.Q Inst_W_IO_switch_matrix.EE4BEG4 VDD VDD VSS
++ VSS gf180mcu_fd_sc_mcu7t5v0__mux4_1
+X_163_ FrameData[17] net31 Inst_W_IO_ConfigMem.Inst_frame2_bit17.Q VDD VDD VSS VSS
++ gf180mcu_fd_sc_mcu7t5v0__latq_1
 XFILLER_69_209 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__fill_1
 XFILLER_37_117 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__fill_2
 XPHY_EDGE_ROW_49_Right_49 VDD VSS gf180mcu_fd_sc_mcu7t5v0__endcap
@@ -668,20 +747,21 @@ XFILLER_60_2 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__fillcap_32
 XPHY_EDGE_ROW_58_Right_58 VDD VSS gf180mcu_fd_sc_mcu7t5v0__endcap
 XFILLER_51_142 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__fillcap_64
 XPHY_EDGE_ROW_67_Right_67 VDD VSS gf180mcu_fd_sc_mcu7t5v0__endcap
-X_215_ net45 net39 Inst_W_IO_ConfigMem.Inst_frame0_bit5.Q VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__latq_1
-X_077_ net55 net92 net76 net2 Inst_W_IO_ConfigMem.Inst_frame0_bit4.Q Inst_W_IO_ConfigMem.Inst_frame0_bit5.Q
-+ Inst_W_IO_switch_matrix.E6BEG5 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__mux4_1
-X_146_ net3 net28 Inst_W_IO_ConfigMem.Inst_frame2_bit0.Q VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__latq_1
-XFILLER_65_212 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__fill_1
+X_215_ FrameData[5] net39 Inst_W_IO_ConfigMem.Inst_frame0_bit5.Q VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__latq_1
+X_077_ W1END[3] WW4END[2] W6END[2] B_O_top Inst_W_IO_ConfigMem.Inst_frame0_bit4.Q
++ Inst_W_IO_ConfigMem.Inst_frame0_bit5.Q Inst_W_IO_switch_matrix.E6BEG5 VDD VDD VSS
++ VSS gf180mcu_fd_sc_mcu7t5v0__mux4_1
+X_146_ FrameData[0] net28 Inst_W_IO_ConfigMem.Inst_frame2_bit0.Q VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__latq_1
 XPHY_EDGE_ROW_27_Left_98 VDD VSS gf180mcu_fd_sc_mcu7t5v0__endcap
+XFILLER_65_212 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__fill_1
 XFILLER_33_142 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__fillcap_8
 XFILLER_21_97 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__fillcap_4
 XFILLER_47_212 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__fill_1
 XFILLER_15_142 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__fillcap_64
-X_129_ net61 _006_ Inst_W_IO_ConfigMem.Inst_frame0_bit31.Q _036_ VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__and3_1
+X_129_ W2END[5] _006_ Inst_W_IO_ConfigMem.Inst_frame0_bit31.Q _036_ VDD VDD VSS VSS
++ gf180mcu_fd_sc_mcu7t5v0__and3_1
 XFILLER_23_2 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__fillcap_4
 XFILLER_21_101 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__fill_1
-Xinput80 WW4END[5] net95 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__buf_2
 XFILLER_29_212 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__fill_1
 XFILLER_35_226 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__fill_1
 XTAP_TAPCELL_ROW_36_254 VDD VSS gf180mcu_fd_sc_mcu7t5v0__filltie
@@ -692,28 +772,34 @@ XTAP_TAPCELL_ROW_10_176 VDD VSS gf180mcu_fd_sc_mcu7t5v0__filltie
 XFILLER_43_84 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__fill_1
 XFILLER_4_34 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__fill_1
 XTAP_TAPCELL_ROW_33_246 VDD VSS gf180mcu_fd_sc_mcu7t5v0__filltie
-XFILLER_66_181 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__fill_2
 XTAP_TAPCELL_ROW_56_316 VDD VSS gf180mcu_fd_sc_mcu7t5v0__filltie
+XFILLER_66_181 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__fill_2
 Xfanout33 net36 net33 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__buf_2
 XFILLER_38_84 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__fill_1
 XFILLER_64_107 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__fillcap_64
+XFILLER_13_240 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__fill_1
 XTAP_TAPCELL_ROW_30_238 VDD VSS gf180mcu_fd_sc_mcu7t5v0__filltie
 XTAP_TAPCELL_ROW_61_330 VDD VSS gf180mcu_fd_sc_mcu7t5v0__filltie
 XFILLER_46_107 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__fillcap_16
-X_300_ FrameStrobe[10] net185 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__buf_2
-X_231_ net16 net37 Inst_W_IO_ConfigMem.Inst_frame0_bit21.Q VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__latq_1
-X_162_ net10 net31 Inst_W_IO_ConfigMem.Inst_frame2_bit16.Q VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__latq_1
-X_093_ net57 net59 net61 net63 Inst_W_IO_ConfigMem.Inst_frame1_bit4.Q Inst_W_IO_ConfigMem.Inst_frame1_bit5.Q
-+ Inst_W_IO_switch_matrix.EE4BEG5 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__mux4_1
+X_231_ FrameData[21] net37 Inst_W_IO_ConfigMem.Inst_frame0_bit21.Q VDD VDD VSS VSS
++ gf180mcu_fd_sc_mcu7t5v0__latq_1
+X_162_ FrameData[16] net31 Inst_W_IO_ConfigMem.Inst_frame2_bit16.Q VDD VDD VSS VSS
++ gf180mcu_fd_sc_mcu7t5v0__latq_1
+X_300_ FrameStrobe[10] net101 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__buf_2
+X_093_ W2END[1] W2END[3] W2END[5] W2END[7] Inst_W_IO_ConfigMem.Inst_frame1_bit4.Q
++ Inst_W_IO_ConfigMem.Inst_frame1_bit5.Q Inst_W_IO_switch_matrix.EE4BEG5 VDD VDD VSS
++ VSS gf180mcu_fd_sc_mcu7t5v0__mux4_1
 XFILLER_49_72 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__fill_2
-Xinput1 A_O_top net1 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__buf_2
+XFILLER_53_2 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__fillcap_64
 XFILLER_36_173 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__fill_2
 XFILLER_10_55 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__fill_1
 XFILLER_3_206 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__fillcap_4
-X_214_ net44 net39 Inst_W_IO_ConfigMem.Inst_frame0_bit4.Q VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__latq_1
+XFILLER_3_228 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__fillcap_8
+X_214_ FrameData[4] net39 Inst_W_IO_ConfigMem.Inst_frame0_bit4.Q VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__latq_1
 XPHY_EDGE_ROW_2_Left_73 VDD VSS gf180mcu_fd_sc_mcu7t5v0__endcap
-X_145_ net42 net27 Inst_W_IO_ConfigMem.Inst_frame3_bit31.Q VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__latq_1
-X_076_ net53 net99 net83 Inst_A_IO_1_bidirectional_frame_config_pass.Q Inst_W_IO_ConfigMem.Inst_frame0_bit6.Q
+X_145_ FrameData[31] net27 Inst_W_IO_ConfigMem.Inst_frame3_bit31.Q VDD VDD VSS VSS
++ gf180mcu_fd_sc_mcu7t5v0__latq_1
+X_076_ W1END[1] WW4END[9] W6END[9] Inst_A_IO_1_bidirectional_frame_config_pass.Q Inst_W_IO_ConfigMem.Inst_frame0_bit6.Q
 + Inst_W_IO_ConfigMem.Inst_frame0_bit7.Q Inst_W_IO_switch_matrix.E6BEG6 VDD VDD VSS
 + VSS gf180mcu_fd_sc_mcu7t5v0__mux4_1
 XFILLER_21_76 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__fill_1
@@ -721,11 +807,9 @@ XFILLER_15_110 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__fillcap_8
 Xclkbuf_1_0__f_UserCLK clknet_0_UserCLK clknet_1_0__leaf_UserCLK VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__clkbuf_16
 X_128_ _002_ Inst_W_IO_ConfigMem.Inst_frame0_bit30.Q Inst_W_IO_ConfigMem.Inst_frame0_bit31.Q
 + _034_ _035_ VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__aoi211_1
-X_059_ Inst_W_IO_ConfigMem.Inst_frame0_bit28.Q _012_ _016_ _008_ _010_ net102 VDD
-+ VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__oai32_1
+X_059_ Inst_W_IO_ConfigMem.Inst_frame0_bit28.Q _012_ _016_ _008_ _010_ net3 VDD VDD
++ VSS VSS gf180mcu_fd_sc_mcu7t5v0__oai32_1
 XFILLER_16_2 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__fill_1
-Xinput81 WW4END[6] net96 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__buf_2
-Xinput70 WW4END[10] net85 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__buf_2
 XTAP_TAPCELL_ROW_39_263 VDD VSS gf180mcu_fd_sc_mcu7t5v0__filltie
 XFILLER_32_53 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__fillcap_4
 XFILLER_35_205 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__fillcap_4
@@ -742,40 +826,39 @@ XTAP_TAPCELL_ROW_33_247 VDD VSS gf180mcu_fd_sc_mcu7t5v0__filltie
 XFILLER_66_171 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__fillcap_4
 Xfanout34 net36 net34 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__buf_4
 XFILLER_49_127 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__fillcap_8
-XFILLER_9_212 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__fillcap_8
+XFILLER_9_212 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__fillcap_16
 XTAP_TAPCELL_ROW_61_331 VDD VSS gf180mcu_fd_sc_mcu7t5v0__filltie
 XFILLER_63_174 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__fillcap_16
-X_230_ net15 net37 Inst_W_IO_ConfigMem.Inst_frame0_bit20.Q VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__latq_1
-X_161_ net9 net31 Inst_W_IO_ConfigMem.Inst_frame2_bit15.Q VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__latq_1
-X_092_ net64 net68 net66 net70 Inst_W_IO_ConfigMem.Inst_frame1_bit7.Q Inst_W_IO_ConfigMem.Inst_frame1_bit6.Q
-+ Inst_W_IO_switch_matrix.EE4BEG6 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__mux4_1
-XFILLER_65_72 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__fillcap_64
+X_230_ FrameData[20] net37 Inst_W_IO_ConfigMem.Inst_frame0_bit20.Q VDD VDD VSS VSS
++ gf180mcu_fd_sc_mcu7t5v0__latq_1
+X_161_ FrameData[15] net31 Inst_W_IO_ConfigMem.Inst_frame2_bit15.Q VDD VDD VSS VSS
++ gf180mcu_fd_sc_mcu7t5v0__latq_1
+X_092_ W2MID[0] W2MID[4] W2MID[2] W2MID[6] Inst_W_IO_ConfigMem.Inst_frame1_bit7.Q
++ Inst_W_IO_ConfigMem.Inst_frame1_bit6.Q Inst_W_IO_switch_matrix.EE4BEG6 VDD VDD VSS
++ VSS gf180mcu_fd_sc_mcu7t5v0__mux4_1
 XFILLER_45_196 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__fillcap_8
 XFILLER_60_177 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__fillcap_32
-Xinput2 B_O_top net2 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__buf_2
+XFILLER_65_72 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__fillcap_64
 XFILLER_10_34 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__fill_1
 XFILLER_42_177 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__fillcap_32
-X_213_ net43 net39 Inst_W_IO_ConfigMem.Inst_frame0_bit3.Q VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__latq_1
-X_144_ net26 net27 Inst_W_IO_ConfigMem.Inst_frame3_bit30.Q VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__latq_1
-X_075_ net52 net98 net82 Inst_B_IO_1_bidirectional_frame_config_pass.Q Inst_W_IO_ConfigMem.Inst_frame0_bit8.Q
+X_213_ FrameData[3] net39 Inst_W_IO_ConfigMem.Inst_frame0_bit3.Q VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__latq_1
+X_144_ FrameData[30] net27 Inst_W_IO_ConfigMem.Inst_frame3_bit30.Q VDD VDD VSS VSS
++ gf180mcu_fd_sc_mcu7t5v0__latq_1
+X_075_ W1END[0] WW4END[8] W6END[8] Inst_B_IO_1_bidirectional_frame_config_pass.Q Inst_W_IO_ConfigMem.Inst_frame0_bit8.Q
 + Inst_W_IO_ConfigMem.Inst_frame0_bit9.Q Inst_W_IO_switch_matrix.E6BEG7 VDD VDD VSS
 + VSS gf180mcu_fd_sc_mcu7t5v0__mux4_1
 XFILLER_51_63 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__fillcap_4
-XFILLER_18_6 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__fill_2
 XFILLER_18_163 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__fillcap_8
+XFILLER_18_6 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__fill_2
 XFILLER_56_225 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__fill_2
 XFILLER_24_122 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__fill_1
-XFILLER_24_177 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__fillcap_32
-Xoutput180 net195 FrameStrobe_O[1] VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__buf_4
+XFILLER_24_177 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__fillcap_64
 XFILLER_7_68 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__fill_2
-X_127_ net70 Inst_W_IO_ConfigMem.Inst_frame0_bit30.Q _034_ VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__nor2_1
+X_127_ W2MID[6] Inst_W_IO_ConfigMem.Inst_frame0_bit30.Q _034_ VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__nor2_1
 X_058_ Inst_W_IO_ConfigMem.Inst_frame0_bit26.Q _013_ _015_ _001_ _016_ VDD VDD VSS
 + VSS gf180mcu_fd_sc_mcu7t5v0__aoi211_1
 XFILLER_53_206 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__fillcap_4
 XTAP_TAPCELL_ROW_16_194 VDD VSS gf180mcu_fd_sc_mcu7t5v0__filltie
-Xinput82 WW4END[7] net97 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__buf_2
-Xinput71 WW4END[11] net86 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__buf_2
-Xinput60 W6END[1] net75 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__buf_2
 XTAP_TAPCELL_ROW_39_264 VDD VSS gf180mcu_fd_sc_mcu7t5v0__filltie
 XFILLER_12_169 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__fillcap_4
 XFILLER_8_107 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__fillcap_64
@@ -783,116 +866,103 @@ XPHY_EDGE_ROW_35_Left_106 VDD VSS gf180mcu_fd_sc_mcu7t5v0__endcap
 XFILLER_50_209 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__fillcap_4
 XTAP_TAPCELL_ROW_13_186 VDD VSS gf180mcu_fd_sc_mcu7t5v0__filltie
 XPHY_EDGE_ROW_44_Left_115 VDD VSS gf180mcu_fd_sc_mcu7t5v0__endcap
-XFILLER_26_217 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__fill_2
 XPHY_EDGE_ROW_53_Left_124 VDD VSS gf180mcu_fd_sc_mcu7t5v0__endcap
 XTAP_TAPCELL_ROW_36_256 VDD VSS gf180mcu_fd_sc_mcu7t5v0__filltie
 XFILLER_41_209 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__fill_1
 XPHY_EDGE_ROW_62_Left_133 VDD VSS gf180mcu_fd_sc_mcu7t5v0__endcap
+XFILLER_17_228 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__fillcap_8
 XFILLER_32_209 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__fillcap_16
 XTAP_TAPCELL_ROW_10_178 VDD VSS gf180mcu_fd_sc_mcu7t5v0__filltie
 XTAP_TAPCELL_ROW_18_201 VDD VSS gf180mcu_fd_sc_mcu7t5v0__filltie
 XTAP_TAPCELL_ROW_41_270 VDD VSS gf180mcu_fd_sc_mcu7t5v0__filltie
-XFILLER_14_209 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__fillcap_16
 XTAP_TAPCELL_ROW_64_340 VDD VSS gf180mcu_fd_sc_mcu7t5v0__filltie
 Xfanout35 net36 net35 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__buf_2
 XFILLER_49_139 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__fill_1
-XFILLER_13_220 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__fillcap_4
 XFILLER_70_51 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__fill_2
-XFILLER_9_224 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__fill_1
+XFILLER_48_6 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__fill_1
 XFILLER_63_142 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__fillcap_32
-X_091_ net65 net69 net67 net71 Inst_W_IO_ConfigMem.Inst_frame1_bit9.Q Inst_W_IO_ConfigMem.Inst_frame1_bit8.Q
-+ Inst_W_IO_switch_matrix.EE4BEG7 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__mux4_1
-X_160_ net8 net31 Inst_W_IO_ConfigMem.Inst_frame2_bit14.Q VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__latq_1
+X_091_ W2MID[1] W2MID[5] W2MID[3] W2MID[7] Inst_W_IO_ConfigMem.Inst_frame1_bit9.Q
++ Inst_W_IO_ConfigMem.Inst_frame1_bit8.Q Inst_W_IO_switch_matrix.EE4BEG7 VDD VDD VSS
++ VSS gf180mcu_fd_sc_mcu7t5v0__mux4_1
+X_160_ FrameData[14] net31 Inst_W_IO_ConfigMem.Inst_frame2_bit14.Q VDD VDD VSS VSS
++ gf180mcu_fd_sc_mcu7t5v0__latq_1
 XFILLER_37_109 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__fillcap_8
 Xclkbuf_regs_0_UserCLK UserCLK UserCLK_regs VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__clkbuf_16
 XFILLER_49_74 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__fill_1
 XFILLER_45_164 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__fillcap_32
 XFILLER_60_101 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__fillcap_4
-X_289_ net42 net176 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__buf_2
+X_289_ FrameData[31] net92 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__buf_2
 XPHY_EDGE_ROW_18_Right_18 VDD VSS gf180mcu_fd_sc_mcu7t5v0__endcap
 XFILLER_39_2 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__fillcap_4
-Xinput3 FrameData[0] net3 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__buf_2
 XPHY_EDGE_ROW_27_Right_27 VDD VSS gf180mcu_fd_sc_mcu7t5v0__endcap
 XFILLER_51_134 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__fillcap_4
 XPHY_EDGE_ROW_36_Right_36 VDD VSS gf180mcu_fd_sc_mcu7t5v0__endcap
 XFILLER_59_212 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__fill_1
-X_212_ net25 net39 Inst_W_IO_ConfigMem.Inst_frame0_bit2.Q VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__latq_1
+X_212_ FrameData[2] net39 Inst_W_IO_ConfigMem.Inst_frame0_bit2.Q VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__latq_1
 XFILLER_42_123 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__fill_1
 XPHY_EDGE_ROW_45_Right_45 VDD VSS gf180mcu_fd_sc_mcu7t5v0__endcap
-X_074_ net95 net88 net79 Inst_A_IO_1_bidirectional_frame_config_pass.Q Inst_W_IO_ConfigMem.Inst_frame0_bit10.Q
-+ Inst_W_IO_ConfigMem.Inst_frame0_bit11.Q Inst_W_IO_switch_matrix.E6BEG8 VDD VDD VSS
-+ VSS gf180mcu_fd_sc_mcu7t5v0__mux4_1
-X_143_ net24 net27 Inst_W_IO_ConfigMem.Inst_frame3_bit29.Q VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__latq_1
+X_074_ WW4END[5] WW4END[13] W6END[5] Inst_A_IO_1_bidirectional_frame_config_pass.Q
++ Inst_W_IO_ConfigMem.Inst_frame0_bit10.Q Inst_W_IO_ConfigMem.Inst_frame0_bit11.Q
++ Inst_W_IO_switch_matrix.E6BEG8 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__mux4_1
+X_143_ FrameData[29] net27 Inst_W_IO_ConfigMem.Inst_frame3_bit29.Q VDD VDD VSS VSS
++ gf180mcu_fd_sc_mcu7t5v0__latq_1
 XPHY_EDGE_ROW_54_Right_54 VDD VSS gf180mcu_fd_sc_mcu7t5v0__endcap
 XPHY_EDGE_ROW_63_Right_63 VDD VSS gf180mcu_fd_sc_mcu7t5v0__endcap
-Xoutput170 net185 FrameStrobe_O[10] VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__buf_4
-Xoutput181 net196 FrameStrobe_O[2] VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__buf_4
 XFILLER_15_134 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__fill_2
 XFILLER_70_240 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__fill_1
-X_126_ Inst_W_IO_ConfigMem.Inst_frame0_bit22.Q _028_ _029_ _030_ _033_ net101 VDD
-+ VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__oai32_1
+X_126_ Inst_W_IO_ConfigMem.Inst_frame0_bit22.Q _028_ _029_ _030_ _033_ net2 VDD VDD
++ VSS VSS gf180mcu_fd_sc_mcu7t5v0__oai32_1
 X_057_ Inst_W_IO_ConfigMem.Inst_frame0_bit25.Q _000_ _014_ Inst_W_IO_ConfigMem.Inst_frame0_bit26.Q
 + _015_ VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__aoi211_1
 XTAP_TAPCELL_ROW_16_195 VDD VSS gf180mcu_fd_sc_mcu7t5v0__filltie
-Xinput50 W2MID[1] net65 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__buf_2
-Xinput72 WW4END[12] net87 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__buf_2
-Xinput61 W6END[2] net76 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__buf_2
-Xinput83 WW4END[8] net98 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__buf_2
 XTAP_TAPCELL_ROW_39_265 VDD VSS gf180mcu_fd_sc_mcu7t5v0__filltie
 XPHY_EDGE_ROW_0_Right_0 VDD VSS gf180mcu_fd_sc_mcu7t5v0__endcap
 XTAP_TAPCELL_ROW_13_187 VDD VSS gf180mcu_fd_sc_mcu7t5v0__filltie
-X_109_ net66 net92 net85 net76 Inst_W_IO_ConfigMem.Inst_frame2_bit4.Q Inst_W_IO_ConfigMem.Inst_frame2_bit5.Q
-+ Inst_W_IO_switch_matrix.E2BEG5 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__mux4_1
-XFILLER_43_10 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__fillcap_4
-XFILLER_4_26 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__fillcap_8
+X_109_ W2MID[2] WW4END[2] WW4END[10] W6END[2] Inst_W_IO_ConfigMem.Inst_frame2_bit4.Q
++ Inst_W_IO_ConfigMem.Inst_frame2_bit5.Q Inst_W_IO_switch_matrix.E2BEG5 VDD VDD VSS
++ VSS gf180mcu_fd_sc_mcu7t5v0__mux4_1
+XFILLER_25_240 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__fill_1
 XFILLER_4_37 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__fillcap_64
-XFILLER_4_177 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__fillcap_32
+XFILLER_4_177 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__fillcap_64
 XTAP_TAPCELL_ROW_18_202 VDD VSS gf180mcu_fd_sc_mcu7t5v0__filltie
-XFILLER_69_2 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__fillcap_8
 XTAP_TAPCELL_ROW_41_271 VDD VSS gf180mcu_fd_sc_mcu7t5v0__filltie
+XFILLER_69_2 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__fillcap_8
 XPHY_EDGE_ROW_18_Left_89 VDD VSS gf180mcu_fd_sc_mcu7t5v0__endcap
 XFILLER_58_107 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__fillcap_64
-Xfanout36 FrameStrobe[1] net36 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__buf_2
 XFILLER_13_24 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__fillcap_4
+Xfanout36 FrameStrobe[1] net36 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__buf_2
 XFILLER_1_136 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__fillcap_4
+XFILLER_9_236 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__fillcap_4
 XFILLER_63_198 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__fillcap_4
 XFILLER_24_34 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__fill_1
-X_090_ net78 net82 net80 net73 Inst_W_IO_ConfigMem.Inst_frame1_bit11.Q Inst_W_IO_ConfigMem.Inst_frame1_bit10.Q
-+ Inst_W_IO_switch_matrix.EE4BEG8 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__mux4_1
+X_090_ W6END[4] W6END[8] W6END[6] W6END[10] Inst_W_IO_ConfigMem.Inst_frame1_bit11.Q
++ Inst_W_IO_ConfigMem.Inst_frame1_bit10.Q Inst_W_IO_switch_matrix.EE4BEG8 VDD VDD
++ VSS VSS gf180mcu_fd_sc_mcu7t5v0__mux4_1
 Xclkbuf_0_UserCLK_regs UserCLK_regs clknet_0_UserCLK_regs VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__clkbuf_16
-X_288_ net26 net175 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__buf_2
-Xinput4 FrameData[10] net4 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__buf_2
+X_288_ FrameData[30] net91 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__buf_2
 XFILLER_51_102 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__fillcap_32
-X_142_ net23 net27 Inst_W_IO_ConfigMem.Inst_frame3_bit28.Q VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__latq_1
-X_211_ net14 net40 Inst_W_IO_ConfigMem.Inst_frame0_bit1.Q VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__latq_1
-XFILLER_51_10 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__fill_1
-X_073_ net94 net87 net78 Inst_B_IO_1_bidirectional_frame_config_pass.Q Inst_W_IO_ConfigMem.Inst_frame0_bit12.Q
-+ Inst_W_IO_ConfigMem.Inst_frame0_bit13.Q Inst_W_IO_switch_matrix.E6BEG9 VDD VDD VSS
-+ VSS gf180mcu_fd_sc_mcu7t5v0__mux4_1
+X_142_ FrameData[28] net27 Inst_W_IO_ConfigMem.Inst_frame3_bit28.Q VDD VDD VSS VSS
++ gf180mcu_fd_sc_mcu7t5v0__latq_1
+X_211_ FrameData[1] net40 Inst_W_IO_ConfigMem.Inst_frame0_bit1.Q VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__latq_1
+X_073_ WW4END[4] WW4END[12] W6END[4] Inst_B_IO_1_bidirectional_frame_config_pass.Q
++ Inst_W_IO_ConfigMem.Inst_frame0_bit12.Q Inst_W_IO_ConfigMem.Inst_frame0_bit13.Q
++ Inst_W_IO_switch_matrix.E6BEG9 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__mux4_1
 XFILLER_18_8 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__fill_1
-Xoutput171 net186 FrameStrobe_O[11] VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__buf_4
-Xoutput182 net197 FrameStrobe_O[3] VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__buf_4
-Xoutput160 net175 FrameData_O[30] VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__buf_4
+XFILLER_51_2 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__fillcap_16
 XPHY_EDGE_ROW_6_Left_77 VDD VSS gf180mcu_fd_sc_mcu7t5v0__endcap
 XFILLER_7_48 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__fillcap_16
 X_125_ Inst_W_IO_ConfigMem.Inst_frame0_bit22.Q _031_ _032_ _033_ VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__nand3_1
-X_056_ Inst_W_IO_ConfigMem.Inst_frame0_bit25.Q net68 _014_ VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__nor2_1
+X_056_ Inst_W_IO_ConfigMem.Inst_frame0_bit25.Q W2MID[4] _014_ VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__nor2_1
 XTAP_TAPCELL_ROW_16_196 VDD VSS gf180mcu_fd_sc_mcu7t5v0__filltie
-Xinput84 WW4END[9] net99 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__buf_2
-Xinput40 W1END[3] net55 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__buf_2
-Xinput51 W2MID[2] net66 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__buf_2
-Xinput73 WW4END[13] net88 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__buf_2
-Xinput62 W6END[3] net77 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__buf_2
 XFILLER_32_34 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__fill_1
-XFILLER_57_42 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__fillcap_16
 XFILLER_7_142 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__fillcap_64
-X_108_ net65 net91 net99 net75 Inst_W_IO_ConfigMem.Inst_frame2_bit6.Q Inst_W_IO_ConfigMem.Inst_frame2_bit7.Q
-+ Inst_W_IO_switch_matrix.E2BEG6 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__mux4_1
+X_108_ W2MID[1] WW4END[1] WW4END[9] W6END[1] Inst_W_IO_ConfigMem.Inst_frame2_bit6.Q
++ Inst_W_IO_ConfigMem.Inst_frame2_bit7.Q Inst_W_IO_switch_matrix.E2BEG6 VDD VDD VSS
++ VSS gf180mcu_fd_sc_mcu7t5v0__mux4_1
 XTAP_TAPCELL_ROW_44_280 VDD VSS gf180mcu_fd_sc_mcu7t5v0__filltie
 XFILLER_4_101 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__fillcap_4
 XPHY_EDGE_ROW_9_Left_80 VDD VSS gf180mcu_fd_sc_mcu7t5v0__endcap
 Xfanout37 net38 net37 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__buf_4
-XFILLER_54_10 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__fillcap_16
 XFILLER_70_53 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__fill_1
 XTAP_TAPCELL_ROW_70_356 VDD VSS gf180mcu_fd_sc_mcu7t5v0__filltie
 XTAP_TAPCELL_ROW_21_209 VDD VSS gf180mcu_fd_sc_mcu7t5v0__filltie
@@ -901,104 +971,88 @@ XFILLER_54_177 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__fillcap_32
 XPHY_EDGE_ROW_59_Left_130 VDD VSS gf180mcu_fd_sc_mcu7t5v0__endcap
 XFILLER_40_34 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__fill_1
 XFILLER_40_45 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__fillcap_4
-X_287_ net24 net173 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__buf_2
-Xinput5 FrameData[11] net5 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__buf_2
+XFILLER_49_32 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__fillcap_4
+X_287_ FrameData[29] net89 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__buf_2
+XFILLER_5_240 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__fill_1
 XFILLER_36_111 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__fill_2
 XFILLER_36_177 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__fillcap_32
 XFILLER_10_37 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__fillcap_16
 XFILLER_27_199 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__fillcap_8
 XFILLER_42_103 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__fill_2
-X_141_ net22 net27 Inst_W_IO_ConfigMem.Inst_frame3_bit27.Q VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__latq_1
-X_210_ net3 net40 Inst_W_IO_ConfigMem.Inst_frame0_bit0.Q VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__latq_1
+X_141_ FrameData[27] net27 Inst_W_IO_ConfigMem.Inst_frame3_bit27.Q VDD VDD VSS VSS
++ gf180mcu_fd_sc_mcu7t5v0__latq_1
 XFILLER_51_55 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__fillcap_8
-X_072_ net53 net91 net75 Inst_A_IO_1_bidirectional_frame_config_pass.Q Inst_W_IO_ConfigMem.Inst_frame0_bit14.Q
+X_210_ FrameData[0] net40 Inst_W_IO_ConfigMem.Inst_frame0_bit0.Q VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__latq_1
+X_072_ W1END[1] WW4END[1] W6END[1] Inst_A_IO_1_bidirectional_frame_config_pass.Q Inst_W_IO_ConfigMem.Inst_frame0_bit14.Q
 + Inst_W_IO_ConfigMem.Inst_frame0_bit15.Q Inst_W_IO_switch_matrix.E6BEG10 VDD VDD
 + VSS VSS gf180mcu_fd_sc_mcu7t5v0__mux4_1
-XFILLER_18_111 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__fill_1
 XFILLER_18_122 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__fill_2
-XFILLER_18_177 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__fillcap_32
-X_339_ Inst_W_IO_switch_matrix.E6BEG8 net134 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__buf_2
+XFILLER_18_111 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__fill_1
+XFILLER_18_177 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__fillcap_64
+X_339_ Inst_W_IO_switch_matrix.E6BEG8 net50 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__buf_2
 XPHY_EDGE_ROW_22_Left_93 VDD VSS gf180mcu_fd_sc_mcu7t5v0__endcap
-Xoutput161 net176 FrameData_O[31] VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__buf_4
-Xoutput150 net165 FrameData_O[21] VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__buf_4
-Xoutput172 net187 FrameStrobe_O[12] VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__buf_4
-Xoutput183 net198 FrameStrobe_O[4] VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__buf_4
-XFILLER_62_10 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__fillcap_16
-X_124_ net58 Inst_W_IO_ConfigMem.Inst_frame0_bit23.Q _032_ VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__nand2_1
+XFILLER_44_2 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__fillcap_8
+X_124_ W2END[2] Inst_W_IO_ConfigMem.Inst_frame0_bit23.Q _032_ VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__nand2_1
 XFILLER_7_16 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__fillcap_32
-X_055_ net70 net71 Inst_W_IO_ConfigMem.Inst_frame0_bit25.Q _013_ VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__mux2_2
+X_055_ W2MID[6] W2MID[7] Inst_W_IO_ConfigMem.Inst_frame0_bit25.Q _013_ VDD VDD VSS
++ VSS gf180mcu_fd_sc_mcu7t5v0__mux2_2
 XFILLER_23_180 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__fillcap_16
 XFILLER_11_80 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__fill_2
-Xinput30 FrameData[5] net45 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__buf_2
-Xinput41 W2END[0] net56 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__buf_2
-Xinput52 W2MID[3] net67 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__buf_2
-Xinput74 WW4END[14] net89 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__buf_2
-Xinput63 W6END[4] net78 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__buf_2
 XFILLER_29_206 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__fillcap_4
 XFILLER_44_209 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__fillcap_16
 XFILLER_32_57 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__fill_2
 XFILLER_32_79 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__fillcap_16
-XFILLER_57_10 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__fillcap_32
 XFILLER_35_209 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__fill_1
-X_107_ net64 net84 net98 net72 Inst_W_IO_ConfigMem.Inst_frame2_bit8.Q Inst_W_IO_ConfigMem.Inst_frame2_bit9.Q
-+ Inst_W_IO_switch_matrix.E2BEG7 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__mux4_1
-XFILLER_26_209 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__fillcap_8
+X_107_ W2MID[0] WW4END[0] WW4END[8] W6END[0] Inst_W_IO_ConfigMem.Inst_frame2_bit8.Q
++ Inst_W_IO_ConfigMem.Inst_frame2_bit9.Q Inst_W_IO_switch_matrix.E2BEG7 VDD VDD VSS
++ VSS gf180mcu_fd_sc_mcu7t5v0__mux4_1
+XFILLER_26_209 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__fillcap_16
 XFILLER_8_81 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__fill_2
 XPHY_EDGE_ROW_31_Left_102 VDD VSS gf180mcu_fd_sc_mcu7t5v0__endcap
 XFILLER_27_35 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__fill_2
 XPHY_EDGE_ROW_40_Left_111 VDD VSS gf180mcu_fd_sc_mcu7t5v0__endcap
-XFILLER_25_220 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__fillcap_4
 XFILLER_31_212 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__fill_1
 XTAP_TAPCELL_ROW_1_149 VDD VSS gf180mcu_fd_sc_mcu7t5v0__filltie
 Xfanout38 net39 net38 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__buf_2
 XTAP_TAPCELL_ROW_24_218 VDD VSS gf180mcu_fd_sc_mcu7t5v0__filltie
-Xfanout27 net51 net27 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__buf_4
+Xfanout27 FrameStrobe[3] net27 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__buf_4
 XFILLER_38_45 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__fill_2
 XFILLER_57_142 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__fillcap_64
 XTAP_TAPCELL_ROW_70_357 VDD VSS gf180mcu_fd_sc_mcu7t5v0__filltie
-XFILLER_13_212 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__fillcap_8
+XFILLER_13_212 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__fillcap_16
 XFILLER_54_101 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__fillcap_4
 XTAP_TAPCELL_ROW_52_302 VDD VSS gf180mcu_fd_sc_mcu7t5v0__filltie
-X_286_ net23 net172 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__buf_2
-Xinput6 FrameData[12] net6 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__buf_2
+X_286_ FrameData[28] net88 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__buf_2
 XFILLER_19_69 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__fill_1
 XFILLER_27_167 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__fillcap_32
 XPHY_EDGE_ROW_14_Right_14 VDD VSS gf180mcu_fd_sc_mcu7t5v0__endcap
-X_140_ net21 net27 Inst_W_IO_ConfigMem.Inst_frame3_bit26.Q VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__latq_1
-X_071_ net52 net84 net72 Inst_B_IO_1_bidirectional_frame_config_pass.Q Inst_W_IO_ConfigMem.Inst_frame0_bit16.Q
+X_140_ FrameData[26] net27 Inst_W_IO_ConfigMem.Inst_frame3_bit26.Q VDD VDD VSS VSS
++ gf180mcu_fd_sc_mcu7t5v0__latq_1
+X_071_ W1END[0] WW4END[0] W6END[0] Inst_B_IO_1_bidirectional_frame_config_pass.Q Inst_W_IO_ConfigMem.Inst_frame0_bit16.Q
 + Inst_W_IO_ConfigMem.Inst_frame0_bit17.Q Inst_W_IO_switch_matrix.E6BEG11 VDD VDD
 + VSS VSS gf180mcu_fd_sc_mcu7t5v0__mux4_1
-XFILLER_51_23 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__fill_2
 XFILLER_51_67 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__fill_2
+XFILLER_4_2 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__fillcap_32
 XPHY_EDGE_ROW_23_Right_23 VDD VSS gf180mcu_fd_sc_mcu7t5v0__endcap
 XPHY_EDGE_ROW_32_Right_32 VDD VSS gf180mcu_fd_sc_mcu7t5v0__endcap
-X_338_ Inst_W_IO_switch_matrix.E6BEG7 net133 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__buf_2
-X_269_ net5 net154 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__buf_2
+X_338_ Inst_W_IO_switch_matrix.E6BEG7 net49 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__buf_2
+X_269_ FrameData[11] net70 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__buf_2
 XPHY_EDGE_ROW_41_Right_41 VDD VSS gf180mcu_fd_sc_mcu7t5v0__endcap
 XPHY_EDGE_ROW_50_Right_50 VDD VSS gf180mcu_fd_sc_mcu7t5v0__endcap
 Xclkbuf_1_1__f_UserCLK_regs clknet_0_UserCLK_regs clknet_1_1__leaf_UserCLK_regs VDD
 + VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__clkbuf_16
-Xoutput173 net188 FrameStrobe_O[13] VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__buf_4
-Xoutput184 net199 FrameStrobe_O[5] VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__buf_4
-Xoutput151 net166 FrameData_O[22] VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__buf_4
-Xoutput162 net177 FrameData_O[3] VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__buf_4
-Xoutput140 net155 FrameData_O[12] VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__buf_4
 XFILLER_46_34 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__fill_1
 XFILLER_30_107 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__fill_1
-X_123_ net60 Inst_W_IO_ConfigMem.Inst_frame0_bit23.Q Inst_W_IO_ConfigMem.Inst_frame0_bit24.Q
+X_123_ W2END[4] Inst_W_IO_ConfigMem.Inst_frame0_bit23.Q Inst_W_IO_ConfigMem.Inst_frame0_bit24.Q
 + _031_ VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__oai21_1
 X_054_ Inst_W_IO_ConfigMem.Inst_frame0_bit27.Q _011_ _012_ VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__nor2_1
-Xinput31 FrameData[6] net46 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__buf_2
-Xinput20 FrameData[25] net20 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__buf_2
-Xinput42 W2END[1] net57 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__buf_2
-Xinput53 W2MID[4] net68 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__buf_2
-Xinput75 WW4END[15] net90 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__buf_2
-Xinput64 W6END[5] net79 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__buf_2
 XFILLER_12_129 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__fillcap_32
 XFILLER_12_107 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__fillcap_4
 XFILLER_57_66 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__fillcap_4
-X_106_ net63 net97 net90 net81 Inst_W_IO_ConfigMem.Inst_frame2_bit10.Q Inst_W_IO_ConfigMem.Inst_frame2_bit11.Q
-+ Inst_W_IO_switch_matrix.E2BEGb0 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__mux4_1
+X_106_ W2END[7] WW4END[7] WW4END[15] W6END[7] Inst_W_IO_ConfigMem.Inst_frame2_bit10.Q
++ Inst_W_IO_ConfigMem.Inst_frame2_bit11.Q Inst_W_IO_switch_matrix.E2BEGb0 VDD VDD
++ VSS VSS gf180mcu_fd_sc_mcu7t5v0__mux4_1
+XFILLER_19_240 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__fill_1
 XPHY_EDGE_ROW_4_Right_4 VDD VSS gf180mcu_fd_sc_mcu7t5v0__endcap
 XTAP_TAPCELL_ROW_4_158 VDD VSS gf180mcu_fd_sc_mcu7t5v0__filltie
 XTAP_TAPCELL_ROW_27_227 VDD VSS gf180mcu_fd_sc_mcu7t5v0__filltie
@@ -1008,129 +1062,102 @@ XTAP_TAPCELL_ROW_50_296 VDD VSS gf180mcu_fd_sc_mcu7t5v0__filltie
 Xfanout28 net29 net28 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__buf_4
 XTAP_TAPCELL_ROW_24_219 VDD VSS gf180mcu_fd_sc_mcu7t5v0__filltie
 Xfanout39 FrameStrobe[0] net39 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__buf_2
-XFILLER_13_224 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__fill_1
 XFILLER_54_34 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__fill_1
 XTAP_TAPCELL_ROW_55_311 VDD VSS gf180mcu_fd_sc_mcu7t5v0__filltie
 XFILLER_70_99 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__fill_2
 XTAP_TAPCELL_ROW_70_358 VDD VSS gf180mcu_fd_sc_mcu7t5v0__filltie
+XFILLER_9_228 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__fillcap_8
 XFILLER_9_206 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__fillcap_4
 XFILLER_0_172 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__fillcap_32
+XFILLER_67_2 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__fillcap_64
 XFILLER_5_72 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__fillcap_64
 XFILLER_39_132 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__fillcap_8
 XTAP_TAPCELL_ROW_52_303 VDD VSS gf180mcu_fd_sc_mcu7t5v0__filltie
-XFILLER_6_209 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__fillcap_16
 XFILLER_24_37 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__fillcap_4
-XFILLER_49_34 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__fillcap_4
 XFILLER_65_66 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__fillcap_4
-XFILLER_5_220 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__fillcap_4
-X_285_ net22 net171 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__buf_2
+X_285_ FrameData[27] net87 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__buf_2
 XFILLER_39_6 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__fill_2
-Xinput7 FrameData[13] net7 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__buf_2
 XFILLER_51_138 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__fill_2
 XFILLER_27_146 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__fill_1
-X_070_ Inst_W_IO_ConfigMem.Inst_frame0_bit21.Q _022_ _026_ _018_ _020_ net100 VDD
-+ VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__oai32_2
+X_070_ Inst_W_IO_ConfigMem.Inst_frame0_bit21.Q _022_ _026_ _018_ _020_ net1 VDD VDD
++ VSS VSS gf180mcu_fd_sc_mcu7t5v0__oai32_2
 XFILLER_51_46 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__fill_1
 XFILLER_18_124 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__fill_1
-X_337_ Inst_W_IO_switch_matrix.E6BEG6 net132 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__buf_2
+X_337_ Inst_W_IO_switch_matrix.E6BEG6 net48 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__buf_2
 XFILLER_41_171 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__fillcap_32
-X_268_ net4 net153 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__buf_2
-X_199_ net16 net35 Inst_W_IO_ConfigMem.Inst_frame1_bit21.Q VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__latq_1
+X_268_ FrameData[10] net69 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__buf_2
+X_199_ FrameData[21] net35 Inst_W_IO_ConfigMem.Inst_frame1_bit21.Q VDD VDD VSS VSS
++ gf180mcu_fd_sc_mcu7t5v0__latq_1
 XFILLER_24_149 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__fillcap_4
-Xoutput174 net189 FrameStrobe_O[14] VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__buf_4
-Xoutput185 net200 FrameStrobe_O[6] VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__buf_4
-Xoutput152 net167 FrameData_O[23] VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__buf_4
-Xoutput130 net145 EE4BEG[3] VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__buf_4
-Xoutput163 net178 FrameData_O[4] VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__buf_4
-Xoutput141 net156 FrameData_O[13] VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__buf_4
 XFILLER_70_200 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__fillcap_4
 XFILLER_46_57 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__fill_2
 XFILLER_62_34 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__fill_1
 X_122_ _002_ Inst_W_IO_ConfigMem.Inst_frame0_bit23.Q Inst_W_IO_ConfigMem.Inst_frame0_bit24.Q
 + _030_ VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__nor3_1
 XFILLER_11_82 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__fill_1
-X_053_ net64 net65 net66 net67 Inst_W_IO_ConfigMem.Inst_frame0_bit25.Q Inst_W_IO_ConfigMem.Inst_frame0_bit26.Q
-+ _011_ VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__mux4_1
+X_053_ W2MID[0] W2MID[1] W2MID[2] W2MID[3] Inst_W_IO_ConfigMem.Inst_frame0_bit25.Q
++ Inst_W_IO_ConfigMem.Inst_frame0_bit26.Q _011_ VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__mux4_1
 XFILLER_14_171 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__fillcap_4
-Xinput43 W2END[2] net58 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__buf_2
-Xinput54 W2MID[5] net69 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__buf_2
-Xinput32 FrameData[7] net47 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__buf_2
-Xinput10 FrameData[16] net10 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__buf_2
-Xinput21 FrameData[26] net21 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__buf_2
-Xinput76 WW4END[1] net91 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__buf_2
-Xinput65 W6END[6] net80 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__buf_2
 XFILLER_32_37 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__fillcap_16
 XFILLER_20_174 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__fill_1
 XTAP_TAPCELL_ROW_7_167 VDD VSS gf180mcu_fd_sc_mcu7t5v0__filltie
-X_105_ net62 net96 net89 net80 Inst_W_IO_ConfigMem.Inst_frame2_bit12.Q Inst_W_IO_ConfigMem.Inst_frame2_bit13.Q
-+ Inst_W_IO_switch_matrix.E2BEGb1 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__mux4_1
+X_105_ W2END[6] WW4END[6] WW4END[14] W6END[6] Inst_W_IO_ConfigMem.Inst_frame2_bit12.Q
++ Inst_W_IO_ConfigMem.Inst_frame2_bit13.Q Inst_W_IO_switch_matrix.E2BEGb1 VDD VDD
++ VSS VSS gf180mcu_fd_sc_mcu7t5v0__mux4_1
 XTAP_TAPCELL_ROW_4_159 VDD VSS gf180mcu_fd_sc_mcu7t5v0__filltie
 XFILLER_25_200 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__fillcap_8
 XTAP_TAPCELL_ROW_27_228 VDD VSS gf180mcu_fd_sc_mcu7t5v0__filltie
-XFILLER_43_14 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__fill_1
 XFILLER_40_225 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__fill_2
 XTAP_TAPCELL_ROW_50_297 VDD VSS gf180mcu_fd_sc_mcu7t5v0__filltie
 XTAP_TAPCELL_ROW_58_320 VDD VSS gf180mcu_fd_sc_mcu7t5v0__filltie
 XFILLER_33_80 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__fillcap_4
+XFILLER_12_2 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__fillcap_32
 XFILLER_66_177 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__fillcap_4
 Xfanout29 net30 net29 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__buf_2
 XFILLER_13_28 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__fill_2
 XTAP_TAPCELL_ROW_32_242 VDD VSS gf180mcu_fd_sc_mcu7t5v0__filltie
 XFILLER_38_47 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__fill_1
 XTAP_TAPCELL_ROW_70_359 VDD VSS gf180mcu_fd_sc_mcu7t5v0__filltie
+XFILLER_13_236 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__fillcap_4
 XTAP_TAPCELL_ROW_55_312 VDD VSS gf180mcu_fd_sc_mcu7t5v0__filltie
 XFILLER_28_91 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__fillcap_4
 XFILLER_48_177 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__fillcap_32
 XFILLER_63_136 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__fillcap_4
 XTAP_TAPCELL_ROW_52_304 VDD VSS gf180mcu_fd_sc_mcu7t5v0__filltie
 XFILLER_40_37 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__fillcap_8
-X_284_ net21 net170 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__buf_2
+XFILLER_49_24 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__fillcap_8
+X_284_ FrameData[26] net86 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__buf_2
 XFILLER_30_92 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__fillcap_4
-Xinput8 FrameData[14] net8 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__buf_2
-XFILLER_10_18 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__fillcap_16
 XFILLER_59_206 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__fillcap_4
 XFILLER_50_161 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__fillcap_8
-XFILLER_51_25 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__fill_1
 XFILLER_51_69 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__fill_1
 XFILLER_18_103 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__fill_2
-X_336_ Inst_W_IO_switch_matrix.E6BEG5 net131 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__buf_2
-X_267_ net49 net183 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__buf_2
-X_198_ net15 net35 Inst_W_IO_ConfigMem.Inst_frame1_bit20.Q VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__latq_1
+X_336_ Inst_W_IO_switch_matrix.E6BEG5 net47 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__buf_2
+X_267_ FrameData[9] net99 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__buf_2
+X_198_ FrameData[20] net35 Inst_W_IO_ConfigMem.Inst_frame1_bit20.Q VDD VDD VSS VSS
++ gf180mcu_fd_sc_mcu7t5v0__latq_1
 XFILLER_56_209 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__fillcap_16
 XFILLER_32_172 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__fill_2
-Xoutput153 net168 FrameData_O[24] VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__buf_4
-Xoutput175 net190 FrameStrobe_O[15] VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__buf_4
-Xoutput186 net201 FrameStrobe_O[7] VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__buf_4
-Xoutput131 net146 EE4BEG[4] VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__buf_4
-Xoutput120 net135 E6BEG[9] VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__buf_4
-Xoutput164 net179 FrameData_O[5] VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__buf_4
-Xoutput142 net157 FrameData_O[14] VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__buf_4
 XFILLER_70_234 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__fillcap_4
-X_121_ net59 _005_ Inst_W_IO_ConfigMem.Inst_frame0_bit24.Q _029_ VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__and3_1
+X_121_ W2END[3] _005_ Inst_W_IO_ConfigMem.Inst_frame0_bit24.Q _029_ VDD VDD VSS VSS
++ gf180mcu_fd_sc_mcu7t5v0__and3_1
 XFILLER_11_72 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__fillcap_8
 X_052_ _001_ _009_ Inst_W_IO_ConfigMem.Inst_frame0_bit28.Q _010_ VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__oai21_1
 XFILLER_38_209 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__fillcap_4
 XFILLER_61_212 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__fill_1
-Xinput77 WW4END[2] net92 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__buf_2
-Xinput44 W2END[3] net59 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__buf_2
-Xinput55 W2MID[6] net70 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__buf_2
-Xinput33 FrameData[8] net48 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__buf_2
-Xinput66 W6END[7] net81 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__buf_2
 XPHY_EDGE_ROW_26_Left_97 VDD VSS gf180mcu_fd_sc_mcu7t5v0__endcap
-X_319_ Inst_W_IO_switch_matrix.E2BEG4 net112 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__buf_2
-Xinput11 FrameData[17] net11 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__buf_2
-Xinput22 FrameData[27] net22 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__buf_2
+X_319_ Inst_W_IO_switch_matrix.E2BEG4 net13 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__buf_2
 XFILLER_42_2 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__fill_1
 XFILLER_37_220 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__fillcap_4
 XTAP_TAPCELL_ROW_7_168 VDD VSS gf180mcu_fd_sc_mcu7t5v0__filltie
 XFILLER_43_212 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__fill_1
 XFILLER_11_142 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__fillcap_64
 XFILLER_11_131 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__fillcap_8
-X_104_ net61 net95 net88 net79 Inst_W_IO_ConfigMem.Inst_frame2_bit14.Q Inst_W_IO_ConfigMem.Inst_frame2_bit15.Q
-+ Inst_W_IO_switch_matrix.E2BEGb2 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__mux4_1
-XFILLER_19_220 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__fillcap_4
+X_104_ W2END[5] WW4END[5] WW4END[13] W6END[5] Inst_W_IO_ConfigMem.Inst_frame2_bit14.Q
++ Inst_W_IO_ConfigMem.Inst_frame2_bit15.Q Inst_W_IO_switch_matrix.E2BEGb2 VDD VDD
++ VSS VSS gf180mcu_fd_sc_mcu7t5v0__mux4_1
 XFILLER_69_142 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__fill_2
-XFILLER_25_212 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__fillcap_8
+XFILLER_25_212 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__fillcap_16
 XTAP_TAPCELL_ROW_27_229 VDD VSS gf180mcu_fd_sc_mcu7t5v0__filltie
 XTAP_TAPCELL_ROW_35_251 VDD VSS gf180mcu_fd_sc_mcu7t5v0__filltie
 XFILLER_43_37 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__fill_1
@@ -1142,59 +1169,43 @@ XTAP_TAPCELL_ROW_32_243 VDD VSS gf180mcu_fd_sc_mcu7t5v0__filltie
 XPHY_EDGE_ROW_13_Left_84 VDD VSS gf180mcu_fd_sc_mcu7t5v0__endcap
 XFILLER_38_37 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__fillcap_8
 XTAP_TAPCELL_ROW_55_313 VDD VSS gf180mcu_fd_sc_mcu7t5v0__filltie
+XFILLER_49_36 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__fill_2
 XFILLER_60_107 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__fillcap_64
-X_283_ net20 net169 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__buf_2
+X_283_ FrameData[25] net85 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__buf_2
 XFILLER_39_8 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__fill_1
 XFILLER_39_80 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__fillcap_16
-Xinput9 FrameData[15] net9 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__buf_2
 XFILLER_27_104 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__fillcap_4
 XFILLER_42_107 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__fillcap_16
 XFILLER_50_173 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__fill_2
 XPHY_EDGE_ROW_38_Left_109 VDD VSS gf180mcu_fd_sc_mcu7t5v0__endcap
-X_335_ Inst_W_IO_switch_matrix.E6BEG4 net130 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__buf_2
-X_197_ net13 net35 Inst_W_IO_ConfigMem.Inst_frame1_bit19.Q VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__latq_1
-X_266_ net48 net182 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__buf_2
+X_335_ Inst_W_IO_switch_matrix.E6BEG4 net46 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__buf_2
+X_197_ FrameData[19] net35 Inst_W_IO_ConfigMem.Inst_frame1_bit19.Q VDD VDD VSS VSS
++ gf180mcu_fd_sc_mcu7t5v0__latq_1
+X_266_ FrameData[8] net98 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__buf_2
 XPHY_EDGE_ROW_47_Left_118 VDD VSS gf180mcu_fd_sc_mcu7t5v0__endcap
 XPHY_EDGE_ROW_10_Right_10 VDD VSS gf180mcu_fd_sc_mcu7t5v0__endcap
 XPHY_EDGE_ROW_56_Left_127 VDD VSS gf180mcu_fd_sc_mcu7t5v0__endcap
 XFILLER_32_162 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__fill_2
 XPHY_EDGE_ROW_65_Left_136 VDD VSS gf180mcu_fd_sc_mcu7t5v0__endcap
-Xoutput121 net136 EE4BEG[0] VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__buf_4
-Xoutput132 net147 EE4BEG[5] VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__buf_4
-Xoutput110 net125 E6BEG[10] VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__buf_4
-Xoutput143 net158 FrameData_O[15] VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__buf_4
-Xoutput176 net191 FrameStrobe_O[16] VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__buf_4
-Xoutput187 net202 FrameStrobe_O[8] VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__buf_4
-Xoutput154 net169 FrameData_O[25] VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__buf_4
-Xoutput165 net180 FrameData_O[6] VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__buf_4
 XFILLER_15_118 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__fillcap_4
-XFILLER_46_26 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__fillcap_8
 XFILLER_46_59 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__fill_1
 X_120_ _003_ Inst_W_IO_ConfigMem.Inst_frame0_bit23.Q Inst_W_IO_ConfigMem.Inst_frame0_bit24.Q
 + _027_ _028_ VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__aoi211_1
-X_051_ net60 net61 net62 net63 Inst_W_IO_ConfigMem.Inst_frame0_bit25.Q Inst_W_IO_ConfigMem.Inst_frame0_bit26.Q
-+ _009_ VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__mux4_1
+X_051_ W2END[4] W2END[5] W2END[6] W2END[7] Inst_W_IO_ConfigMem.Inst_frame0_bit25.Q
++ Inst_W_IO_ConfigMem.Inst_frame0_bit26.Q _009_ VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__mux4_1
 XFILLER_11_51 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__fillcap_4
 XFILLER_2_2 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__fillcap_32
 XPHY_EDGE_ROW_1_Left_72 VDD VSS gf180mcu_fd_sc_mcu7t5v0__endcap
-Xinput78 WW4END[3] net93 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__buf_2
-Xinput45 W2END[4] net60 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__buf_2
-Xinput56 W2MID[7] net71 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__buf_2
-Xinput67 W6END[8] net82 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__buf_2
-Xinput34 FrameData[9] net49 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__buf_2
-X_249_ Inst_W_IO_switch_matrix.EE4BEG7 net149 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__buf_2
-X_318_ Inst_W_IO_switch_matrix.E2BEG3 net111 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__buf_2
-Xinput12 FrameData[18] net12 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__buf_2
-Xinput23 FrameData[28] net23 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__buf_2
+X_249_ Inst_W_IO_switch_matrix.EE4BEG7 net65 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__buf_2
+X_318_ Inst_W_IO_switch_matrix.E2BEG3 net12 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__buf_2
 XTAP_TAPCELL_ROW_7_169 VDD VSS gf180mcu_fd_sc_mcu7t5v0__filltie
-XFILLER_57_58 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__fillcap_8
 XTAP_TAPCELL_ROW_38_260 VDD VSS gf180mcu_fd_sc_mcu7t5v0__filltie
 XFILLER_7_136 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__fillcap_4
 XFILLER_22_61 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__fill_2
-X_103_ net60 net94 net87 net78 Inst_W_IO_ConfigMem.Inst_frame2_bit16.Q Inst_W_IO_ConfigMem.Inst_frame2_bit17.Q
-+ Inst_W_IO_switch_matrix.E2BEGb3 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__mux4_1
+X_103_ W2END[4] WW4END[4] WW4END[12] W6END[4] Inst_W_IO_ConfigMem.Inst_frame2_bit16.Q
++ Inst_W_IO_ConfigMem.Inst_frame2_bit17.Q Inst_W_IO_switch_matrix.E2BEGb3 VDD VDD
++ VSS VSS gf180mcu_fd_sc_mcu7t5v0__mux4_1
 XTAP_TAPCELL_ROW_12_182 VDD VSS gf180mcu_fd_sc_mcu7t5v0__filltie
-XFILLER_25_224 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__fill_1
 XTAP_TAPCELL_ROW_35_252 VDD VSS gf180mcu_fd_sc_mcu7t5v0__filltie
 XFILLER_17_72 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__fillcap_4
 XTAP_TAPCELL_ROW_58_322 VDD VSS gf180mcu_fd_sc_mcu7t5v0__filltie
@@ -1203,7 +1214,6 @@ XPHY_EDGE_ROW_8_Right_8 VDD VSS gf180mcu_fd_sc_mcu7t5v0__endcap
 XTAP_TAPCELL_ROW_32_244 VDD VSS gf180mcu_fd_sc_mcu7t5v0__filltie
 XPHY_EDGE_ROW_39_Right_39 VDD VSS gf180mcu_fd_sc_mcu7t5v0__endcap
 XTAP_TAPCELL_ROW_0_142 VDD VSS gf180mcu_fd_sc_mcu7t5v0__filltie
-XFILLER_54_26 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__fillcap_8
 XFILLER_54_37 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__fillcap_64
 XFILLER_70_36 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__fill_1
 XPHY_EDGE_ROW_48_Right_48 VDD VSS gf180mcu_fd_sc_mcu7t5v0__endcap
@@ -1212,96 +1222,69 @@ XFILLER_48_124 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__fill_1
 XPHY_EDGE_ROW_66_Right_66 VDD VSS gf180mcu_fd_sc_mcu7t5v0__endcap
 XFILLER_62_171 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__fillcap_4
 XFILLER_62_193 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__fillcap_8
-XFILLER_5_212 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__fillcap_8
-X_282_ net19 net168 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__buf_2
+XFILLER_5_212 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__fillcap_16
+X_282_ FrameData[24] net84 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__buf_2
 XFILLER_65_2 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__fillcap_64
 XFILLER_25_72 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__fillcap_4
-X_334_ Inst_W_IO_switch_matrix.E6BEG3 net129 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__buf_2
-X_196_ net12 net35 Inst_W_IO_ConfigMem.Inst_frame1_bit18.Q VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__latq_1
-X_265_ net47 net181 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__buf_2
+X_334_ Inst_W_IO_switch_matrix.E6BEG3 net45 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__buf_2
+X_196_ FrameData[18] net35 Inst_W_IO_ConfigMem.Inst_frame1_bit18.Q VDD VDD VSS VSS
++ gf180mcu_fd_sc_mcu7t5v0__latq_1
+X_265_ FrameData[7] net97 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__buf_2
 XFILLER_32_174 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__fill_1
-Xoutput177 net192 FrameStrobe_O[17] VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__buf_4
-Xoutput155 net170 FrameData_O[26] VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__buf_4
-Xoutput100 net115 E2BEG[7] VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__buf_4
-Xoutput133 net148 EE4BEG[6] VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__buf_4
-Xoutput122 net137 EE4BEG[10] VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__buf_4
-Xoutput111 net126 E6BEG[11] VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__buf_4
-Xoutput166 net181 FrameData_O[7] VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__buf_4
-Xoutput144 net159 FrameData_O[16] VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__buf_4
-Xoutput188 net203 FrameStrobe_O[9] VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__buf_4
-XFILLER_62_26 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__fillcap_8
+Xoutput100 net115 FrameStrobe_O[5] VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__buf_4
 XFILLER_62_37 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__fillcap_64
 X_050_ Inst_W_IO_ConfigMem.Inst_frame0_bit27.Q _007_ _008_ VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__nor2_1
 XFILLER_23_196 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__fillcap_8
 XFILLER_11_63 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__fillcap_4
-X_317_ Inst_W_IO_switch_matrix.E2BEG2 net110 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__buf_2
-Xinput13 FrameData[19] net13 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__buf_2
-Xinput79 WW4END[4] net94 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__buf_2
-Xinput46 W2END[5] net61 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__buf_2
-Xinput35 FrameStrobe[2] net50 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__buf_2
-Xinput57 W6END[0] net72 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__buf_2
-Xinput68 W6END[9] net83 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__buf_2
-X_248_ Inst_W_IO_switch_matrix.EE4BEG6 net148 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__buf_2
-X_179_ net14 net35 Inst_W_IO_ConfigMem.Inst_frame1_bit1.Q VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__latq_1
-Xinput24 FrameData[29] net24 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__buf_2
+X_317_ Inst_W_IO_switch_matrix.E2BEG2 net11 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__buf_2
+X_248_ Inst_W_IO_switch_matrix.EE4BEG6 net64 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__buf_2
+X_179_ FrameData[1] net35 Inst_W_IO_ConfigMem.Inst_frame1_bit1.Q VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__latq_1
 XFILLER_28_2 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__fill_1
 XFILLER_52_225 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__fill_2
 XTAP_TAPCELL_ROW_15_191 VDD VSS gf180mcu_fd_sc_mcu7t5v0__filltie
-XFILLER_20_177 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__fillcap_32
+XFILLER_20_177 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__fillcap_64
 XTAP_TAPCELL_ROW_38_261 VDD VSS gf180mcu_fd_sc_mcu7t5v0__filltie
-X_102_ net59 net93 net86 net77 Inst_W_IO_ConfigMem.Inst_frame2_bit18.Q Inst_W_IO_ConfigMem.Inst_frame2_bit19.Q
-+ Inst_W_IO_switch_matrix.E2BEGb4 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__mux4_1
+X_102_ W2END[3] WW4END[3] WW4END[11] W6END[3] Inst_W_IO_ConfigMem.Inst_frame2_bit18.Q
++ Inst_W_IO_ConfigMem.Inst_frame2_bit19.Q Inst_W_IO_switch_matrix.E2BEGb4 VDD VDD
++ VSS VSS gf180mcu_fd_sc_mcu7t5v0__mux4_1
 XTAP_TAPCELL_ROW_12_183 VDD VSS gf180mcu_fd_sc_mcu7t5v0__filltie
 XFILLER_69_144 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__fill_1
 XFILLER_69_111 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__fillcap_16
+XFILLER_25_236 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__fillcap_4
 XTAP_TAPCELL_ROW_35_253 VDD VSS gf180mcu_fd_sc_mcu7t5v0__filltie
 XFILLER_4_107 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__fillcap_64
-XFILLER_16_225 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__fillcap_8
 XFILLER_33_72 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__fillcap_8
 XFILLER_13_206 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__fillcap_4
 XTAP_TAPCELL_ROW_0_143 VDD VSS gf180mcu_fd_sc_mcu7t5v0__filltie
 XFILLER_57_136 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__fillcap_4
+XFILLER_13_228 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__fillcap_8
 XTAP_TAPCELL_ROW_61_329 VDD VSS gf180mcu_fd_sc_mcu7t5v0__filltie
-XFILLER_10_209 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__fillcap_16
+XFILLER_10_2 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__fillcap_32
 XFILLER_45_139 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__fill_1
-XFILLER_5_224 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__fill_1
-X_281_ net18 net167 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__buf_2
+X_281_ FrameData[23] net83 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__buf_2
 XFILLER_30_51 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__fillcap_8
 XFILLER_58_2 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__fillcap_32
 XFILLER_35_150 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__fillcap_4
-X_333_ Inst_W_IO_switch_matrix.E6BEG2 net128 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__buf_2
-X_264_ net46 net180 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__buf_2
+X_333_ Inst_W_IO_switch_matrix.E6BEG2 net44 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__buf_2
+X_264_ FrameData[6] net96 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__buf_2
 XFILLER_41_131 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__fillcap_8
 XFILLER_41_142 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__fill_1
-X_195_ net11 net34 Inst_W_IO_ConfigMem.Inst_frame1_bit17.Q VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__latq_1
+X_195_ FrameData[17] net34 Inst_W_IO_ConfigMem.Inst_frame1_bit17.Q VDD VDD VSS VSS
++ gf180mcu_fd_sc_mcu7t5v0__latq_1
 XFILLER_41_72 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__fillcap_4
-Xoutput189 net204 UserCLKo VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__buf_1
-Xoutput178 net193 FrameStrobe_O[18] VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__buf_4
-Xoutput156 net171 FrameData_O[27] VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__buf_4
-Xoutput145 net160 FrameData_O[17] VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__buf_4
-Xoutput101 net116 E2BEGb[0] VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__buf_4
-Xoutput134 net149 EE4BEG[7] VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__buf_4
-Xoutput123 net138 EE4BEG[11] VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__buf_4
-Xoutput112 net127 E6BEG[1] VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__buf_4
-Xoutput167 net182 FrameData_O[8] VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__buf_4
+Xoutput101 net116 FrameStrobe_O[6] VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__buf_4
 XFILLER_55_212 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__fill_1
-X_247_ Inst_W_IO_switch_matrix.EE4BEG5 net147 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__buf_2
-Xinput25 FrameData[2] net25 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__buf_2
-Xinput14 FrameData[1] net14 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__buf_2
-Xinput36 FrameStrobe[3] net51 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__buf_2
-X_316_ Inst_W_IO_switch_matrix.E2BEG1 net109 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__buf_2
-Xinput69 WW4END[0] net84 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__buf_2
-Xinput47 W2END[6] net62 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__buf_2
-Xinput58 W6END[10] net73 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__buf_2
-X_178_ net3 net35 Inst_W_IO_ConfigMem.Inst_frame1_bit0.Q VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__latq_1
+X_247_ Inst_W_IO_switch_matrix.EE4BEG5 net63 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__buf_2
+X_316_ Inst_W_IO_switch_matrix.E2BEG1 net10 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__buf_2
+X_178_ FrameData[0] net35 Inst_W_IO_ConfigMem.Inst_frame1_bit0.Q VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__latq_1
 XFILLER_37_212 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__fillcap_8
 XTAP_TAPCELL_ROW_15_192 VDD VSS gf180mcu_fd_sc_mcu7t5v0__filltie
 XTAP_TAPCELL_ROW_38_262 VDD VSS gf180mcu_fd_sc_mcu7t5v0__filltie
-X_101_ net58 net92 net85 net76 Inst_W_IO_ConfigMem.Inst_frame2_bit20.Q Inst_W_IO_ConfigMem.Inst_frame2_bit21.Q
-+ Inst_W_IO_switch_matrix.E2BEGb5 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__mux4_1
-XFILLER_19_212 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__fillcap_8
+X_101_ W2END[2] WW4END[2] WW4END[10] W6END[2] Inst_W_IO_ConfigMem.Inst_frame2_bit20.Q
++ Inst_W_IO_ConfigMem.Inst_frame2_bit21.Q Inst_W_IO_switch_matrix.E2BEGb5 VDD VDD
++ VSS VSS gf180mcu_fd_sc_mcu7t5v0__mux4_1
+XFILLER_19_212 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__fillcap_16
 XTAP_TAPCELL_ROW_12_184 VDD VSS gf180mcu_fd_sc_mcu7t5v0__filltie
-XFILLER_8_10 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__fillcap_16
 XFILLER_6_171 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__fillcap_4
 XFILLER_40_2 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__fillcap_4
 XFILLER_68_37 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__fillcap_64
@@ -1309,32 +1292,30 @@ XFILLER_17_30 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__fill_2
 XTAP_TAPCELL_ROW_64_338 VDD VSS gf180mcu_fd_sc_mcu7t5v0__filltie
 XTAP_TAPCELL_ROW_0_144 VDD VSS gf180mcu_fd_sc_mcu7t5v0__filltie
 XFILLER_70_16 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__fillcap_4
+XFILLER_21_240 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__fill_1
 XFILLER_5_66 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__fillcap_4
 XFILLER_54_107 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__fillcap_64
 XPHY_EDGE_ROW_17_Left_88 VDD VSS gf180mcu_fd_sc_mcu7t5v0__endcap
-X_280_ net17 net166 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__buf_2
+X_280_ FrameData[22] net82 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__buf_2
+XFILLER_5_236 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__fillcap_4
 XFILLER_30_41 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__fill_2
 XFILLER_30_96 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__fill_2
 XFILLER_36_107 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__fillcap_4
 XFILLER_44_173 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__fill_2
-XFILLER_18_118 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__fillcap_4
+XFILLER_51_18 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__fillcap_8
 XFILLER_18_107 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__fillcap_4
+XFILLER_18_118 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__fillcap_4
 XFILLER_26_173 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__fill_2
-X_332_ Inst_W_IO_switch_matrix.E6BEG1 net127 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__buf_2
-X_263_ net45 net179 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__buf_2
+X_332_ Inst_W_IO_switch_matrix.E6BEG1 net43 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__buf_2
+X_263_ FrameData[5] net95 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__buf_2
 XFILLER_41_40 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__fill_1
 XFILLER_41_121 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__fill_2
-X_194_ net10 net34 Inst_W_IO_ConfigMem.Inst_frame1_bit16.Q VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__latq_1
+X_194_ FrameData[16] net34 Inst_W_IO_ConfigMem.Inst_frame1_bit16.Q VDD VDD VSS VSS
++ gf180mcu_fd_sc_mcu7t5v0__latq_1
 XFILLER_2_34 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__fill_1
-Xoutput157 net172 FrameData_O[28] VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__buf_4
-Xoutput146 net161 FrameData_O[18] VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__buf_4
-Xoutput179 net194 FrameStrobe_O[19] VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__buf_4
+Xoutput102 net117 FrameStrobe_O[7] VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__buf_4
 XPHY_EDGE_ROW_34_Left_105 VDD VSS gf180mcu_fd_sc_mcu7t5v0__endcap
-Xoutput102 net117 E2BEGb[1] VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__buf_4
-Xoutput124 net139 EE4BEG[12] VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__buf_4
-Xoutput135 net150 EE4BEG[8] VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__buf_4
-Xoutput113 net128 E6BEG[2] VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__buf_4
-Xoutput168 net183 FrameData_O[9] VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__buf_4
+XFILLER_46_18 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__fillcap_16
 XPHY_EDGE_ROW_43_Left_114 VDD VSS gf180mcu_fd_sc_mcu7t5v0__endcap
 XFILLER_11_43 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__fillcap_8
 XFILLER_11_32 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__fill_2
@@ -1342,27 +1323,24 @@ XPHY_EDGE_ROW_52_Left_123 VDD VSS gf180mcu_fd_sc_mcu7t5v0__endcap
 XFILLER_36_95 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__fill_2
 XPHY_EDGE_ROW_61_Left_132 VDD VSS gf180mcu_fd_sc_mcu7t5v0__endcap
 XPHY_EDGE_ROW_70_Left_141 VDD VSS gf180mcu_fd_sc_mcu7t5v0__endcap
-Xinput26 FrameData[30] net26 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__buf_2
-X_315_ Inst_W_IO_switch_matrix.E2BEG0 net108 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__buf_2
-Xinput48 W2END[7] net63 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__buf_2
-Xinput37 W1END[0] net52 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__buf_2
-X_246_ Inst_W_IO_switch_matrix.EE4BEG4 net146 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__buf_2
-X_177_ net42 net50 Inst_W_IO_ConfigMem.Inst_frame2_bit31.Q VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__latq_1
-Xinput59 W6END[11] net74 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__buf_2
-Xinput15 FrameData[20] net15 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__buf_2
+X_315_ Inst_W_IO_switch_matrix.E2BEG0 net9 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__buf_2
+X_246_ Inst_W_IO_switch_matrix.EE4BEG4 net62 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__buf_2
+X_177_ FrameData[31] FrameStrobe[2] Inst_W_IO_ConfigMem.Inst_frame2_bit31.Q VDD VDD
++ VSS VSS gf180mcu_fd_sc_mcu7t5v0__latq_1
 XFILLER_37_224 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__fill_2
 XTAP_TAPCELL_ROW_15_193 VDD VSS gf180mcu_fd_sc_mcu7t5v0__filltie
 XFILLER_20_113 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__fill_2
-X_100_ net57 net91 net99 net75 Inst_W_IO_ConfigMem.Inst_frame2_bit22.Q Inst_W_IO_ConfigMem.Inst_frame2_bit23.Q
-+ Inst_W_IO_switch_matrix.E2BEGb6 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__mux4_1
+X_100_ W2END[1] WW4END[1] WW4END[9] W6END[1] Inst_W_IO_ConfigMem.Inst_frame2_bit22.Q
++ Inst_W_IO_ConfigMem.Inst_frame2_bit23.Q Inst_W_IO_switch_matrix.E2BEGb6 VDD VDD
++ VSS VSS gf180mcu_fd_sc_mcu7t5v0__mux4_1
 XFILLER_0_2 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__fillcap_32
 XPHY_EDGE_ROW_5_Left_76 VDD VSS gf180mcu_fd_sc_mcu7t5v0__endcap
-XFILLER_19_224 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__fill_1
 XFILLER_47_61 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__fill_1
 XFILLER_47_72 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__fillcap_4
 XFILLER_8_99 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__fillcap_4
 XFILLER_8_77 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__fillcap_4
-X_229_ net13 net37 Inst_W_IO_ConfigMem.Inst_frame0_bit19.Q VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__latq_1
+X_229_ FrameData[19] net37 Inst_W_IO_ConfigMem.Inst_frame0_bit19.Q VDD VDD VSS VSS
++ gf180mcu_fd_sc_mcu7t5v0__latq_1
 XFILLER_69_135 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__fillcap_4
 XTAP_TAPCELL_ROW_67_347 VDD VSS gf180mcu_fd_sc_mcu7t5v0__filltie
 XFILLER_17_97 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__fillcap_16
@@ -1371,8 +1349,8 @@ XFILLER_33_63 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__fillcap_4
 XTAP_TAPCELL_ROW_41_269 VDD VSS gf180mcu_fd_sc_mcu7t5v0__filltie
 XFILLER_3_142 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__fillcap_64
 XTAP_TAPCELL_ROW_64_339 VDD VSS gf180mcu_fd_sc_mcu7t5v0__filltie
-XFILLER_65_182 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__fillcap_4
 XTAP_TAPCELL_ROW_0_145 VDD VSS gf180mcu_fd_sc_mcu7t5v0__filltie
+XFILLER_65_182 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__fillcap_4
 XPHY_EDGE_ROW_17_Right_17 VDD VSS gf180mcu_fd_sc_mcu7t5v0__endcap
 XPHY_EDGE_ROW_26_Right_26 VDD VSS gf180mcu_fd_sc_mcu7t5v0__endcap
 XFILLER_48_116 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__fillcap_8
@@ -1382,52 +1360,45 @@ XPHY_EDGE_ROW_35_Right_35 VDD VSS gf180mcu_fd_sc_mcu7t5v0__endcap
 XPHY_EDGE_ROW_44_Right_44 VDD VSS gf180mcu_fd_sc_mcu7t5v0__endcap
 XPHY_EDGE_ROW_53_Right_53 VDD VSS gf180mcu_fd_sc_mcu7t5v0__endcap
 XTAP_TAPCELL_ROW_20_206 VDD VSS gf180mcu_fd_sc_mcu7t5v0__filltie
-XFILLER_49_18 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__fillcap_16
 XPHY_EDGE_ROW_62_Right_62 VDD VSS gf180mcu_fd_sc_mcu7t5v0__endcap
 XFILLER_55_72 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__fillcap_64
 XFILLER_50_177 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__fillcap_32
-XFILLER_51_19 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__fillcap_4
-X_331_ Inst_W_IO_switch_matrix.E6BEG0 net124 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__buf_2
-X_262_ net44 net178 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__buf_2
-XFILLER_41_30 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__fillcap_8
-X_193_ net9 net34 Inst_W_IO_ConfigMem.Inst_frame1_bit15.Q VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__latq_1
+X_331_ Inst_W_IO_switch_matrix.E6BEG0 net25 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__buf_2
+X_262_ FrameData[4] net94 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__buf_2
+X_193_ FrameData[15] net34 Inst_W_IO_ConfigMem.Inst_frame1_bit15.Q VDD VDD VSS VSS
++ gf180mcu_fd_sc_mcu7t5v0__latq_1
+XFILLER_1_240 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__fill_1
 XFILLER_41_96 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__fill_1
 XFILLER_32_177 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__fillcap_32
-Xoutput103 net118 E2BEGb[2] VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__buf_4
-Xoutput125 net140 EE4BEG[13] VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__buf_4
-Xoutput114 net129 E6BEG[3] VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__buf_4
+Xoutput103 net118 FrameStrobe_O[8] VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__buf_4
 XFILLER_63_2 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__fillcap_64
-Xoutput169 net184 FrameStrobe_O[0] VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__buf_4
-Xoutput158 net173 FrameData_O[29] VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__buf_4
-Xoutput147 net162 FrameData_O[19] VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__buf_4
-Xoutput136 net151 EE4BEG[9] VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__buf_4
 XFILLER_36_30 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__fillcap_4
-XFILLER_14_177 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__fillcap_32
-X_314_ Inst_W_IO_switch_matrix.E1BEG3 net107 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__buf_2
+XFILLER_14_177 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__fillcap_64
+X_314_ Inst_W_IO_switch_matrix.E1BEG3 net8 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__buf_2
 XFILLER_61_206 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__fillcap_4
-Xinput27 FrameData[31] net42 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__buf_2
-Xinput38 W1END[1] net53 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__buf_2
-Xinput49 W2MID[0] net64 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__buf_2
-X_176_ net26 net31 Inst_W_IO_ConfigMem.Inst_frame2_bit30.Q VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__latq_1
-X_245_ Inst_W_IO_switch_matrix.EE4BEG3 net145 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__buf_2
-Xinput16 FrameData[21] net16 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__buf_2
+X_176_ FrameData[30] net31 Inst_W_IO_ConfigMem.Inst_frame2_bit30.Q VDD VDD VSS VSS
++ gf180mcu_fd_sc_mcu7t5v0__latq_1
+X_245_ Inst_W_IO_switch_matrix.EE4BEG3 net61 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__buf_2
 XFILLER_20_158 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__fillcap_16
 XPHY_EDGE_ROW_21_Left_92 VDD VSS gf180mcu_fd_sc_mcu7t5v0__endcap
 XFILLER_28_225 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__fill_2
+XFILLER_19_236 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__fillcap_4
 XFILLER_8_34 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__fill_1
 XTAP_TAPCELL_ROW_44_278 VDD VSS gf180mcu_fd_sc_mcu7t5v0__filltie
 XFILLER_63_72 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__fillcap_64
-X_228_ net12 net37 Inst_W_IO_ConfigMem.Inst_frame0_bit18.Q VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__latq_1
-X_159_ net7 net31 Inst_W_IO_ConfigMem.Inst_frame2_bit13.Q VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__latq_1
+X_228_ FrameData[18] net37 Inst_W_IO_ConfigMem.Inst_frame0_bit18.Q VDD VDD VSS VSS
++ gf180mcu_fd_sc_mcu7t5v0__latq_1
+X_159_ FrameData[13] net31 Inst_W_IO_ConfigMem.Inst_frame2_bit13.Q VDD VDD VSS VSS
++ gf180mcu_fd_sc_mcu7t5v0__latq_1
 XFILLER_69_169 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__fill_2
+XFILLER_26_2 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__fillcap_4
 XTAP_TAPCELL_ROW_67_348 VDD VSS gf180mcu_fd_sc_mcu7t5v0__filltie
+XFILLER_25_228 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__fillcap_8
 XFILLER_40_209 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__fillcap_16
 XFILLER_17_65 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__fillcap_4
 XFILLER_17_32 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__fill_1
 XFILLER_31_209 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__fill_1
-XFILLER_22_209 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__fillcap_16
 XTAP_TAPCELL_ROW_0_146 VDD VSS gf180mcu_fd_sc_mcu7t5v0__filltie
-XFILLER_21_220 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__fillcap_4
 XTAP_TAPCELL_ROW_23_215 VDD VSS gf180mcu_fd_sc_mcu7t5v0__filltie
 XFILLER_28_31 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__fillcap_4
 XFILLER_44_41 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__fill_2
@@ -1439,101 +1410,99 @@ XFILLER_39_96 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__fillcap_4
 XFILLER_67_212 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__fill_1
 XFILLER_35_142 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__fillcap_8
 XFILLER_25_76 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__fill_1
-X_330_ Inst_W_IO_switch_matrix.E2BEGb7 net123 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__buf_2
-X_261_ net43 net177 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__buf_2
-X_192_ net8 net34 Inst_W_IO_ConfigMem.Inst_frame1_bit14.Q VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__latq_1
+X_330_ Inst_W_IO_switch_matrix.E2BEGb7 net24 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__buf_2
+X_261_ FrameData[3] net93 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__buf_2
+X_192_ FrameData[14] net34 Inst_W_IO_ConfigMem.Inst_frame1_bit14.Q VDD VDD VSS VSS
++ gf180mcu_fd_sc_mcu7t5v0__latq_1
 XFILLER_49_212 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__fill_1
 XFILLER_64_204 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__fill_1
 XFILLER_17_186 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__fillcap_16
 XFILLER_32_134 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__fillcap_4
-Xoutput104 net119 E2BEGb[3] VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__buf_4
-Xoutput126 net141 EE4BEG[14] VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__buf_4
-Xoutput115 net130 E6BEG[4] VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__buf_4
-Xoutput137 net152 FrameData_O[0] VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__buf_4
+Xoutput104 net119 FrameStrobe_O[9] VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__buf_4
 XFILLER_56_2 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__fillcap_32
-Xoutput159 net174 FrameData_O[2] VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__buf_4
-Xoutput148 net163 FrameData_O[1] VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__buf_4
 XFILLER_11_67 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__fill_2
 XFILLER_11_34 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__fill_1
-X_244_ Inst_W_IO_switch_matrix.EE4BEG2 net144 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__buf_2
-X_313_ Inst_W_IO_switch_matrix.E1BEG2 net106 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__buf_2
-Xinput28 FrameData[3] net43 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__buf_2
-Xinput39 W1END[2] net54 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__buf_2
-X_175_ net24 net31 Inst_W_IO_ConfigMem.Inst_frame2_bit29.Q VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__latq_1
-Xinput17 FrameData[22] net17 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__buf_2
+X_244_ Inst_W_IO_switch_matrix.EE4BEG2 net60 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__buf_2
+X_313_ Inst_W_IO_switch_matrix.E1BEG2 net7 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__buf_2
+X_175_ FrameData[29] net31 Inst_W_IO_ConfigMem.Inst_frame2_bit29.Q VDD VDD VSS VSS
++ gf180mcu_fd_sc_mcu7t5v0__latq_1
 XFILLER_37_226 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__fill_1
 XTAP_TAPCELL_ROW_47_287 VDD VSS gf180mcu_fd_sc_mcu7t5v0__filltie
 XFILLER_20_115 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__fill_1
 XFILLER_11_115 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__fillcap_16
 XFILLER_47_30 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__fill_2
-X_227_ net11 net40 Inst_W_IO_ConfigMem.Inst_frame0_bit17.Q VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__latq_1
+X_227_ FrameData[17] net40 Inst_W_IO_ConfigMem.Inst_frame0_bit17.Q VDD VDD VSS VSS
++ gf180mcu_fd_sc_mcu7t5v0__latq_1
 XTAP_TAPCELL_ROW_44_279 VDD VSS gf180mcu_fd_sc_mcu7t5v0__filltie
-X_089_ net75 net79 net77 net81 Inst_W_IO_ConfigMem.Inst_frame1_bit13.Q Inst_W_IO_ConfigMem.Inst_frame1_bit12.Q
-+ Inst_W_IO_switch_matrix.EE4BEG9 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__mux4_1
-X_158_ net6 net30 Inst_W_IO_ConfigMem.Inst_frame2_bit12.Q VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__latq_1
+X_089_ W6END[1] W6END[5] W6END[3] W6END[7] Inst_W_IO_ConfigMem.Inst_frame1_bit13.Q
++ Inst_W_IO_ConfigMem.Inst_frame1_bit12.Q Inst_W_IO_switch_matrix.EE4BEG9 VDD VDD
++ VSS VSS gf180mcu_fd_sc_mcu7t5v0__mux4_1
+X_158_ FrameData[12] net30 Inst_W_IO_ConfigMem.Inst_frame2_bit12.Q VDD VDD VSS VSS
++ gf180mcu_fd_sc_mcu7t5v0__latq_1
 XFILLER_69_159 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__fill_2
-XTAP_TAPCELL_ROW_67_349 VDD VSS gf180mcu_fd_sc_mcu7t5v0__filltie
 XFILLER_19_2 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__fillcap_4
-XFILLER_68_170 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__fillcap_4
+XTAP_TAPCELL_ROW_67_349 VDD VSS gf180mcu_fd_sc_mcu7t5v0__filltie
 XTAP_TAPCELL_ROW_3_155 VDD VSS gf180mcu_fd_sc_mcu7t5v0__filltie
 XTAP_TAPCELL_ROW_26_224 VDD VSS gf180mcu_fd_sc_mcu7t5v0__filltie
+XFILLER_68_170 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__fillcap_4
 XPHY_EDGE_ROW_49_Left_120 VDD VSS gf180mcu_fd_sc_mcu7t5v0__endcap
 XFILLER_66_107 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__fillcap_64
+XFILLER_15_240 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__fill_1
 XTAP_TAPCELL_ROW_0_147 VDD VSS gf180mcu_fd_sc_mcu7t5v0__filltie
 XPHY_EDGE_ROW_3_Right_3 VDD VSS gf180mcu_fd_sc_mcu7t5v0__endcap
 XTAP_TAPCELL_ROW_23_216 VDD VSS gf180mcu_fd_sc_mcu7t5v0__filltie
 XFILLER_48_107 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__fill_1
-XFILLER_8_225 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__fillcap_8
 XFILLER_69_72 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__fillcap_16
 XTAP_TAPCELL_ROW_20_208 VDD VSS gf180mcu_fd_sc_mcu7t5v0__filltie
 XTAP_TAPCELL_ROW_51_300 VDD VSS gf180mcu_fd_sc_mcu7t5v0__filltie
 XFILLER_14_34 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__fill_1
 XFILLER_5_206 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__fillcap_4
+XFILLER_5_228 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__fillcap_8
 XFILLER_29_162 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__fillcap_4
 XFILLER_39_53 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__fill_2
 XFILLER_44_165 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__fillcap_8
 XFILLER_35_154 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__fill_2
 XFILLER_50_124 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__fill_1
 XFILLER_50_102 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__fill_2
-XFILLER_2_209 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__fillcap_16
-X_260_ net25 net174 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__buf_2
-X_191_ net7 net34 Inst_W_IO_ConfigMem.Inst_frame1_bit13.Q VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__latq_1
-XFILLER_1_220 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__fillcap_4
+X_260_ FrameData[2] net90 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__buf_2
+X_191_ FrameData[13] net34 Inst_W_IO_ConfigMem.Inst_frame1_bit13.Q VDD VDD VSS VSS
++ gf180mcu_fd_sc_mcu7t5v0__latq_1
 XFILLER_2_37 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__fillcap_64
 XFILLER_17_154 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__fillcap_32
-Xoutput149 net164 FrameData_O[20] VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__buf_4
-Xoutput105 net120 E2BEGb[4] VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__buf_4
-Xoutput127 net142 EE4BEG[15] VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__buf_4
-Xoutput116 net131 E6BEG[5] VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__buf_4
-Xoutput138 net153 FrameData_O[10] VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__buf_4
-XFILLER_11_24 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__fillcap_8
+Xoutput105 net120 UserCLKo VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__buf_1
+XFILLER_49_2 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__fillcap_4
 XFILLER_36_65 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__fill_2
 XFILLER_36_87 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__fillcap_8
-X_312_ Inst_W_IO_switch_matrix.E1BEG1 net105 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__buf_2
+X_312_ Inst_W_IO_switch_matrix.E1BEG1 net6 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__buf_2
 XPHY_EDGE_ROW_30_Left_101 VDD VSS gf180mcu_fd_sc_mcu7t5v0__endcap
-X_243_ net2 clknet_1_1__leaf_UserCLK_regs Inst_B_IO_1_bidirectional_frame_config_pass.Q
+X_243_ B_O_top clknet_1_1__leaf_UserCLK_regs Inst_B_IO_1_bidirectional_frame_config_pass.Q
 + VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__dffq_4
-Xinput18 FrameData[23] net18 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__buf_2
-Xinput29 FrameData[4] net44 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__buf_2
-X_174_ net23 net31 Inst_W_IO_ConfigMem.Inst_frame2_bit28.Q VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__latq_1
+X_174_ FrameData[28] net31 Inst_W_IO_ConfigMem.Inst_frame2_bit28.Q VDD VDD VSS VSS
++ gf180mcu_fd_sc_mcu7t5v0__latq_1
 XTAP_TAPCELL_ROW_47_288 VDD VSS gf180mcu_fd_sc_mcu7t5v0__filltie
 XTAP_TAPCELL_ROW_6_164 VDD VSS gf180mcu_fd_sc_mcu7t5v0__filltie
 XTAP_TAPCELL_ROW_29_233 VDD VSS gf180mcu_fd_sc_mcu7t5v0__filltie
-X_157_ net5 net30 Inst_W_IO_ConfigMem.Inst_frame2_bit11.Q VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__latq_1
+X_157_ FrameData[11] net30 Inst_W_IO_ConfigMem.Inst_frame2_bit11.Q VDD VDD VSS VSS
++ gf180mcu_fd_sc_mcu7t5v0__latq_1
 XFILLER_10_171 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__fillcap_4
 XFILLER_8_69 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__fillcap_8
-X_226_ net10 net40 Inst_W_IO_ConfigMem.Inst_frame0_bit16.Q VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__latq_1
+X_226_ FrameData[16] net40 Inst_W_IO_ConfigMem.Inst_frame0_bit16.Q VDD VDD VSS VSS
++ gf180mcu_fd_sc_mcu7t5v0__latq_1
+X_088_ W6END[0] W6END[4] W6END[2] A_O_top Inst_W_IO_ConfigMem.Inst_frame1_bit15.Q
++ Inst_W_IO_ConfigMem.Inst_frame1_bit14.Q Inst_W_IO_switch_matrix.EE4BEG10 VDD VDD
++ VSS VSS gf180mcu_fd_sc_mcu7t5v0__mux4_1
 XFILLER_69_127 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__fillcap_8
-X_088_ net72 net78 net76 net1 Inst_W_IO_ConfigMem.Inst_frame1_bit15.Q Inst_W_IO_ConfigMem.Inst_frame1_bit14.Q
-+ Inst_W_IO_switch_matrix.EE4BEG10 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__mux4_1
 XFILLER_25_208 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__fill_2
 XTAP_TAPCELL_ROW_3_156 VDD VSS gf180mcu_fd_sc_mcu7t5v0__filltie
 XTAP_TAPCELL_ROW_26_225 VDD VSS gf180mcu_fd_sc_mcu7t5v0__filltie
+XFILLER_33_22 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__fillcap_8
 XFILLER_33_55 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__fillcap_8
-X_209_ net42 net32 Inst_W_IO_ConfigMem.Inst_frame1_bit31.Q VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__latq_1
-XFILLER_65_174 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__fillcap_8
+X_209_ FrameData[31] net32 Inst_W_IO_ConfigMem.Inst_frame1_bit31.Q VDD VDD VSS VSS
++ gf180mcu_fd_sc_mcu7t5v0__latq_1
+XFILLER_31_2 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__fillcap_8
 XFILLER_0_70 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__fillcap_32
 XTAP_TAPCELL_ROW_0_148 VDD VSS gf180mcu_fd_sc_mcu7t5v0__filltie
+XFILLER_65_174 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__fillcap_8
 XTAP_TAPCELL_ROW_23_217 VDD VSS gf180mcu_fd_sc_mcu7t5v0__filltie
 XFILLER_0_104 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__fillcap_32
 XFILLER_44_10 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__fillcap_4
@@ -1541,154 +1510,163 @@ XPHY_EDGE_ROW_13_Right_13 VDD VSS gf180mcu_fd_sc_mcu7t5v0__endcap
 XPHY_EDGE_ROW_22_Right_22 VDD VSS gf180mcu_fd_sc_mcu7t5v0__endcap
 XFILLER_62_177 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__fillcap_16
 XPHY_EDGE_ROW_68_Left_139 VDD VSS gf180mcu_fd_sc_mcu7t5v0__endcap
-Xwire190 net102 net205 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__clkbuf_1
 XPHY_EDGE_ROW_31_Right_31 VDD VSS gf180mcu_fd_sc_mcu7t5v0__endcap
 XFILLER_38_174 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__fill_1
 XTAP_TAPCELL_ROW_51_301 VDD VSS gf180mcu_fd_sc_mcu7t5v0__filltie
 XPHY_EDGE_ROW_40_Right_40 VDD VSS gf180mcu_fd_sc_mcu7t5v0__endcap
 XFILLER_29_174 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__fillcap_32
-XFILLER_55_42 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__fillcap_16
 XFILLER_44_177 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__fillcap_32
 XFILLER_50_169 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__fillcap_4
 XFILLER_25_45 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__fill_2
 XFILLER_25_67 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__fill_2
 XFILLER_26_177 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__fillcap_32
-X_190_ net6 net34 Inst_W_IO_ConfigMem.Inst_frame1_bit12.Q VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__latq_1
+XFILLER_41_22 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__fillcap_16
+X_190_ FrameData[12] net34 Inst_W_IO_ConfigMem.Inst_frame1_bit12.Q VDD VDD VSS VSS
++ gf180mcu_fd_sc_mcu7t5v0__latq_1
+XFILLER_9_2 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__fillcap_32
 XFILLER_32_103 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__fill_2
 XFILLER_32_158 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__fillcap_4
-Xoutput106 net121 E2BEGb[5] VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__buf_4
-Xoutput128 net143 EE4BEG[1] VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__buf_4
-Xoutput117 net132 E6BEG[6] VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__buf_4
-Xoutput139 net154 FrameData_O[11] VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__buf_4
 XFILLER_55_206 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__fillcap_4
 XFILLER_11_69 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__fill_1
-X_311_ Inst_W_IO_switch_matrix.E1BEG0 net104 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__buf_2
-X_242_ net1 clknet_1_0__leaf_UserCLK_regs Inst_A_IO_1_bidirectional_frame_config_pass.Q
+XFILLER_36_22 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__fillcap_8
+X_311_ Inst_W_IO_switch_matrix.E1BEG0 net5 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__buf_2
+X_242_ A_O_top clknet_1_0__leaf_UserCLK_regs Inst_A_IO_1_bidirectional_frame_config_pass.Q
 + VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__dffq_4
-X_173_ net22 net31 Inst_W_IO_ConfigMem.Inst_frame2_bit27.Q VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__latq_1
-XFILLER_52_10 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__fillcap_8
-Xinput19 FrameData[24] net19 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__buf_2
+X_173_ FrameData[27] net31 Inst_W_IO_ConfigMem.Inst_frame2_bit27.Q VDD VDD VSS VSS
++ gf180mcu_fd_sc_mcu7t5v0__latq_1
 XTAP_TAPCELL_ROW_9_173 VDD VSS gf180mcu_fd_sc_mcu7t5v0__filltie
 XTAP_TAPCELL_ROW_47_289 VDD VSS gf180mcu_fd_sc_mcu7t5v0__filltie
 XFILLER_52_209 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__fillcap_16
+XFILLER_61_2 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__fillcap_64
 XFILLER_11_139 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__fill_1
 XFILLER_22_24 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__fill_2
 XTAP_TAPCELL_ROW_6_165 VDD VSS gf180mcu_fd_sc_mcu7t5v0__filltie
+XFILLER_19_228 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__fillcap_8
 XTAP_TAPCELL_ROW_29_234 VDD VSS gf180mcu_fd_sc_mcu7t5v0__filltie
 XFILLER_47_32 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__fill_1
 XPHY_EDGE_ROW_69_Right_69 VDD VSS gf180mcu_fd_sc_mcu7t5v0__endcap
 XFILLER_34_209 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__fillcap_4
-X_156_ net4 net30 Inst_W_IO_ConfigMem.Inst_frame2_bit10.Q VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__latq_1
+X_156_ FrameData[10] net30 Inst_W_IO_ConfigMem.Inst_frame2_bit10.Q VDD VDD VSS VSS
++ gf180mcu_fd_sc_mcu7t5v0__latq_1
 XFILLER_8_37 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__fillcap_32
-XFILLER_8_26 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__fillcap_8
-X_087_ net80 net73 net82 net2 Inst_W_IO_ConfigMem.Inst_frame1_bit17.Q Inst_W_IO_ConfigMem.Inst_frame1_bit16.Q
-+ Inst_W_IO_switch_matrix.EE4BEG11 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__mux4_1
-X_225_ net9 net41 Inst_W_IO_ConfigMem.Inst_frame0_bit15.Q VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__latq_1
+X_087_ W6END[6] W6END[10] W6END[8] B_O_top Inst_W_IO_ConfigMem.Inst_frame1_bit17.Q
++ Inst_W_IO_ConfigMem.Inst_frame1_bit16.Q Inst_W_IO_switch_matrix.EE4BEG11 VDD VDD
++ VSS VSS gf180mcu_fd_sc_mcu7t5v0__mux4_1
+X_225_ FrameData[15] net41 Inst_W_IO_ConfigMem.Inst_frame0_bit15.Q VDD VDD VSS VSS
++ gf180mcu_fd_sc_mcu7t5v0__latq_1
 XFILLER_69_139 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__fill_1
 XPHY_EDGE_ROW_25_Left_96 VDD VSS gf180mcu_fd_sc_mcu7t5v0__endcap
-XFILLER_68_161 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__fill_1
 XTAP_TAPCELL_ROW_3_157 VDD VSS gf180mcu_fd_sc_mcu7t5v0__filltie
-XFILLER_16_209 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__fillcap_16
+XFILLER_68_161 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__fill_1
 XTAP_TAPCELL_ROW_26_226 VDD VSS gf180mcu_fd_sc_mcu7t5v0__filltie
 XFILLER_33_34 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__fill_1
 XFILLER_33_67 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__fill_2
-XFILLER_15_220 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__fillcap_4
-X_208_ net26 net33 Inst_W_IO_ConfigMem.Inst_frame1_bit30.Q VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__latq_1
-X_139_ net20 net51 Inst_W_IO_ConfigMem.Inst_frame3_bit25.Q VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__latq_1
-XFILLER_65_186 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__fill_2
+X_208_ FrameData[30] net33 Inst_W_IO_ConfigMem.Inst_frame1_bit30.Q VDD VDD VSS VSS
++ gf180mcu_fd_sc_mcu7t5v0__latq_1
+X_139_ FrameData[25] FrameStrobe[3] Inst_W_IO_ConfigMem.Inst_frame3_bit25.Q VDD VDD
++ VSS VSS gf180mcu_fd_sc_mcu7t5v0__latq_1
+XFILLER_21_212 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__fillcap_16
 XFILLER_65_142 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__fillcap_32
-XFILLER_21_212 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__fillcap_8
+XFILLER_65_186 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__fill_2
 XTAP_TAPCELL_ROW_31_240 VDD VSS gf180mcu_fd_sc_mcu7t5v0__filltie
 XFILLER_0_138 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__fillcap_32
 XTAP_TAPCELL_ROW_54_310 VDD VSS gf180mcu_fd_sc_mcu7t5v0__filltie
 XFILLER_69_96 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__fill_1
 XFILLER_69_63 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__fillcap_4
 XFILLER_62_101 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__fillcap_4
-Xwire191 net101 net206 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__clkbuf_1
 XPHY_EDGE_ROW_12_Left_83 VDD VSS gf180mcu_fd_sc_mcu7t5v0__endcap
 XFILLER_39_55 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__fill_1
-XFILLER_55_10 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__fillcap_32
 XFILLER_35_156 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__fill_1
 XFILLER_35_189 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__fillcap_16
 XFILLER_50_104 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__fill_1
 XFILLER_32_115 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__fill_2
 XFILLER_32_126 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__fillcap_8
-Xoutput107 net122 E2BEGb[6] VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__buf_4
 XFILLER_40_170 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__fillcap_4
-Xoutput129 net144 EE4BEG[2] VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__buf_4
-Xoutput118 net133 E6BEG[7] VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__buf_4
 XFILLER_23_148 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__fillcap_32
 XFILLER_31_181 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__fillcap_16
 XFILLER_36_34 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__fill_1
-X_310_ clknet_1_0__leaf_UserCLK net204 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__buf_1
+X_310_ clknet_1_0__leaf_UserCLK net120 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__buf_1
 XFILLER_52_22 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__fill_2
 XFILLER_52_33 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__fill_2
-X_241_ net42 net38 Inst_W_IO_ConfigMem.Inst_frame0_bit31.Q VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__latq_1
+X_241_ FrameData[31] net38 Inst_W_IO_ConfigMem.Inst_frame0_bit31.Q VDD VDD VSS VSS
++ gf180mcu_fd_sc_mcu7t5v0__latq_1
 XFILLER_22_170 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__fillcap_4
-X_172_ net21 net31 Inst_W_IO_ConfigMem.Inst_frame2_bit26.Q VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__latq_1
+X_172_ FrameData[26] net31 Inst_W_IO_ConfigMem.Inst_frame2_bit26.Q VDD VDD VSS VSS
++ gf180mcu_fd_sc_mcu7t5v0__latq_1
 XTAP_TAPCELL_ROW_9_174 VDD VSS gf180mcu_fd_sc_mcu7t5v0__filltie
 XFILLER_9_130 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__fillcap_8
+XFILLER_54_2 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__fillcap_32
 XTAP_TAPCELL_ROW_6_166 VDD VSS gf180mcu_fd_sc_mcu7t5v0__filltie
 XTAP_TAPCELL_ROW_29_235 VDD VSS gf180mcu_fd_sc_mcu7t5v0__filltie
-X_224_ net8 net41 Inst_W_IO_ConfigMem.Inst_frame0_bit14.Q VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__latq_1
-XFILLER_6_177 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__fillcap_32
-X_086_ net75 net79 net77 Inst_A_IO_1_bidirectional_frame_config_pass.Q Inst_W_IO_ConfigMem.Inst_frame1_bit19.Q
+XFILLER_47_22 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__fillcap_8
+X_224_ FrameData[14] net41 Inst_W_IO_ConfigMem.Inst_frame0_bit14.Q VDD VDD VSS VSS
++ gf180mcu_fd_sc_mcu7t5v0__latq_1
+XFILLER_6_177 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__fillcap_64
+X_086_ W6END[1] W6END[5] W6END[3] Inst_A_IO_1_bidirectional_frame_config_pass.Q Inst_W_IO_ConfigMem.Inst_frame1_bit19.Q
 + Inst_W_IO_ConfigMem.Inst_frame1_bit18.Q Inst_W_IO_switch_matrix.EE4BEG12 VDD VDD
 + VSS VSS gf180mcu_fd_sc_mcu7t5v0__mux4_1
-X_155_ net49 net28 Inst_W_IO_ConfigMem.Inst_frame2_bit9.Q VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__latq_1
+X_155_ FrameData[9] net28 Inst_W_IO_ConfigMem.Inst_frame2_bit9.Q VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__latq_1
 XPHY_EDGE_ROW_0_Left_71 VDD VSS gf180mcu_fd_sc_mcu7t5v0__endcap
+XFILLER_26_6 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__fill_1
 XFILLER_17_69 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__fill_1
 XFILLER_3_136 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__fillcap_4
-X_207_ net24 net32 Inst_W_IO_ConfigMem.Inst_frame1_bit29.Q VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__latq_1
+X_207_ FrameData[29] net32 Inst_W_IO_ConfigMem.Inst_frame1_bit29.Q VDD VDD VSS VSS
++ gf180mcu_fd_sc_mcu7t5v0__latq_1
 X_069_ Inst_W_IO_ConfigMem.Inst_frame0_bit19.Q _023_ _025_ _004_ _026_ VDD VDD VSS
 + VSS gf180mcu_fd_sc_mcu7t5v0__aoi211_1
-X_138_ net19 net27 Inst_W_IO_ConfigMem.Inst_frame3_bit24.Q VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__latq_1
-XFILLER_21_224 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__fill_1
+X_138_ FrameData[24] net27 Inst_W_IO_ConfigMem.Inst_frame3_bit24.Q VDD VDD VSS VSS
++ gf180mcu_fd_sc_mcu7t5v0__latq_1
+XFILLER_17_2 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__fillcap_8
 XTAP_TAPCELL_ROW_31_241 VDD VSS gf180mcu_fd_sc_mcu7t5v0__filltie
 XPHY_EDGE_ROW_7_Right_7 VDD VSS gf180mcu_fd_sc_mcu7t5v0__endcap
+XFILLER_14_26 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__fillcap_8
 XFILLER_14_37 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__fillcap_4
 XFILLER_55_66 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__fillcap_4
 XFILLER_50_116 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__fillcap_8
 XFILLER_25_69 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__fill_1
-XFILLER_1_212 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__fillcap_8
-XFILLER_66_10 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__fillcap_16
+XFILLER_1_212 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__fillcap_16
 XFILLER_17_113 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__fill_2
 XFILLER_70_8 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__fillcap_8
-Xoutput108 net123 E2BEGb[7] VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__buf_4
-Xoutput119 net134 E6BEG[8] VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__buf_4
-Xoutput90 net105 E1BEG[1] VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__buf_4
-X_240_ net26 net38 Inst_W_IO_ConfigMem.Inst_frame0_bit30.Q VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__latq_1
+Xoutput90 net105 FrameStrobe_O[14] VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__buf_4
+XFILLER_11_16 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__fillcap_16
+X_240_ FrameData[30] net38 Inst_W_IO_ConfigMem.Inst_frame0_bit30.Q VDD VDD VSS VSS
++ gf180mcu_fd_sc_mcu7t5v0__latq_1
 XFILLER_22_160 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__fill_2
 XFILLER_36_57 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__fillcap_8
-X_171_ net20 net28 Inst_W_IO_ConfigMem.Inst_frame2_bit25.Q VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__latq_1
+X_171_ FrameData[25] net28 Inst_W_IO_ConfigMem.Inst_frame2_bit25.Q VDD VDD VSS VSS
++ gf180mcu_fd_sc_mcu7t5v0__latq_1
 XTAP_TAPCELL_ROW_9_175 VDD VSS gf180mcu_fd_sc_mcu7t5v0__filltie
 XFILLER_9_142 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__fillcap_64
 XFILLER_3_72 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__fillcap_64
 XFILLER_22_37 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__fillcap_4
 XFILLER_22_26 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__fill_1
 XFILLER_6_101 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__fillcap_4
-X_223_ net7 net40 Inst_W_IO_ConfigMem.Inst_frame0_bit13.Q VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__latq_1
+X_223_ FrameData[13] net40 Inst_W_IO_ConfigMem.Inst_frame0_bit13.Q VDD VDD VSS VSS
++ gf180mcu_fd_sc_mcu7t5v0__latq_1
 XFILLER_63_66 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__fillcap_4
-X_154_ net48 net28 Inst_W_IO_ConfigMem.Inst_frame2_bit8.Q VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__latq_1
-X_085_ net81 net74 net83 Inst_B_IO_1_bidirectional_frame_config_pass.Q Inst_W_IO_ConfigMem.Inst_frame1_bit21.Q
+X_154_ FrameData[8] net28 Inst_W_IO_ConfigMem.Inst_frame2_bit8.Q VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__latq_1
+X_085_ W6END[7] W6END[11] W6END[9] Inst_B_IO_1_bidirectional_frame_config_pass.Q Inst_W_IO_ConfigMem.Inst_frame1_bit21.Q
 + Inst_W_IO_ConfigMem.Inst_frame1_bit20.Q Inst_W_IO_switch_matrix.EE4BEG13 VDD VDD
 + VSS VSS gf180mcu_fd_sc_mcu7t5v0__mux4_1
 XFILLER_19_6 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__fill_2
 XTAP_TAPCELL_ROW_11_180 VDD VSS gf180mcu_fd_sc_mcu7t5v0__filltie
-XFILLER_68_174 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__fill_1
 XFILLER_17_26 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__fillcap_4
+XFILLER_68_174 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__fill_1
 XFILLER_33_69 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__fill_1
 XTAP_TAPCELL_ROW_34_250 VDD VSS gf180mcu_fd_sc_mcu7t5v0__filltie
-X_206_ net23 net33 Inst_W_IO_ConfigMem.Inst_frame1_bit28.Q VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__latq_1
-X_137_ net18 net27 Inst_W_IO_ConfigMem.Inst_frame3_bit23.Q VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__latq_1
+X_206_ FrameData[28] net33 Inst_W_IO_ConfigMem.Inst_frame1_bit28.Q VDD VDD VSS VSS
++ gf180mcu_fd_sc_mcu7t5v0__latq_1
+X_137_ FrameData[23] net27 Inst_W_IO_ConfigMem.Inst_frame3_bit23.Q VDD VDD VSS VSS
++ gf180mcu_fd_sc_mcu7t5v0__latq_1
 X_068_ _000_ Inst_W_IO_ConfigMem.Inst_frame0_bit18.Q Inst_W_IO_ConfigMem.Inst_frame0_bit19.Q
 + _024_ _025_ VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__aoi211_1
+XFILLER_21_236 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__fillcap_4
 XFILLER_56_177 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__fillcap_32
-XFILLER_12_225 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__fillcap_8
 XFILLER_60_34 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__fill_1
-XFILLER_69_43 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__fillcap_4
 XFILLER_69_10 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__fill_2
+XFILLER_69_43 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__fillcap_4
 XTAP_TAPCELL_ROW_60_326 VDD VSS gf180mcu_fd_sc_mcu7t5v0__filltie
+XFILLER_7_240 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__fill_1
 XPHY_EDGE_ROW_37_Left_108 VDD VSS gf180mcu_fd_sc_mcu7t5v0__endcap
 XFILLER_38_177 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__fillcap_32
 XFILLER_53_136 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__fillcap_4
@@ -1702,25 +1680,29 @@ XPHY_EDGE_ROW_64_Left_135 VDD VSS gf180mcu_fd_sc_mcu7t5v0__endcap
 XFILLER_41_117 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__fillcap_4
 XFILLER_41_139 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__fill_1
 XFILLER_41_69 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__fill_1
-XFILLER_1_224 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__fill_1
 XFILLER_15_92 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__fill_2
 XFILLER_32_117 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__fill_1
+Xoutput1 net1 A_I_top VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__buf_4
 XFILLER_31_80 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__fillcap_4
-Xoutput109 net124 E6BEG[0] VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__buf_4
-Xoutput91 net106 E1BEG[2] VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__buf_4
+XFILLER_49_6 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__fill_2
+Xoutput91 net106 FrameStrobe_O[15] VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__buf_4
+Xoutput80 net95 FrameData_O[5] VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__buf_4
 XFILLER_46_209 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__fillcap_4
 XFILLER_14_139 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__fillcap_32
-X_170_ net19 net28 Inst_W_IO_ConfigMem.Inst_frame2_bit24.Q VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__latq_1
+X_170_ FrameData[24] net28 Inst_W_IO_ConfigMem.Inst_frame2_bit24.Q VDD VDD VSS VSS
++ gf180mcu_fd_sc_mcu7t5v0__latq_1
 XFILLER_52_24 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__fill_1
-X_299_ FrameStrobe[9] net203 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__buf_2
+X_299_ FrameStrobe[9] net119 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__buf_2
 XFILLER_28_209 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__fillcap_16
 XFILLER_51_212 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__fill_1
 XPHY_EDGE_ROW_29_Right_29 VDD VSS gf180mcu_fd_sc_mcu7t5v0__endcap
-X_153_ net47 net28 Inst_W_IO_ConfigMem.Inst_frame2_bit7.Q VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__latq_1
+X_153_ FrameData[7] net28 Inst_W_IO_ConfigMem.Inst_frame2_bit7.Q VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__latq_1
 XPHY_EDGE_ROW_38_Right_38 VDD VSS gf180mcu_fd_sc_mcu7t5v0__endcap
-X_222_ net6 net40 Inst_W_IO_ConfigMem.Inst_frame0_bit12.Q VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__latq_1
-X_084_ net64 net68 net66 net70 Inst_W_IO_ConfigMem.Inst_frame1_bit23.Q Inst_W_IO_ConfigMem.Inst_frame1_bit22.Q
-+ Inst_W_IO_switch_matrix.EE4BEG14 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__mux4_1
+X_222_ FrameData[12] net40 Inst_W_IO_ConfigMem.Inst_frame0_bit12.Q VDD VDD VSS VSS
++ gf180mcu_fd_sc_mcu7t5v0__latq_1
+X_084_ W2MID[0] W2MID[4] W2MID[2] W2MID[6] Inst_W_IO_ConfigMem.Inst_frame1_bit23.Q
++ Inst_W_IO_ConfigMem.Inst_frame1_bit22.Q Inst_W_IO_switch_matrix.EE4BEG14 VDD VDD
++ VSS VSS gf180mcu_fd_sc_mcu7t5v0__mux4_1
 XPHY_EDGE_ROW_47_Right_47 VDD VSS gf180mcu_fd_sc_mcu7t5v0__endcap
 XFILLER_33_212 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__fill_1
 XPHY_EDGE_ROW_56_Right_56 VDD VSS gf180mcu_fd_sc_mcu7t5v0__endcap
@@ -1728,13 +1710,16 @@ XTAP_TAPCELL_ROW_11_181 VDD VSS gf180mcu_fd_sc_mcu7t5v0__filltie
 XPHY_EDGE_ROW_65_Right_65 VDD VSS gf180mcu_fd_sc_mcu7t5v0__endcap
 XFILLER_58_34 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__fill_1
 XFILLER_59_142 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__fillcap_64
-XFILLER_15_212 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__fillcap_8
-X_136_ net17 net27 Inst_W_IO_ConfigMem.Inst_frame3_bit22.Q VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__latq_1
-X_205_ net22 net34 Inst_W_IO_ConfigMem.Inst_frame1_bit27.Q VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__latq_1
+XFILLER_15_212 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__fillcap_16
+X_136_ FrameData[22] net27 Inst_W_IO_ConfigMem.Inst_frame3_bit22.Q VDD VDD VSS VSS
++ gf180mcu_fd_sc_mcu7t5v0__latq_1
+X_205_ FrameData[27] net34 Inst_W_IO_ConfigMem.Inst_frame1_bit27.Q VDD VDD VSS VSS
++ gf180mcu_fd_sc_mcu7t5v0__latq_1
 XFILLER_2_171 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__fillcap_4
-X_067_ net68 Inst_W_IO_ConfigMem.Inst_frame0_bit18.Q _024_ VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__nor2_1
+X_067_ W2MID[4] Inst_W_IO_ConfigMem.Inst_frame0_bit18.Q _024_ VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__nor2_1
 XTAP_TAPCELL_ROW_63_335 VDD VSS gf180mcu_fd_sc_mcu7t5v0__filltie
 XFILLER_9_72 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__fillcap_4
+XFILLER_9_50 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__fillcap_8
 XFILLER_28_37 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__fillcap_4
 XFILLER_56_101 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__fillcap_4
 XFILLER_44_14 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__fill_1
@@ -1742,75 +1727,88 @@ XFILLER_69_88 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__fillcap_8
 XFILLER_47_134 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__fillcap_4
 XFILLER_47_178 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__fillcap_32
 XTAP_TAPCELL_ROW_60_327 VDD VSS gf180mcu_fd_sc_mcu7t5v0__filltie
-X_119_ net71 Inst_W_IO_ConfigMem.Inst_frame0_bit23.Q _027_ VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__nor2_1
+X_119_ W2MID[7] Inst_W_IO_ConfigMem.Inst_frame0_bit23.Q _027_ VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__nor2_1
 XFILLER_50_90 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__fillcap_8
 XFILLER_20_71 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__fillcap_8
 XFILLER_50_107 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__fill_1
 XPHY_EDGE_ROW_16_Left_87 VDD VSS gf180mcu_fd_sc_mcu7t5v0__endcap
+XFILLER_1_236 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__fillcap_4
 XFILLER_66_34 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__fill_1
-Xoutput92 net107 E1BEG[3] VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__buf_4
-X_298_ FrameStrobe[8] net202 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__buf_2
+Xoutput70 net85 FrameData_O[25] VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__buf_4
+Xoutput2 net122 A_T_top VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__buf_4
+Xoutput92 net107 FrameStrobe_O[16] VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__buf_4
+Xoutput81 net96 FrameData_O[6] VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__buf_4
+X_298_ FrameStrobe[8] net118 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__buf_2
 XTAP_TAPCELL_ROW_14_190 VDD VSS gf180mcu_fd_sc_mcu7t5v0__filltie
 XPHY_EDGE_ROW_19_Left_90 VDD VSS gf180mcu_fd_sc_mcu7t5v0__endcap
-X_083_ net65 net69 net67 net71 Inst_W_IO_ConfigMem.Inst_frame1_bit25.Q Inst_W_IO_ConfigMem.Inst_frame1_bit24.Q
-+ Inst_W_IO_switch_matrix.EE4BEG15 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__mux4_1
-X_221_ net5 net40 Inst_W_IO_ConfigMem.Inst_frame0_bit11.Q VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__latq_1
-X_152_ net46 net28 Inst_W_IO_ConfigMem.Inst_frame2_bit6.Q VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__latq_1
+X_083_ W2MID[1] W2MID[5] W2MID[3] W2MID[7] Inst_W_IO_ConfigMem.Inst_frame1_bit25.Q
++ Inst_W_IO_ConfigMem.Inst_frame1_bit24.Q Inst_W_IO_switch_matrix.EE4BEG15 VDD VDD
++ VSS VSS gf180mcu_fd_sc_mcu7t5v0__mux4_1
+X_221_ FrameData[11] net40 Inst_W_IO_ConfigMem.Inst_frame0_bit11.Q VDD VDD VSS VSS
++ gf180mcu_fd_sc_mcu7t5v0__latq_1
+X_152_ FrameData[6] net28 Inst_W_IO_ConfigMem.Inst_frame2_bit6.Q VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__latq_1
 XFILLER_19_8 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__fill_1
 XFILLER_33_202 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__fillcap_8
+XFILLER_52_2 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__fillcap_16
 XTAP_TAPCELL_ROW_66_344 VDD VSS gf180mcu_fd_sc_mcu7t5v0__filltie
-XFILLER_15_224 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__fill_1
 XPHY_EDGE_ROW_4_Left_75 VDD VSS gf180mcu_fd_sc_mcu7t5v0__endcap
-X_204_ net21 net34 Inst_W_IO_ConfigMem.Inst_frame1_bit26.Q VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__latq_1
-X_135_ Inst_W_IO_ConfigMem.Inst_frame0_bit29.Q _035_ _036_ _038_ _041_ net103 VDD
-+ VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__oai32_1
-X_066_ net70 net71 Inst_W_IO_ConfigMem.Inst_frame0_bit18.Q _023_ VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__mux2_2
+X_204_ FrameData[26] net34 Inst_W_IO_ConfigMem.Inst_frame1_bit26.Q VDD VDD VSS VSS
++ gf180mcu_fd_sc_mcu7t5v0__latq_1
+X_135_ Inst_W_IO_ConfigMem.Inst_frame0_bit29.Q _035_ _036_ _038_ _041_ net4 VDD VDD
++ VSS VSS gf180mcu_fd_sc_mcu7t5v0__oai32_1
+X_066_ W2MID[6] W2MID[7] Inst_W_IO_ConfigMem.Inst_frame0_bit18.Q _023_ VDD VDD VSS
++ VSS gf180mcu_fd_sc_mcu7t5v0__mux2_2
 XTAP_TAPCELL_ROW_40_266 VDD VSS gf180mcu_fd_sc_mcu7t5v0__filltie
 XTAP_TAPCELL_ROW_63_336 VDD VSS gf180mcu_fd_sc_mcu7t5v0__filltie
-XFILLER_8_209 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__fillcap_16
 XFILLER_44_37 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__fillcap_4
 XFILLER_69_12 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__fill_1
 XFILLER_69_67 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__fill_2
-XFILLER_7_220 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__fillcap_4
 XTAP_TAPCELL_ROW_60_328 VDD VSS gf180mcu_fd_sc_mcu7t5v0__filltie
-X_118_ net55 net1 Inst_W_IO_ConfigMem.Inst_frame3_bit22.Q Inst_W_IO_switch_matrix.E1BEG0
+X_118_ W1END[3] A_O_top Inst_W_IO_ConfigMem.Inst_frame3_bit22.Q Inst_W_IO_switch_matrix.E1BEG0
 + VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__mux2_2
-X_049_ net56 net57 net58 net59 Inst_W_IO_ConfigMem.Inst_frame0_bit25.Q Inst_W_IO_ConfigMem.Inst_frame0_bit26.Q
-+ _007_ VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__mux4_1
+X_049_ W2END[0] W2END[1] W2END[2] W2END[3] Inst_W_IO_ConfigMem.Inst_frame0_bit25.Q
++ Inst_W_IO_ConfigMem.Inst_frame0_bit26.Q _007_ VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__mux4_1
+XFILLER_15_2 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__fillcap_8
 XFILLER_38_102 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__fill_2
-XFILLER_55_58 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__fillcap_8
 XFILLER_41_38 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__fill_2
 XFILLER_49_208 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__fill_2
 XFILLER_40_174 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__fill_1
-Xoutput93 net108 E2BEG[0] VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__buf_4
+Xoutput93 net108 FrameStrobe_O[17] VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__buf_4
+Xoutput3 net121 B_I_top VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__buf_4
+Xoutput82 net97 FrameData_O[7] VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__buf_4
+Xoutput60 net75 FrameData_O[16] VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__buf_4
+Xoutput71 net86 FrameData_O[26] VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__buf_4
 XFILLER_22_152 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__fillcap_8
 XFILLER_22_174 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__fill_1
 XFILLER_52_37 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__fillcap_64
-X_297_ FrameStrobe[7] net201 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__buf_2
+X_297_ FrameStrobe[7] net117 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__buf_2
 XTAP_TAPCELL_ROW_69_353 VDD VSS gf180mcu_fd_sc_mcu7t5v0__filltie
-X_220_ net4 net40 Inst_W_IO_ConfigMem.Inst_frame0_bit10.Q VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__latq_1
-X_151_ net45 net29 Inst_W_IO_ConfigMem.Inst_frame2_bit5.Q VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__latq_1
-XFILLER_10_177 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__fillcap_32
-X_082_ net54 net86 net74 net1 Inst_W_IO_ConfigMem.Inst_frame1_bit26.Q Inst_W_IO_ConfigMem.Inst_frame1_bit27.Q
-+ Inst_W_IO_switch_matrix.E6BEG0 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__mux4_1
+X_220_ FrameData[10] net40 Inst_W_IO_ConfigMem.Inst_frame0_bit10.Q VDD VDD VSS VSS
++ gf180mcu_fd_sc_mcu7t5v0__latq_1
+X_151_ FrameData[5] net29 Inst_W_IO_ConfigMem.Inst_frame2_bit5.Q VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__latq_1
+XFILLER_10_177 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__fillcap_64
+X_082_ W1END[2] WW4END[11] W6END[11] A_O_top Inst_W_IO_ConfigMem.Inst_frame1_bit26.Q
++ Inst_W_IO_ConfigMem.Inst_frame1_bit27.Q Inst_W_IO_switch_matrix.E6BEG0 VDD VDD VSS
++ VSS gf180mcu_fd_sc_mcu7t5v0__mux4_1
 XTAP_TAPCELL_ROW_43_275 VDD VSS gf180mcu_fd_sc_mcu7t5v0__filltie
-XFILLER_68_155 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__fillcap_4
 XTAP_TAPCELL_ROW_66_345 VDD VSS gf180mcu_fd_sc_mcu7t5v0__filltie
+XFILLER_68_155 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__fillcap_4
 XPHY_EDGE_ROW_20_Left_91 VDD VSS gf180mcu_fd_sc_mcu7t5v0__endcap
-XFILLER_24_225 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__fillcap_8
+XFILLER_15_236 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__fillcap_4
 XFILLER_23_72 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__fillcap_4
-X_203_ net20 net32 Inst_W_IO_ConfigMem.Inst_frame1_bit25.Q VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__latq_1
+X_203_ FrameData[25] net32 Inst_W_IO_ConfigMem.Inst_frame1_bit25.Q VDD VDD VSS VSS
++ gf180mcu_fd_sc_mcu7t5v0__latq_1
 XTAP_TAPCELL_ROW_40_267 VDD VSS gf180mcu_fd_sc_mcu7t5v0__filltie
 X_134_ Inst_W_IO_ConfigMem.Inst_frame0_bit29.Q _039_ _040_ _041_ VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__nand3_1
 X_065_ Inst_W_IO_ConfigMem.Inst_frame0_bit20.Q _021_ _022_ VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__nor2_1
 XFILLER_65_136 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__fillcap_4
-XFILLER_0_65 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__fill_2
 XFILLER_21_206 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__fillcap_4
+XFILLER_21_228 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__fillcap_8
 XTAP_TAPCELL_ROW_63_337 VDD VSS gf180mcu_fd_sc_mcu7t5v0__filltie
 Xclkbuf_0_UserCLK UserCLK clknet_0_UserCLK VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__clkbuf_16
 XTAP_TAPCELL_ROW_22_212 VDD VSS gf180mcu_fd_sc_mcu7t5v0__filltie
 XFILLER_60_37 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__fillcap_64
-X_117_ net54 Inst_A_IO_1_bidirectional_frame_config_pass.Q Inst_W_IO_ConfigMem.Inst_frame3_bit23.Q
+X_117_ W1END[2] Inst_A_IO_1_bidirectional_frame_config_pass.Q Inst_W_IO_ConfigMem.Inst_frame3_bit23.Q
 + Inst_W_IO_switch_matrix.E1BEG1 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__mux2_2
 X_048_ Inst_W_IO_ConfigMem.Inst_frame0_bit30.Q _006_ VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__inv_1
 XFILLER_39_49 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__fillcap_4
@@ -1820,86 +1818,97 @@ XFILLER_45_92 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__fillcap_4
 XPHY_EDGE_ROW_51_Left_122 VDD VSS gf180mcu_fd_sc_mcu7t5v0__endcap
 XFILLER_58_209 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__fillcap_4
 XPHY_EDGE_ROW_60_Left_131 VDD VSS gf180mcu_fd_sc_mcu7t5v0__endcap
-Xoutput94 net109 E2BEG[1] VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__buf_4
+Xoutput4 net4 B_T_top VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__buf_4
+Xoutput50 net65 EE4BEG[7] VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__buf_4
+Xoutput83 net98 FrameData_O[8] VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__buf_4
+Xoutput61 net76 FrameData_O[17] VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__buf_4
+Xoutput72 net87 FrameData_O[27] VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__buf_4
+Xoutput94 net109 FrameStrobe_O[18] VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__buf_4
 XFILLER_63_212 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__fill_1
 XFILLER_31_142 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__fillcap_4
 XFILLER_31_197 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__fillcap_8
 XFILLER_45_212 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__fill_1
-X_296_ FrameStrobe[6] net200 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__buf_2
+X_296_ FrameStrobe[6] net116 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__buf_2
 XFILLER_13_142 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__fillcap_64
 XTAP_TAPCELL_ROW_46_284 VDD VSS gf180mcu_fd_sc_mcu7t5v0__filltie
 XTAP_TAPCELL_ROW_69_354 VDD VSS gf180mcu_fd_sc_mcu7t5v0__filltie
 XFILLER_27_212 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__fill_1
-X_150_ net44 net29 Inst_W_IO_ConfigMem.Inst_frame2_bit4.Q VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__latq_1
-X_081_ net55 net85 net73 net2 Inst_W_IO_ConfigMem.Inst_frame1_bit28.Q Inst_W_IO_ConfigMem.Inst_frame1_bit29.Q
-+ Inst_W_IO_switch_matrix.E6BEG1 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__mux4_1
+X_150_ FrameData[4] net29 Inst_W_IO_ConfigMem.Inst_frame2_bit4.Q VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__latq_1
+X_081_ W1END[3] WW4END[10] W6END[10] B_O_top Inst_W_IO_ConfigMem.Inst_frame1_bit28.Q
++ Inst_W_IO_ConfigMem.Inst_frame1_bit29.Q Inst_W_IO_switch_matrix.E6BEG1 VDD VDD VSS
++ VSS gf180mcu_fd_sc_mcu7t5v0__mux4_1
 XFILLER_12_52 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__fill_1
 XFILLER_5_2 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__fillcap_64
 XPHY_EDGE_ROW_16_Right_16 VDD VSS gf180mcu_fd_sc_mcu7t5v0__endcap
-X_279_ net16 net165 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__buf_2
+X_279_ FrameData[21] net81 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__buf_2
 XPHY_EDGE_ROW_25_Right_25 VDD VSS gf180mcu_fd_sc_mcu7t5v0__endcap
 XTAP_TAPCELL_ROW_43_276 VDD VSS gf180mcu_fd_sc_mcu7t5v0__filltie
-XFILLER_68_101 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__fillcap_4
 XFILLER_38_2 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__fill_1
-XTAP_TAPCELL_ROW_66_346 VDD VSS gf180mcu_fd_sc_mcu7t5v0__filltie
+XFILLER_68_101 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__fillcap_4
 XPHY_EDGE_ROW_34_Right_34 VDD VSS gf180mcu_fd_sc_mcu7t5v0__endcap
+XTAP_TAPCELL_ROW_66_346 VDD VSS gf180mcu_fd_sc_mcu7t5v0__filltie
 XPHY_EDGE_ROW_43_Right_43 VDD VSS gf180mcu_fd_sc_mcu7t5v0__endcap
 XPHY_EDGE_ROW_52_Right_52 VDD VSS gf180mcu_fd_sc_mcu7t5v0__endcap
 XFILLER_58_37 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__fillcap_64
 XTAP_TAPCELL_ROW_2_152 VDD VSS gf180mcu_fd_sc_mcu7t5v0__filltie
 XTAP_TAPCELL_ROW_25_221 VDD VSS gf180mcu_fd_sc_mcu7t5v0__filltie
-X_133_ net60 Inst_W_IO_ConfigMem.Inst_frame0_bit30.Q _040_ VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__nand2_1
-X_202_ net19 net32 Inst_W_IO_ConfigMem.Inst_frame1_bit24.Q VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__latq_1
+X_133_ W2END[4] Inst_W_IO_ConfigMem.Inst_frame0_bit30.Q _040_ VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__nand2_1
+X_202_ FrameData[24] net32 Inst_W_IO_ConfigMem.Inst_frame1_bit24.Q VDD VDD VSS VSS
++ gf180mcu_fd_sc_mcu7t5v0__latq_1
 XTAP_TAPCELL_ROW_40_268 VDD VSS gf180mcu_fd_sc_mcu7t5v0__filltie
 XPHY_EDGE_ROW_61_Right_61 VDD VSS gf180mcu_fd_sc_mcu7t5v0__endcap
 XPHY_EDGE_ROW_70_Right_70 VDD VSS gf180mcu_fd_sc_mcu7t5v0__endcap
-X_064_ net64 net65 net66 net67 Inst_W_IO_ConfigMem.Inst_frame0_bit18.Q Inst_W_IO_ConfigMem.Inst_frame0_bit19.Q
-+ _021_ VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__mux4_1
-XFILLER_9_42 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__fillcap_16
+X_064_ W2MID[0] W2MID[1] W2MID[2] W2MID[3] Inst_W_IO_ConfigMem.Inst_frame0_bit18.Q
++ Inst_W_IO_ConfigMem.Inst_frame0_bit19.Q _021_ VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__mux4_1
 XTAP_TAPCELL_ROW_22_213 VDD VSS gf180mcu_fd_sc_mcu7t5v0__filltie
-XFILLER_69_69 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__fill_1
 XFILLER_69_47 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__fill_2
+XFILLER_69_69 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__fill_1
 XFILLER_62_107 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__fillcap_64
-X_116_ net53 net2 Inst_W_IO_ConfigMem.Inst_frame3_bit24.Q Inst_W_IO_switch_matrix.E1BEG2
+XFILLER_11_240 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__fill_1
+X_116_ W1END[1] B_O_top Inst_W_IO_ConfigMem.Inst_frame3_bit24.Q Inst_W_IO_switch_matrix.E1BEG2
 + VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__mux2_2
 X_047_ Inst_W_IO_ConfigMem.Inst_frame0_bit23.Q _005_ VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__inv_1
 XFILLER_38_115 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__fill_2
 XFILLER_38_104 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__fill_1
 XPHY_EDGE_ROW_2_Right_2 VDD VSS gf180mcu_fd_sc_mcu7t5v0__endcap
-XFILLER_4_225 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__fillcap_8
 XFILLER_29_72 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__fillcap_4
 XFILLER_45_60 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__fill_2
 XFILLER_6_32 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__fill_2
+XFILLER_1_228 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__fillcap_8
 XFILLER_1_206 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__fillcap_4
 XFILLER_66_37 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__fillcap_64
-XFILLER_66_26 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__fillcap_8
 XFILLER_25_184 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__fillcap_16
-Xoutput95 net110 E2BEG[2] VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__buf_4
+Xoutput5 net5 E1BEG[0] VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__buf_4
+Xoutput73 net88 FrameData_O[28] VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__buf_4
+Xoutput40 net55 EE4BEG[12] VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__buf_4
+Xoutput51 net66 EE4BEG[8] VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__buf_4
+Xoutput84 net99 FrameData_O[9] VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__buf_4
+Xoutput95 net110 FrameStrobe_O[19] VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__buf_4
+Xoutput62 net77 FrameData_O[18] VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__buf_4
 XFILLER_16_151 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__fillcap_16
 XFILLER_31_132 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__fillcap_8
 XFILLER_68_2 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__fillcap_32
 XTAP_TAPCELL_ROW_49_293 VDD VSS gf180mcu_fd_sc_mcu7t5v0__filltie
-X_295_ FrameStrobe[5] net199 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__buf_2
+X_295_ FrameStrobe[5] net115 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__buf_2
 XFILLER_3_66 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__fillcap_4
 XTAP_TAPCELL_ROW_46_285 VDD VSS gf180mcu_fd_sc_mcu7t5v0__filltie
 XTAP_TAPCELL_ROW_69_355 VDD VSS gf180mcu_fd_sc_mcu7t5v0__filltie
-X_080_ net97 net90 net81 net1 Inst_W_IO_ConfigMem.Inst_frame1_bit30.Q Inst_W_IO_ConfigMem.Inst_frame1_bit31.Q
-+ Inst_W_IO_switch_matrix.E6BEG2 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__mux4_1
+X_080_ WW4END[7] WW4END[15] W6END[7] A_O_top Inst_W_IO_ConfigMem.Inst_frame1_bit30.Q
++ Inst_W_IO_ConfigMem.Inst_frame1_bit31.Q Inst_W_IO_switch_matrix.E6BEG2 VDD VDD VSS
++ VSS gf180mcu_fd_sc_mcu7t5v0__mux4_1
 XTAP_TAPCELL_ROW_5_161 VDD VSS gf180mcu_fd_sc_mcu7t5v0__filltie
 XTAP_TAPCELL_ROW_28_230 VDD VSS gf180mcu_fd_sc_mcu7t5v0__filltie
 XFILLER_37_72 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__fillcap_4
-X_278_ net15 net164 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__buf_2
+X_278_ FrameData[20] net80 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__buf_2
 XTAP_TAPCELL_ROW_43_277 VDD VSS gf180mcu_fd_sc_mcu7t5v0__filltie
 XTAP_TAPCELL_ROW_2_153 VDD VSS gf180mcu_fd_sc_mcu7t5v0__filltie
 XTAP_TAPCELL_ROW_25_222 VDD VSS gf180mcu_fd_sc_mcu7t5v0__filltie
-X_132_ net62 Inst_W_IO_ConfigMem.Inst_frame0_bit30.Q Inst_W_IO_ConfigMem.Inst_frame0_bit31.Q
+X_132_ W2END[6] Inst_W_IO_ConfigMem.Inst_frame0_bit30.Q Inst_W_IO_ConfigMem.Inst_frame0_bit31.Q
 + _039_ VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__oai21_1
 X_063_ _004_ _019_ Inst_W_IO_ConfigMem.Inst_frame0_bit21.Q _020_ VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__oai21_1
-X_201_ net18 net32 Inst_W_IO_ConfigMem.Inst_frame1_bit23.Q VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__latq_1
-XFILLER_0_45 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__fillcap_4
-XFILLER_0_67 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__fill_1
+X_201_ FrameData[23] net32 Inst_W_IO_ConfigMem.Inst_frame1_bit23.Q VDD VDD VSS VSS
++ gf180mcu_fd_sc_mcu7t5v0__latq_1
 XFILLER_9_76 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__fill_2
-XFILLER_9_10 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__fillcap_32
 XFILLER_9_98 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__fillcap_32
 XFILLER_50_2 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__fillcap_4
 XFILLER_64_171 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__fillcap_4
@@ -1909,15 +1918,21 @@ XPHY_EDGE_ROW_8_Left_79 VDD VSS gf180mcu_fd_sc_mcu7t5v0__endcap
 XFILLER_18_41 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__fill_1
 XFILLER_47_138 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__fill_2
 XFILLER_70_152 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__fillcap_4
-XFILLER_7_212 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__fillcap_8
+XFILLER_7_212 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__fillcap_16
 X_046_ Inst_W_IO_ConfigMem.Inst_frame0_bit20.Q _004_ VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__inv_1
-X_115_ net52 Inst_B_IO_1_bidirectional_frame_config_pass.Q Inst_W_IO_ConfigMem.Inst_frame3_bit25.Q
+X_115_ W1END[0] Inst_B_IO_1_bidirectional_frame_config_pass.Q Inst_W_IO_ConfigMem.Inst_frame3_bit25.Q
 + Inst_W_IO_switch_matrix.E1BEG3 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__mux2_2
 XFILLER_38_138 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__fillcap_4
 XFILLER_29_84 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__fill_2
 XFILLER_40_177 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__fillcap_32
-Xoutput85 net100 A_I_top VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__buf_4
+Xoutput6 net6 E1BEG[1] VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__buf_4
+Xoutput52 net67 EE4BEG[9] VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__buf_4
+Xoutput41 net56 EE4BEG[13] VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__buf_4
+Xoutput30 net45 E6BEG[3] VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__buf_4
+Xoutput96 net111 FrameStrobe_O[1] VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__buf_4
 XFILLER_0_240 VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__fill_1
-Xoutput96 net111 E2BEG[3] VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__buf_4
+Xoutput63 net78 FrameData_O[19] VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__buf_4
+Xoutput74 net89 FrameData_O[29] VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__buf_4
+Xoutput85 net100 FrameStrobe_O[0] VDD VDD VSS VSS gf180mcu_fd_sc_mcu7t5v0__buf_4
 .ends
 
