@@ -22,10 +22,6 @@ VERILOG_FILES:
 # as it would resize the buffers
 PL_TIME_DRIVEN: false
 
-# Add buffers
-DESIGN_REPAIR_BUFFER_INPUT_PORTS: False
-DESIGN_REPAIR_BUFFER_OUTPUT_PORTS: True
-
 # "AREA 0" "AREA 1" "AREA 2" "AREA 3"
 SYNTH_STRATEGY: "AREA 2"
 
