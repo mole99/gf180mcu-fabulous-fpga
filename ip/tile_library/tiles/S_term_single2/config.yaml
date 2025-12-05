@@ -10,6 +10,8 @@ VERILOG_FILES:
   - dir::../../models_pack.v
   - dir::../../custom.v
 
+DIODE_ON_PORTS: in
+
 # Clock
 CLOCK_PERIOD: 20
 CLOCK_PORT: UserCLK

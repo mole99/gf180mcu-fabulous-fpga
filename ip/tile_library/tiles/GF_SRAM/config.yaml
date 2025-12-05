@@ -22,10 +22,6 @@ FABULOUS_EXTERNAL_SIDE: E
 # as it would resize the buffers
 PL_TIME_DRIVEN: false
 
-# Add buffers
-DESIGN_REPAIR_BUFFER_INPUT_PORTS: False
-DESIGN_REPAIR_BUFFER_OUTPUT_PORTS: True
-
 # Seems to add a few buffers too
 PL_ROUTABILITY_DRIVEN: false
 
