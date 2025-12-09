@@ -8,6 +8,14 @@ MACRO gf180mcu_ws_ip__id
   ORIGIN 0.000 0.000 ;
   SIZE 142.800 BY 142.800 ;
   OBS
+      LAYER Metal1 ;
+        RECT 0.0 0.0 142.8 142.8 ;
+      LAYER Metal2 ;
+        RECT 0.0 0.0 142.8 142.8 ;
+      LAYER Metal3 ;
+        RECT 0.0 0.0 142.8 142.8 ;
+      LAYER Metal4 ;
+        RECT 0.0 0.0 142.8 142.8 ;
       LAYER Metal5 ;
         RECT 0.0 0.0 142.8 142.8 ;
   END

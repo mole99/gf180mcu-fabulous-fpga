@@ -19,7 +19,7 @@ def convert_to_gds(
     merge=False,
     smooth=False,
     pixel_size=6,
-    foreground="1/0",
+    foregrounds=["1/0"],
     boundaries=["0/0"],
 ):
 
@@ -33,8 +33,12 @@ def convert_to_gds(
     # Open the image
     img = Image.open(input_filepath)
 
-    layer, datatype = foreground.split('/')
-    foreground_layer = db.LayerInfo(int(layer), int(datatype))
+    # Add the foregrounds
+    foreground_layers = []
+    for foreground in foregrounds:
+        layer, datatype = foreground.split('/')
+        foreground_layer = db.LayerInfo(int(layer), int(datatype))
+        foreground_layers.append(foreground_layer)
 
     if not invert_alpha:
         # Create a white rgba background
@@ -88,7 +92,8 @@ def convert_to_gds(
                     pixel_polygon = db.DPolygon(pixel)
                     top_region.insert(from_um * pixel_polygon)
                 else:
-                    top.shapes(foreground_layer).insert(pixel)
+                    for foreground_layer in foreground_layers:
+                        top.shapes(foreground_layer).insert(pixel)
 
     if merge:
         top_region.merge()
@@ -96,7 +101,8 @@ def convert_to_gds(
         if smooth:
             top_region = top_region.smoothed(from_um * pixel_size * 0.99)
 
-        top.shapes(foreground_layer).insert(top_region)
+        for foreground_layer in foreground_layers:
+            top.shapes(foreground_layer).insert(top_region)
 
     # Add the boundaries
     for boundary in boundaries:
@@ -139,6 +145,7 @@ if __name__ == "__main__":
     parser.add_argument("--merge", action="store_true", help="merge polygons")
     parser.add_argument(
         "--foreground",
+        nargs="*",
         type=str,
         help="gds layer/datatype pair for foreground pixels e.g. 0/0",
     )
@@ -165,6 +172,6 @@ if __name__ == "__main__":
         merge=args.merge,
         smooth=args.smooth,
         pixel_size=args.pixel_size,
-        foreground=args.foreground,
+        foregrounds=args.foreground,
         boundaries=args.boundary,
     )
