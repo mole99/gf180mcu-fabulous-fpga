@@ -140,10 +140,11 @@ MAGIC_GDS_FLATGLOB:
 - "sa_*"
 
 # Since we cannot meet the minimum density limit on Metal2,
-# move the dummy shapes to the active metal layer and ignore
-# DM.5_DM.7 and DM.4_DM.6
+# ignore active metal on previous and subsequent layers
+# (DM.5_DM.7 and DM.4_DM.6). Dummy metal is moved to active
+# metal during the precheck.
 KLAYOUT_FILLER_OPTIONS:
-  Metal2_active: true
+  Metal2_ignore_active: true
 
 # Because we have multiple power pads for one power domain
 MAGIC_EXT_UNIQUE: notopports
