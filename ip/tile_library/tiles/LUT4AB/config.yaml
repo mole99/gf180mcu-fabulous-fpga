@@ -51,9 +51,14 @@ pdk::gf180mcuD:
     # Height should be multiple of 0.56 (Metal3 pitch)
     # Standard cell row height: 3.92 (8 Metal3 track)
     DIE_AREA: [0, 0, 287.28, 287.28]
-    PL_TARGET_DENSITY_PCT: 90
+    PL_TARGET_DENSITY_PCT: 89
     BOTTOM_MARGIN_MULT: 1
     TOP_MARGIN_MULT: 1
+
+    ROUTING_OBSTRUCTIONS:
+    - [Metal3, -1, 0, 0, 287.28]
+    - [Metal3, 287.28, 0, 288.28, 287.28]
+    - [Metal4, 0, -1, 288.28, 0]
 
 SYNTH_LATCH_MAP: dir::../../latch_map.v
 

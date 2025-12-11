@@ -1,6 +1,6 @@
 *SPEF "ieee 1481-1999"
 *DESIGN "eFPGA"
-*DATE "23:06:55 Friday December 05, 2025"
+*DATE "16:06:22 Thursday December 11, 2025"
 *VENDOR "The OpenROAD Project"
 *PROGRAM "OpenROAD"
 *VERSION "341650e72dad0dc8571822ff8c5d9c5e365327f7"
@@ -27462,16 +27462,19 @@ Tile_X8Y8_WEN_SRAM6 O
 Tile_X8Y8_WEN_SRAM7 O
 UserCLK I
 
-*D_NET *1 0.0130942
+*D_NET *1 0.0129182
 *CONN
 *P FrameData[0] I
 *I *26154:FrameData[0] I *D N_term_single
 *CAP
-1 FrameData[0] 0.00437849
-2 *26154:FrameData[0] 0.00437849
-3 *26154:FrameData[0] *26154:FrameData[1] 0.00433721
+1 FrameData[0] 0.00139019
+2 *26154:FrameData[0] 0.00319959
+3 *1:7 0.00458978
+4 *26154:FrameData[0] *26154:FrameData[1] 0.00250944
+5 *1:7 *26154:FrameData[1] 0.00122919
 *RES
-1 FrameData[0] *26154:FrameData[0] 53.248 
+1 FrameData[0] *1:7 15.86 
+2 *1:7 *26154:FrameData[0] 38.116 
 *END
 
 *D_NET *2 4.52129e-05
@@ -28901,15 +28904,16 @@ UserCLK I
 1 FrameData[19] *26154:FrameData[19] 53.248 
 *END
 
-*D_NET *112 0.0136464
+*D_NET *112 0.0133574
 *CONN
 *P FrameData[1] I
 *I *26154:FrameData[1] I *D N_term_single
 *CAP
-1 FrameData[1] 0.00239647
-2 *26154:FrameData[1] 0.00239647
+1 FrameData[1] 0.00255123
+2 *26154:FrameData[1] 0.00255123
 3 *26154:FrameData[1] *26154:FrameData[2] 0.00451626
-4 *26154:FrameData[0] *26154:FrameData[1] 0.00433721
+4 *26154:FrameData[0] *26154:FrameData[1] 0.00250944
+5 *1:7 *26154:FrameData[1] 0.00122919
 *RES
 1 FrameData[1] *26154:FrameData[1] 53.248 
 *END

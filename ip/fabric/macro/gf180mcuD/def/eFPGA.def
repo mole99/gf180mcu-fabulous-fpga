@@ -6236,7 +6236,11 @@ SPECIALNETS 2 ;
 END SPECIALNETS
 NETS 26139 ;
     - FrameData[0] ( PIN FrameData[0] ) ( Tile_X1Y0_N_term_single FrameData[0] ) + USE SIGNAL
-      + ROUTED Metal3 ( 560 7048720 0 ) ( 287280 * 0 ) ;
+      + ROUTED Metal3 ( 280560 7047600 ) ( * 7048160 )
+      NEW Metal3 ( 280560 7048160 ) ( 287280 * 0 )
+      NEW Metal3 ( 560 7048720 0 ) ( 84000 * )
+      NEW Metal3 ( 84000 7047600 ) ( * 7048720 )
+      NEW Metal3 ( 84000 7047600 ) ( 280560 * ) ;
     - FrameData[100] ( PIN FrameData[100] ) ( Tile_X0Y3_W_IO4 FrameData[4] ) + USE SIGNAL
       + ROUTED Metal3 ( 560 5634160 0 ) ( 1680 * 0 ) ;
     - FrameData[101] ( PIN FrameData[101] ) ( Tile_X0Y3_W_IO4 FrameData[5] ) + USE SIGNAL
