@@ -82,25 +82,36 @@ jobs:
       - name: Run RTL simulation
         run: |
           nix develop --command make sim
+          # cocotb also returns 0 upon failure
+          # check the simulation results
+          ! grep failure cocotb/sim_build/results.xml
       - name: Implement the Chip
+        if: success() || failure()
         run: |
           nix develop --command make librelane
           make copy-final
           nix develop --command make render-image
       - name: Create summary
+        if: success() || failure()
         run: |
           echo "# Manufacturability" >> $GITHUB_STEP_SUMMARY
           cat librelane/runs/*/*-misc-reportmanufacturability/manufacturability.rpt >> $GITHUB_STEP_SUMMARY
       - name: Upload GDS
+        if: success() || failure()
         uses: actions/upload-artifact@v4
         with:
           name: ${{ matrix.slot }}_gds
           path: final/gds/*
       - name: Upload image
+        if: success() || failure()
         uses: actions/upload-artifact@v4
         with:
           name: ${{ matrix.slot }}_image
           path: img/*.png
       - name: Run GL simulation
+        if: success() || failure()
         run: |
           nix develop --command make sim-gl
+          # cocotb also returns 0 upon failure
+          # check the simulation results
+          ! grep failure cocotb/sim_build/results.xml
